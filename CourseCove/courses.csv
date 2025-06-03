@@ -1,0 +1,6 @@
+title,instructor,rating,description,price,courseurl,imageurl
+"Introduction to Algebra","John Doe",4.5,"Learn the basics of algebra including variables, equations, and functions.","$49.99","https://example.com/course/algebra","https://via.placeholder.com/300x160.png?text=Algebra+Course"
+"Calculus for Beginners","Jane Smith",4.2,"A beginner-friendly course on limits, derivatives, and integrals.","$59.99","https://example.com/course/calculus","https://via.placeholder.com/300x160.png?text=Calculus+Course"
+"Statistics Essentials","Robert Johnson",4.7,"Understand key concepts in statistics with real-world examples.","$39.99","https://example.com/course/statistics","https://via.placeholder.com/300x160.png?text=Statistics+Course"
+"Discrete Mathematics","Emily Davis",4.1,"Explore sets, logic, combinatorics, and graph theory.","$44.99","https://example.com/course/discrete-math","https://via.placeholder.com/300x160.png?text=Discrete+Math+Course"
+"Linear Algebra Fundamentals","Michael Brown",4.6,"Matrix operations, vector spaces, and linear transformations.","$54.99","https://example.com/course/linear-algebra","https://via.placeholder.com/300x160.png?text=Linear+Algebra+Course"

@@ -1,0 +1,48 @@
+[
+    {
+      "title": "Introduction to Environmental Science",
+      "instructor": "Duke University",
+      "rating": 4.8,
+      "description": "Understand environmental issues and sustainability concepts.",
+      "price": "Free",
+      "image": "logo.png",
+      "url": "https://www.coursera.org/learn/environmental-science"
+    },
+    {
+      "title": "Climate Change: The Science",
+      "instructor": "University of British Columbia",
+      "rating": 4.7,
+      "description": "Learn the science behind climate change and its impacts.",
+      "price": "Free",
+      "image": "logo.png",
+      "url": "https://www.coursera.org/learn/climate-change"
+    },
+    {
+      "title": "Sustainable Development: The Post-Capitalist Order",
+      "instructor": "UCL (University College London)",
+      "rating": 4.5,
+      "description": "Explore sustainability challenges and solutions for future development.",
+      "price": "Free",
+      "image": "logo.png",
+      "url": "https://www.coursera.org/learn/sustainable-development"
+    },
+    {
+      "title": "Energy Production, Distribution & Safety",
+      "instructor": "The State University of New York",
+      "rating": 4.6,
+      "description": "Basics of energy production and environmental safety.",
+      "price": "Free",
+      "image": "logo.png",
+      "url": "https://www.coursera.org/learn/energy-production"
+    },
+    {
+      "title": "Environmental Management & Ethics",
+      "instructor": "Technical University of Denmark",
+      "rating": 4.4,
+      "description": "Environmental management and ethical considerations in sustainability.",
+      "price": "Free",
+      "image": "logo.png",
+      "url": "https://www.udemy.com/course/environmental-management-and-ethics/"
+    }
+  ]
+  
