@@ -1,0 +1,48 @@
+[
+    {
+      "title": "English for Career Development",
+      "instructor": "University of Pennsylvania",
+      "rating": 4.7,
+      "description": "Improve English skills for job searching and career advancement.",
+      "price": "Free",
+      "image": "images/logo.png",
+      "url": "https://www.coursera.org/learn/careerdevelopment"
+    },
+    {
+      "title": "Mandarin Chinese for Beginners",
+      "instructor": "Peking University",
+      "rating": 4.6,
+      "description": "Learn basic Mandarin Chinese speaking and writing.",
+      "price": "Free",
+      "image": "images/logo.png",
+      "url": "https://www.coursera.org/learn/mandarin-chinese"
+    },
+    {
+      "title": "Spanish Vocabulary: Meeting People",
+      "instructor": "University of California, Davis",
+      "rating": 4.5,
+      "description": "Learn Spanish vocabulary for everyday conversation.",
+      "price": "Free",
+      "image": "images/logo.png",
+      "url": "https://www.coursera.org/learn/spanish-vocabulary"
+    },
+    {
+      "title": "Complete French Language Course",
+      "instructor": "Francois Dupont",
+      "rating": 4.6,
+      "description": "From beginner to advanced French speaking skills.",
+      "price": "$14.99",
+      "image": "images/logo.png",
+      "url": "https://www.udemy.com/course/complete-french-language-course/"
+    },
+    {
+      "title": "Japanese for Beginners",
+      "instructor": "John Smith",
+      "rating": 4.4,
+      "description": "Learn Japanese basics with speaking and writing.",
+      "price": "Free",
+      "image": "images/logo.png",
+      "url": "https://www.udemy.com/course/japanese-for-beginners/"
+    }
+  ]
+  
