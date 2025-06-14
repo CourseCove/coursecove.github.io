@@ -375,3 +375,32 @@ footer {
 }
 
 
+
+/* Blog cards styling consistent with homepage */
+
+.card {
+  background-color: #00264d; /* dark navy */
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-title,
+.card-text {
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #001f3f; /* navy */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #003366;
+}
+
+
