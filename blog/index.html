@@ -3,71 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog - Course Cove</title>
+  <title>Blog - Online Course Aggregator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../CourseCove/css/style.css" />
 </head>
-<body class="bg-gradient-light text-primary font-base">
+<body>
 
-  <nav class="navbar navbar-expand-lg bg-transparent">
+  <nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
     <div class="container">
-      <a class="navbar-brand text-primary" href="/">Course Cove</a>
+      <a class="navbar-brand" href="../index.html">
+        <img src="../CourseCove/images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="/blog/">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="/CourseCove/math.html">Math</a></li>
-          <li class="nav-item"><a class="nav-link" href="/CourseCove/ai-ml.html">AI / ML</a></li>
-          <li class="nav-item"><a class="nav-link" href="/CourseCove/arts-humanities.html">Arts & Humanities</a></li>
-          <li class="nav-item"><a class="nav-link" href="/CourseCove/languages.html">Languages</a></li>
-          <li class="nav-item"><a class="nav-link" href="/CourseCove/politics-economics.html">Politics & Economics</a></li>
-          <li class="nav-item"><a class="nav-link" href="/CourseCove/environment.html">Environment</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../CourseCove/math.html">Math</a></li>
+          <li class="nav-item"><a class="nav-link" href="../CourseCove/ai-ml.html">AI / ML</a></li>
+          <li class="nav-item"><a class="nav-link" href="../CourseCove/arts-humanities.html">Arts & Humanities</a></li>
+          <li class="nav-item"><a class="nav-link" href="../CourseCove/languages.html">Languages</a></li>
+          <li class="nav-item"><a class="nav-link" href="../CourseCove/politics-economics.html">Politics & Economics</a></li>
+          <li class="nav-item"><a class="nav-link" href="../CourseCove/environment.html">Environment</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../CourseCove/contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main class="container blog-container">
-    <h1 class="blog-title">Blog Posts</h1>
-    <ul id="posts-list" class="posts-list">Loading posts...</ul>
+  <main class="container my-5">
+
+    <h2 class="mb-4">Latest Blog Posts</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Example blog post card -->
+      <article class="col">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" 
+               class="card-img-top" alt="Sample Blog Post" />
+          <div class="card-body">
+            <h5 class="card-title">Sample Blog Post Title</h5>
+            <p class="card-text">This is a short excerpt from the blog post to entice the reader to click and read more.</p>
+            <a href="#" class="btn btn-primary">Read more...</a>
+          </div>
+        </div>
+      </article>
+      <!-- Repeat similar article blocks for each blog post -->
+    </div>
+
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    const postsList = document.getElementById('posts-list');
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="mb-2 mb-md-0">
+        <strong>Course Aggregator</strong> &nbsp;|&nbsp;
+        <strong>© 2025 All rights reserved.</strong>
+      </div>
+      <div>
+        <a href="../index.html" class="text-light text-decoration-none me-3">Home</a>
+        <a href="../CourseCove/contact.html" class="text-light text-decoration-none me-3">Contact</a>
+        <a href="../CourseCove/privacy.html" class="text-light text-decoration-none">Privacy</a>
+      </div>
+    </div>
+  </footer>
 
-    // List your markdown post filenames here:
-    const posts = [
-      "2025-06-14-example-post.md",
-      // Add more posts here
-    ];
-
-    const repoBase = 'https://raw.githubusercontent.com/coursecove/coursecove.github.io/main/posts/';
-
-    async function loadPosts() {
-      postsList.innerHTML = '';
-      for (const post of posts) {
-        try {
-          const response = await fetch(repoBase + post);
-          const text = await response.text();
-
-          const titleMatch = text.match(/^#\s+(.*)/m);
-          const title = titleMatch ? titleMatch[1] : post;
-
-          const li = document.createElement('li');
-          li.innerHTML = `<a href="/posts/${post.replace('.md', '.html')}" class="post-link">${title}</a>`;
-          postsList.appendChild(li);
-
-        } catch (e) {
-          console.error('Error loading post', post, e);
-        }
-      }
-    }
-
-    loadPosts();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
