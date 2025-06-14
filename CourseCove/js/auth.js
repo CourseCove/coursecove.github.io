@@ -1,33 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const identity = window.netlifyIdentity;
-  
-    identity.on('init', user => {
-      if (!user) {
-        if (document.getElementById('signup-button')) {
-          identity.open('signup');
-        } else if (document.getElementById('login-button')) {
-          identity.open('login');
-        }
+  const identity = window.netlifyIdentity;
+
+  identity.on('init', user => {
+    if (!user) {
+      const signupBtn = document.getElementById('signup-button');
+      const loginBtn = document.getElementById('login-button');
+
+      if (signupBtn) {
+        signupBtn.addEventListener('click', () => identity.open('signup'));
       }
-    });
-  
-    identity.on('login', user => {
-      console.log("Logged in", user);
-      identity.close();
-      window.location.href = "/"; // Redirect to homepage or dashboard
-    });
-  
-    identity.on('signup', user => {
-      console.log("Signed up", user);
-      identity.close();
-      window.location.href = "/"; // Redirect to homepage or dashboard
-    });
-  
-    identity.on('logout', () => {
-      console.log("Logged out");
-      window.location.href = "/";
-    });
-  
-    identity.init();
+
+      if (loginBtn) {
+        loginBtn.addEventListener('click', () => identity.open('login'));
+      }
+    }
   });
-  
+
+  identity.on('login', user => {
+    console.log("Logged in", user);
+    identity.close();
+    window.location.href = "/";
+  });
+
+  identity.on('signup', user => {
+    console.log("Signed up", user);
+    identity.close();
+    window.location.href = "/";
+  });
+
+  identity.on('logout', () => {
+    console.log("Logged out");
+    window.location.href = "/";
+  });
+
+  identity.init();
+});
