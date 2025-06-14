@@ -6,27 +6,43 @@
   <title>Blog - Course Cove</title>
   <link rel="stylesheet" href="../CourseCove/css/style.css" />
 </head>
-<body>
+<body class="bg-gradient-light text-primary font-base">
 
-  <nav>
-    <!-- Add your navbar here or include existing navbar HTML -->
-    <a href="/">Home</a> | <a href="/blog/">Blog</a>
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container">
+      <a class="navbar-brand text-primary" href="/">Course Cove</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/blog/">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/CourseCove/math.html">Math</a></li>
+          <li class="nav-item"><a class="nav-link" href="/CourseCove/ai-ml.html">AI / ML</a></li>
+          <li class="nav-item"><a class="nav-link" href="/CourseCove/arts-humanities.html">Arts & Humanities</a></li>
+          <li class="nav-item"><a class="nav-link" href="/CourseCove/languages.html">Languages</a></li>
+          <li class="nav-item"><a class="nav-link" href="/CourseCove/politics-economics.html">Politics & Economics</a></li>
+          <li class="nav-item"><a class="nav-link" href="/CourseCove/environment.html">Environment</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <h1>Blog Posts</h1>
-    <ul id="posts-list">Loading posts...</ul>
+  <main class="container blog-container">
+    <h1 class="blog-title">Blog Posts</h1>
+    <ul id="posts-list" class="posts-list">Loading posts...</ul>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     const postsList = document.getElementById('posts-list');
 
-    // List your markdown posts here manually or fetch the file list dynamically
-    // For simplicity, manually list your post markdown filenames here:
+    // List your markdown post filenames here:
     const posts = [
       "2025-06-14-example-post.md",
-      // Add more posts here as you add them
+      // Add more posts here
     ];
 
     const repoBase = 'https://raw.githubusercontent.com/coursecove/coursecove.github.io/main/posts/';
@@ -38,13 +54,11 @@
           const response = await fetch(repoBase + post);
           const text = await response.text();
 
-          // Extract title from markdown (assumes title on first line like # Title)
           const titleMatch = text.match(/^#\s+(.*)/m);
           const title = titleMatch ? titleMatch[1] : post;
 
-          // Create list item with link to post page (you can make a simple post page)
           const li = document.createElement('li');
-          li.innerHTML = `<a href="/posts/${post.replace('.md', '.html')}">${title}</a>`;
+          li.innerHTML = `<a href="/posts/${post.replace('.md', '.html')}" class="post-link">${title}</a>`;
           postsList.appendChild(li);
 
         } catch (e) {
@@ -55,6 +69,5 @@
 
     loadPosts();
   </script>
-
 </body>
 </html>
