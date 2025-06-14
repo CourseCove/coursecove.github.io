@@ -312,3 +312,66 @@ footer {
   }
 }
 
+/* Blog page specific */
+
+.bg-gradient-light {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.text-primary {
+  color: #283593; /* navy/dark blue */
+}
+
+.font-base {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blog-container {
+  max-width: 720px;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  margin: 2rem auto 4rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.blog-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.posts-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.15rem;
+}
+
+.posts-list li {
+  margin-bottom: 1.2rem;
+}
+
+.post-link {
+  color: #3949ab;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.post-link:hover {
+  color: #1a237e;
+  text-decoration: underline;
+}
+
+/* Navbar adjustments for blog page */
+.navbar.bg-transparent {
+  background-color: transparent !important;
+}
+
+.navbar .nav-link.active {
+  font-weight: 600;
+  color: #1a237e !important;
+}
+
+
