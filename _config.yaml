@@ -1,0 +1,5 @@
+title: Course Aggregator
+description: Your favorite online course aggregator
+baseurl: "" 
+url: "https://yourgithubusername.github.io/your-repo-name"
+markdown: kramdown
