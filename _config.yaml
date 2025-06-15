@@ -1,5 +1,11 @@
-title: Course Aggregator
-description: Your favorite online course aggregator
+title: CourseCove Blog
+description: A blog about the best online courses.
 baseurl: "" 
-url: "https://yourgithubusername.github.io/your-repo-name"
+url: "https://coursecove.netlify.app"
+
 markdown: kramdown
+theme: minima
+
+collections:
+  posts:
+    output: true
