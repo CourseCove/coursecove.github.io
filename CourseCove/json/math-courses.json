@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Introduction to Mathematical Thinking",
+    "instructor": "Dr. Keith Devlin",
+    "rating": 4.7,
+    "description": "Develop a valuable skill for university-level mathematics and beyond: the ability to think mathematically.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/mathematical-thinking"
+  },
+  {
+    "title": "Mathematics for Machine Learning",
+    "instructor": "Imperial College London",
+    "rating": 4.6,
+    "description": "Learn the foundational mathematics necessary for machine learning, including linear algebra and calculus.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/specializations/mathematics-machine-learning"
+  },
+  {
+    "title": "Basic Mathematics",
+    "instructor": "Birla Institute of Technology & Science, Pilani",
+    "rating": 4.5,
+    "description": "An elementary introduction to basic mathematics concepts and their applications.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/basicmathematics"
+  },
+  {
+    "title": "Linear Algebra for Machine Learning and Data Science",
+    "instructor": "DeepLearning.AI",
+    "rating": 4.6,
+    "description": "Master the concepts of linear algebra essential for machine learning and data science.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/linear-algebra-machine-learning"
+  },
+  {
+    "title": "Master the Fundamentals of Math",
+    "instructor": "Krista King",
+    "rating": 4.7,
+    "description": "Comprehensive course covering arithmetic, fractions, decimals, and more, suitable for all levels.",
+    "price": "$19.99",
+    "image": "images/logo.png",
+    "url": "https://www.udemy.com/course/fundamentals-of-math/"
+  },
+  {
+    "title": "Complete Mathematics Masterclass: College & University Level",
+    "instructor": "Dr. Felix Harder",
+    "rating": 4.6,
+    "description": "A complete course covering calculus, algebra, statistics, and stochastics for college and university students.",
+    "price": "$24.99",
+    "image": "images/logo.png",
+    "url": "https://www.udemy.com/course/university-mathematics/"
+  },
+  {
+    "title": "Mathematics - Basics to Advanced for Data Science and GenAI",
+    "instructor": "Krish Naik",
+    "rating": 4.5,
+    "description": "Build a strong math foundation with linear algebra, statistics, probability, and calculus for data science.",
+    "price": "$29.99",
+    "image": "images/logo.png",
+    "url": "https://www.udemy.com/course/mathematics-basics-to-advanced-for-data-science-and-ml/"
+  },
+  {
+    "title": "Basic Math Course",
+    "instructor": "John Smith",
+    "rating": 4.4,
+    "description": "A beginner's course covering percentages, fractions, decimals, and algebraic equations.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.udemy.com/course/basic-math-course/"
+  }
+]
