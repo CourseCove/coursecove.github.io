@@ -1,10 +1,10 @@
 {
-  "name": "coursecove-blog",
+  "name": "coursecove",
   "version": "1.0.0",
   "scripts": {
     "build": "eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
+    "@11ty/eleventy": "^2.0.1"
   }
 }
