@@ -521,6 +521,53 @@ footer a.text-light:hover {
   text-decoration: underline;
 }
 
+.privacy-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  color: #2c3e50;
+}
+
+.privacy-container h1,
+.privacy-container h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 700;
+  color: #1a237e;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-container h1 {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.privacy-container h2 {
+  font-size: 1.5rem;
+}
+
+.privacy-container p,
+.privacy-container ul {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.privacy-container ul {
+  padding-left: 1.25rem;
+}
+
+.privacy-container li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+
 
 
 
