@@ -1,27 +1,31 @@
-function renderBlogPosts(jsonPath, containerId) {
-  fetch(jsonPath)
-    .then(res => res.json())
-    .then(posts => {
-      const container = document.getElementById(containerId);
-      posts.forEach(post => {
-        const col = document.createElement('div');
-        col.className = 'col';
+async function renderBlogPosts(jsonPath, containerId) {
+  try {
+    const response = await fetch(`${jsonPath}?t=${Date.now()}`);
+    const posts = await response.json();
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
 
-        col.innerHTML = `
-          <div class="card h-100">
-            <a href="${post.link}" target="_blank" rel="noopener">
-              <img src="${post.thumbnail}" class="card-img-top" alt="${post.title}">
-            </a>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${post.title}</h5>
-              <p class="card-text">${post.preview}</p>
-              <a href="${post.link}" class="btn btn-primary mt-auto" target="_blank">Read More</a>
-            </div>
+    posts.forEach(post => {
+      const col = document.createElement('div');
+      col.className = 'col';
+
+      col.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <a href="${post.link}" target="_blank" rel="noopener">
+            <img src="${post.thumbnail}" alt="${post.title}" class="card-img-top" style="object-fit: cover; height: 200px;">
+          </a>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${post.title}</h5>
+            <p class="card-text flex-grow-1">${post.preview}</p>
+            <a href="${post.link}" target="_blank" class="btn btn-primary mt-auto">Read More</a>
           </div>
-        `;
+        </div>
+      `;
 
-        container.appendChild(col);
-      });
-    })
-    .catch(err => console.error("Error loading blog posts:", err));
+      container.appendChild(col);
+    });
+  } catch (error) {
+    console.error("Failed to render blog posts:", error);
+    container.innerHTML = '<p class="text-danger">Failed to load blog posts.</p>';
+  }
 }
