@@ -95,7 +95,7 @@ h1, h2, h3 {
 }
 
 /* Course Card */
-.course-card, .col, .blog-card {
+.course-card, .col {
   background: #ffffff;
   border-radius: 12px;
   box-shadow:
