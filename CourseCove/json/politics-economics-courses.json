@@ -9,7 +9,7 @@
     "price": "Free",
     "rating": 5.0,
     "url": "https://example.com/politics-economics-course-1",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "market",
       "economics",
@@ -26,7 +26,7 @@
     "price": "Free",
     "rating": 4.9,
     "url": "https://example.com/politics-economics-course-2",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "international",
       "politics",
@@ -43,7 +43,7 @@
     "price": "$54",
     "rating": 4.8,
     "url": "https://example.com/politics-economics-course-3",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "government",
@@ -60,7 +60,7 @@
     "price": "$81",
     "rating": 3.6,
     "url": "https://example.com/politics-economics-course-4",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "development",
@@ -77,7 +77,7 @@
     "price": "Free",
     "rating": 4.5,
     "url": "https://example.com/politics-economics-course-5",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "theory",
       "global",
@@ -94,7 +94,7 @@
     "price": "$54",
     "rating": 3.1,
     "url": "https://example.com/politics-economics-course-6",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "market",
       "development",
@@ -111,7 +111,7 @@
     "price": "Free",
     "rating": 4.0,
     "url": "https://example.com/politics-economics-course-7",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "theory",
       "economics",
@@ -128,7 +128,7 @@
     "price": "Free",
     "rating": 4.1,
     "url": "https://example.com/politics-economics-course-8",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "international",
@@ -145,7 +145,7 @@
     "price": "Free",
     "rating": 3.7,
     "url": "https://example.com/politics-economics-course-9",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "theory",
       "development",
@@ -162,7 +162,7 @@
     "price": "$62",
     "rating": 3.6,
     "url": "https://example.com/politics-economics-course-10",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "economics",
       "government",
@@ -179,7 +179,7 @@
     "price": "Free",
     "rating": 3.8,
     "url": "https://example.com/politics-economics-course-11",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "international",
       "government",
@@ -196,7 +196,7 @@
     "price": "Free",
     "rating": 4.4,
     "url": "https://example.com/politics-economics-course-12",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "politics",
       "government",
@@ -213,7 +213,7 @@
     "price": "Free",
     "rating": 4.8,
     "url": "https://example.com/politics-economics-course-13",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "theory",
@@ -230,7 +230,7 @@
     "price": "$98",
     "rating": 4.1,
     "url": "https://example.com/politics-economics-course-14",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "development",
@@ -247,7 +247,7 @@
     "price": "Free",
     "rating": 4.0,
     "url": "https://example.com/politics-economics-course-15",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "government",
       "global",
@@ -264,7 +264,7 @@
     "price": "$47",
     "rating": 3.8,
     "url": "https://example.com/politics-economics-course-16",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "development",
       "politics",
@@ -281,7 +281,7 @@
     "price": "Free",
     "rating": 3.7,
     "url": "https://example.com/politics-economics-course-17",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "government",
       "economics",
@@ -298,7 +298,7 @@
     "price": "Free",
     "rating": 3.1,
     "url": "https://example.com/politics-economics-course-18",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "development",
       "policy",
@@ -315,7 +315,7 @@
     "price": "Free",
     "rating": 4.9,
     "url": "https://example.com/politics-economics-course-19",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "government",
@@ -332,7 +332,7 @@
     "price": "$50",
     "rating": 4.6,
     "url": "https://example.com/politics-economics-course-20",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "development",
@@ -349,7 +349,7 @@
     "price": "Free",
     "rating": 3.1,
     "url": "https://example.com/politics-economics-course-21",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "development",
       "global",
@@ -366,7 +366,7 @@
     "price": "$81",
     "rating": 4.9,
     "url": "https://example.com/politics-economics-course-22",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "international",
       "politics",
@@ -383,7 +383,7 @@
     "price": "Free",
     "rating": 3.3,
     "url": "https://example.com/politics-economics-course-23",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "global",
       "international",
@@ -400,7 +400,7 @@
     "price": "Free",
     "rating": 4.0,
     "url": "https://example.com/politics-economics-course-24",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "development",
       "policy",
@@ -417,7 +417,7 @@
     "price": "Free",
     "rating": 4.3,
     "url": "https://example.com/politics-economics-course-25",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "economics",
       "theory",
@@ -434,7 +434,7 @@
     "price": "Free",
     "rating": 4.5,
     "url": "https://example.com/politics-economics-course-26",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "market",
       "policy",
@@ -451,7 +451,7 @@
     "price": "$30",
     "rating": 3.7,
     "url": "https://example.com/politics-economics-course-27",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "international",
       "global",
@@ -468,7 +468,7 @@
     "price": "Free",
     "rating": 4.0,
     "url": "https://example.com/politics-economics-course-28",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "market",
       "theory",
@@ -485,7 +485,7 @@
     "price": "Free",
     "rating": 4.9,
     "url": "https://example.com/politics-economics-course-29",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "global",
       "economics",
@@ -502,7 +502,7 @@
     "price": "$68",
     "rating": 4.0,
     "url": "https://example.com/politics-economics-course-30",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "economics",
       "theory",
@@ -519,7 +519,7 @@
     "price": "Free",
     "rating": 3.9,
     "url": "https://example.com/politics-economics-course-31",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "economics",
       "policy",
@@ -536,7 +536,7 @@
     "price": "Free",
     "rating": 3.6,
     "url": "https://example.com/politics-economics-course-32",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "theory",
       "politics",
@@ -553,7 +553,7 @@
     "price": "Free",
     "rating": 3.2,
     "url": "https://example.com/politics-economics-course-33",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "development",
       "government",
@@ -570,7 +570,7 @@
     "price": "$24",
     "rating": 4.3,
     "url": "https://example.com/politics-economics-course-34",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "theory",
       "economics",
@@ -587,7 +587,7 @@
     "price": "Free",
     "rating": 4.0,
     "url": "https://example.com/politics-economics-course-35",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "theory",
       "development",
@@ -604,7 +604,7 @@
     "price": "$31",
     "rating": 3.8,
     "url": "https://example.com/politics-economics-course-36",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "government",
       "politics",
@@ -621,7 +621,7 @@
     "price": "$31",
     "rating": 4.2,
     "url": "https://example.com/politics-economics-course-37",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "theory",
       "international",
@@ -638,7 +638,7 @@
     "price": "Free",
     "rating": 3.6,
     "url": "https://example.com/politics-economics-course-38",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "politics",
       "development",
@@ -655,7 +655,7 @@
     "price": "Free",
     "rating": 4.6,
     "url": "https://example.com/politics-economics-course-39",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "politics",
@@ -672,7 +672,7 @@
     "price": "Free",
     "rating": 3.7,
     "url": "https://example.com/politics-economics-course-40",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "development",
       "politics",
@@ -689,7 +689,7 @@
     "price": "Free",
     "rating": 4.2,
     "url": "https://example.com/politics-economics-course-41",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "politics",
       "global",
@@ -706,7 +706,7 @@
     "price": "Free",
     "rating": 4.7,
     "url": "https://example.com/politics-economics-course-42",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "global",
       "economics",
@@ -723,7 +723,7 @@
     "price": "Free",
     "rating": 4.1,
     "url": "https://example.com/politics-economics-course-43",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "government",
       "theory",
@@ -740,7 +740,7 @@
     "price": "$78",
     "rating": 4.0,
     "url": "https://example.com/politics-economics-course-44",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "policy",
       "economics",
@@ -757,7 +757,7 @@
     "price": "Free",
     "rating": 3.4,
     "url": "https://example.com/politics-economics-course-45",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "politics",
       "international",
@@ -774,7 +774,7 @@
     "price": "Free",
     "rating": 3.1,
     "url": "https://example.com/politics-economics-course-46",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "international",
       "politics",
@@ -791,7 +791,7 @@
     "price": "$25",
     "rating": 4.6,
     "url": "https://example.com/politics-economics-course-47",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "market",
       "policy",
@@ -808,7 +808,7 @@
     "price": "$39",
     "rating": 4.7,
     "url": "https://example.com/politics-economics-course-48",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "global",
       "development",
@@ -825,7 +825,7 @@
     "price": "$69",
     "rating": 3.3,
     "url": "https://example.com/politics-economics-course-49",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "global",
       "politics",
@@ -842,7 +842,7 @@
     "price": "$42",
     "rating": 4.7,
     "url": "https://example.com/politics-economics-course-50",
-    "image": "images/default-course.jpg",
+    "image": "images/logo.png",
     "keywords": [
       "government",
       "economics",
