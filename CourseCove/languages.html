@@ -84,10 +84,55 @@
 </nav>
 
 
+
 <main class="container my-5">
-  <h1 class="mb-4" style="color:#7FDBFF;">Languages Courses</h1>
-  <div id="course-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"></div>
+  <h1 class="mb-4" >Languages Courses</h1>
+
+  <div class="row">
+    <!-- Sidebar Filters -->
+    <aside class="col-lg-4 mb-4">
+      <div class="card p-3" id="filters">
+        <h5 class="mb-3">Filter by</h5>
+
+        <div class="mb-3">
+          <label class="form-label">Provider</label>
+          <div>
+            <div><input type="checkbox" name="provider" value="Coursera" id="provider-coursera"> <label for="provider-coursera">Coursera</label></div>
+            <div><input type="checkbox" name="provider" value="Udemy" id="provider-udemy"> <label for="provider-udemy">Udemy</label></div>
+            <div><input type="checkbox" name="provider" value="edX" id="provider-edx"> <label for="provider-edx">edX</label></div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Level</label>
+          <div>
+            <div><input type="checkbox" name="level" value="Beginner" id="level-beginner"> <label for="level-beginner">Beginner</label></div>
+            <div><input type="checkbox" name="level" value="Intermediate" id="level-intermediate"> <label for="level-intermediate">Intermediate</label></div>
+            <div><input type="checkbox" name="level" value="Advanced" id="level-advanced"> <label for="level-advanced">Advanced</label></div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Duration (hours)</label>
+          <div>
+            <div><input type="checkbox" name="duration" value="<2" id="duration-less2"> <label for="duration-less2">Less than 2</label></div>
+            <div><input type="checkbox" name="duration" value="2-5" id="duration-2to5"> <label for="duration-2to5">2–5</label></div>
+            <div><input type="checkbox" name="duration" value=">5" id="duration-more5"> <label for="duration-more5">More than 5</label></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Course Cards Section -->
+    <section class="col-lg-8">
+      <input type="search" id="searchBar" class="form-control mb-3" placeholder="Search courses...">
+      <div id="course-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"></div>
+      <div id="pagination" class="mt-4 d-flex justify-content-center flex-wrap"></div>
+    </section>
+  </div>
 </main>
+
+  
 
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
