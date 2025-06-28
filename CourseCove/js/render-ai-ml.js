@@ -43,9 +43,15 @@ function applyFilters() {
       course.description.toLowerCase().includes(query) ||
       (course.keywords || []).some(k => k.toLowerCase().includes(query));
 
-     const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes((course.provider || '').toLowerCase());
-     const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes((course.level || '').toLowerCase());
 
+      const provider = (course.provider || '').toLowerCase();
+      const level = (course.level || '').toLowerCase();
+      
+      const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes(provider);
+      const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes(level);
+
+    
+    
     const matchesDuration = (() => {
       if (selectedDurations.length === 0) return true;
       const hours = parseFloat(course.duration);
