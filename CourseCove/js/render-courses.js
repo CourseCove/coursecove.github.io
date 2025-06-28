@@ -42,7 +42,7 @@ function applyFilters() {
   filteredCourses = allCourses.filter(course => {
     const titleMatch = course.title.toLowerCase().includes(query);
     const descMatch = course.description.toLowerCase().includes(query);
-    const instructorMatch = course.instructor.toLowerCase().includes(query);
+    const instructorMatch = (course.instructor || '').toLowerCase().includes(query);
     const matchesQuery = query === '' || titleMatch || descMatch || instructorMatch;
 
     const matchesProvider = selectedProviders.length === 0 || (course.provider && selectedProviders.includes(course.provider.toLowerCase()));
@@ -64,7 +64,6 @@ function applyFilters() {
 
   renderCourses();
 }
-
 
 function renderCourses() {
   courseContainer.innerHTML = '';
@@ -105,9 +104,10 @@ function renderCourses() {
   renderPagination();
 }
 
+function renderPagination() {
+  paginationContainer.innerHTML = '';
+  const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
 
-
-  // Pagination buttons
   for (let i = 1; i <= totalPages; i++) {
     const li = document.createElement('li');
     li.className = 'page-item' + (i === currentPage ? ' active' : '');
