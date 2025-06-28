@@ -115,10 +115,22 @@
 </nav>
 
 
-<main class="container my-5">
+  <main class="container my-5">
   <h1 class="mb-4" style="color:#7FDBFF;">AI / ML Courses</h1>
+
+  <!-- Optional: Search Bar -->
+  <input type="search" id="searchBar" class="form-control mb-4" placeholder="Search courses..." />
+
+  <!-- Optional: Filters -->
+  <div id="filters" class="mb-4"></div>
+
+  <!-- Courses Grid -->
   <div id="course-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"></div>
+
+  <!-- Pagination Controls -->
+  <div id="pagination" class="mt-4 d-flex justify-content-center"></div>
 </main>
+
 
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
