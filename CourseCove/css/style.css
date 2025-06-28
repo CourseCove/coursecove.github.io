@@ -567,6 +567,38 @@ footer a.text-light:hover {
   list-style-type: disc;
 }
 
+#filters {
+  background-color: #002a4d;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+#filters h5 {
+  color: #7FDBFF;
+  font-weight: 600;
+}
+
+#filters label.form-label {
+  color: #ccc;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+#filters input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+#filters div > div {
+  margin-bottom: 6px;
+}
+
+#filters input[type="checkbox"]:focus + label {
+  outline: 2px solid #7FDBFF;
+  outline-offset: 2px;
+}
 
 
 
