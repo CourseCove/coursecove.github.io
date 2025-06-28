@@ -33,8 +33,8 @@ function setupEventListeners() {
 
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
-  const selectedProviders = [...filters.querySelectorAll('input[name="provider"]:checked')].map(i => i.value);
-  const selectedLevels = [...filters.querySelectorAll('input[name="level"]:checked')].map(i => i.value);
+  const selectedProviders = [...filters.querySelectorAll('input[name="provider"]:checked')].map(i => i.value.toLowerCase());
+  const selectedLevels = [...filters.querySelectorAll('input[name="level"]:checked')].map(i => i.value.toLowerCase());
   const selectedDurations = [...filters.querySelectorAll('input[name="duration"]:checked')].map(i => i.value);
 
   filteredCourses = allCourses.filter(course => {
@@ -43,8 +43,8 @@ function applyFilters() {
       course.description.toLowerCase().includes(query) ||
       (course.keywords || []).some(k => k.toLowerCase().includes(query));
 
-    const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes(course.provider);
-    const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes(course.level);
+      const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes(course.provider.toLowerCase());
+      const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes(course.level.toLowerCase());
 
     const matchesDuration = (() => {
       if (selectedDurations.length === 0) return true;
