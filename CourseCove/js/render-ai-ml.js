@@ -43,8 +43,8 @@ function applyFilters() {
       course.description.toLowerCase().includes(query) ||
       (course.keywords || []).some(k => k.toLowerCase().includes(query));
 
-      const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes(course.provider.toLowerCase());
-      const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes(course.level.toLowerCase());
+     const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes((course.provider || '').toLowerCase());
+     const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes((course.level || '').toLowerCase());
 
     const matchesDuration = (() => {
       if (selectedDurations.length === 0) return true;
