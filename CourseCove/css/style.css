@@ -600,6 +600,11 @@ footer a.text-light:hover {
   outline-offset: 2px;
 }
 
+.card-img-top {
+  height: 150px;
+  object-fit: contain;
+  background: #e9ecef;
+}
 
 
 
