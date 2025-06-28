@@ -93,12 +93,8 @@ function renderCourses() {
         <img src="${course.image || 'images/default-course.jpg'}" class="card-img-top" alt="${course.title}" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${course.title}</h5>
-          <p class="text-muted mb-1"><small>Instructor: ${course.instructor}</small></p>
           <p class="mb-1">${stars} (${course.rating || 'N/A'})</p>
           <p class="card-text flex-grow-1">${course.description}</p>
-          <p><strong>Level:</strong> ${course.level || 'N/A'}</p>
-          <p><strong>Provider:</strong> ${course.provider || 'N/A'}</p>
-          <p><strong>Duration:</strong> ${course.duration || 'N/A'} hours</p>
           <p><strong>Price:</strong> ${course.price || 'Free'}</p>
           <a href="${course.url}" target="_blank" rel="noopener" class="btn btn-primary mt-auto">Go to Course</a>
         </div>
