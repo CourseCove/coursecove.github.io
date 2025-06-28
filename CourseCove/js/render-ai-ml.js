@@ -150,4 +150,4 @@ function clearFilters() {
 }
 
 // Initial load
-loadCourses();
+document.addEventListener('DOMContentLoaded', loadCourses);
