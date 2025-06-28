@@ -1,20 +1,122 @@
 [
-    {
-      "title": "Introduction to Political Science",
-      "instructor": "University of Copenhagen",
-      "rating": 4.6,
-      "description": "Explore fundamental political science theories and concepts.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/learn/political-science"
-    },
-    {
-      "title": "Microeconomics Principles",
-      "instructor": "University of Illinois",
-      "rating": 4.7,
-      "description": "Understand microeconomic principles and decision-making.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/learn/microeconomics"
-    }
-]  
+  {
+    "title": "Global Politics",
+    "instructor": "University of London",
+    "rating": 4.7,
+    "description": "Explore global governance, power dynamics, and international relations.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/global-politics",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": "20"
+  },
+  {
+    "title": "Principles of Economics",
+    "instructor": "MIT OpenCourseWare",
+    "rating": 4.8,
+    "description": "Micro and macroeconomic principles and economic reasoning.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://ocw.mit.edu/courses/principles-of-economics",
+    "provider": "MIT OCW",
+    "level": "Beginner",
+    "duration": "25"
+  },
+  {
+    "title": "Behavioral Finance",
+    "instructor": "Duke University",
+    "rating": 4.6,
+    "description": "Learn how psychology affects financial decision-making.",
+    "price": "$49",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/behavioral-finance",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": "15"
+  },
+  {
+    "title": "Public Policy Challenges",
+    "instructor": "University of Virginia",
+    "rating": 4.5,
+    "description": "Analysis of global public policy issues and interventions.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/public-policy",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": "12"
+  },
+  {
+    "title": "Development Economics",
+    "instructor": "Stanford Online",
+    "rating": 4.4,
+    "description": "Economics and policy in developing countries.",
+    "price": "$49",
+    "image": "images/logo.png",
+    "url": "https://online.stanford.edu/courses/development-economics",
+    "provider": "Stanford Online",
+    "level": "Advanced",
+    "duration": "18"
+  },
+  {
+    "title": "Political Philosophy",
+    "instructor": "University of Oxford",
+    "rating": 4.7,
+    "description": "Key philosophical ideas about government and justice.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://www.edx.org/course/political-philosophy",
+    "provider": "edX",
+    "level": "Advanced",
+    "duration": "20"
+  },
+  {
+    "title": "International Economics",
+    "instructor": "Yale University",
+    "rating": 4.6,
+    "description": "Trade theory, international finance, and policy.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://oyc.yale.edu/economics/international-economics",
+    "provider": "Yale Open Course",
+    "level": "Intermediate",
+    "duration": "22"
+  },
+  {
+    "title": "Game Theory",
+    "instructor": "Stanford University",
+    "rating": 4.8,
+    "description": "Strategic interaction models applicable to economics and politics.",
+    "price": "$49",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/game-theory",
+    "provider": "Coursera",
+    "level": "Advanced",
+    "duration": "15"
+  },
+  {
+    "title": "U.S. Constitutional Law",
+    "instructor": "Harvard University",
+    "rating": 4.5,
+    "description": "Examination of key Supreme Court cases and constitutional principles.",
+    "price": "Free",
+    "image": "images/logo.png",
+    "url": "https://online-learning.harvard.edu/course/us-constitutional-law",
+    "provider": "Harvard Online",
+    "level": "Intermediate",
+    "duration": "18"
+  },
+  {
+    "title": "Environmental Policy",
+    "instructor": "Michigan University",
+    "rating": 4.4,
+    "description": "Policies on environmental challenges and sustainability.",
+    "price": "$49",
+    "image": "images/logo.png",
+    "url": "https://www.coursera.org/learn/environmental-policy",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": "14"
+  }
+]
