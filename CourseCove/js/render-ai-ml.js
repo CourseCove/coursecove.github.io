@@ -4,7 +4,7 @@ let currentPage = 1;
 const itemsPerPage = 10;
 
 const searchBar = document.getElementById('searchBar');
-const courseContainer = document.getElementById('courses');
+const courseContainer = document.getElementById('course-container');
 const paginationContainer = document.getElementById('pagination');
 const filters = document.getElementById('filters');
 
