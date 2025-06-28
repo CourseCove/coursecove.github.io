@@ -24,20 +24,27 @@ function renderCourses() {
   const pageItems = filteredCourses.slice(start, end);
 
   pageItems.forEach(course => {
-    const div = document.createElement('div');
-    div.className = 'course';
-    div.innerHTML = `
-      <h3><a href="${course.url}" target="_blank">${course.title}</a></h3>
-      <p>${course.description}</p>
-      <p><strong>Provider:</strong> ${course.provider}</p>
-      <p><strong>Level:</strong> ${course.level}</p>
-      <p><strong>Duration:</strong> ${course.duration}</p>
+    const col = document.createElement('div');
+    col.className = 'col';
+    col.innerHTML = `
+      <div class="card h-100">
+        <img src="images/ai.jpg" class="card-img-top" alt="${course.title}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${course.title}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">${course.provider}</h6>
+          <p class="card-text">${course.description}</p>
+          <div class="mt-auto">
+            <a href="${course.url}" class="btn btn-outline-info mt-3" target="_blank">View Course</a>
+          </div>
+        </div>
+      </div>
     `;
-    courseContainer.appendChild(div);
+    courseContainer.appendChild(col);
   });
 
   renderPagination();
 }
+
 
 function renderPagination() {
   paginationContainer.innerHTML = '';
