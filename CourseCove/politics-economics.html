@@ -82,19 +82,12 @@
   
   
 
-<main class="container my-5">
+
+
+  <main class="container my-5">
   <h1 class="mb-4">Politics & Economics Courses</h1>
-
-  <div class="row mb-4">
-    <!-- Search bar full width -->
-    <div class="col-12">
-      <input type="text" id="searchBar" class="form-control" placeholder="Search courses...">
-    </div>
-  </div>
-
   <div class="row">
-    <!-- Filters (Left Sidebar) -->
-    <div class="col-lg-3 mb-4">
+    <aside class="col-lg-4 mb-4">
       <div class="card p-3" id="filters">
         <h5 class="mb-3">Filter by</h5>
 
@@ -125,15 +118,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </aside>
 
-    <!-- Course Cards (Main Content) -->
-    <div class="col-lg-9">
-      <div class="row row-cols-1 row-cols-md-2 g-4" id="course-container"></div>
-
-      <!-- Pagination -->
-      <div class="mt-4 d-flex flex-wrap gap-2" id="pagination"></div>
-    </div>
+    <section class="col-lg-8">
+      <input type="search" id="searchBar" class="form-control mb-3" placeholder="Search politics & economics courses..." />
+      <div id="course-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4"></div>
+      <nav>
+        <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
+      </nav>
+    </section>
   </div>
 </main>
 
