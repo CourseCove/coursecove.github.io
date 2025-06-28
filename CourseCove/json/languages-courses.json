@@ -1,48 +1,122 @@
 [
-    {
-      "title": "English for Career Development",
-      "instructor": "University of Pennsylvania",
-      "rating": 4.7,
-      "description": "Improve English skills for job searching and career advancement.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/learn/careerdevelopment"
-    },
-    {
-      "title": "Mandarin Chinese for Beginners",
-      "instructor": "Peking University",
-      "rating": 4.6,
-      "description": "Learn basic Mandarin Chinese speaking and writing.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/learn/mandarin-chinese"
-    },
-    {
-      "title": "Spanish Vocabulary: Meeting People",
-      "instructor": "University of California, Davis",
-      "rating": 4.5,
-      "description": "Learn Spanish vocabulary for everyday conversation.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/learn/spanish-vocabulary"
-    },
-    {
-      "title": "Complete French Language Course",
-      "instructor": "Francois Dupont",
-      "rating": 4.6,
-      "description": "From beginner to advanced French speaking skills.",
-      "price": "$14.99",
-      "image": "images/logo.png",
-      "url": "https://www.udemy.com/course/complete-french-language-course/"
-    },
-    {
-      "title": "Japanese for Beginners",
-      "instructor": "John Smith",
-      "rating": 4.4,
-      "description": "Learn Japanese basics with speaking and writing.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.udemy.com/course/japanese-for-beginners/"
-    }
-  ]
-  
+  {
+    "title": "First Step Korean",
+    "instructor": "Yonsei University",
+    "rating": 4.8,
+    "description": "Learn the basics of Korean language and culture.",
+    "price": "Free",
+    "image": "images/korean.png",
+    "url": "https://www.coursera.org/learn/learn-korean",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": "12"
+  },
+  {
+    "title": "Spanish for Beginners",
+    "instructor": "University of California, Davis",
+    "rating": 4.7,
+    "description": "Foundational Spanish for everyday communication.",
+    "price": "Free",
+    "image": "images/spanish.png",
+    "url": "https://www.coursera.org/learn/spanish-for-beginners",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": "15"
+  },
+  {
+    "title": "Mandarin Chinese Level 1",
+    "instructor": "MandarinX",
+    "rating": 4.6,
+    "description": "Introduction to spoken and written Mandarin Chinese.",
+    "price": "Free",
+    "image": "images/chinese.png",
+    "url": "https://www.edx.org/course/mandarin-chinese-level-1",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": "20"
+  },
+  {
+    "title": "Learn French for Global Communication",
+    "instructor": "ESSEC Business School",
+    "rating": 4.5,
+    "description": "French language fundamentals for real-world interaction.",
+    "price": "$49",
+    "image": "images/french.png",
+    "url": "https://www.coursera.org/learn/french-for-beginners",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": "10"
+  },
+  {
+    "title": "German Made Simple",
+    "instructor": "Udemy Instructor",
+    "rating": 4.5,
+    "description": "German basics for everyday situations and grammar rules.",
+    "price": "$19.99",
+    "image": "images/german.png",
+    "url": "https://www.udemy.com/course/german-made-simple",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": "7"
+  },
+  {
+    "title": "Russian for Beginners",
+    "instructor": "Saint Petersburg State University",
+    "rating": 4.6,
+    "description": "Cyrillic alphabet, grammar, and conversational skills.",
+    "price": "Free",
+    "image": "images/russian.png",
+    "url": "https://www.coursera.org/learn/russian-alphabet",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": "14"
+  },
+  {
+    "title": "Japanese for Beginners",
+    "instructor": "Waseda University",
+    "rating": 4.6,
+    "description": "Introductory course to Japanese writing and speaking.",
+    "price": "Free",
+    "image": "images/japanese.png",
+    "url": "https://www.edx.org/course/japanese-pronunciation",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": "16"
+  },
+  {
+    "title": "English for Career Development",
+    "instructor": "University of Pennsylvania",
+    "rating": 4.7,
+    "description": "English for professional settings like resumes and interviews.",
+    "price": "Free",
+    "image": "images/english-career.png",
+    "url": "https://www.coursera.org/learn/careerdevelopment",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": "12"
+  },
+  {
+    "title": "Arabic Language for Beginners",
+    "instructor": "Udemy Instructor",
+    "rating": 4.4,
+    "description": "Modern Standard Arabic: pronunciation, writing, and grammar.",
+    "price": "$29.99",
+    "image": "images/arabic.png",
+    "url": "https://www.udemy.com/course/arabic-for-beginners",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": "9"
+  },
+  {
+    "title": "Italian Language and Culture",
+    "instructor": "Wellesley College",
+    "rating": 4.5,
+    "description": "Beginner-level Italian vocabulary and cultural lessons.",
+    "price": "Free",
+    "image": "images/italian.png",
+    "url": "https://www.edx.org/course/italian-language-and-culture",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": "13"
+  }
+]
