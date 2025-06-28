@@ -143,5 +143,11 @@ function renderPagination() {
   }
 }
 
+function clearFilters() {
+  filters.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+  searchBar.value = '';
+  applyFilters();
+}
+
 // Initial load
 loadCourses();
