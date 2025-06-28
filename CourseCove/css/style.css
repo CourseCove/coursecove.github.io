@@ -606,7 +606,7 @@ footer a.text-light:hover {
   background: #e9ecef;
 }
 
-h6.card-subtitle {
+.card-body h6.card-subtitle {
   color: #fff;
 }
 
