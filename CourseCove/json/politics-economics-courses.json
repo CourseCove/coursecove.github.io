@@ -1,122 +1,852 @@
 [
   {
-    "title": "Global Politics",
-    "instructor": "University of London",
-    "rating": 4.7,
-    "description": "Explore global governance, power dynamics, and international relations.",
-    "price": "Free",
-    "image": "images/logo.png",
-    "url": "https://www.coursera.org/learn/global-politics",
+    "title": "Development Studies Course 1",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Prof. Mark Smith",
     "provider": "Coursera",
     "level": "Intermediate",
-    "duration": "20"
+    "duration": 5.2,
+    "price": "Free",
+    "rating": 5.0,
+    "url": "https://example.com/politics-economics-course-1",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "market",
+      "economics",
+      "government"
+    ]
   },
   {
-    "title": "Principles of Economics",
-    "instructor": "MIT OpenCourseWare",
-    "rating": 4.8,
-    "description": "Micro and macroeconomic principles and economic reasoning.",
-    "price": "Free",
-    "image": "images/logo.png",
-    "url": "https://ocw.mit.edu/courses/principles-of-economics",
-    "provider": "MIT OCW",
+    "title": "Macroeconomics Course 2",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Coursera",
     "level": "Beginner",
-    "duration": "25"
-  },
-  {
-    "title": "Behavioral Finance",
-    "instructor": "Duke University",
-    "rating": 4.6,
-    "description": "Learn how psychology affects financial decision-making.",
-    "price": "$49",
-    "image": "images/logo.png",
-    "url": "https://www.coursera.org/learn/behavioral-finance",
-    "provider": "Coursera",
-    "level": "Intermediate",
-    "duration": "15"
-  },
-  {
-    "title": "Public Policy Challenges",
-    "instructor": "University of Virginia",
-    "rating": 4.5,
-    "description": "Analysis of global public policy issues and interventions.",
+    "duration": 4.1,
     "price": "Free",
-    "image": "images/logo.png",
-    "url": "https://www.coursera.org/learn/public-policy",
-    "provider": "Coursera",
+    "rating": 4.9,
+    "url": "https://example.com/politics-economics-course-2",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "international",
+      "politics",
+      "government"
+    ]
+  },
+  {
+    "title": "Macroeconomics Course 3",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Udemy",
     "level": "Intermediate",
-    "duration": "12"
+    "duration": 2.0,
+    "price": "$54",
+    "rating": 4.8,
+    "url": "https://example.com/politics-economics-course-3",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "government",
+      "market"
+    ]
   },
   {
-    "title": "Development Economics",
-    "instructor": "Stanford Online",
-    "rating": 4.4,
-    "description": "Economics and policy in developing countries.",
-    "price": "$49",
-    "image": "images/logo.png",
-    "url": "https://online.stanford.edu/courses/development-economics",
-    "provider": "Stanford Online",
-    "level": "Advanced",
-    "duration": "18"
-  },
-  {
-    "title": "Political Philosophy",
-    "instructor": "University of Oxford",
-    "rating": 4.7,
-    "description": "Key philosophical ideas about government and justice.",
-    "price": "Free",
-    "image": "images/logo.png",
-    "url": "https://www.edx.org/course/political-philosophy",
+    "title": "Comparative Politics Course 4",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Dr. Alice Johnson",
     "provider": "edX",
     "level": "Advanced",
-    "duration": "20"
+    "duration": 4.1,
+    "price": "$81",
+    "rating": 3.6,
+    "url": "https://example.com/politics-economics-course-4",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "development",
+      "politics"
+    ]
   },
   {
-    "title": "International Economics",
-    "instructor": "Yale University",
-    "rating": 4.6,
-    "description": "Trade theory, international finance, and policy.",
+    "title": "Microeconomics Course 5",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Prof. Mark Smith",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": 2.7,
     "price": "Free",
-    "image": "images/logo.png",
-    "url": "https://oyc.yale.edu/economics/international-economics",
-    "provider": "Yale Open Course",
-    "level": "Intermediate",
-    "duration": "22"
+    "rating": 4.5,
+    "url": "https://example.com/politics-economics-course-5",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "theory",
+      "global",
+      "international"
+    ]
   },
   {
-    "title": "Game Theory",
-    "instructor": "Stanford University",
+    "title": "Global Economics Course 6",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "edX",
+    "level": "Advanced",
+    "duration": 2.9,
+    "price": "$54",
+    "rating": 3.1,
+    "url": "https://example.com/politics-economics-course-6",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "market",
+      "development",
+      "economics"
+    ]
+  },
+  {
+    "title": "Game Theory Course 7",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Jane Doe",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": 7.2,
+    "price": "Free",
+    "rating": 4.0,
+    "url": "https://example.com/politics-economics-course-7",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "theory",
+      "economics",
+      "government"
+    ]
+  },
+  {
+    "title": "Game Theory Course 8",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "John Appleseed",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": 9.0,
+    "price": "Free",
+    "rating": 4.1,
+    "url": "https://example.com/politics-economics-course-8",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "international",
+      "development"
+    ]
+  },
+  {
+    "title": "Political Ideologies Course 9",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "Jane Doe",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": 3.4,
+    "price": "Free",
+    "rating": 3.7,
+    "url": "https://example.com/politics-economics-course-9",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "theory",
+      "development",
+      "government"
+    ]
+  },
+  {
+    "title": "Global Economics Course 10",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Emily Clark",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": 10.3,
+    "price": "$62",
+    "rating": 3.6,
+    "url": "https://example.com/politics-economics-course-10",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "economics",
+      "government",
+      "development"
+    ]
+  },
+  {
+    "title": "Political Philosophy Course 11",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Jane Doe",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": 4.0,
+    "price": "Free",
+    "rating": 3.8,
+    "url": "https://example.com/politics-economics-course-11",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "international",
+      "government",
+      "global"
+    ]
+  },
+  {
+    "title": "Game Theory Course 12",
+    "description": "Analyze global trends, international trade, and geopolitical influences.",
+    "instructor": "John Appleseed",
+    "provider": "Udemy",
+    "level": "Advanced",
+    "duration": 6.5,
+    "price": "Free",
+    "rating": 4.4,
+    "url": "https://example.com/politics-economics-course-12",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "politics",
+      "government",
+      "international"
+    ]
+  },
+  {
+    "title": "Political Ideologies Course 13",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "John Appleseed",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": 5.3,
+    "price": "Free",
     "rating": 4.8,
-    "description": "Strategic interaction models applicable to economics and politics.",
-    "price": "$49",
-    "image": "images/logo.png",
-    "url": "https://www.coursera.org/learn/game-theory",
+    "url": "https://example.com/politics-economics-course-13",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "theory",
+      "economics"
+    ]
+  },
+  {
+    "title": "Political Ideologies Course 14",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "Prof. Mark Smith",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": 6.3,
+    "price": "$98",
+    "rating": 4.1,
+    "url": "https://example.com/politics-economics-course-14",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "development",
+      "economics"
+    ]
+  },
+  {
+    "title": "Microeconomics Course 15",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "John Appleseed",
     "provider": "Coursera",
     "level": "Advanced",
-    "duration": "15"
-  },
-  {
-    "title": "U.S. Constitutional Law",
-    "instructor": "Harvard University",
-    "rating": 4.5,
-    "description": "Examination of key Supreme Court cases and constitutional principles.",
+    "duration": 3.5,
     "price": "Free",
-    "image": "images/logo.png",
-    "url": "https://online-learning.harvard.edu/course/us-constitutional-law",
-    "provider": "Harvard Online",
-    "level": "Intermediate",
-    "duration": "18"
+    "rating": 4.0,
+    "url": "https://example.com/politics-economics-course-15",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "government",
+      "global",
+      "market"
+    ]
   },
   {
-    "title": "Environmental Policy",
-    "instructor": "Michigan University",
-    "rating": 4.4,
-    "description": "Policies on environmental challenges and sustainability.",
-    "price": "$49",
-    "image": "images/logo.png",
-    "url": "https://www.coursera.org/learn/environmental-policy",
+    "title": "International Relations Course 16",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "Emily Clark",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": 8.3,
+    "price": "$47",
+    "rating": 3.8,
+    "url": "https://example.com/politics-economics-course-16",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "development",
+      "politics",
+      "market"
+    ]
+  },
+  {
+    "title": "Comparative Politics Course 17",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Jane Doe",
+    "provider": "Coursera",
+    "level": "Advanced",
+    "duration": 10.8,
+    "price": "Free",
+    "rating": 3.7,
+    "url": "https://example.com/politics-economics-course-17",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "government",
+      "economics",
+      "international"
+    ]
+  },
+  {
+    "title": "International Relations Course 18",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "Jane Doe",
     "provider": "Coursera",
     "level": "Intermediate",
-    "duration": "14"
+    "duration": 10.5,
+    "price": "Free",
+    "rating": 3.1,
+    "url": "https://example.com/politics-economics-course-18",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "development",
+      "policy",
+      "politics"
+    ]
+  },
+  {
+    "title": "Global Economics Course 19",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "edX",
+    "level": "Advanced",
+    "duration": 10.2,
+    "price": "Free",
+    "rating": 4.9,
+    "url": "https://example.com/politics-economics-course-19",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "government",
+      "development"
+    ]
+  },
+  {
+    "title": "Development Studies Course 20",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "John Appleseed",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": 4.7,
+    "price": "$50",
+    "rating": 4.6,
+    "url": "https://example.com/politics-economics-course-20",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "development",
+      "economics"
+    ]
+  },
+  {
+    "title": "International Relations Course 21",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Jane Doe",
+    "provider": "Udemy",
+    "level": "Intermediate",
+    "duration": 3.4,
+    "price": "Free",
+    "rating": 3.1,
+    "url": "https://example.com/politics-economics-course-21",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "development",
+      "global",
+      "economics"
+    ]
+  },
+  {
+    "title": "Political Philosophy Course 22",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Emily Clark",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": 6.6,
+    "price": "$81",
+    "rating": 4.9,
+    "url": "https://example.com/politics-economics-course-22",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "international",
+      "politics",
+      "theory"
+    ]
+  },
+  {
+    "title": "Comparative Politics Course 23",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Jane Doe",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": 10.0,
+    "price": "Free",
+    "rating": 3.3,
+    "url": "https://example.com/politics-economics-course-23",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "global",
+      "international",
+      "policy"
+    ]
+  },
+  {
+    "title": "Development Studies Course 24",
+    "description": "Analyze global trends, international trade, and geopolitical influences.",
+    "instructor": "Emily Clark",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": 6.8,
+    "price": "Free",
+    "rating": 4.0,
+    "url": "https://example.com/politics-economics-course-24",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "development",
+      "policy",
+      "theory"
+    ]
+  },
+  {
+    "title": "Macroeconomics Course 25",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": 6.8,
+    "price": "Free",
+    "rating": 4.3,
+    "url": "https://example.com/politics-economics-course-25",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "economics",
+      "theory",
+      "politics"
+    ]
+  },
+  {
+    "title": "Comparative Politics Course 26",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "John Appleseed",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": 7.0,
+    "price": "Free",
+    "rating": 4.5,
+    "url": "https://example.com/politics-economics-course-26",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "market",
+      "policy",
+      "global"
+    ]
+  },
+  {
+    "title": "Public Policy Course 27",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "John Appleseed",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": 3.7,
+    "price": "$30",
+    "rating": 3.7,
+    "url": "https://example.com/politics-economics-course-27",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "international",
+      "global",
+      "theory"
+    ]
+  },
+  {
+    "title": "Macroeconomics Course 28",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Emily Clark",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": 4.1,
+    "price": "Free",
+    "rating": 4.0,
+    "url": "https://example.com/politics-economics-course-28",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "market",
+      "theory",
+      "economics"
+    ]
+  },
+  {
+    "title": "Microeconomics Course 29",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "John Appleseed",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": 11.7,
+    "price": "Free",
+    "rating": 4.9,
+    "url": "https://example.com/politics-economics-course-29",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "global",
+      "economics",
+      "theory"
+    ]
+  },
+  {
+    "title": "Global Economics Course 30",
+    "description": "Analyze global trends, international trade, and geopolitical influences.",
+    "instructor": "Jane Doe",
+    "provider": "edX",
+    "level": "Advanced",
+    "duration": 9.5,
+    "price": "$68",
+    "rating": 4.0,
+    "url": "https://example.com/politics-economics-course-30",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "economics",
+      "theory",
+      "politics"
+    ]
+  },
+  {
+    "title": "Political Philosophy Course 31",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": 11.5,
+    "price": "Free",
+    "rating": 3.9,
+    "url": "https://example.com/politics-economics-course-31",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "economics",
+      "policy",
+      "development"
+    ]
+  },
+  {
+    "title": "Political Ideologies Course 32",
+    "description": "Analyze global trends, international trade, and geopolitical influences.",
+    "instructor": "John Appleseed",
+    "provider": "Udemy",
+    "level": "Advanced",
+    "duration": 6.0,
+    "price": "Free",
+    "rating": 3.6,
+    "url": "https://example.com/politics-economics-course-32",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "theory",
+      "politics",
+      "economics"
+    ]
+  },
+  {
+    "title": "Political Philosophy Course 33",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Emily Clark",
+    "provider": "edX",
+    "level": "Advanced",
+    "duration": 10.7,
+    "price": "Free",
+    "rating": 3.2,
+    "url": "https://example.com/politics-economics-course-33",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "development",
+      "government",
+      "global"
+    ]
+  },
+  {
+    "title": "Public Policy Course 34",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Prof. Mark Smith",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": 8.9,
+    "price": "$24",
+    "rating": 4.3,
+    "url": "https://example.com/politics-economics-course-34",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "theory",
+      "economics",
+      "market"
+    ]
+  },
+  {
+    "title": "Public Policy Course 35",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Udemy",
+    "level": "Intermediate",
+    "duration": 3.3,
+    "price": "Free",
+    "rating": 4.0,
+    "url": "https://example.com/politics-economics-course-35",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "theory",
+      "development",
+      "economics"
+    ]
+  },
+  {
+    "title": "Macroeconomics Course 36",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Emily Clark",
+    "provider": "Udemy",
+    "level": "Intermediate",
+    "duration": 3.3,
+    "price": "$31",
+    "rating": 3.8,
+    "url": "https://example.com/politics-economics-course-36",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "government",
+      "politics",
+      "market"
+    ]
+  },
+  {
+    "title": "International Relations Course 37",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "John Appleseed",
+    "provider": "edX",
+    "level": "Advanced",
+    "duration": 1.8,
+    "price": "$31",
+    "rating": 4.2,
+    "url": "https://example.com/politics-economics-course-37",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "theory",
+      "international",
+      "global"
+    ]
+  },
+  {
+    "title": "Microeconomics Course 38",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Udemy",
+    "level": "Intermediate",
+    "duration": 7.8,
+    "price": "Free",
+    "rating": 3.6,
+    "url": "https://example.com/politics-economics-course-38",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "politics",
+      "development",
+      "international"
+    ]
+  },
+  {
+    "title": "International Relations Course 39",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "John Appleseed",
+    "provider": "Coursera",
+    "level": "Advanced",
+    "duration": 11.8,
+    "price": "Free",
+    "rating": 4.6,
+    "url": "https://example.com/politics-economics-course-39",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "politics",
+      "government"
+    ]
+  },
+  {
+    "title": "International Relations Course 40",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Udemy",
+    "level": "Intermediate",
+    "duration": 7.8,
+    "price": "Free",
+    "rating": 3.7,
+    "url": "https://example.com/politics-economics-course-40",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "development",
+      "politics",
+      "theory"
+    ]
+  },
+  {
+    "title": "Macroeconomics Course 41",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Prof. Mark Smith",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": 2.1,
+    "price": "Free",
+    "rating": 4.2,
+    "url": "https://example.com/politics-economics-course-41",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "politics",
+      "global",
+      "theory"
+    ]
+  },
+  {
+    "title": "Political Ideologies Course 42",
+    "description": "Examine public decision-making and strategic behavior.",
+    "instructor": "Emily Clark",
+    "provider": "Udemy",
+    "level": "Intermediate",
+    "duration": 8.0,
+    "price": "Free",
+    "rating": 4.7,
+    "url": "https://example.com/politics-economics-course-42",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "global",
+      "economics",
+      "government"
+    ]
+  },
+  {
+    "title": "Comparative Politics Course 43",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Emily Clark",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": 7.0,
+    "price": "Free",
+    "rating": 4.1,
+    "url": "https://example.com/politics-economics-course-43",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "government",
+      "theory",
+      "politics"
+    ]
+  },
+  {
+    "title": "Microeconomics Course 44",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "Emily Clark",
+    "provider": "Udemy",
+    "level": "Intermediate",
+    "duration": 10.3,
+    "price": "$78",
+    "rating": 4.0,
+    "url": "https://example.com/politics-economics-course-44",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "policy",
+      "economics",
+      "market"
+    ]
+  },
+  {
+    "title": "Development Studies Course 45",
+    "description": "Analyze global trends, international trade, and geopolitical influences.",
+    "instructor": "Jane Doe",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": 8.2,
+    "price": "Free",
+    "rating": 3.4,
+    "url": "https://example.com/politics-economics-course-45",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "politics",
+      "international",
+      "policy"
+    ]
+  },
+  {
+    "title": "Global Economics Course 46",
+    "description": "Dive into theories and concepts of political thought from ancient to modern times.",
+    "instructor": "Prof. Mark Smith",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": 6.4,
+    "price": "Free",
+    "rating": 3.1,
+    "url": "https://example.com/politics-economics-course-46",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "international",
+      "politics",
+      "government"
+    ]
+  },
+  {
+    "title": "Political Ideologies Course 47",
+    "description": "Analyze global trends, international trade, and geopolitical influences.",
+    "instructor": "Dr. Alice Johnson",
+    "provider": "Udemy",
+    "level": "Advanced",
+    "duration": 4.3,
+    "price": "$25",
+    "rating": 4.6,
+    "url": "https://example.com/politics-economics-course-47",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "market",
+      "policy",
+      "government"
+    ]
+  },
+  {
+    "title": "Political Philosophy Course 48",
+    "description": "Explore the fundamentals and key issues shaping modern politics.",
+    "instructor": "John Appleseed",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": 1.6,
+    "price": "$39",
+    "rating": 4.7,
+    "url": "https://example.com/politics-economics-course-48",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "global",
+      "development",
+      "market"
+    ]
+  },
+  {
+    "title": "Political Philosophy Course 49",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Prof. Mark Smith",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": 6.0,
+    "price": "$69",
+    "rating": 3.3,
+    "url": "https://example.com/politics-economics-course-49",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "global",
+      "politics",
+      "international"
+    ]
+  },
+  {
+    "title": "International Relations Course 50",
+    "description": "Understand how economies function at a macro and micro level.",
+    "instructor": "Emily Clark",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": 10.3,
+    "price": "$42",
+    "rating": 4.7,
+    "url": "https://example.com/politics-economics-course-50",
+    "image": "images/default-course.jpg",
+    "keywords": [
+      "government",
+      "economics",
+      "policy"
+    ]
   }
 ]
