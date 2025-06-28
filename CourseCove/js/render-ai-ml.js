@@ -12,6 +12,7 @@ async function loadCourses() {
   try {
     const response = await fetch(`json/ai-ml-courses.json?t=${Date.now()}`);
     allCourses = await response.json();
+    console.log('Loaded courses:', allCourses);  // Add this line
     filteredCourses = allCourses;
     renderCourses();
     setupEventListeners();
@@ -19,6 +20,7 @@ async function loadCourses() {
     courseContainer.innerHTML = '<p class="text-danger">Failed to load courses.</p>';
   }
 }
+
 
 function setupEventListeners() {
   searchBar.addEventListener('input', () => {
