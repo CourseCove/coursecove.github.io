@@ -27,17 +27,20 @@ function renderCourses() {
     const col = document.createElement('div');
     col.className = 'col';
     col.innerHTML = `
-      <div class="card h-100">
-        <img src="images/ai.jpg" class="card-img-top" alt="${course.title}">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">${course.title}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${course.provider}</h6>
-          <p class="card-text">${course.description}</p>
-          <div class="mt-auto">
-            <a href="${course.url}" class="btn btn-outline-info mt-3" target="_blank">View Course</a>
-          </div>
-        </div>
+      <div class="col">
+  <div class="card h-100">
+    <img src="images/ai.jpg" class="card-img-top" alt="Course title">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Course Title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Provider Name</h6>
+      <p class="card-text">Short description of the course.</p>
+      <div class="mt-auto">
+        <a href="#" class="btn btn-outline-info mt-3" target="_blank">View Course</a>
       </div>
+    </div>
+  </div>
+</div>
+
     `;
     courseContainer.appendChild(col);
   });
