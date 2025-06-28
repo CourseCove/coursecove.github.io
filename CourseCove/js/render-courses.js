@@ -65,43 +65,47 @@ function applyFilters() {
   renderCourses();
 }
 
+
 function renderCourses() {
   courseContainer.innerHTML = '';
-  paginationContainer.innerHTML = '';
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = filteredCourses.slice(start, end);
 
-  if (filteredCourses.length === 0) {
+  if (pageItems.length === 0) {
     courseContainer.innerHTML = '<p>No courses found.</p>';
+    paginationContainer.innerHTML = '';
     return;
   }
 
-  const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
-
-  if (currentPage > totalPages) currentPage = totalPages;
-
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const coursesToShow = filteredCourses.slice(start, end);
-
-  coursesToShow.forEach(course => {
-    const starsCount = Math.round(course.rating || 0);
-    const stars = '⭐'.repeat(starsCount) + '☆'.repeat(5 - starsCount);
+  pageItems.forEach(course => {
+    const rating = Math.round(course.rating || 0);
+    const ratingStars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
 
     const card = document.createElement('div');
     card.className = 'col';
     card.innerHTML = `
       <div class="card h-100 shadow-sm">
-        <img src="${course.image || 'images/default-course.jpg'}" class="card-img-top" alt="${course.title}" />
+        <img src="${course.image || 'images/default-course.jpg'}" alt="${course.title}" class="card-img-top" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${course.title}</h5>
-          <p class="mb-1">${stars} (${course.rating || 'N/A'})</p>
+          <h6 class="card-subtitle mb-2 text-muted">${course.instructor || course.provider || 'Unknown'}</h6>
+          <div class="rating mb-2">${ratingStars} (${(course.rating || 0).toFixed(1)})</div>
           <p class="card-text flex-grow-1">${course.description}</p>
-          <p><strong>Price:</strong> ${course.price || 'Free'}</p>
-          <a href="${course.url}" target="_blank" rel="noopener" class="btn btn-primary mt-auto">Go to Course</a>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="price fw-bold">${course.price || 'Free'}</span>
+            <a href="${course.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
+          </div>
         </div>
       </div>
     `;
     courseContainer.appendChild(card);
   });
+
+  renderPagination();
+}
+
+
 
   // Pagination buttons
   for (let i = 1; i <= totalPages; i++) {
