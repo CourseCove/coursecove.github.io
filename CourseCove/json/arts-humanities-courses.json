@@ -1,48 +1,122 @@
 [
-    {
-      "title": "The Science of Well-Being",
-      "instructor": "Laurie Santos",
-      "rating": 4.9,
-      "description": "Psychological science behind happiness and building productive habits.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/learn/the-science-of-well-being"
-    },
-    {
-      "title": "Introduction to Philosophy",
-      "instructor": "University of Edinburgh",
-      "rating": 4.6,
-      "description": "Explore key philosophical questions and thinkers.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/learn/philosophy"
-    },
-    {
-      "title": "Modern and Contemporary Art and Design Specialization",
-      "instructor": "The Museum of Modern Art",
-      "rating": 4.7,
-      "description": "Discover the history of modern and contemporary art.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://www.coursera.org/specializations/moma-modern-art"
-    },
-    {
-      "title": "Creative Writing Workshop",
-      "instructor": "Massachusetts Institute of Technology (MIT)",
-      "rating": 4.5,
-      "description": "Improve your writing skills through practice and feedback.",
-      "price": "Free",
-      "image": "images/logo.png",
-      "url": "https://ocw.mit.edu/courses/18-100-creative-writing-workshop-fall-2012/"
-    },
-    {
-      "title": "Art & Culture for Beginners",
-      "instructor": "John Doe",
-      "rating": 4.4,
-      "description": "Introduction to art history and cultural appreciation.",
-      "price": "$9.99",
-      "image": "images/logo.png",
-      "url": "https://www.udemy.com/course/art-culture-for-beginners/"
-    }
-  ]
-  
+  {
+    "title": "The Modern Art & Ideas",
+    "instructor": "MoMA",
+    "rating": 4.8,
+    "description": "Explores modern art topics and cultural context.",
+    "price": "Free",
+    "image": "images/modern-art.png",
+    "url": "https://www.coursera.org/learn/modern-art",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": "10"
+  },
+  {
+    "title": "Philosophy: Introduction to Logic",
+    "instructor": "University of Melbourne",
+    "rating": 4.7,
+    "description": "Learn the principles of logic and reasoning.",
+    "price": "$49",
+    "image": "images/logic.jpg",
+    "url": "https://www.coursera.org/learn/logic",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": "15"
+  },
+  {
+    "title": "World Literature",
+    "instructor": "HarvardX",
+    "rating": 4.6,
+    "description": "Study major works of literature from around the globe.",
+    "price": "Free",
+    "image": "images/literature.png",
+    "url": "https://www.edx.org/course/world-literature",
+    "provider": "edX",
+    "level": "Beginner",
+    "duration": "12"
+  },
+  {
+    "title": "History of Ancient Greece",
+    "instructor": "Yale University",
+    "rating": 4.5,
+    "description": "An in-depth look into Ancient Greek civilization.",
+    "price": "Free",
+    "image": "images/ancient-greece.png",
+    "url": "https://oyc.yale.edu/classics/clcv-114",
+    "provider": "Yale Open Course",
+    "level": "Intermediate",
+    "duration": "20"
+  },
+  {
+    "title": "Renaissance Art",
+    "instructor": "Udemy Instructor",
+    "rating": 4.4,
+    "description": "Explore art from the Renaissance period in Europe.",
+    "price": "$19.99",
+    "image": "images/renaissance-art.png",
+    "url": "https://www.udemy.com/course/renaissance-art",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": "8"
+  },
+  {
+    "title": "Introduction to Black Studies",
+    "instructor": "Columbia University",
+    "rating": 4.7,
+    "description": "Explore the history, politics, and culture of the African diaspora.",
+    "price": "$49",
+    "image": "images/black-studies.png",
+    "url": "https://www.coursera.org/learn/black-studies",
+    "provider": "Coursera",
+    "level": "Intermediate",
+    "duration": "18"
+  },
+  {
+    "title": "Music Theory - Complete",
+    "instructor": "edX Music Team",
+    "rating": 4.6,
+    "description": "Comprehensive introduction to music theory fundamentals.",
+    "price": "$99",
+    "image": "images/music-theory.png",
+    "url": "https://www.edx.org/course/music-theory-complete",
+    "provider": "edX",
+    "level": "Advanced",
+    "duration": "25"
+  },
+  {
+    "title": "Photography Basics",
+    "instructor": "Udemy",
+    "rating": 4.5,
+    "description": "Learn composition, lighting, and editing techniques.",
+    "price": "$24.99",
+    "image": "images/photography.png",
+    "url": "https://www.udemy.com/course/photography-basics",
+    "provider": "Udemy",
+    "level": "Beginner",
+    "duration": "6"
+  },
+  {
+    "title": "Ethics in the Modern World",
+    "instructor": "University of Edinburgh",
+    "rating": 4.3,
+    "description": "Explore ethical theories and contemporary moral issues.",
+    "price": "Free",
+    "image": "images/ethics.png",
+    "url": "https://www.edx.org/course/ethics-in-modern-world",
+    "provider": "edX",
+    "level": "Intermediate",
+    "duration": "14"
+  },
+  {
+    "title": "Creative Writing: The Craft of Plot",
+    "instructor": "Wesleyan University",
+    "rating": 4.4,
+    "description": "Learn effective plotting for stories and narratives.",
+    "price": "$49",
+    "image": "images/creative-writing.png",
+    "url": "https://www.coursera.org/learn/craft-of-plot",
+    "provider": "Coursera",
+    "level": "Beginner",
+    "duration": "10"
+  }
+]
