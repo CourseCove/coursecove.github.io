@@ -33,4 +33,41 @@ async function renderCourses(jsonPath, containerId) {
       document.getElementById(containerId).innerHTML = '<p class="text-danger">Failed to load course data.</p>';
     }
   }
+
+
+const filters = document.getElementById('filters');
+filters.addEventListener('change', applyFilters);
+
+function applyFilters() {
+  const query = document.getElementById('searchBar').value.toLowerCase();
+  const selectedProviders = [...filters.querySelectorAll('input[name="provider"]:checked')].map(i => i.value);
+  const selectedLevels = [...filters.querySelectorAll('input[name="level"]:checked')].map(i => i.value);
+  const selectedDurations = [...filters.querySelectorAll('input[name="duration"]:checked')].map(i => i.value);
+
+  filteredCourses = allCourses.filter(course => {
+    const matchesQuery =
+      course.title.toLowerCase().includes(query) ||
+      course.description.toLowerCase().includes(query) ||
+      (course.keywords || []).some(k => k.toLowerCase().includes(query));
+
+    const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes(course.provider);
+    const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes(course.level);
+
+    const matchesDuration = (() => {
+      if (selectedDurations.length === 0) return true;
+      const hours = parseFloat(course.duration);
+      return selectedDurations.some(d => {
+        if (d === '<2') return hours < 2;
+        if (d === '2-5') return hours >= 2 && hours <= 5;
+        if (d === '>5') return hours > 5;
+      });
+    })();
+
+    return matchesQuery && matchesProvider && matchesLevel && matchesDuration;
+  });
+
+  currentPage = 1;
+  renderCourses();
+}
+
   
