@@ -83,9 +83,47 @@
   
 
 <main class="container my-5">
-  <h1 class="mb-4" style="color:#7FDBFF;">Politics & Economics Courses</h1>
-  <div id="course-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"></div>
-</main>
+    <h1 class="mb-4">Politics & Economics Courses</h1>
+
+    <!-- Search bar -->
+    <div class="mb-4">
+      <input type="text" id="searchBar" class="form-control" placeholder="Search courses...">
+    </div>
+
+    <!-- Filters -->
+    <div id="filters" class="mb-4 row">
+      <div class="col-md-4">
+        <h5>Provider</h5>
+        <div><input type="checkbox" name="provider" value="Coursera"> Coursera</div>
+        <div><input type="checkbox" name="provider" value="edX"> edX</div>
+        <div><input type="checkbox" name="provider" value="MIT OCW"> MIT OCW</div>
+        <div><input type="checkbox" name="provider" value="Harvard Online"> Harvard Online</div>
+        <div><input type="checkbox" name="provider" value="Yale Open Course"> Yale Open Course</div>
+        <div><input type="checkbox" name="provider" value="Stanford Online"> Stanford Online</div>
+      </div>
+      <div class="col-md-4">
+        <h5>Level</h5>
+        <div><input type="checkbox" name="level" value="Beginner"> Beginner</div>
+        <div><input type="checkbox" name="level" value="Intermediate"> Intermediate</div>
+        <div><input type="checkbox" name="level" value="Advanced"> Advanced</div>
+      </div>
+      <div class="col-md-4">
+        <h5>Duration</h5>
+        <div><input type="checkbox" name="duration" value="<2"> Less than 2 hours</div>
+        <div><input type="checkbox" name="duration" value="2-5"> 2 to 5 hours</div>
+        <div><input type="checkbox" name="duration" value=">5"> More than 5 hours</div>
+      </div>
+    </div>
+
+    <!-- Course cards -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="course-container"></div>
+
+    <!-- Pagination -->
+    <div class="mt-4 d-flex flex-wrap gap-2" id="pagination"></div>
+  </main>
+
+
+  
 
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
