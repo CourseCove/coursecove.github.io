@@ -611,4 +611,6 @@ footer a.text-light:hover {
 }
 
 
-
+#searchInput {
+  padding-left: 0;
+}
