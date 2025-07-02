@@ -97,7 +97,7 @@
 
     for (const category of courseCategories) {
       try {
-        const res = await fetch(`CourseCove/data/${category}.json`);
+        const res = await fetch(`CourseCove/json/${category}.json`);
         const data = await res.json();
 
         // Filter by rating and date (rating >= 4.5 and recent year)
