@@ -7,68 +7,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="CourseCove/css/style.css" />
   <link rel="icon" type="image/png" href="CourseCove/images/favicon.png" />
-
-<!--  <style>
-    .text-muted{
-      color: #a4c6ff;
-    }
-    body {
-        background-color: #0a1a2b;
-      color: #001f3f;
-    }
-    nav.navbar {
-      background-color: #001f3f; /* navy blue */
-    }
-    nav .nav-link {
-      color: #fff;
-    }
-    nav .nav-link.active,
-    nav .nav-link:hover {
-      color: #7FDBFF; /* lighter blue */
-    }
-    section h2 {
-      color: #001a4d; /* dark blue */
-      margin-bottom: 1.5rem;
-    }
-    .card {
-      background-color: #00264d; /* dark navy */
-      border: none;
-    }
-    .card-title,
-    .card-text {
-      color: #fff;
-    }
-    .btn-primary {
-      background-color: #001f3f; /* navy */
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #003366;
-    }
-
-    footer {
-  border-top: 1px solid #1a2a3d;
-  font-size: 0.95rem;
-  background-color: #001f3f;
-}
-
-footer a:hover {
-  color: #7FDBFF;
-  text-decoration: underline;
-}
-
-  </style>-->
 </head>
 <body>
 
-
-     <nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
+<nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
   <div class="container">
     <a class="navbar-brand" href="index.html">
       <img src="CourseCove/images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -91,87 +38,37 @@ footer a:hover {
 
 <main class="container my-5">
 
-  <!-- Math Section -->
-  <section id="math" class="mb-5">
-    <h2>Math</h2>
+  <!-- Hero Section -->
+  <section class="text-center py-5">
+    <h1 class="display-4">Discover the Best Free Online Courses</h1>
+    <p class="lead">Curated by category for easy access — from AI to Environment.</p>
+    <a href="#featured" class="btn btn-primary">Browse Featured Courses</a>
+  </section>
+
+  <!-- Featured Courses Section -->
+  <section id="featured" class="mb-5">
+    <h2 class="mb-4">Featured & New Courses</h2>
+    <div id="featured-courses" class="row row-cols-1 row-cols-md-3 g-4"></div>
+  </section>
+
+  <!-- Category Preview Section -->
+  <section id="categories" class="mb-5">
+    <h2 class="mb-4">Explore by Category</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <article class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" 
-               class="card-img-top" alt="Math Article 1" />
-          <div class="card-body">
-            <h5 class="card-title">Exploring Algebraic Concepts</h5>
-            <p class="card-text">A deep dive into algebra and its real-world applications.</p>
-            <a href="#" class="btn btn-primary">Read more...</a>
-          </div>
-        </div>
-      </article>
-      <article class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=600&q=80" 
-               class="card-img-top" alt="Math Article 2" />
-          <div class="card-body">
-            <h5 class="card-title">Understanding Geometry Basics</h5>
-            <p class="card-text">Learn the fundamentals of shapes and spaces.</p>
-            <a href="#" class="btn btn-primary">Read more...</a>
-          </div>
-        </div>
-      </article>
-      <article class="col">
-        <div class="card h-100">
-          <img src="images/logo.png" 
-               class="card-img-top" alt="Math Article 3" />
-          <div class="card-body">
-            <h5 class="card-title">Calculus Made Simple</h5>
-            <p class="card-text">Introduction to derivatives and integrals with practical examples.</p>
-            <a href="#" class="btn btn-primary">Read more...</a>
-          </div>
-        </div>
-      </article>
+      <div class="col"><a href="CourseCove/math.html" class="btn btn-outline-primary w-100 py-3">📐 Math</a></div>
+      <div class="col"><a href="CourseCove/ai-ml.html" class="btn btn-outline-primary w-100 py-3">🤖 AI / ML</a></div>
+      <div class="col"><a href="CourseCove/arts-humanities.html" class="btn btn-outline-primary w-100 py-3">📚 Arts & Humanities</a></div>
+      <div class="col"><a href="CourseCove/languages.html" class="btn btn-outline-primary w-100 py-3">🗣️ Languages</a></div>
+      <div class="col"><a href="CourseCove/politics-economics.html" class="btn btn-outline-primary w-100 py-3">🏛️ Politics & Economics</a></div>
+      <div class="col"><a href="CourseCove/environment.html" class="btn btn-outline-primary w-100 py-3">🌿 Environment</a></div>
     </div>
   </section>
 
-  <!-- AI / ML Section -->
-  <section id="ai-ml" class="mb-5">
-    <h2>AI / ML</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <article class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" 
-               class="card-img-top" alt="AI Article 1" />
-          <div class="card-body">
-            <h5 class="card-title">Intro to Machine Learning</h5>
-            <p class="card-text">Basics of ML algorithms and their applications.</p>
-            <a href="#" class="btn btn-primary">Read more...</a>
-          </div>
-        </div>
-      </article>
-      <article class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" 
-               class="card-img-top" alt="AI Article 2" />
-          <div class="card-body">
-            <h5 class="card-title">Neural Networks Explained</h5>
-            <p class="card-text">Understanding how neural networks work.</p>
-            <a href="#" class="btn btn-primary">Read more...</a>
-          </div>
-        </div>
-      </article>
-      <article class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" 
-               class="card-img-top" alt="AI Article 3" />
-          <div class="card-body">
-            <h5 class="card-title">AI Ethics</h5>
-            <p class="card-text">Ethical considerations in AI development.</p>
-            <a href="#" class="btn btn-primary">Read more...</a>
-          </div>
-        </div>
-      </article>
-    </div>
+  <!-- About Snippet -->
+  <section class="mb-5">
+    <h2>About CourseCove</h2>
+    <p>CourseCove is your curated library of the best free online courses — designed to simplify the search for high-quality education. Whether you’re diving into data science, exploring literature, or picking up a new language, we help you find top courses from leading platforms.</p>
   </section>
-
-  <!-- Additional sections can be added similarly -->
 
 </main>
 
@@ -190,5 +87,52 @@ footer a:hover {
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  async function loadFeaturedCourses() {
+    const courseCategories = [
+      "math", "ai-ml", "arts-humanities", "languages", "politics-economics", "environment"
+    ];
+    const container = document.getElementById("featured-courses");
+    const allCourses = [];
+
+    for (const category of courseCategories) {
+      try {
+        const res = await fetch(`CourseCove/data/${category}.json`);
+        const data = await res.json();
+
+        // Filter by rating and date (rating >= 4.5 and recent year)
+        const filtered = data.filter(course => {
+          const year = new Date(course.date).getFullYear();
+          return course.rating >= 4.5 && year >= 2023;
+        });
+
+        allCourses.push(...filtered);
+      } catch (error) {
+        console.error(`Error loading ${category}:`, error);
+      }
+    }
+
+    // Sort by date (newest first)
+    allCourses.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Limit to 5
+    allCourses.slice(0, 5).forEach(course => {
+      const col = document.createElement("div");
+      col.className = "col";
+      col.innerHTML = `
+        <div class="card h-100">
+          <img src="${course.image || 'CourseCove/images/logo1.png'}" class="card-img-top" alt="${course.title}" />
+          <div class="card-body">
+            <h5 class="card-title">${course.title}</h5>
+            <p class="card-text">${course.description || ''}</p>
+            <a href="${course.link}" target="_blank" class="btn btn-primary">Go to Course</a>
+          </div>
+        </div>
+      `;
+      container.appendChild(col);
+    });
+  }
+  loadFeaturedCourses();
+</script>
 </body>
 </html>
