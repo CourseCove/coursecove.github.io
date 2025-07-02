@@ -107,7 +107,7 @@
 
         const filtered = data.filter(course => {
           const year = new Date(course.date).getFullYear();
-          return course.rating >= 4.5 && year >= 2023;
+          return course.rating >= 4 && year >= 2020;
         });
 
         allCourses.push(...filtered);
