@@ -1,31 +1,51 @@
-async function renderBlogPosts(jsonPath, containerId) {
-  try {
-    const response = await fetch(`${jsonPath}?t=${Date.now()}`);
-    const posts = await response.json();
-    const container = document.getElementById(containerId);
-    container.innerHTML = '';
+function renderBlogPosts(jsonPath, containerId) {
+  fetch(jsonPath)
+    .then((response) => response.json())
+    .then((data) => {
+      const container = document.getElementById(containerId);
+      const filterSelect = document.getElementById("filterSelect");
 
-    posts.forEach(post => {
-      const col = document.createElement('div');
-      col.className = 'col';
+      const render = (filter) => {
+        container.innerHTML = "";
 
-      col.innerHTML = `
-        <div class="card h-100 shadow-sm">
-          <a href="${post.link}" target="_blank" rel="noopener">
-            <img src="${post.thumbnail}" alt="${post.title}" class="card-img-top" style="object-fit: cover; height: 200px;">
-          </a>
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">${post.title}</h5>
-            <p class="card-text flex-grow-1">${post.preview}</p>
-            <a href="${post.link}" target="_blank" class="btn btn-primary mt-auto">Read More</a>
-          </div>
-        </div>
-      `;
+        let filtered = data;
+        if (filter !== "all") {
+          filtered = data.filter((blog) => {
+            if (filter === "Scott") return blog.title.includes("Scott") || blog.link.includes("scotthyoung");
+            if (filter === "Ali") return blog.link.includes("aliabdaal");
+            if (filter === "Learning") return blog.link.includes("learningscientists");
+            if (filter === "Edutopia") return blog.link.includes("edutopia");
+            return true;
+          });
+        }
 
-      container.appendChild(col);
+        filtered.forEach((blog) => {
+          const card = document.createElement("div");
+          card.className = "col";
+
+          card.innerHTML = `
+            <div class="card h-100 shadow-sm">
+              <img src="${blog.thumbnail}" class="card-img-top" alt="${blog.title}" style="object-fit: cover; height: 180px;">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${blog.title}</h5>
+                <p class="card-text flex-grow-1">${blog.preview}</p>
+                <a href="${blog.link}" class="btn btn-primary mt-2" target="_blank" rel="noopener noreferrer">Read More</a>
+              </div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      };
+
+      // Initial render
+      render("all");
+
+      // Re-render on filter change
+      filterSelect.addEventListener("change", (e) => {
+        render(e.target.value);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching blog posts:", error);
     });
-  } catch (error) {
-    console.error("Failed to render blog posts:", error);
-    container.innerHTML = '<p class="text-danger">Failed to load blog posts.</p>';
-  }
 }
