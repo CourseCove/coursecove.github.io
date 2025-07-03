@@ -10,9 +10,31 @@
 </head>
 <body>
 
-<!-- Navbar Placeholder -->
-<div id="navbar-container"></div>
-
+<nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="CourseCove/images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="CourseCove/math.html">Math</a></li>
+        <li class="nav-item"><a class="nav-link " href="CourseCove/ai-ml.html">AI / ML</a></li>
+        <li class="nav-item"><a class="nav-link" href="CourseCove/arts-humanities.html">Arts & Humanities</a></li>
+        <li class="nav-item"><a class="nav-link" href="CourseCove/languages.html">Languages</a></li>
+        <li class="nav-item"><a class="nav-link" href="CourseCove/politics-economics.html">Politics & Economics</a></li>
+        <li class="nav-item"><a class="nav-link" href="CourseCove/environment.html">Environment</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link " href="signup.html">Sign Up</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="CourseCove/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <main class="container my-5">
 
@@ -108,49 +130,6 @@
     });
   }
   loadFeaturedCourses();
-
-
-
-
-  // Simulate login (run this once in console or inside your login handler)
-  // localStorage.setItem('isLoggedIn', 'true');
-  // localStorage.setItem('username', 'Hrach');
-  // localStorage.setItem('avatar', 'https://i.pravatar.cc/150?img=12');
-
-  function logout() {
-    localStorage.clear();
-    location.reload();
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    const username = localStorage.getItem('username') || 'User';
-    const avatar = localStorage.getItem('avatar') || 'https://i.pravatar.cc/150?img=12';
-
-    const navList = document.querySelector('.navbar-nav');
-
-    if (isLoggedIn) {
-      // Remove "Sign Up" and "Login"
-      const signupLink = navList.querySelector('a[href="signup.html"]')?.closest('li');
-      const loginLink = navList.querySelector('a[href="login.html"]')?.closest('li');
-      signupLink?.remove();
-      loginLink?.remove();
-
-      // Create user profile item
-      const userItem = document.createElement('li');
-      userItem.className = 'nav-item d-flex align-items-center ms-2';
-      userItem.innerHTML = `
-        <img src="${avatar}" alt="Avatar" width="32" height="32" class="rounded-circle me-2" />
-        <span class="navbar-text me-3">${username}</span>
-        <a class="nav-link" href="#" onclick="logout()">Logout</a>
-      `;
-
-      navList.appendChild(userItem);
-    }
-  });
-
-
-  
 </script>
 
   
