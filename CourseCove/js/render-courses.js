@@ -42,7 +42,8 @@ function applyFilters() {
   filteredCourses = allCourses.filter(course => {
     const titleMatch = course.title.toLowerCase().includes(query);
     const descMatch = course.description.toLowerCase().includes(query);
-    const matchesQuery = query === '' || titleMatch || descMatch;
+    const instructorMatch = (course.instructor || '').toLowerCase().includes(query);
+    const matchesQuery = query === '' || titleMatch || descMatch || instructorMatch;
 
     const matchesProvider = selectedProviders.length === 0 || (course.provider && selectedProviders.includes(course.provider.toLowerCase()));
     const matchesLevel = selectedLevels.length === 0 || (course.level && selectedLevels.includes(course.level.toLowerCase()));
@@ -60,10 +61,6 @@ function applyFilters() {
 
     return matchesQuery && matchesProvider && matchesLevel && matchesDuration;
   });
-
-  renderCourses();
-}
-
 
   renderCourses();
 }
