@@ -614,3 +614,7 @@ footer a.text-light:hover {
 #searchInput {
   margin-left: 0;
 }
+
+.navbar-toggler-icon {
+  background-color: #192233;
+}
