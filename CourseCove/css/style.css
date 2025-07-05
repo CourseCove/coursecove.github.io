@@ -615,3 +615,9 @@ footer a.text-light:hover {
   margin-left: 0;
 }
 
+
+#pagination {
+  flex-wrap: wrap;
+  overflow-x: auto; /* or hidden */
+}
+
