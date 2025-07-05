@@ -107,21 +107,62 @@ function renderCourses() {
 function renderPagination() {
   paginationContainer.innerHTML = '';
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+  const maxVisiblePages = 11; // Current page ±5 + first + last
 
-  for (let i = 1; i <= totalPages; i++) {
+  const createPageItem = (page, text = null, active = false, disabled = false) => {
     const li = document.createElement('li');
-    li.className = 'page-item' + (i === currentPage ? ' active' : '');
-    li.innerHTML = `<a href="#" class="page-link">${i}</a>`;
-    li.addEventListener('click', e => {
-      e.preventDefault();
-      if (currentPage !== i) {
-        currentPage = i;
+    li.className = `page-item${active ? ' active' : ''}${disabled ? ' disabled' : ''}`;
+    li.innerHTML = `<a href="#" class="page-link">${text || page}</a>`;
+    if (!disabled && !active) {
+      li.addEventListener('click', e => {
+        e.preventDefault();
+        currentPage = page;
         renderCourses();
         window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
+      });
+    }
+    paginationContainer.appendChild(li);
+  };
+
+  if (totalPages <= 1) return;
+
+  // Previous Arrow
+  createPageItem(currentPage - 1, '«', false, currentPage === 1);
+
+  // Always show first page
+  createPageItem(1, '1', currentPage === 1);
+
+  // Ellipsis before current range
+  if (currentPage > 6) {
+    const li = document.createElement('li');
+    li.className = 'page-item disabled';
+    li.innerHTML = `<span class="page-link">...</span>`;
     paginationContainer.appendChild(li);
   }
+
+  // Pages around currentPage
+  const start = Math.max(2, currentPage - 5);
+  const end = Math.min(totalPages - 1, currentPage + 5);
+  for (let i = start; i <= end; i++) {
+    createPageItem(i, `${i}`, currentPage === i);
+  }
+
+  // Ellipsis after current range
+  if (currentPage < totalPages - 5) {
+    const li = document.createElement('li');
+    li.className = 'page-item disabled';
+    li.innerHTML = `<span class="page-link">...</span>`;
+    paginationContainer.appendChild(li);
+  }
+
+  // Always show last page
+  if (totalPages > 1) {
+    createPageItem(totalPages, `${totalPages}`, currentPage === totalPages);
+  }
+
+  // Next Arrow
+  createPageItem(currentPage + 1, '»', false, currentPage === totalPages);
 }
+
 
 loadCourses();
