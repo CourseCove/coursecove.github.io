@@ -4792,5 +4792,1205 @@
     "thumbnail": "CourseCove/images/logo.png",
     "preview": "Ilknur Eren",
     "link": "https://www.freecodecamp.org/news/improve-web-accessibility-with-landmarks/"
+    },
+    {
+    "title": "Cursor makes developers less effective?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/cursor-makes-developers-less-effective/"
+  },
+  {
+    "title": "Software engineering with LLMs in 2025: temperature check",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/software-engineering-with-llms-in-2025/"
+  },
+  {
+    "title": "Builder.ai did not “fake AI with 700 engineers”",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/builder-ai-did-not-fake-ai/"
+  },
+  {
+    "title": "Stack overflow is almost dead",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/stack-overflow-is-almost-dead/"
+  },
+  {
+    "title": "Tech hiring: is this an inflection point?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/tech-hiring-is-this-an-inflection-point/"
+  },
+  {
+    "title": "Survey: What’s in your tech stack?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/survey-whats-in-your-tech-stack/"
+  },
+  {
+    "title": "Software engineering job openings hit five-year low?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/software-engineer-jobs-five-year-low/"
+  },
+  {
+    "title": "Where did TikTok’s software engineers go?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/where-did-tiktoks-software-engineers-go/"
+  },
+  {
+    "title": "The Pragmatic Engineer 100K Giveaway",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-pragmatic-engineer-100k-giveaway/"
+  },
+  {
+    "title": "Are LLMs making StackOverflow irrelevant?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/are-llms-making-stackoverflow-irrelevant/"
+  },
+  {
+    "title": "Where to find to The Pragmatic Engineer Podcast",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-pragmatic-engineer-podcast/"
+  },
+  {
+    "title": "Why my new audiobook “The Software Engineer's Guidebook” is everywhere except on Audible",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/why-my-audibook-is-not-on-audible/"
+  },
+  {
+    "title": "The Pragmatic Engineer: Cyber Monday Deals",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-pragmatic-engineer-cyber-monday-deals/"
+  },
+  {
+    "title": "The Pragmatic Engineer in 2024",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-pragmatic-engineer-in-2024/"
+  },
+  {
+    "title": "Which IDEs do software engineers love, and why?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/ide-that-software-engineers-love/"
+  },
+  {
+    "title": "Did Automattic commit open source theft?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/did-automattic-commit-open-source-theft/"
+  },
+  {
+    "title": "Interesting startup idea: benchmarking cloud platform pricing",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/spare-cores/"
+  },
+  {
+    "title": "Open source business model struggles at WordPress",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/wordpress-struggles/"
+  },
+  {
+    "title": "Paying down tech debt: further learnings",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/paying-down-tech-debt-further-learnings/"
+  },
+  {
+    "title": "Speakers for Amsterdam / Netherlands Tech Events",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/speakers-for-eu-tech-events/"
+  },
+  {
+    "title": "Klarna’s AI chatbot: how revolutionary is it, really?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/klarnas-ai-chatbot/"
+  },
+  {
+    "title": "The software engineering industry in 2024: what changed, why, and what is next",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-software-engineering-industry-in-2024/"
+  },
+  {
+    "title": "Is the “AI developer”a threat to jobs – or a marketing stunt?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/ai-developer-marketing-stunt/"
+  },
+  {
+    "title": "How does ChatGPT work? As explained by the ChatGPT team.",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/how-does-chatgpt-work/"
+  },
+  {
+    "title": "Weekend maintenance kicks an Italian bank offline for days",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/italian-bank-outage/"
+  },
+  {
+    "title": "Shutting Down My Job Board for Software Engineering Positions After 2.5 Years",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/tech-jobs-board/"
+  },
+  {
+    "title": "Is the “AI developer”a threat to jobs – or a marketing stunt?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-ai-developer/"
+  },
+  {
+    "title": "The “10x engineer:\" 50 years ago and now",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-10x-engineer-evolution/"
+  },
+  {
+    "title": "Happy Leap Day!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/happy-leap-day/"
+  },
+  {
+    "title": "The Pulse: Will US companies hire fewer engineers due to Section 174?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/section-174/"
+  },
+  {
+    "title": "Mentoring software engineers or engineering leaders",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/mentoring/"
+  },
+  {
+    "title": "The DevTernity Tech Conference Listed Fake Speakers for Years: I Accidentally Noticed",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/devternity-fake-speakers/"
+  },
+  {
+    "title": "The Roots of Today's Modern Backend Engineering Practices",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-roots-of-modern-backend-engineering-practices/"
+  },
+  {
+    "title": "Asked to do something illegal at work? Here’s what these software engineers did",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/asked-to-do-something-illegal-at-work/"
+  },
+  {
+    "title": "Handling a Regional Outage: Comparing the Response From AWS, Azure and GCP",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/aws-azure-and-gcp-regional-outages/"
+  },
+  {
+    "title": "Code Review on Printed Paper: an Excerpt from the Twitoons Comic Book",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-man-behind-the-big-tech-comics/"
+  },
+  {
+    "title": "Going from Developer to CEO: Chronosphere",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/chronosphere/"
+  },
+  {
+    "title": "Working at a Startup vs in Big Tech",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/working-at-a-startup-vs-in-big-tech/"
+  },
+  {
+    "title": "Why are Cloud Development Environments Spiking in Popularity, Now?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/why-are-cloud-development-environments-spiking-in-popularity-now/"
+  },
+  {
+    "title": "Bun: lessons from disrupting a tech ecosystem",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/bun-lessons-from-disrupting/"
+  },
+    {
+        "title": "How Microsoft does Quality Assurance (QA)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/how-microsoft-does-qa/"
+    },
+    {
+        "title": "How Games Typically Get Built",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/how-games-typically-get-built/"
+    },
+    {
+        "title": "A senior engineer/EM job search story",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/a-senior-engineer-em-job-search-story/"
+    },
+    {
+        "title": "Are reports of StackOverflow’s fall greatly exaggerated?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/are-reports-of-stackoverflows-fall-exaggerated/"
+    },
+    {
+        "title": "Google Shutting down Firebase Dynamic Links",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/google-shutting-down-firebase-dynamic-links/"
+    },
+    {
+        "title": "What is a Senior Software Engineer at Wise and Amazon?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/what-is-a-senior-software-engineer-at-wise-and-amazon/"
+    },
+    {
+        "title": "Building an an Early Stage Startup: Lessons from Akita Software",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/building-an-an-early-stage-startup/"
+    },
+    {
+        "title": "The Pulse: VanMoof files for bankruptcy protection",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-pulse-vanmoof/"
+    },
+    {
+        "title": "Twitter vs Instagram Threads: two different approaches to throttling",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/twitter-vs-instagram-threads/"
+    },
+    {
+        "title": "Domain Registrars which Developers Recommend",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/domain-registrars-which-developers-recommend/"
+    },
+    {
+        "title": "Google Domains to shut down",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/google-domains-to-shut-down/"
+    },
+    {
+        "title": "An explosion in software engineers using AI coding tools?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/ai-coding-tools-explosion/"
+    },
+    {
+        "title": "Inside Agoda’s Private Cloud - Exclusive",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/inside-agodas-private-cloud/"
+    },
+    {
+        "title": "Should you optimize for all-cash compensation, if possible?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/should-you-optimize-for-all-cash-compensation/"
+    },
+    {
+        "title": "An educational side project",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/an-educational-side-project/"
+    },
+    {
+        "title": "Layoffs push down scores on Glassdoor: this is how companies respond",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/layoffs-push-down-scores-on-glassdoor/"
+    },
+    {
+        "title": "Github Copilot and ChatGPT alternatives",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/github-copilot-alternatives/"
+    },
+    {
+        "title": "PagerDuty (and OpsGenie) alternatives",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/pagerduty-alternatives/"
+    },
+    {
+        "title": "Datadog’s $65M/year customer mystery solved",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/datadog-65m-year-customer-mystery/"
+    },
+    {
+        "title": "Compensation at Publicly Traded Tech Companies",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/compensation-at-tech-companies/"
+    },
+    {
+        "title": "Uber’s engineering level changes",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/uber-engineering-levels/"
+    },
+    {
+        "title": "Is Critical Thinking the Most Important Skill for Software Engineers?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/critical-thinking/"
+    },
+    {
+        "title": "The state of startup funding",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-state-of-startup-funding/"
+    },
+    {
+        "title": "Behind the Scenes with Two New Salary Transparency Websites",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-scoop-salary-transparency/"
+    },
+    {
+        "title": "Lyft in Trouble",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/lyft-in-trouble/"
+    },
+    {
+        "title": "Is there a drop in software engineer job openings, globally?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/is-there-a-drop-in-software-engineer-job-openings-globally/"
+    },
+    {
+        "title": "Amazon doubling down on RTO (return to office) - exclusive",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/amazon-return-to-office/"
+    },
+    {
+        "title": "The Collapse of Silicon Valley Bank",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-collapse-of-silicon-valley-bank/"
+    },
+    {
+        "title": "Big Tech job-switching stats - exclusive",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/big-tech-job-switching-stats/"
+    },
+    {
+        "title": "Why did Google close its coding competitions after 20 years? Exclusive details.",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/google-coding-competitions/"
+    },
+    {
+        "title": "The job market for new grads: worse than in 2008, but better than 2002",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-job-market-for-new-grads-2023/"
+    },
+    {
+        "title": "Apple cracking down to enforce its RTO policy - exclusive",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-scoop-apple-rto/"
+    },
+    {
+        "title": "Apple: The Only Big Tech Giant Going Against the Job Cuts Tide",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/apple-job-cuts-tide/"
+    },
+    {
+        "title": "What Big Tech layoffs suggest for the industry",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-scoop-big-tech-layoffs/"
+    },
+    {
+        "title": "Inside Pollen's Software Engineering Salaries - Exclusive",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/pollen-salaries/"
+    },
+    {
+        "title": "CircleCI’s unnoticed holiday security breach",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-scoop-circleci/"
+    },
+    {
+        "title": "A Return to the Office (RTO) Wave?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/the-scoop-rto/"
+    },
+    {
+        "title": "Twitter’s ongoing cruel treatment of software engineers",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/twitter-cruel-treatment-of-software-engineers/"
+    },
+    {
+        "title": "Who is Still Hiring Software Engineers and EMs?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/who-is-hiring-2022/"
+    },
+    {
+        "title": "The Scoop: Tech Layoffs in 2022",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Gergely Orosz",
+        "link": "https://blog.pragmaticengineer.com/layoffs-2022/"
+    },
+    {
+    "title": "Cruel Changes at Twitter",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/cruel-changes-at-twitter/"
+    },
+    {
+    "title": "The Scoop: Turmoil at Twitter",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/turmoil-at-twitter/"
+    },
+    {
+    "title": "The Big Tech Hiring Slowdown Is Here and it will Hurt",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/big-tech-hiring-slowdown/"
+    },
+    {
+    "title": "Pollen’s enormous debt left behind: exclusive details",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/the-scoop-pollen/"
+    },
+    {
+    "title": "Is the strategy of joining late-stage startups for the financial upside, a dead end?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gergely Orosz",
+    "link": "https://blog.pragmaticengineer.com/strategy-of-joining-late-stage-startups/"
+    },
+    {
+    "title": "The Math Is Haunted",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/the-math-is-haunted/"
+    },
+    {
+    "title": "Suppressions of Suppressions",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/suppressions-of-suppressions/"
+    },
+    {
+    "title": "I'm Doing a Little Consulting",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/im-doing-a-little-consulting/"
+    },
+    {
+    "title": "How Imports Work in RSC",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/how-imports-work-in-rsc/"
+    },
+    {
+    "title": "RSC for LISP Developers",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/rsc-for-lisp-developers/"
+    },
+    {
+    "title": "Progressive JSON",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/progressive-json/"
+    },
+    {
+    "title": "Why Does RSC Integrate with a Bundler?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/why-does-rsc-integrate-with-a-bundler/"
+    },
+    {
+    "title": "One Roundtrip Per Navigation",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/one-roundtrip-per-navigation/"
+    },
+    {
+    "title": "Static as a Server",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/static-as-a-server/"
+    },
+    {
+    "title": "RSC for Astro Developers",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/rsc-for-astro-developers/"
+    },
+    {
+    "title": "Functional HTML",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/functional-html/"
+    },
+    {
+    "title": "What Does \"use client\" Do?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/what-does-use-client-do/"
+    },
+    {
+    "title": "Impossible Components",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/impossible-components/"
+    },
+    {
+    "title": "JSX Over The Wire",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/jsx-over-the-wire/"
+    },
+    {
+    "title": "React for Two Computers",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "dan abramov",
+    "link": "https://overreacted.io/react-for-two-computers/"
+    },
+    {
+    "title": "Work, Study, Win: Student-Friendly Jobs That Pay Off",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/work-study-win-student-friendly-jobs-that-pay-off/"
+    },
+    {
+    "title": "From Zoom Calls to Netflix Nights: Goodr Blue Light Glasses Have You Covered",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/from-zoom-calls-to-netflix-nights-goodr-blue-light-glasses-have-you-covered/"
+    },
+    {
+    "title": "Things To Consider When Buying A Car As A Student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/things-to-consider-when-buying-a-car-as-a-student/"
+    },
+    {
+    "title": "Why UX-Driven Ad Design Converts Better",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/why-ux-driven-ad-design-converts-better/"
+    },
+    {
+    "title": "From Classrooms to Cafes—College Students Really Care About Campus Cleanliness More Than We Realized!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/from-classrooms-to-cafes-college-students-really-care-about-campus-cleanliness-more-than-we-realized/"
+    },
+    {
+    "title": "The Importance of Sustainable Energy in a Changing World",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/the-importance-of-sustainable-energy-in-a-changing-world/"
+    },
+    {
+    "title": "6 New Franchise Business Ideas to Explore",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/6-new-franchise-business-ideas-to-explore/"
+    },
+    {
+    "title": "Basic Steps for Listing Cryptocurrency on Exchange Platforms",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2025/basic-steps-for-listing-cryptocurrency-on-exchange-platforms/"
+    },
+    {
+    "title": "Helping Your Child Balance Academics, Friends, and Hobbies",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/helping-your-child-balance-academics-friends-and-hobbies/"
+    },
+    {
+    "title": "Empowering Career Growth through Online Education",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/empowering-career-growth-through-online-education/"
+    },
+    {
+    "title": "The Journey to Wellness: Effective Strategies for a Healthier Lifestyle",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/the-journey-to-wellness-effective-strategies-for-a-healthier-lifestyle/"
+    },
+    {
+    "title": "How to Handle Medical Emergencies in College and Get Help Fast",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/how-to-handle-medical-emergencies-in-college-and-get-help-fast/"
+    },
+    {
+    "title": "Beyond Classes: 4 Skills Nursing Students Must Pick in College",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/beyond-classes-4-skills-nursing-students-must-pick-in-college/"
+    },
+    {
+    "title": "Your Guide to Building a Leadership Path in Financial Services",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/your-guide-to-building-a-leadership-path-in-financial-services/"
+    },
+    {
+    "title": "Are Stigmas Preventing Students From Getting Mental Health Help?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/are-stigmas-preventing-students-from-getting-mental-health-help/"
+    },
+    {
+    "title": "4 Key Skills Required to Become a Hospital Pharmacy Director",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/4-key-skills-required-to-become-a-hospital-pharmacy-director/"
+    },
+    {
+    "title": "Considering a Career in Healthcare? 3 Options That Could Be Right for You",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/considering-a-career-in-healthcare-3-options-that-could-be-right-for-you/"
+    },
+    {
+    "title": "When to Begin College Counseling: A Comprehensive Guide for Students and Parents",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/when-to-begin-college-counseling-a-comprehensive-guide-for-students-and-parents/"
+    },
+    {
+    "title": "The Core Pillars of Financial Management",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/the-core-pillars-of-financial-management/"
+    },
+    {
+    "title": "Traveling Light: The Best Fiberglass-Free Mattresses for a Healthy Sleep",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "College Cures",
+    "link": "https://collegecures.com/2024/traveling-light-the-best-fiberglass-free-mattresses-for-a-healthy-sleep/"
+    },
+    {
+    "title": "From Closet Clutter to Cash: How to Sell Your Stuff Like a Pro",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2025/05/29/from-closet-clutter-to-cash-how-to-sell-your-stuff-like-a-pro/"
+  },
+  {
+    "title": "New Year, New Me? 7 Most Popular Student Resolutions",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2023/01/09/new-year-top-student-resolutions/"
+  },
+  {
+    "title": "4 Tips to Boost Your Chances of Winning Canada’s Luckiest Student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/12/11/4-tips-winning-canadas-luckiest-student/"
+  },
+  {
+    "title": "5 Tips to Help You Stand Out in University and College",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/09/02/5-tips-stand-out-university-college/"
+  },
+  {
+    "title": "Big Decision, Little Time: 3 Factors to Consider When Deciding on a University/College",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/09/01/3-factors-university-college-decision/"
+  },
+  {
+    "title": "3 Big Things I Wish I Knew in Grade 12",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/08/30/3-things-wish-knew-grade-12/"
+  },
+  {
+    "title": "How to Stay Focused During the Summer Break",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/07/28/how-stay-focused-summer-break/"
+  },
+  {
+    "title": "My First In-Person Event Since 2019: TEDxToronto 2022",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/07/20/first-in-person-event-tedxtoronto/"
+  },
+  {
+    "title": "5 Tips to Help You Choose Which University to Go To",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/06/07/how-to-decide-which-university-to-attend/"
+  },
+  {
+    "title": "How Student Investors in Cryptocurrency and NFTs Will Have Their Tax Returns Impacted",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/04/14/cryptocurrency-nfts-and-student-taxes/"
+  },
+  {
+    "title": "10 Things Every Student Is Tired of Hearing",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/02/16/10-things-every-student-is-tired-of-hearing/"
+  },
+  {
+    "title": "You Can Earn Rewards by Referring Friends. Here’s How.",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2021/12/28/canadas-luckiest-student-referral-rewards/"
+  },
+  {
+    "title": "6 Things You Need to Fix Before Handing in Your Essay",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2022/02/03/6-ways-fix-your-essay/"
+  },
+  {
+    "title": "4 Questions to Help You Decide if University Is for You",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2021/12/13/4-questions-decide-attending-university/"
+  },
+  {
+    "title": "8 Christmas Movies Every Student Needs to Watch (in Between Exams)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Life Network",
+    "link": "https://blog.studentlifenetwork.com/2021/12/20/8-christmas-movies-every-student/"
+  },
+  {
+    "title": "Is going to university worth it?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/is-university-worth-money.html"
+  },
+  {
+    "title": "Student Finance on a year abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/student-finance-on-a-year-abroad.html"
+  },
+  {
+    "title": "Being a parent at university",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/being-a-parent-at-university.html"
+  },
+  {
+    "title": "15 Student Finance myths debunked",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/15-tuition-fee-myths-debunked.html"
+  },
+  {
+    "title": "How much does university cost?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/university-study-cost.html"
+  },
+  {
+    "title": "How to crowdfund your degree",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/how-to-crowdfund-your-degree.html"
+  },
+  {
+    "title": "Guide to the Turing Scheme",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/turing-scheme.html"
+  },
+  {
+    "title": "Managing debt at university",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/ultimate-guide-student-debt.html"
+  },
+  {
+    "title": "14 stages of the loan cycle every student goes through",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/14-inevitable-stages-of-the-student-loan-cycle-you-know-all-too-well.html"
+  },
+  {
+    "title": "Accelerated degrees: pros, cons and Student Finance",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Save The Student",
+    "link": "https://www.savethestudent.org/student-finance/accelerated-degrees.html"
+  },
+  {
+    "title": "What to Bring to College",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/what-to-bring-to-college-list.html"
+  },
+  {
+    "title": "How to Choose a College Major",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/how-to-choose-your-college-major.html"
+  },
+  {
+    "title": "Tips for Freshman Year of College",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/tips-for-freshman-year-of-college.html"
+  },
+  {
+    "title": "Mistakes to Avoid in College",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/mistakes-to-avoid-in-college.html"
+  },
+  {
+    "title": "How to Get Along with your Roommate",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/how-to-get-along-with-your-roommate.html"
+  },
+  {
+    "title": "Most Beautiful College Libraries",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/most-beautiful-college-libraries.html"
+  },
+  {
+    "title": "America's Most Expensive Colleges",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/most-expensive-colleges.html"
+  },
+  {
+    "title": "US College Rankings",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/us-college-rankings.html"
+  },
+  {
+    "title": "Creating a Weekly Study Schedule – A Step-by-Step Guide",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/study-schedule.html"
+  },
+  {
+    "title": "Study Tips for Finals",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/ace-your-exams-finals-week-preparation.html"
+  },
+  {
+    "title": "College Study Strategies: Organize a Study Group",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Campus Grotto",
+    "link": "https://www.campusgrotto.com/college-study-strategies-organize-a-study-group.html"
+  },
+  {
+    "title": "How to enter a flowstate",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Hut",
+    "link": "https://studenthut.com/2024/04/29/flowstate/"
+  },
+  {
+    "title": "Conquer the clock: overcoming procrastination",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Hut",
+    "link": "https://studenthut.com/2024/05/10/conquer-the-clock-overcoming-procrastination-for-high-school-success/"
+  },
+  {
+    "title": "How to advocate for your educational needs",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Hut",
+    "link": "https://studenthut.com/2024/05/10/how-to-advocate-for-your-educational-needs/"
+  },
+  {
+    "title": "Out-of-state vs in-state colleges",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Student Hut",
+    "link": "https://studenthut.com/2024/04/29/out-of-state-vs-in-state-colleges/"
+  },
+    {
+        "title": "The ultimate college move-in checklist for freshmen",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/03/02/the-ultimate-college-move-in-checklist-for-freshmen/"
+    },
+    {
+        "title": "How to ethically use AI at high school and beyond",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/05/08/how-to-ethically-use-ai-at-high-school/"
+    },
+    {
+        "title": "What to eat while studying",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/04/29/what-to-eat-while-studying/"
+    },
+    {
+        "title": "How to avoid ultra-processed food",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/05/10/how-to-avoid-ultra-processed-food/"
+    },
+    {
+        "title": "How to cope with burnout",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/05/10/how-to-cope-with-burnout/"
+    },
+    {
+        "title": "How to set healthy boundaries",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/04/29/how-to-set-healthy-boundaries/"
+    },
+    {
+        "title": "The power of ZZZs: a Guide to Quality Sleep",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/04/29/the-power-of-zzzs-a-teenagers-guide-to-quality-sleep/"
+    },
+    {
+        "title": "Conquer the clock: overcoming procrastination",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/05/10/conquer-the-clock-overcoming-procrastination-for-high-school-success/"
+    },
+    {
+        "title": "How to advocate for your educational needs",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Student Hut",
+        "link": "https://studenthut.com/2024/05/10/how-to-advocate-for-your-educational-needs/"
+    },
+    {
+        "title": "73 Top Side Hustles for College Students to Make Fast Cash in 2025",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/best-side-hustles-for-college-students/"
+    },
+    {
+        "title": "College Student Internships: The Complete 101 Guide",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/college-internships-guide/"
+    },
+    {
+        "title": "How to Make Friends in College: Our Staff’s Top 10 Tips",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/how-to-make-friends-in-college/"
+    },
+    {
+        "title": "The College Student’s Guide to Career Counselors and Guidance",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/college-career-counselors-guidance/"
+    },
+    {
+        "title": "How to Find Scholarships for College: Top Tips for a Successful Search",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/finding-scholarships-tips/"
+    },
+    {
+        "title": "15 Best Colleges to Attend if You Want a Vibrant Social Life",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/colleges-with-the-best-social-life/"
+    },
+    {
+        "title": "15 Online Jobs for College Students to Make Money in 2024",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/best-online-jobs-college-students/"
+    },
+    {
+        "title": "15 Best Tech Gadgets for College Students on a Budget [2024]",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The College Post",
+        "link": "https://thecollegepost.com/tech-gadgets-for-college-students/"
+    },
+    {
+        "title": "Can you get into a university that rejected you?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/ucas/can-you-get-into-a-university-that-rejected-you"
+    },
+    {
+        "title": "Masters Personal Statement",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/personal-statement/masters-personal-statement"
+    },
+    {
+        "title": "How to write an undergraduate personal statement",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/personal-statement/how-to-write-a-personal-statement"
+    },
+    {
+        "title": "What you need to include in your personal statement",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/personal-statement/what-to-include-in-a-personal-statement"
+    },
+    {
+        "title": "Personal Statement FAQs",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/personal-statement/personal-statement-faqs"
+    },
+    {
+        "title": "Personal Statement Tips",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/personal-statement/personal-statement-tips"
+    },
+    {
+        "title": "The ultimate guide to applying for university",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/ultimate-guide-to-applying-to-university"
+    },
+    {
+        "title": "10 top ranked universities in Clearing 2025",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/best-universities-in-clearing"
+    },
+    {
+        "title": "How do I choose the right university for me?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/how-to-choose-a-university"
+    },
+    {
+        "title": "What is Turnitin?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/what-is-turnitin"
+    },
+    {
+        "title": "What is the GMAT?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/gmat"
+    },
+    {
+        "title": "What to do about bullying at university",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student"
+    },
+    {
+        "title": "What is an undergraduate degree and what to expect?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/undergraduate"
+    },
+    {
+        "title": "What to eat as a student",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/what-to-eat"
+    },
+    {
+        "title": "How to manage working while studying",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/manage-working-studying"
+    },
+    {
+        "title": "What are university interviews?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/university-interviews"
+    },
+    {
+        "title": "What does a two year degree cover?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/two-year-degree"
+    },
+    {
+        "title": "What are university societies?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/university-societies"
+    },
+    {
+        "title": "Dropping out of uni: what you need to know",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/dropping-out-of-uni"
+    },
+    {
+        "title": "The ultimate student calendar",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/student-calendar"
+    },
+    {
+        "title": "What is a research university?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/what-is-a-research-university"
+    },
+    {
+        "title": "What is a virtual interview?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/virtual-interview"
+    },
+    {
+        "title": "What is a collegiate university?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "universitycompare",
+        "link": "https://universitycompare.com/advice/student/what-is-a-collegiate-university"
     }
 ]
