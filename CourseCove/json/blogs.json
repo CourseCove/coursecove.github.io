@@ -1,62 +1,3596 @@
 [
-  {
-    "title": "22 Thoughts on Using AI to Learn Better",
+    {
+        "title": "How to Easily Stay Organized and Productive in College",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-stay-organized-in-college/"
+    },
+    {
+        "title": "The Ultimate Guide To Building A Personal Website",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/personal-website/"
+    },
+    {
+        "title": "What to Bring to College: The Ultimate College Packing List",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://collegeinfogeek.com/college-packing-list/"
+    },
+    {
+        "title": "23 of the Best Online Jobs for Students – and How to Get Them",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/online-jobs-for-college-students/"
+    },
+    {
+        "title": "40+ Study Tips to Help You Work Smarter This Semester",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/study-tips/"
+    },
+    {
+        "title": "How to Use the Feynman Technique to Learn Faster (With Examples)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/feynman-technique/"
+    },
+    {
+        "title": "8 Better Ways to Make and Study Flash Cards",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/flash-card-study-tips/"
+    },
+    {
+        "title": "How to Remember More of What You Learn with Spaced Repetition",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/spaced-repetition-memory-technique/"
+    },
+    {
+        "title": "How to Improve Your Memory: A Comprehensive, Science-Backed Guide",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/how-to-improve-memory/"
+    },
+    {
+        "title": "How to Take Better Notes: The 6 Best Note-Taking Systems",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Elizabeth Lundin",
+        "link": "https://collegeinfogeek.com/how-to-take-notes-in-college/"
+    },
+    {
+        "title": "How to Make Studying Fun",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/how-to-make-studying-fun/"
+    },
+    {
+        "title": "How to Study for Any Test or Exam (Even If You Feel Unmotivated)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://collegeinfogeek.com/how-to-study/"
+    },
+    {
+        "title": "How to Deal with Essay Questions on Exams",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/essay-questions/"
+    },
+    {
+        "title": "How to Improve Your Grades on Multiple Choice Tests",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/multiple-choice-tests/"
+    },
+    {
+        "title": "How to Overcome Test Anxiety – 5 Strategies That Work",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/test-anxiety/"
+    },
+    {
+        "title": "How to Create a Study Schedule for Your Final Exams",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/final-exam-study-schedule/"
+    },
+    {
+        "title": "Confidence Tracking: A Brain Hack for Improving Your Exam Grades",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/confidence-tracking-exam-technique/"
+    },
+    {
+        "title": "So You Failed a Test… or a Whole Semester. What Now?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/failed-test-or-semester/"
+    },
+    {
+        "title": "How to Prepare for Exams Like A Pro: The Exam Prep Cycle",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/exam-prep-cycle/"
+    },
+    {
+        "title": "How to Motivate Yourself to Study (The 5-Step Process)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Elizabeth Lundin",
+        "link": "https://collegeinfogeek.com/study-motivation/"
+    },
+    {
+        "title": "How to Get Better at Math (While Spending Less Time Studying)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/how-to-get-better-at-math/"
+    },
+    {
+        "title": "How to Write High-Quality Papers and Essays More Quickly",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/write-excellent-papers-quickly/"
+    },
+    {
+        "title": "How to Stop Falling Behind on Your Homework",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/how-to-stop-falling-behind-on-your-homework/"
+    },
+    {
+        "title": "How to Finish Homework FAST",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/how-to-finish-homework-fast/"
+    },
+    {
+        "title": "How to Create a Great Study Space (With Examples)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/create-study-space/"
+    },
+    {
+        "title": "How to Write a Killer Research Paper (Even If You Hate Writing)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Elizabeth Lundin",
+        "link": "https://collegeinfogeek.com/how-to-write-a-research-paper/"
+    },
+    {
+        "title": "How to Stop Procrastinating: The Only Guide You’ll Ever Need",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/how-to-stop-procrastinating/"
+    },
+    {
+        "title": "How to Read More Books: 7 Ways to Build a Consistent Reading Habit",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/build-reading-habit-read-more-books/"
+    },
+    {
+        "title": "The Science Behind How Fast Humans Can Read",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/speed-reading-science/"
+    },
+    {
+        "title": "3 Speed Reading Techniques Examined: Do They Actually Work?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/speed-reading-techniques-examined/"
+    },
+    {
+        "title": "5 Ways You Can ACTUALLY Increase Your Reading Speed",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/increasing-reading-speed/"
+    },
+    {
+        "title": "Textbook Reading Strategies For Ultra-Efficient Learning",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-read-a-textbook/"
+    },
+    {
+        "title": "5 Active Reading Strategies (And How I’m Applying Them)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/active-reading/"
+    },
+    {
+        "title": "Essential Books for Students",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://collegeinfogeek.com/essential-books-for-students/"
+    },
+    {
+        "title": "Listen and Learn: The 40 Best Educational Podcasts in 2023",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/best-podcasts/"
+    },
+    {
+        "title": "Watch and Learn: The 100+ Best Educational YouTube Channels in 2023",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/educational-youtube-channels/"
+    },
+    {
+        "title": "How to Learn Any Language from Scratch",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/how-to-learn-a-language/"
+    },
+    {
+        "title": "Self-Education: The Skill That Will Help You Stay Ahead",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/self-education/"
+    },
+    {
+        "title": "A 12-Step Exam Prep Checklist (Ep. 204)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/exam-prep-checklist/"
+    },
+    {
+        "title": "How to Be Good at Everything — The Rapid Skill Learning Process (Ep. 210)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/rapid-skill-building/"
+    },
+    {
+        "title": "How to Study Math and Science Effectively (Ep. 132)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/karen-christian/"
+    },
+    {
+        "title": "How to Make a Comeback and Save Your Grades (Ep. 115)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/make-comeback-save-grades/"
+    },
+    {
+        "title": "Reading Faster: The Science Behind What Works… and What Doesn’t (Ep. 93)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/liz-schotter/"
+    },
+    {
+        "title": "How to Read And Learn More Effectively (Ep. 48)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/shane-parrish/"
+    },
+    {
+        "title": "The Best To-Do List App in 2023 – Our Top 10 Picks",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/best-to-do-list-app/"
+    },
+    {
+        "title": "The 11 Best Note-Taking Apps in 2023 – Evernote, Notion, and More",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/best-note-taking-apps/"
+    },
+    {
+        "title": "The Best Time Tracking Apps in 2023: Toggl, Clockify, and More",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/time-tracking-app/"
+    },
+    {
+        "title": "How the Bullet Journal Can Make You a More Productive Student",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/bullet-journal/"
+    },
+    {
+        "title": "The Ultimate Study Music Playlist",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://collegeinfogeek.com/playlist/"
+    },
+    {
+        "title": "How to Stop Procrastinating: The Only Guide You’ll Ever Need",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/how-to-stop-procrastinating/"
+    },
+    {
+        "title": "How to ACTUALLY Break Your Bad Habits",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Elizabeth Lundin",
+        "link": "https://collegeinfogeek.com/how-to-break-bad-habits/"
+    },
+    {
+        "title": "How to Wake Up Feeling Motivated Every Single Morning",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/wake-up-motivated-every-morning/"
+    },
+    {
+        "title": "How to Actually Stop Wasting Time On The Internet",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/internet-time-wasting/"
+    },
+    {
+        "title": "Feeling Overwhelmed? These 8 Techniques Can Help",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/time-management-tips/"
+    },
+    {
+        "title": "Why Multitasking Makes You Less Productive (Except When It Doesn’t)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/multitasking/"
+    },
+    {
+        "title": "How to Stop Procrastinating and Focus: A Guide to the Pomodoro Technique",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/pomorodo-technique/"
+    },
+    {
+        "title": "The Flow State: How to Enter Your Brain’s Most Productive State",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/flow/"
+    },
+    {
+        "title": "This Technique Can Help You Focus Like an Elite Athlete – The “AMRAP” Mentality",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/amrap-mentality/"
+    },
+    {
+        "title": "How the Internet Destroys Your Focus (and How to Get It Back)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/stay-focused-internet/"
+    },
+    {
+        "title": "How to Study with INTENSE Focus: 6 Essential Tips",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/how-to-focus/"
+    },
+    {
+        "title": "Deep Work: How to Focus and Resist Distractions (Ep. 100)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/deep-work/"
+    },
+    {
+        "title": "Morning Routines (Ep. 208)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/morning-routines/"
+    },
+    {
+        "title": "How to Build Strong Habits (Ep. 214)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/build-strong-habits/"
+    },
+    {
+        "title": "How to Actually Use Productivity Tips and Improve Your Life (Ep. 176)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/actually-use-productivity-tips/"
+    },
+    {
+        "title": "Productivity Lessons from Video Game Design (Ep. 265)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/productivity-video-game-design/"
+    },
+    {
+        "title": "Essentialism: How to Do More by Doing Less (Ep. 171)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/essentialism/"
+    },
+    {
+        "title": "Applying for a Job? This is Exactly How to Write a Winning Resume",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-write-a-resume/"
+    },
+    {
+        "title": "4 Tips to Ace Phone Interviews (Plus 8 Practice Interview Questions)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Elizabeth Lundin",
+        "link": "https://collegeinfogeek.com/phone-interview-tips/"
+    },
+    {
+        "title": "How to Write a Thank You Note for Any Occasion (With 3 Examples You Can Use)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/thank-you-note/"
+    },
+    {
+        "title": "7 Resume Mistakes You Need to Avoid",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/resume-mistakes-to-avoid/"
+    },
+    {
+        "title": "How to Write a Cover Letter",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/cover-letter/"
+    },
+    {
+        "title": "How to Get Any Job You Want: The 2 Decisive Moments to Master",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/how-to-get-a-job/"
+    },
+    {
+        "title": "How to Ace Your Next Job Interview: 35 Proven Tips",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/job-interview-tips/"
+    },
+    {
+        "title": "12 Pieces of Career Advice to Put You On the Path to Success",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/career-advice/"
+    },
+    {
+        "title": "Working for a Nonprofit: 2 Pros Share What It’s Like (and Why You Should Consider It)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/working-for-a-nonprofit/"
+    },
+    {
+        "title": "The Ultimate Guide To Building A Personal Website",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/personal-website/"
+    },
+    {
+        "title": "49 of the Best Personal Website and Portfolio Examples in 2023",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/personal-website-examples/"
+    },
+    {
+        "title": "How to Build a Personal Brand That Cuts Through the Clutter",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/personal-brand/"
+    },
+    {
+        "title": "The Essential Components of a Great Personal Website (Examples Included)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/essential-components-of-personal-websites/"
+    },
+    {
+        "title": "How to Create an Impressive Online Portfolio (with Examples)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/online-portfolio/"
+    },
+    {
+        "title": "The Ultimate Guide to LinkedIn for Students",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/linkedin-summary-examples-for-students/"
+    },
+    {
+        "title": "How to Network Like the Pros: 8 Creative Strategies No One Else Is Using",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/how-to-network/"
+    },
+    {
+        "title": "How to Use Informational Interviews to Land Your Dream Job",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Roxine Kee",
+        "link": "https://collegeinfogeek.com/informational-interviews/"
+    },
+    {
+        "title": "Silver-Medal Mentors: Mastering the Art of 21st-Century Apprenticeships",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/find-a-mentor/"
+    },
+    {
+        "title": "How to Ask for Letters of Recommendation and References",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/letter-of-recommendation/"
+    },
+    {
+        "title": "Don’t Have 3-5 Years of Experience? Here’s How to Get It",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-get-a-job-with-no-experience/"
+    },
+    {
+        "title": "23 of the Best Online Jobs for Students – and How to Get Them",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/online-jobs-for-college-students/"
+    },
+    {
+        "title": "These 26 Part-Time Jobs Will Help You Stop Being Broke",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/jobs-for-college-students/"
+    },
+    {
+        "title": "How to Make an Extra $1,000 a Month (26 Ways That Actually Work)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-make-an-extra-1000-a-month/"
+    },
+    {
+        "title": "The Ultimate Guide to Freelancing in College",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/ultimate-guide-freelancing-college/"
+    },
+    {
+        "title": "Why You Aren’t Successful Yet (Ep. 219)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/why-you-arent-successful/"
+    },
+    {
+        "title": "Our Winding Career Paths (Ep. 268)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/winding-career-paths/"
+    },
+    {
+        "title": "How to Achieve Work-Life Balance (Ep. 234)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/achieve-work-life-balance/"
+    },
+    {
+        "title": "How to Write a Great Resume and Cover Letter (Ep. 209)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/write-a-great-resume/"
+    },
+    {
+        "title": "Career Fairs and Networking Events (Ep. 233)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/career-fairs-and-networking-events/"
+    },
+    {
+        "title": "How to Find a Mentor (Ep. 203)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/how-to-find-a-mentor/"
+    },
+    {
+        "title": "Why You’re Tired All the Time: How to Have All-Day Energy",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/stop-feeling-tired/"
+    },
+    {
+        "title": "How to Stay Hydrated: Here’s Everything You Need to Know",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/stay-hydrated/"
+    },
+    {
+        "title": "Optimize Your Sleep: 5 Tips for Falling Asleep Faster and Sleeping Better",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/optimize-sleep/"
+    },
+    {
+        "title": "6 Ways to Be More Active (No Gym Required)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-be-more-active/"
+    },
+    {
+        "title": "How to Make Friends in College: A Comprehensive Guide",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/make-friends-college/"
+    },
+    {
+        "title": "The T-Shaped Person: Building Deep Expertise AND a Wide Knowledge Base",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/become-t-shaped-person/"
+    },
+    {
+        "title": "7 Ways to Improve Your Critical Thinking Skills",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/improve-critical-thinking-skills/"
+    },
+    {
+        "title": "How to Learn Any Skill in Under 20 Hours",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-learn-a-new-skill-quickly/"
+    },
+    {
+        "title": "How to Move to a New City (From Start to Finish)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-move-to-a-new-city/"
+    },
+    {
+        "title": "How to Budget and Save Money as a College Student",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/budgeting-for-college-students/"
+    },
+    {
+        "title": "How I Cut My Average Meal Cost to $3.57 by Meal Prepping",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Dominic Vaiana",
+        "link": "https://collegeinfogeek.com/meal-prep/"
+    },
+    {
+        "title": "How to Save $108.76 Per Year with Amazon Prime Student",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/amazon-prime-student/"
+    },
+    {
+        "title": "39 Ways You Can Cut The Cost Of College",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Thomas Frank",
+        "link": "https://collegeinfogeek.com/cut-college-costs/"
+    },
+    {
+        "title": "The Ultimate List of Student Discounts and Deals – Winter 2023",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/student-discounts/"
+    },
+    {
+        "title": "Stop Being Broke: 100+ Ways to Make Money in College – Winter 2023",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-make-money-in-college/"
+    },
+    {
+        "title": "Credit Card Rewards and Points: The Beginner’s Guide",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/credit-card-rewards-points/"
+    },
+    {
+        "title": "10 Essential Life Skills That Every Student Should Have (Ep. 175)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/10-essential-skills-for-students/"
+    },
+    {
+        "title": "Social Skills: How to Be Confident in Social Situations (Ep. 181)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/social-skills-confidence/"
+    },
+    {
+        "title": "How to Be Good at Everything — The Rapid Skill Learning Process (Ep. 210)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/rapid-skill-building/"
+    },
+    {
+        "title": "10 Things We Regret NOT Doing in College (Ep. 271)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/10-things-we-regret-not-doing/"
+    },
+    {
+        "title": "Easy Ways to Be Eco-Friendly (Ep. 262)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/easy-ways-to-be-eco-friendly/"
+    },
+    {
+        "title": "How to Take Criticism (Ep. 215)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/criticism/"
+    },
+    {
+        "title": "The Dip: How to Know When to Quit (Ep. 202)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/the-dip/"
+    },
+    {
+        "title": "How We Use Notion to Manage a Blog That Gets 200K+ Monthly Visits",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/how-to-manage-a-blog-with-notion/"
+    },
+    {
+        "title": "The 6 Best Language Learning Apps in 2023: Duolingo, iTalki, and More",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/best-language-learning-apps/"
+    },
+    {
+        "title": "9 Ways You’re Wasting Money (and What to Do Instead)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/wasting-money/"
+    },
+    {
+        "title": "7 Hidden Ways You’re Wasting Time (and How to Eliminate Them)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ransom Patterson",
+        "link": "https://collegeinfogeek.com/wasting-time/"
+    },
+    {
+        "title": "Resources And Tools For Students",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://collegeinfogeek.com/resources/"
+    },
+    {
+        "title": "Essential Books for Students",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://collegeinfogeek.com/essential-books-for-students/"
+    },
+    {
+        "title": "What to Bring to College: The Ultimate College Packing List",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://collegeinfogeek.com/college-packing-list/"
+    },
+    {
+        "title": "The End: Reflections on the CIG Podcast (And What Comes Next) (Ep. 300)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/the-end/"
+    },
+    {
+        "title": "18 Reasons We Are Fools, According to Our Girlfriends (Ep. 298)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/reasons-we-are-fools/"
+    },
+    {
+        "title": "6 of the Biggest Lessons We Learned in College (Ep. 297)",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Martin Boehme",
+        "link": "https://collegeinfogeek.com/6-lessons-from-college/"
+    },
+    {
+        "title": "22 Thoughts on Using AI to Learn Better",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Scott H. Young",
+        "link": "https://www.scotthyoung.com/blog/2025/05/13/22-thoughts-on-using-ai-to-learn-better/"
+    },
+    {
+        "title": "How to Learn Anything Faster",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ali Abdaal",
+        "link": "https://aliabdaal.com/studying/how-to-learn-anything-faster/"
+    },
+    {
+        "title": "The Ultimate Guide To Studying For Exams",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://aliabdaal.com/studying/the-ultimate-guide-to-studying-for-exams/"
+    },
+    {
+        "title": "Useful Apps To Improve Productivity and Study",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Ali Abdaal",
+        "link": "https://aliabdaal.com/productivity/useful-apps-to-improve-productivity-and-study-effectively/"
+    },
+    {
+        "title": "What is Ultralearning?",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Scott H. Young",
+        "link": "https://www.scotthyoung.com/blog/ultralearning/"
+    },
+    {
+        "title": "Ultralearning vs Get Better at Anything",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Scott",
+        "link": "https://www.scotthyoung.com/blog/2024/05/14/ultralearning-vs-get-better-at-anything/"
+    },
+    {
+        "title": "Six Strategies for Effective Learning",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The Learning Scientists.",
+        "link": "https://www.learningscientists.org/blog/2021/2/18-1"
+    },
+    {
+        "title": "GUEST POST: Secret to Learning? It's Belonging",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "The Learning Scientists",
+        "link": "https://www.learningscientists.org/blog/2022/12/8-1"
+    },
+    {
+        "title": "Blogging in the 21st‑Century Classroom",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Edutopia",
+        "link": "https://www.edutopia.org/blog/blogging-in-21st-century-classroom-michelle-lampinen"
+    },
+    {
+        "title": "Student‑Centered Learning: It Starts With the Teacher",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "John McCarthy",
+        "link": "https://www.edutopia.org/blog/student-centered-learning-starts-with-teacher-john-mccarthy"
+    },
+    {
+        "title": "Balancing Work and School: Strategies for Success",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "",
+        "link": "https://www.easterncollege.ca/blog/balancing-work-and-school-strategies-for-success/?utm_source=chatgpt.com"
+    },
+    {
+        "title": "How I balance school and work life",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Hadiqah Khalil",
+        "link": "https://www.torontomu.ca/admissions/undergraduate/student-blog/news-and-events/2023/11/how-i-balance-school-and-work-life/?utm_source=chatgpt.com"
+    },
+    {
+        "title": "Working Students: How to Maintain a Balance",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Emma Coppins",
+        "link": "https://www.ousa.ca/blog_student_balance?utm_source=chatgpt.com"
+    },
+    {
+        "title": "Student Perspectives: Balancing Part-Time Work and Study",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "tim.worth",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2025/02/26/1044/"
+    },
+    {
+        "title": "Balancing Part-Time Work and Study: You are not alone!",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "tim.worth",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2025/02/21/balancing-part-time-work-and-study-you-are-not-alone/"
+    },
+    {
+        "title": "Balancing Part-Time Work and Study: Flexible jobs help you stay sociable and focused on study",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "tim.worth",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2025/02/21/balancing-part-time-work-and-study-flexible-jobs-help-you-stay-sociable-and-focused-on-study/"
+    },
+    {
+        "title": "Balancing Part-Time Work and Study: Restrictions and benefits as an international student",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "tim.worth",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2025/02/21/balancing-part-time-work-and-study-restrictions-and-benefits-as-an-international-student/"
+    },
+    {
+        "title": "Letter to my undergraduate self: Kerrianne Orriss – ‘Everything is fixable as long as you’re willing to learn’",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2023/04/17/letter-to-my-undergraduate-self-kerrianne-orriss-everything-is-fixable-as-long-as-youre-willing-to-learn/"
+    },
+    {
+        "title": "Letter to my undergraduate self: Souwoon Cho – ‘Enjoy learning and don’t be afraid to explore your interests!’",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2022/10/10/letter-to-my-undergraduate-self-souwoon-cho-enjoy-learning-and-dont-be-afraid-to-explore-your-interests/"
+    },
+    {
+        "title": "Student perspective: Staying motivated after receiving feedback",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2022/04/26/student-perspective-staying-motivated-after-receiving-feedback/"
+    },
+    {
+        "title": "How I make notes: The 5Rs",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "Molly Jackson",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2021/10/18/how-i-make-notes-the-5rs/"
+    },
+    {
+        "title": "Letter to my undergraduate self: Lewis Coyne – ‘I learned to actually listen to the feedback I was getting’",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2021/03/08/letter-to-my-undergraduate-self-lewis-coyne-i-learned-to-actually-listen-to-the-feedback-i-was-getting/"
+    },
+    {
+        "title": "Letter to my undergraduate self: Jenny Norris – ‘Failure isn’t the end of the world’",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2020/11/02/letter-to-my-undergraduate-self-jenny-norris/"
+    },
+    {
+        "title": "Student perspective: Dealing with online, proctored exams for the first time",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2022/05/12/student-perspective-dealing-with-online-proctored-exams-for-the-first-time/"
+    },
+    {
+        "title": "Student Perspectives: top tips for studying at university",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "tim.worth",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2024/10/04/student-perspectives-top-tips-for-studying-at-university/"
+    },
+    {
+        "title": "Student perspective: 3 reasons to do a summer internship at Bristol University",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2023/11/30/student-perspective-3-reasons-to-do-a-summer-internship-at-bristol-university/"
+    },
+    {
+        "title": "Student perspective: How to use your summer productively",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2021/06/01/student-perspective-how-to-use-your-summer-productively/"
+    },
+    {
+        "title": "Student Advocate tips for… starting uni",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2021/10/07/student-advocate-tips-for-starting-uni/"
+    },
+    {
+        "title": "Student perspective: Catching up on work when you’ve fallen behind",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2021/03/04/student-perspective-catching-up-on-work-when-youve-fallen-behind/"
+    },
+    {
+        "title": "Student perspective: Staying motivated in the lead up to and during Winter Break",
+        "thumbnail": "CourseCove/images/logo.png",
+        "preview": "study.skills",
+        "link": "https://studyskills.blogs.bristol.ac.uk/2020/11/27/student-perspective-staying-motivated-in-the-lead-up-to-and-during-winter-break/"
+    },
+    {
+    "title": "Student perspective: Maintaining an asynchronous routine for synchronous students",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "Scott H. Young explores how AI can both help and hinder deep learning.",
-    "link": "https://www.scotthyoung.com/blog/2025/05/13/22-thoughts-on-using-ai-to-learn-better/"
-  },
-  {
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2020/11/24/student-perspective-maintaining-an-asynchronous-routine-for-synchronous-students/"
+    },
+    {
+    "title": "Student perspective: Productivity – what does it mean to you?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2020/05/12/student-perspective-productivity-what-does-it-mean-to-you/"
+    },
+    {
+    "title": "Student perspective: Obliterating procrastination",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2020/12/17/student-perspective-obliterating-procrastination/"
+    },
+    {
+    "title": "Student perspective: On mindful studying",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2020/05/20/student-perspective-on-mindful-studying/"
+    },
+    {
+    "title": "Student perspective: Staying focused in a new environment",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2020/04/21/student-perspective-staying-focused-in-a-new-environment/"
+    },
+    {
+    "title": "Student perspective: Revising with AI tutors as a veterinary student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2023/12/14/student-perspective-revising-with-ai-tutors-as-a-veterinary-student/"
+    },
+    {
+    "title": "Student perspective: My journey with MarginNote mind maps",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2023/12/14/my-journey-with-margin-note-mind-maps/"
+    },
+    {
+    "title": "How I make notes: From a textbook",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jasmin Rahman",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2022/01/24/how-i-make-notes-from-a-textbook/"
+    },
+    {
+    "title": "How I make notes: From recorded lectures",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gloria Bosi",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2021/12/16/how-i-make-notes-from-recorded-lectures/"
+    },
+    {
+    "title": "How I make notes: A law student’s guide to making revision notes",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "study.skills",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2021/12/13/how-i-make-notes-a-law-students-guide-to-making-revision-notes/"
+    },
+    {
+    "title": "How I make notes: For essay planning",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Breanna Goff",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2021/11/15/how-i-make-notes-for-essay-planning/"
+    },
+    {
+    "title": "How I make notes: On paper",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Carys James",
+    "link": "https://studyskills.blogs.bristol.ac.uk/2021/11/01/how-i-make-notes-on-paper/"
+    },
+    {
+    "title": "5 Practical Tips for Balancing Academic and Social Life for Neurodivergent Students",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jennifer Schmidt",
+    "link": "https://lifeskillsadvocate.com/blog/5-practical-tips-for-balancing-academic-and-social-life-for-neurodivergent-students/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "Mental Health and Balancing Student Work Life",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kartik",
+    "link": "https://learningcommons.ubc.ca/mental-health-and-balancing-student-work-life/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "I Tried It! Meditating Everyday For a Week",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Manya",
+    "link": "https://learningcommons.ubc.ca/i-tried-it-meditating-everyday-for-a-week/"
+    },
+    {
+    "title": "How to Deal With 0.5 hrs of Daylight in the Winter",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Roshni",
+    "link": "https://learningcommons.ubc.ca/how-to-deal-with-0-5-hrs-of-daylight-in-the-winter/"
+    },
+    {
+    "title": "Not Heading Home for the Holidays? Tips for Feeling Less Homesick Over Winter Break",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thao",
+    "link": "https://learningcommons.ubc.ca/not-heading-home-for-the-holidays-tips-for-feeling-less-homesick-over-winter-break/"
+    },
+    {
+    "title": "Outdoor Spots to Practice Mindfulness",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jaya",
+    "link": "https://learningcommons.ubc.ca/outdoor-spots-to-practice-mindfulness/"
+    },
+    {
+    "title": "Peaceful Playing: Relaxing Video Game Recommendations",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Dixie",
+    "link": "https://learningcommons.ubc.ca/peaceful-playing-relaxing-video-game-recommendations/"
+    },
+    {
+    "title": "5 Books To Add To Your Summer TBR!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Oishi",
+    "link": "https://learningcommons.ubc.ca/5-books-to-add-to-your-summer-tbr/"
+    },
+    {
+    "title": "Stuck in a Rut? Get Re-energized by Trying New Things!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Payal",
+    "link": "https://learningcommons.ubc.ca/stuck-in-a-rut-get-re-energized-by-trying-new-things/"
+    },
+    {
+    "title": "Exploring Different Workplace Cultures",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thao",
+    "link": "https://learningcommons.ubc.ca/exploring-different-workplace-cultures/"
+    },
+    {
+    "title": "Disconnect to Reconnect: A Guide to “Digital Detoxing”",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Yanya",
+    "link": "https://learningcommons.ubc.ca/disconnect-to-reconnect-a-guide-to-digital-detoxing/"
+    },
+    {
+    "title": "I tried it! Journaling for a week",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mika",
+    "link": "https://learningcommons.ubc.ca/i-tried-it-journaling-for-a-week/"
+    },
+    {
+    "title": "3 General Tips for Solving All Roommate Disputes",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Florent",
+    "link": "https://learningcommons.ubc.ca/3-general-tips-for-solving-all-roommate-disputes/"
+    },
+    {
+    "title": "The Ultimate Guide to Time Management – Part 1",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sam",
+    "link": "https://learningcommons.ubc.ca/the-ultimate-cheat-sheet-on-time-management-part-1/"
+    },
+    {
+    "title": "The Ultimate Guide to Time Management – Part 2",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sam",
+    "link": "https://learningcommons.ubc.ca/the-ultimate-guide-to-time-management-part-2/"
+    },
+    {
+    "title": "Studying While Neurodivergent: Advice From a Recent Graduate",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://learningcommons.ubc.ca/studying-while-neurodivergent-advice-from-a-recent-graduate/"
+    },
+    {
+    "title": "Why a Longer Degree May Be a Great Option to Consider",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cindy",
+    "link": "https://learningcommons.ubc.ca/why-a-longer-degree-may-be-a-great-option-to-consider/"
+    },
+    {
+    "title": "Things to Consider When Choosing a Major",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Fariha",
+    "link": "https://learningcommons.ubc.ca/things-to-consider-when-choosing-a-major/"
+    },
+    {
+    "title": "How to Have Self-Compassion in Academics",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Alex",
+    "link": "https://learningcommons.ubc.ca/how-to-have-self-compassion-in-academics/"
+    },
+    {
+    "title": "Volunteering: What I Have Learned",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Rosemary",
+    "link": "https://learningcommons.ubc.ca/volunteering-what-i-have-learned/"
+    },
+    {
+    "title": "How to Write Persuasively, Patiently and with Ease",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Moussa",
+    "link": "https://learningcommons.ubc.ca/how-to-write-persuasively-patiently-and-with-ease/"
+    },
+    {
+    "title": "Ask Yourself: How do you Learn?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Nana",
+    "link": "https://learningcommons.ubc.ca/ask-yourself-how-do-you-learn/"
+    },
+    {
+    "title": "Getting Better With Money: Methods and Techniques",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Keli",
+    "link": "https://learningcommons.ubc.ca/getting-better-with-money-methods-techniques/"
+    },
+    {
+    "title": "How to build confidence as an introverted minority",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Tam",
+    "link": "https://learningcommons.ubc.ca/how-to-build-confidence-as-an-introverted-minority/"
+    },
+    {
+    "title": "Discovering My Approach to Learning",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kira",
+    "link": "https://learningcommons.ubc.ca/discovering-my-approach-to-learning/"
+    },
+    {
+    "title": "A Positive Approach to Facing University",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Alina",
+    "link": "https://learningcommons.ubc.ca/a-positive-approach-to-facing-university/"
+    },
+    {
+    "title": "The Danger of Reference Points",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Chris",
+    "link": "https://learningcommons.ubc.ca/the-danger-of-reference-points/"
+    },
+    {
+    "title": "Residence: Planning Ahead for Year-Round Housing",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://learningcommons.ubc.ca/residence-planning-ahead-for-year-round-housing/"
+    },
+    {
+    "title": "Grades vs Educational Knowledge",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madeleine",
+    "link": "https://learningcommons.ubc.ca/grades-vs-educational-knowledge/"
+    },
+    {
+    "title": "My Journey to Getting Better With Money",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Keli",
+    "link": "https://learningcommons.ubc.ca/my-journey-to-getting-better-with-money/"
+    },
+    {
+    "title": "Tips & Tricks for First Time Job Hunters",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kira",
+    "link": "https://learningcommons.ubc.ca/tips-tricks-for-first-time-job-hunters/"
+    },
+    {
+    "title": "Why are Office Hours Important?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Rahul",
+    "link": "https://learningcommons.ubc.ca/why-are-office-hours-important/"
+    },
+    {
+    "title": "How I Navigated an Academic Dilemma",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sammy",
+    "link": "https://learningcommons.ubc.ca/how-i-navigated-an-academic-dilemma/"
+    },
+    {
+    "title": "Homesickness and the Education System as a First Year Student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Miski",
+    "link": "https://learningcommons.ubc.ca/homesickness-and-the-education-system-as-a-first-year-student/"
+    },
+    {
+    "title": "Mental Health and Students’ Academic Lives",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kartik",
+    "link": "https://learningcommons.ubc.ca/mental-health-and-students-academic-lives-2/"
+    },
+    {
+    "title": "Mental Health and Students’ Social Lives",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kartik",
+    "link": "https://learningcommons.ubc.ca/mental-health-and-students-social-lives/"
+    },
+    {
+    "title": "Combating Winter Blues",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sammy",
+    "link": "https://learningcommons.ubc.ca/combating-winter-blues/"
+    },
+    {
+    "title": "What I Would Do Differently If I Could Do University All Over Again",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Lia",
+    "link": "https://learningcommons.ubc.ca/what-i-would-do-differently-if-i-could-do-university-all-over-again/"
+    },
+    {
+    "title": "Setting Intentions and Getting to Work",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Selina Boan",
+    "link": "https://learningcommons.ubc.ca/setting-intentions-and-getting-to-work/"
+    },
+    {
+    "title": "Why Don’t We Like Group Work?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Tristan",
+    "link": "https://learningcommons.ubc.ca/why-dont-we-like-group-work/"
+    },
+    {
+    "title": "Improving Students’ Work-Life Balance on Campus",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Emily Fournier",
+    "link": "https://www.workplaceoptions.com/blog/improving-students-work-life-balance-on-campus/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "BALANCING FULL- TIME STUDENT WITH PART- TIME JOB",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jasmine Ramirez",
+    "link": "https://www.westernwyoming.edu/blogs/life/wellbeing/life-balance-work.php?utm_source=chatgpt.com"
+    },
+    {
+    "title": "Welcome to the future of learning! Introducing the Virtual Reality lab and Hy-Flex classrooms",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kayla Hawley",
+    "link": "https://www.westernwyoming.edu/blogs/learning/business-computer-technology/business-info-systems/the-future-of-learning-vr-lab.php"
+    },
+    {
+    "title": "Western Wyoming Community College’s Information Systems Program: A Gateway to Diverse Tech Careers",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Stephanie Peterson",
+    "link": "https://www.westernwyoming.edu/blogs/learning/business-computer-technology/business-info-systems/information-systems-a-gateway-to-diverse-tech-careers.php"
+    },
+    {
+    "title": "Western’s HyFlex: A Solution for a Busy College Student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Curtmarie Hardaker",
+    "link": "https://www.westernwyoming.edu/blogs/learning/business-computer-technology/computer-science/hyflex-a-solution-for-busy-college-students.php"
+    },
+    {
+    "title": "Soil Research Results in Opportunities in Alaska",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Curtmarie Hardaker",
+    "link": "https://www.westernwyoming.edu/blogs/learning/math-science/biological-sciences/soil-research-results-in-opportunties-in-alaska.php"
+    },
+    {
+    "title": "Tips When Taking Online Classes",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/tips-when-taking-online-classes.php"
+    },
+    {
+    "title": "Linkedin for Students: Getting Started",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/linkedin-for-student-get-started.php"
+    },
+    {
+    "title": "Finding What's Right For You",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/find-whats-right-for-you-wyoming-boots.php"
+    },
+    {
+    "title": "Maximizing Your Potential: Opportunities for Scholarships on Campus",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kaleb Click",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/opportunities-for-scholarships.php"
+    },
+    {
+    "title": "Embracing AI: Why Professors Should Be Open to Artificial Intelligence",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kaleb Click",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/embracing-ai-why-professors-should-be-open-to-artificial-intellegence.php"
+    },
+    {
+    "title": "Is A.I. Helpful or Harmful?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/is-ai-helpful-or-harmful.php"
+    },
+    {
+    "title": "The Importance of Networking: Building Bridges to Success",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kaleb Click",
+    "link": "https://www.westernwyoming.edu/blogs/learning/business-computer-technology/business/importance-of-networking.php"
+    },
+    {
+    "title": "Overcoming Fear: Trying to Graduate",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Black",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/overcoming-fear-trying-to-graduate.php"
+    },
+    {
+    "title": "The Benefits of Reading",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kaleb Click",
+    "link": "https://www.westernwyoming.edu/blogs/learning/arts-humanities/communications/the-benefits-of-reading.php"
+    },
+    {
+    "title": "The Art of Listening: Why It Matters More Than You Think",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kaleb Click",
+    "link": "https://www.westernwyoming.edu/blogs/learning/social-sciences-education/psychology/art-of-listening.php"
+    },
+    {
+    "title": "Getting Ahead in High School",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/getting-ahead-in-high-school.php"
+    },
+    {
+    "title": "How to be Successful in Online Courses",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Caleb Click",
+    "link": "https://www.westernwyoming.edu/blogs/learning/general-learning/how-to-be-successful-in-online-courses.php"
+    },
+    {
+    "title": "Remote Learning: How Technology Has Changed Education",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kaleb Click",
+    "link": "https://www.westernwyoming.edu/blogs/learning/arts-humanities/communications/remote-learning.php"
+    },
+    {
+    "title": "Music For The Brain",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/arts-humanities/art/music-for-the-brain.php"
+    },
+    {
+    "title": "Tips For Better Notes",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/arts-humanities/communications/tips-for-better-notes.php"
+    },
+    {
+    "title": "How to Study",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Madison Blake",
+    "link": "https://www.westernwyoming.edu/blogs/learning/arts-humanities/communications/how-to-study.php"
+    },
+    {
+    "title": "Communicating Competently is Important!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Tanya Baer",
+    "link": "https://www.westernwyoming.edu/blogs/learning/arts-humanities/communications/com-spring-2022.php"
+    },
+    {
+    "title": "How to Make the Most Out of Your Clinical Placement as a Medical Student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://www.qub.ac.uk/student-blog/featured/clinical-placement-prep.html?utm_source=chatgpt.com"
+    },
+    {
+    "title": "Time Management Tips",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/10/07/time-management-tips/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "The Importance of Mindful Planning",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/04/03/the-importance-of-mindfully-planning/"
+    },
+    {
+    "title": "Three Fun Facts You Should Know About the Relationship Between Coffee and Sleep!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/03/07/three-fun-facts-you-should-know-about-the-relationship-between-coffee-and-sleep/"
+    },
+    {
+    "title": "Did you know Procrastination is much more than Laziness?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/02/29/why-procrastination-is-much-more-than-laziness/"
+    },
+    {
+    "title": "5 Ways to Enjoy your Academic Journey",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/02/22/5-ways-to-enjoy-your-academic-journey/"
+    },
+    {
+    "title": "What does it really mean to be productive?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/02/15/what-does-it-really-mean-to-be-productive/"
+    },
+    {
+    "title": "5 Hidden Benefits of Early Morning Studying!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/02/07/5-hidden-benefits-of-early-morning-studying/"
+    },
+    {
+    "title": "Are all-nighters ever a good idea?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/02/02/are-all-nighters-ever-a-good-idea/"
+    },
+    {
+    "title": "5 Ways to Boost Productivity During Midterm Season!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Mahrosh",
+    "link": "https://sites.dartmouth.edu/learning/2024/01/26/5-ways-to-boost-productivity-during-midterm-season/"
+    },
+    {
+    "title": "Time Management",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2023/05/15/time-management/"
+    },
+    {
+    "title": "A Guide on How to Effectively Communicate With Your Professors",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "f004yfd",
+    "link": "https://sites.dartmouth.edu/learning/2022/08/26/a-guide-on-how-to-effectively-communicate-with-your-professors/"
+    },
+    {
+    "title": "Keys to Maintaining A School Life Balance",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "f005g8z",
+    "link": "https://sites.dartmouth.edu/learning/2022/05/19/keys-to-maintaining-a-school-life-balance/"
+    },
+    {
+    "title": "Office Hours, Tutorials, X-hours, Oh My! Building Relationships with Professors",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "f005g8z",
+    "link": "https://sites.dartmouth.edu/learning/2022/05/13/office-hours-tutorials-x-hours-oh-my-building-relationships-with-professors/"
+    },
+    {
+    "title": "Struggling with time management? There’s an app for that!",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "f005g8z",
+    "link": "https://sites.dartmouth.edu/learning/2022/05/06/struggling-with-time-management-theres-an-app-for-that/"
+    },
+    {
+    "title": "What to Do When you Don’t Understand your Readings",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/10/25/what-to-do-when-you-dont-understand-your-readings/"
+    },
+    {
+    "title": "5 Tips for In-person Exams",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/09/16/5-tips-for-in-person-exams/"
+    },
+    {
+    "title": "How to Pick Balanced Courses",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/08/19/how-to-pick-balanced-courses/"
+    },
+    {
+    "title": "Summer Reading List",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "f0043gh",
+    "link": "https://sites.dartmouth.edu/learning/2021/06/24/summer-reading-list/"
+    },
+    {
+    "title": "Prioritization: an Important Productivity Technique",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "f0043gh",
+    "link": "https://sites.dartmouth.edu/learning/2021/05/26/prioritization-an-important-productivity-technique/"
+    },
+    {
+    "title": "My Experience as a Group Tutor",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "f0043gh",
+    "link": "https://sites.dartmouth.edu/learning/2021/05/12/my-experience-as-a-group-tutor/"
+    },
+    {
+    "title": "Productivity Apps Part 2: Review of Asana and Trello",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/04/28/productivity-apps-part-2-review-of-asana-and-trello/"
+    },
+    {
+    "title": "Productivity Apps: Review of Flora and Focus Keeper",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/04/14/productivity-apps-review-of-flora-and-focus-keeper/"
+    },
+    {
+    "title": "Videos That Will Help You Be More Productive",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Academic Skills Center",
+    "link": "https://sites.dartmouth.edu/learning/2021/03/31/videos-that-will-help-you-be-more-productive/"
+    },
+    {
+    "title": "4 Tips on Increasing Productivity During Quarantine",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Academic Skills Center",
+    "link": "https://sites.dartmouth.edu/learning/2021/02/24/4-tips-on-increasing-productivity-during-quarantine/"
+    },
+    {
+    "title": "5 Tips on Creating Your Own Study Place",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/01/27/5-tips-on-creating-your-own-study-place/"
+    },
+    {
+    "title": "Tips for Handling Rejection",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2021/01/15/tips-for-handling-rejection/"
+    },
+    {
+    "title": "Reading Strategies I Used for an Art History Course",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2020/11/03/reading-strategies-i-used-for-an-art-history-course/"
+    },
+    {
+    "title": "The Key to Changing Habits",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2020/10/23/the-key-to-changing-habits/"
+    },
+    {
+    "title": "The 4 Stages of Note-taking",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sarah",
+    "link": "https://sites.dartmouth.edu/learning/2020/10/06/the-4-stages-of-note-taking/"
+    },
+    {
+    "title": "How to Not Stress the End of 20S",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2020/06/02/how-to-not-stress-the-end-of-20s/"
+    },
+    {
+    "title": "Is a Humanities Master’s Degree Right for you?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2020/05/22/the-mals-program/"
+    },
+    {
+    "title": "4 Tips to Being A Successful Online Test Taker",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2020/05/13/4-tips-to-being-a-successful-online-test-taker/"
+    },
+    {
+    "title": "The Mindset Transition from Undergrad to Grad School",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2020/04/29/the-mindset-transition-from-undergrad-to-grad-school/"
+    },
+    {
+    "title": "Remote Student Enrichment for 20S",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2020/04/10/remote-student-enrichment-for-20s/"
+    },
+    {
+    "title": "Make the Most of Your 20S Online Courses",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2020/03/23/20s-online-courses/"
+    },
+    {
+    "title": "Four Ways to “Take Care” This Winter",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2020/02/25/four-ways-to-take-care-this-winter/"
+    },
+    {
+    "title": "How to Begin to Approach your Humanities & Social Science Research",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Keren Valenzuela Bermudez",
+    "link": "https://sites.dartmouth.edu/learning/2019/11/11/how-to-begin-to-approach-your-humanities-social-science-research/"
+    },
+    {
+    "title": "All About Balance: For 23’s",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2019/07/22/all-about-balance-for-23s/"
+    },
+    {
+    "title": "7 Things I Wish I Knew During Undergrad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2019/06/11/7-things-i-wish-i-knew-during-my-undergraduate-career/"
+    },
+    {
+    "title": "A Productive Day Begins the Night Before",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://sites.dartmouth.edu/learning/2019/05/07/a-productive-day-begins-the-night-before/"
+    },
+    {
+    "title": "Blueprint for Success in College and Career: A Book Review",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2019/03/25/blueprint-for-success-in-college-and-career-a-book-review/"
+    },
+    {
+    "title": "6 Tips to Finish Off the Term Strong",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2019/03/06/6-tips-to-finish-off-the-term-strong/"
+    },
+    {
+    "title": "Take Breaks- and Don’t Feel Guilty About it",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Liza Gallandt",
+    "link": "https://sites.dartmouth.edu/learning/2019/02/18/take-breaks-and-dont-feel-guilty-about-it/"
+    },
+    {
+    "title": "What’s in Your 5 Year Plan?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2019/02/13/whats-in-your-5-year-plan/"
+    },
+    {
+    "title": "Combat College Burnout",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2019/01/25/combat-college-burnout/"
+    },
+    {
+    "title": "3 Ways to Make Your New Year’s Resolutions Stick",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2018/12/20/3-ways-to-make-your-new-years-resolutions-stick/"
+    },
+    {
+    "title": "The Importance of Positive Thinking",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2018/12/17/importance-of-positive-thinking/"
+    },
+    {
+    "title": "How Planning Can Lead to a Successful College Experience",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2018/12/03/how-planning-can-lead-to-a-successful-college-experience/"
+    },
+    {
+    "title": "Reading and Recall",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Wells",
+    "link": "https://sites.dartmouth.edu/learning/2018/06/06/reading-and-recall/"
+    },
+    {
+    "title": "Studying On The Weekend",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2018/04/05/studying-on-the-weekend/"
+    },
+    {
+    "title": "Finding Direction in The New Year",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/12/21/finding-direction-in-the-new-year/"
+    },
+    {
+    "title": "How to Create a Self-Reflection List",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/11/27/394/"
+    },
+    {
+    "title": "Final Exam Week",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/11/10/final-exam-week/"
+    },
+    {
+    "title": "Surviving Midterm Week",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/10/02/surviving-midterm-week/"
+    },
+    {
+    "title": "What I Wished I Bought",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/08/14/what-i-wished-i-bought/"
+    },
+    {
+    "title": "Implementing a Four-Year Plan",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/07/04/implementing-a-four-year-plan/"
+    },
+    {
+    "title": "Four Steps to a Growth Mindset",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/05/20/developing-a-growth-mindset/"
+    },
+    {
+    "title": "Goal Setting Part 2: The Four Steps to Effective Goal Setting",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/05/19/goal-setting-part-2-the-four-steps-to-effective-goal-setting/"
+    },
+    {
+    "title": "Goal Setting Part 1: Setting Effective Goals",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/05/19/114/"
+    },
+    {
+    "title": "How the Growth Mindset helped me make a perfect score on the SAT Writing Section",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/05/19/how-the-growth-mindset-helped-me-make-a-perfect-score-on-the-sat-writing-section/"
+    },
+    {
+    "title": "Understanding the Growth Mindset",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/05/18/understanding-the-growth-mindset/"
+    },
+    {
+    "title": "Thinking About Course Selection",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/05/06/picking-courses-part-2-how-to-use-the-dartmouth-course-catalog/"
+    },
+    {
+    "title": "Overcoming Final Exam Anxiety",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/04/28/overcoming-final-exam-anxiety/"
+    },
+    {
+    "title": "The Freshman 15: Fact or Fiction?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jonathan Lu",
+    "link": "https://sites.dartmouth.edu/learning/2017/04/17/the-freshman-15-fact-or-fiction/"
+    },
+    {
+    "title": "10 Tips For Balancing School And Personal Life",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "admin",
+    "link": "https://eastohio.edu/tips-for-balancing-school-and-personal-life/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "MY BURNOUT LEARNING CYCLE: Beating Stress of College Starts with Balance and Prioritizing",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Annelise Miller",
+    "link": "https://blog.mnsu.edu/csu/my-burnout-learning-cycle-beating-stress-of-college-starts-with-balance-and-prioritizing/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "Advance Your Major through Eight Core Career Competencies",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Lenny Koupal",
+    "link": "https://blog.mnsu.edu/csu/create-your-skills-checklist-for-advancing-your-major-through-eight-core-competencies/"
+    },
+    {
+    "title": "A Week In The Life of a Harvard Student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kathleen",
+    "link": "https://college.harvard.edu/student-life/student-stories/week-life-harvard-student?utm_source=chatgpt.com"
+    },
+    {
+    "title": "Making the Most of Spring Recess",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gabe Farmer",
+    "link": "https://ischool.sjsu.edu/istudent-blog/making-most-spring-recess"
+    },
+    {
+    "title": "From Education to Libraries: Jackie’s Journey of Career Transition and Balance",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gabe Farmer",
+    "link": "https://ischool.sjsu.edu/istudent-blog/education-libraries-jackies-journey-career-transition-and-balance"
+    },
+    {
+    "title": "Balancing Life, Work and School – Spotlighting Corrine’s Journey",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Gabe Farmer",
+    "link": "https://ischool.sjsu.edu/istudent-blog/balancing-life-work-and-school-spotlighting-corrines-journey"
+    },
+    {
+    "title": "Tips for Scholarship Applications",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kesheena Doctor",
+    "link": "https://ischool.sjsu.edu/istudent-blog/tips-scholarship-applications"
+    },
+    {
+    "title": "Self-Care Tips to Succeed During Finals Week",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kesheena Doctor",
+    "link": "https://ischool.sjsu.edu/istudent-blog/self-care-tips-succeed-during-finals-week"
+    },
+    {
+    "title": "Successful Strategies for Class Registration",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Kesheena Doctor",
+    "link": "https://ischool.sjsu.edu/istudent-blog/successful-strategies-class-registration"
+    },
+    {
+    "title": "Eyes on the Prize: Charting Your Course Through School",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leslie Parry",
+    "link": "https://ischool.sjsu.edu/istudent-blog/eyes-prize-charting-your-course-through-school"
+    },
+    {
+    "title": "Why Join a Student Group?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leslie Parry",
+    "link": "https://ischool.sjsu.edu/istudent-blog/why-join-student-group"
+    },
+    {
+    "title": "Tips for Staying Focused and Managing Your Time",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leslie Parry",
+    "link": "https://ischool.sjsu.edu/istudent-blog/tips-staying-focused-and-managing-your-time"
+    },
+    {
+    "title": "Mindful abroad: 9 tips to stay mentally fit while studying in a new country",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "TOI Education",
+    "link": "https://timesofindia.indiatimes.com/education/study-abroad/mindful-abroad-9-tips-to-stay-mentally-fit-while-studying-in-a-new-country/articleshow/121594904.cms?utm_source=chatgpt.com"
+    },
+    {
+    "title": "What back-to-school must-have lists won’t tell you, per college students",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Charlotte Finch",
+    "link": "https://nypost.com/2025/07/28/shopping/the-back-to-school-must-haves-college-students-swear-by/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "What I wish I’d known about university",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://www.thetimes.com/uk/education/article/what-i-wish-id-known-about-university-33wl0lbsr?utm_source=chatgpt.com&region=global"
+    },
+    {
+    "title": "Managing stress and finding balance as a student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ahmed",
+    "link": "https://www.birmingham.ac.uk/study/student-experience/stories/search/managing-stress-and-finding-balance-as-a-student?utm_source=chatgpt.com"
+    },
+    {
+    "title": "Juggling student life: managing social life and studying",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://microsites.bournemouth.ac.uk/student-blog/2025/02/24/juggling-student-life-managing-social-life-and-studying/?utm_source=chatgpt.com"
+    },
+    {
+    "title": "Navigating education: a comparative look at UK and Indian teaching styles and grading systems",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Meet Jain",
+    "link": "https://microsites.bournemouth.ac.uk/student-blog/2023/08/30/navigating-education-a-comparative-look-at-uk-and-indian-teaching-styles-and-grading-systems/"
+    },
+    {
+    "title": "Three important differences between the UK and US education systems for Undergrad students",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Guest Blogger",
+    "link": "https://microsites.bournemouth.ac.uk/student-blog/2017/02/20/three-important-differences-between-the-uk-and-us-education-systems-for-undergrad-students/"
+    },
+    {
+    "title": "Apprenticeships: Two Perspectives — From a Student and an Employer",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Guest Blogger",
+    "link": "https://microsites.bournemouth.ac.uk/student-blog/2025/07/09/apprenticeships-two-perspectives-from-a-student-and-an-employer/"
+    },
+    {
+    "title": "Making Friends at University",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://www.birmingham.ac.uk/study/student-experience/stories/search/making-friends-at-university"
+    },
+    {
+    "title": "My Impossible List",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://collegeinfogeek.com/about/meet-the-author/my-impossible-list/"
+    },
+    {
+    "title": "My MacOS Shortcut & Macro Library – Raycast, Keyboard Maestro, and More",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/my-macos-shortcut-macro-library-raycast-keyboard-maestro-and-more/"
+    },
+    {
+    "title": "How to Find Work that Won’t Crush Your Soul",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/how-to-find-work-that-wont-crush-your-soul/"
+    },
+    {
+    "title": "How to Organize Your Calendar: The Ultimate Guide",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/how-to-organize-your-calendar-the-ultimate-guide/"
+    },
+    {
+    "title": "The 10 Best Chrome Extensions for Productivity in 2021",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/best-chrome-extensions-productivity/"
+    },
+    {
+    "title": "Free Budgeting Spreadsheet Template",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/free-budgeting-spreadsheet-template/"
+    },
+    {
+    "title": "iOS 14 Productivity: Launch Shortcuts from the Home Screen",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/shortcuts/"
+    },
+    {
+    "title": "5 Things I Wish I Knew When I Became an Entrepreneur",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/entrepreneur-lessons/"
+    },
+    {
+    "title": "3 Habits For Creating a Better Work-Life Balance",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/3-habits-for-creating-a-better-work-life-balance/"
+    },
+    {
+    "title": "The Focus Toolkit",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/focus-toolkit/"
+    },
+    {
+    "title": "My 1% Rule Journal",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/my-1-rule-journal/"
+    },
+    {
+    "title": "A Complete List of Every App and Software Tool I Use",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/a-complete-list-of-every-app-and-software-tool-i-use/"
+    },
+    {
+    "title": "An Easy CSS Trick to Make YouTube Less Distracting",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/youtube-distraction-css-trick/"
+    },
+    {
+    "title": "A Collection of My Advice on YouTube, Podcasting, Blogging, and Content Creation",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/content-creation-advice/"
+    },
+    {
+    "title": "The Rich Mindset vs. The Poor Mindset",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/the-rich-mindset-vs-the-poor-mindset/"
+    },
+    {
+    "title": "Doing Too Much for Too Long",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/doing-too-much-for-too-long/"
+    },
+    {
+    "title": "Unlimited Access to Information is Not Enough",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Thomas Frank",
+    "link": "https://thomasjfrank.com/unlimited-access-to-information-is-not-enough/"
+    },
+    {
+    "title": "Reblog: How To Convince Students To Use Effective Study Strategies?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Carolina Kuepper-Tetzel",
+    "link": "https://www.learningscientists.org/blog/2023/6/29-1-64hw2"
+    },
+    {
+    "title": "Digest #181: Popular Learning Scientists Posts",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Arduinna",
+    "link": "https://www.learningscientists.org/blog/2025/7/25/digest-181"
+    },
+    {
+    "title": "Flipped Classrooms: Can We Skip the Lecture?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cindy Nebel",
+    "link": "https://www.learningscientists.org/blog/2025/7/17/flipped-classrooms-can-we-skip-the-lecture"
+    },
+    {
+    "title": "Cognitive Networks and Implicit Bias",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Elisa",
+    "link": "https://www.learningscientists.org/blog/2025/7/10"
+    },
+    {
+    "title": "The Science of Motivation",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cindy Nebel",
+    "link": "https://www.learningscientists.org/blog/2025/6/5-1"
+    },
+    {
+    "title": "Imitation versus Retrieval Practice in Foreign Language Pronunciation Learning",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Carolina Kuepper-Tetzel",
+    "link": "https://www.learningscientists.org/blog/2025/6/20-1"
+    },
+    {
+    "title": "AI and Adolescent Well-Being: New APA Health Advisory",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Althea Need Kaminske",
+    "link": "https://www.learningscientists.org/blog/2025/6/26"
+    },
+    {
+    "title": "Digest #180: Marking Rubrics in Education",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Carolina Kuepper-Tetzel",
+    "link": "https://www.learningscientists.org/blog/2025/6/13/digest-180"
+    },
+    {
+    "title": "GUEST POST: A Neuroscientific Perspective on Understanding and Managing Stress",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Dr Julie-Myrtille Bourgognon",
+    "link": "https://www.learningscientists.org/blog/2025/5/9-1"
+    },
+    {
+    "title": "Dual Coding and Cognitive Load",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Megan Sumeracki",
+    "link": "https://www.learningscientists.org/blog/2025/5/29"
+    },
+    {
+    "title": "Digest #179: Combating Summer Learning Loss",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Megan Sumeracki",
+    "link": "https://www.learningscientists.org/blog/2025/5/1/digest-179"
+    },
+    {
+    "title": "Mood and Memory",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Althea Need Kaminske",
+    "link": "https://www.learningscientists.org/blog/2025/5/15-1"
+    },
+    {
+    "title": "Notetaking Formats",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Althea Need Kaminske",
+    "link": "https://www.learningscientists.org/blog/2025/3/28"
+    },
+    {
+    "title": "Improving Multiple-Choice Retrieval Practice",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cindy Nebel",
+    "link": "https://www.learningscientists.org/blog/2025/4/24-1"
+    },
+    {
+    "title": "Retrieval Practice Improves Learning, But Will it Help ALL of My Students? More Experimental Evidence",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Megan Sumeracki",
+    "link": "https://www.learningscientists.org/blog/2025/4/17"
+    },
+    {
+    "title": "The Impact of Confidence on Anxiety and Motivation",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cindy Nebel",
+    "link": "https://www.learningscientists.org/blog/2025/3/13-1"
+    },
+    {
+    "title": "GUEST POST: Mindfulness Interventions for ADHD",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Christina Xu",
+    "link": "https://www.learningscientists.org/blog/2025/3/20-1"
+    },
+    {
+    "title": "Expert Thinking and AI (Part 2)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Althea Need Kaminske",
+    "link": "https://www.learningscientists.org/blog/2025/3/4"
+    },
+    {
+    "title": "Expert Thinking and AI (Part 1)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Althea Need Kaminske",
+    "link": "https://www.learningscientists.org/blog/2025/2/19"
+    },
+    {
+    "title": "GUEST POST: Finals Prep: Effective Studying Methods",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Julia Donald",
+    "link": "https://www.learningscientists.org/blog/2025/2/6"
+    },
+    {
+    "title": "Digest #178: Boosting Presentation Skills",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://www.learningscientists.org/blog/2025/2/14/digest-178"
+    },
+    {
+    "title": "What Is Procrastination And How To End It",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/what-is-procrastination"
+    },
+    {
+    "title": "Mastering How to Focus: Strategies for Greater Productivity & Clarity",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/how-to-focus"
+    },
+    {
+    "title": "What Are Distractions in a Nutshell?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/what-are-distractions"
+    },
+    {
+    "title": "Prioritization — Using Your Time & Energy Effectively",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/what-is-prioritization"
+    },
+    {
+    "title": "Your Guide to Effective Planning & Scheduling",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/effective-planning-scheduling"
+    },
+    {
+    "title": "Delegation — Leveraging Your Time & Resources",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/delegation"
+    },
+    {
+    "title": "The Ultimate Guide to Achieving Goals",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/achieving-goals"
+    },
+    {
+    "title": "How To Find Lasting Motivation",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/motivation-guide-how-to-get-motivated"
+    },
+    {
+    "title": "Lack of Energy: Your Guide to Boosting Energy",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/lack-of-energy"
+    },
+    {
+    "title": "How to Have a Good Life Balance",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leon Ho",
+    "link": "https://www.lifehack.org/good-life-balance"
+    },
+    {
+    "title": "The Dilemma of \"Success Without Fulfillment\"",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://p.lifehack.org/solutions-success-without-fulfillment?_gl=1*p897hn*_ga*OTkyOTAwNTQ0LjE3NTQyNDAwNjc.*_ga_Z1ZD9EZ3KG*czE3NTQyNDAwNjckbzEkZzEkdDE3NTQyNDAyNDgkajIyJGwwJGgw"
+    },
+    {
+    "title": "Paralyzed by Procrastination",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://p.lifehack.org/solutions-paralyzed-by-procrastination"
+    },
+    {
+    "title": "Finding Balance When Everything's Pulling You",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://p.lifehack.org/solutions-struggle-for-balance"
+    },
+    {
+    "title": "Breaking Free from Survival Mode",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "",
+    "link": "https://p.lifehack.org/solutions-survival-mode"
+    },
+    {
+    "title": "Embracing a Slow Life: A Gentle Approach to Productivity",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/slow-life/"
+    },
+    {
+    "title": "The Need for Boredom",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/boredom/"
+    },
+    {
+    "title": "How We Talk to Ourselves Really Matters",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/self-talk/"
+    },
+    {
+    "title": "Action-Focused Mindfulness",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/action-focused/"
+    },
+    {
+    "title": "The Power of Small Actions in Resetting Your Life",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/small-actions/"
+    },
+    {
+    "title": "Don’t Make Things Mean Anything About You",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/self-meaning/"
+    },
+    {
+    "title": "Balancing Long-Term Improvement with Short-Term Happiness",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/balancing/"
+    },
+    {
+    "title": "Bonus Coaching Calls: Small Commitment to Create Action in Your Life",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/fla-bonus-coaching/"
+    },
+    {
+    "title": "How Not to Get Stopped by Discouragement",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/discouraged/"
+    },
+    {
+    "title": "Do Something Caring for Yourself Each Day",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/self-care/"
+    },
+    {
+    "title": "How to Develop More Patience",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/more-patience/"
+    },
+    {
+    "title": "How to Choose What to Do",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/choosing/"
+    },
+    {
+    "title": "In Pursuit of a Deliciously Healthy Life",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/healthy-life/"
+    },
+    {
+    "title": "The Cumulative Effect of Daily Actions",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/daily-actions/"
+    },
+    {
+    "title": "The Futility of Trying to Be on Top of Everything",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/on-top/"
+    },
+    {
+    "title": "A Lack of Sleep Makes It Hard to Take Action",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/sleep-deprived/"
+    },
+    {
+    "title": "Create a More Flexible Mind",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/flexible-mind/"
+    },
+    {
+    "title": "The Feeling That You’re Failing",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/failure-feeling/"
+    },
+    {
+    "title": "How to Shift Out of Helplessness",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/helplessness/"
+    },
+    {
+    "title": "The Courage to Face What You’ve Been Avoiding",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/stop-avoiding/"
+    },
+    {
+    "title": "How to Learn a New Skill",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/new-skill/"
+    },
+    {
+    "title": "The Importance of Open Calendar Space",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/calendar-space/"
+    },
+    {
+    "title": "Forcing Yourself to Do Everything",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/stop-forcing/"
+    },
+    {
+    "title": "A Guide to Getting Better at Taking Action",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/take-action/"
+    },
+    {
+    "title": "Quick Guide: What to Do When You’re Triggered",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/triggered/"
+    },
+    {
+    "title": "10 Personal Development Thinking Mistakes",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/thinking-mistakes/"
+    },
+    {
+    "title": "How to Have a More Expansive Day",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/expansiveness/"
+    },
+    {
+    "title": "When Your Cup is Empty",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/empty-cup/"
+    },
+    {
+    "title": "You Don’t Need to Feel Ready to Begin",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/ready/"
+    },
+    {
+    "title": "How Will I Show Up Today?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/show-up/"
+    },
+    {
+    "title": "The Problem of Having Too Much to Do",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/to-do/"
+    },
+    {
+    "title": "A Little Discomfort is Good",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/discomfortable/"
+    },
+    {
+    "title": "Using Your Mistakes as Fuel for Growth",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/fuel-growth/"
+    },
+    {
+    "title": "Simple Movements",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/simple-movements/"
+    },
+    {
+    "title": "How to Curb Impulse Shopping (or Similar Behaviors)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/curb-impulse/"
+    },
+    {
+    "title": "An Open Heart",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/open-heart/"
+    },
+    {
+    "title": "Simple Workouts: Easy & Hard",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/simple-workouts/"
+    },
+    {
+    "title": "How to Feel More at Peace",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/at-peace/"
+    },
+    {
+    "title": "Simple Meals",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/simple-meals/"
+    },
+    {
+    "title": "In a Hurry to Be Done",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/hurry-up/"
+    },
+    {
+    "title": "7 Keys to Effective Mental Training",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/mental-training/"
+    },
+    {
+    "title": "The Physics of Motivating Yourself",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/motivation-physics/"
+    },
+    {
+    "title": "The Simplicity of Fully Committing Yourself",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/full-commitment/"
+    },
+    {
+    "title": "How to Embarrass Yourself in a Transformative Way",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/embarrassment/"
+    },
+    {
+    "title": "The Art of Completing a Meaningful Project",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/project/"
+    },
+    {
+    "title": "Create a Mindful Relationship with Your Tech",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/tech-relationship/"
+    },
+    {
+    "title": "When Your Mind Can't Let Go",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/fixated/"
+    },
+    {
+    "title": "How to Become Enchanted by Life",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/enchanted/"
+    },
+    {
+    "title": "How to Actually Create Meaningful Life Changes This Year",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Leo Babauta",
+    "link": "https://zenhabits.net/new-year/"
+    },
+    {
+    "title": "How To Never Be Bored at Work",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/how-to-never-be-bored-at-work/"
+    },
+    {
+    "title": "How to build a time management routine",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/how-to-build-a-time-management-routine/"
+    },
+    {
+    "title": "How procrastination affects your daily life",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/how-procrastination-affects-your-daily-life/"
+    },
+    {
+    "title": "10 Productivity Tips For New Entrepreneurs",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/10-productivity-tips-for-new-entrepreneurs/"
+    },
+    {
+    "title": "What is Sustainable Productivity and How You Can Achieve It",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/what-is-sustainable-productivity-and-how-you-can-achieve-it/"
+    },
+    {
+    "title": "10 Productivity Tips for Creators",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/10-productivity-tips-for-creators/"
+    },
+    {
+    "title": "What Is Burnout and How To Recover From It",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/what-is-burnout-and-how-to-recover-from-it/"
+    },
+    {
+    "title": "How To Boost Your Productivity and Stay Creative",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/how-to-boost-your-productivity-and-stay-creative/"
+    },
+    {
+    "title": "5 Ways to Gamify Your Tasks and Get Work Done Faster",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/5-ways-to-gamify-your-tasks-and-get-work-done-faster/"
+    },
+    {
+    "title": "15 Tools To Help You Manage and Achieve Your Goals",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/15-tools-to-help-you-manage-and-achieve-your-goals/"
+    },
+    {
+    "title": "10 time management tips to up your productivity game",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/10-time-management-tips-to-up-your-productivity-game/"
+    },
+    {
+    "title": "How to overcome the fear of getting started",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/youtube/how-to-overcome-the-fear-of-getting-started/"
+    },
+    {
+    "title": "How to Apply for a Job – 14 Effective Tips",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-apply-for-a-job-14-effective-tips/"
+    },
+    {
+    "title": "My 28 Best Pieces of Life Advice",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/my-28-best-pieces-of-life-advice/"
+    },
+    {
+    "title": "The 24 Best Productivity Apps in 2022",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/the-24-best-productivity-apps-in-2022/"
+    },
+    {
     "title": "How to Learn Anything Faster",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "Ali Abdaal shares nine evidence-based tips to accelerate your learning.",
+    "preview": "Ali Abdaal",
     "link": "https://aliabdaal.com/studying/how-to-learn-anything-faster/"
-  },
-  {
+    },
+    {
+    "title": "9 Lessons from 4 Years on YouTube",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/youtube/9-lessons-from-4-years-on-youtube/"
+    },
+    {
+    "title": "How To Type Faster: 8 Actionable Tips To Increase Your Typing Speed",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/how-to-type-faster-8-actionable-tips-to-increase-your-typing-speed/"
+    },
+    {
+    "title": "The 5 Rs of Note Taking",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/the-5-rs-of-note-taking/"
+    },
+    {
+    "title": "How To Stay Focused (and not get distracted)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/how-to-stay-focused-and-not-get-distracted/"
+    },
+    {
+    "title": "The ABCs of Idea Generation",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/youtube/the-abcs-of-idea-generation/"
+    },
+    {
+    "title": "The Feynman Technique",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/the-feynman-technique/"
+    },
+    {
+    "title": "10 Time Management Tips That I Genuinely Use Everyday",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/10-time-management-tips-that-i-genuinely-use-everyday/"
+    },
+    {
+    "title": "7 Essential Self-Management Skills: Definition, Examples, and Tips",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/7-essential-self-management-skills-definition-examples-and-tips/"
+    },
+    {
+    "title": "How To Stop Overthinking: 7 Simple Ways",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/how-to-stop-overthinking-7-simple-ways/"
+    },
+    {
+    "title": "The Hidden Power of Boredom",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/the-hidden-power-of-boredom/"
+    },
+    {
+    "title": "How to Manage Your Study Schedule – The Waterfall Method of Time Management",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-manage-your-study-schedule-the-waterfall-method-of-time-management/"
+    },
+    {
+    "title": "The Art of Reading More Effectively and Efficiently",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/the-art-of-reading-more-effectively-and-efficiently/"
+    },
+    {
     "title": "The Ultimate Guide To Studying For Exams",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "Proven study techniques like active recall to prepare effectively for exams.",
+    "preview": "Ali Abdaal",
     "link": "https://aliabdaal.com/studying/the-ultimate-guide-to-studying-for-exams/"
-  },
-  {
-    "title": "Useful Apps To Improve Productivity and Study",
+    },
+    {
+    "title": "How To Stop Procrastinating",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "Ali Abdaal reviews flashcards, note‑taking, Pomodoro apps to boost study.",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/habits/how-to-stop-procrastinating/"
+    },
+    {
+    "title": "How To Study: The Essay Memorisation Framework",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-study-the-essay-memorisation-framework/"
+    },
+    {
+    "title": "How To Study: Using the Method of ‘The Great Explainer’",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-study-using-the-method-of-the-great-explainer/"
+    },
+    {
+    "title": "Useful Apps To Improve Productivity and Study Effectively",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
     "link": "https://aliabdaal.com/productivity/useful-apps-to-improve-productivity-and-study-effectively/"
-  },
-  {
-    "title": "What is Ultralearning?",
+    },
+    {
+    "title": "3 Books That Changed My Life",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "Scott H. Young defines ultralearning: intense, self-directed skill acquisition.",
-    "link": "https://www.scotthyoung.com/blog/ultralearning/"
-  },
-  {
-    "title": "Ultralearning vs Get Better at Anything",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/journal/3-books-that-changed-my-life/"
+    },
+    {
+    "title": "How To Study: An Effective Learning Framework To ‘STIC’ With",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "Scott compares his book Ultralearning with Get Better at Anything.",
-    "link": "https://www.scotthyoung.com/blog/2024/05/14/ultralearning-vs-get-better-at-anything/"
-  },
-  {
-    "title": "Six Strategies for Effective Learning",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-study-an-effective-learning-framework-to-stic-with/"
+    },
+    {
+    "title": "The Pomodoro Technique – The ‘Tomato Inspired’ Strategy to Improve Productivity",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "A curated digest of top‑shared posts by The Learning Scientists.",
-    "link": "https://www.learningscientists.org/blog/2021/2/18-1"
-  },
-  {
-    "title": "GUEST POST: Secret to Learning? It's Belonging",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/the-pomodoro-technique-the-tomato-inspired-strategy-to-improve-productivity/"
+    },
+    {
+    "title": "How To Study: The Power of Retrospective Revision Timetables",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "The Learning Scientists highlight belonging as a critical part of learning.",
-    "link": "https://www.learningscientists.org/blog/2022/12/8-1"
-  },
-  {
-    "title": "Blogging in the 21st‑Century Classroom",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-study-the-power-of-retrospective-revision-timetables/"
+    },
+    {
+    "title": "How to Study: Spaced Repetition and My ‘Magic’ Spreadsheet System",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "Edutopia discusses how blogging engages students and meets standards.",
-    "link": "https://www.edutopia.org/blog/blogging-in-21st-century-classroom-michelle-lampinen"
-  },
-  {
-    "title": "Student‑Centered Learning: It Starts With the Teacher",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-study-spaced-repetition-and-my-magic-spreadsheet-system/"
+    },
+    {
+    "title": "How To Study: Active Recall – The ‘High Utility’ Technique You Should Be Using",
     "thumbnail": "CourseCove/images/logo.png",
-    "preview": "John McCarthy on empowering students through teacher‑led, student‑centered methods.",
-    "link": "https://www.edutopia.org/blog/student-centered-learning-starts-with-teacher-john-mccarthy"
-  }
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-study-active-recall-the-high-utility-technique-you-should-be-using/"
+    },
+    {
+    "title": "How To Study: 3 Popular Revision Techniques You Should Avoid",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/how-to-study-3-popular-revision-techniques-you-should-avoid/"
+    },
+    {
+    "title": "When my to-do list piles up, I use this productivity trick",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/productivity/when-my-to-do-list-piles-up-i-use-this-productivity-trick/"
+    },
+    {
+    "title": "The £5 item that made my student life much happier",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/journal/the-5-item-that-made-my-student-life-much-happier/"
+    },
+    {
+    "title": "How to be Excellent",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/journal/how-to-be-excellent/"
+    },
+    {
+    "title": "How to get stuff done",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/journal/how-to-get-stuff-done/"
+    },
+    {
+    "title": "Why and how you should learn to code",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/tech/why-and-how-you-should-learn-to-code/"
+    },
+    {
+    "title": "Exams are a game",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ali Abdaal",
+    "link": "https://aliabdaal.com/studying/exams-are-a-game/"
+    },
+    {
+    "title": "Loneliness at University: A Common, Shared Experience",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "William Sarenden",
+    "link": "https://www.studentmindsblog.co.uk/2025/01/loneliness-at-university-common-shared.html"
+    },
+    {
+    "title": "How an autism diagnosis encouraged me to thrive in education",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Laur Charleston",
+    "link": "https://www.studentmindsblog.co.uk/2024/07/how-autism-diagnosis-encouraged-me-to.html"
+    },
+    {
+    "title": "Fear of Failure or Saluting Success? A High Achiever’s Guide to Results Days",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Emily",
+    "link": "https://www.studentmindsblog.co.uk/2023/08/fear-of-failure-or-saluting-success.html"
+    },
+    {
+    "title": "No One Knows Anything About AI",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/no-one-knows-anything-about-ai/"
+    },
+    {
+    "title": "Is AI Making Us Lazy?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/does-ai-make-us-lazy/"
+    },
+    {
+    "title": "Why Can’t We Tame AI?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/why-cant-we-tame-ai/"
+    },
+    {
+    "title": "The Workload Fairy Tale",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/the-workload-fairy-tale/"
+    },
+    {
+    "title": "AI and Work (Some Predictions)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/ai-and-work-some-predictions/"
+    },
+    {
+    "title": "The Perfect Cheating Machine?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/the-perfect-cheating-machine/"
+    },
+    {
+    "title": "When Time Management Was Easy",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/when-time-management-was-easy/"
+    },
+    {
+    "title": "Do We Need AI to Revolutionize Work?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/do-we-need-ai-to-revolutionize-work/"
+    },
+    {
+    "title": "ChatGPT Can’t Plan. This Matters.",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cal Newport",
+    "link": "https://calnewport.com/chatgpt-cant-plan-this-matters/"
+    },
+    {
+    "title": "8 Powerful Ways to Take Control of Your Life in 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/take-control-of-your-life"
+    },
+    {
+    "title": "10 Simple Ways to Organize Life in 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/organize-life"
+    },
+    {
+    "title": "7 Best Gamification Notion Template Picks for 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/gamification-notion-template"
+    },
+    {
+    "title": "Second Brain Notion Guide: The Complete 2025 Workflow",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/second-brain-notion"
+    },
+    {
+    "title": "Second Brain Guide: How to Build Your Digital Mind in 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/second-brain"
+    },
+    {
+    "title": "7 Best Second Brain Notion Template Free Picks for 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/second-brain-notion-template-free"
+    },
+    {
+    "title": "How to Create a Budget Planning Notion (8 Simple Steps)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/budget-planning-notion"
+    },
+    {
+    "title": "How to Add Notion Images - 4 Simple Steps",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-images"
+    },
+    {
+    "title": "How I Set Up My 12 Week Year Notion Template (2025)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/12-week-year-notion-template"
+    },
+    {
+    "title": "How to Switch to Notion Light Mode - 5 Easy Steps",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-light-mode"
+    },
+    {
+    "title": "How to Build a Notion Wiki Template",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-wiki-template"
+    },
+    {
+    "title": "3 Ways to Create a Notion Checklist for Managing Tasks",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-checklist"
+    },
+    {
+    "title": "5 Simple Ways to Build Notion Charts (2025)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-charts"
+    },
+    {
+    "title": "How To Create and Sell Notion Templates: A Beginner's Guide 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/sell-notion-templates"
+    },
+    {
+    "title": "The 12+ Best Notion Blog Templates for Bloggers [2025]",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-blog-templates"
+    },
+    {
+    "title": "30+ Best Notion Icons Packs Aesthetic & FREE (2025)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-icon-packs"
+    },
+    {
+    "title": "Use This Second Brain Notion Template in 2025 (+Tutorial)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/second-brain-notion-template"
+    },
+    {
+    "title": "The 10 Best Notion Recipe Templates of 2025 (With Tutorial)",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-recipe-templates"
+    },
+    {
+    "title": "The 15 Best Notion Life OS Templates of 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Modest Mitkus",
+    "link": "https://www.pathpages.com/blog/notion-life-os"
+    },
+    {
+    "title": "7 Best Ways to Work Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Season Cooper",
+    "link": "https://www.goabroad.com/articles/jobs-abroad/best-way-to-work-abroad"
+    },
+    {
+    "title": "9 Countries That Need English Teachers in 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Lauren Kubik",
+    "link": "https://www.goabroad.com/articles/teach-abroad/what-countries-need-english-teachers"
+    },
+    {
+    "title": "5 Awesome New Zealand Jobs For Foreigners",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cathryn Fortuna",
+    "link": "https://www.goabroad.com/articles/jobs-abroad/new-zealand-jobs-for-foreigners"
+    },
+    {
+    "title": "7 Best Fields for Internships in Madrid",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Dana Marie Paler",
+    "link": "https://www.goabroad.com/articles/intern-abroad/internship-fields-madrid"
+    },
+    {
+    "title": "Study Abroad Visa Requirements: Here’s What You Should Know",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Dana Marie Paler",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-visa-requirements"
+    },
+    {
+    "title": "Top Tips for Planning Your Summer Study Abroad in Scotland",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "GoAbroad Writing Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/tips-for-planning-summer-study-abroad-scotland"
+    },
+    {
+    "title": "Study Abroad in Brighton: A Guide to Sustainable Living by the Sea",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "University of Sussex Inbound Global Mobility Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-brighton-sustainable-living"
+    },
+    {
+    "title": "Study Abroad Safety: 9 Great Destinations + Helpful Tips",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jordyn Jacobson",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-safety"
+    },
+    {
+    "title": "9 Best Study Abroad Programs in South America You Can't Miss",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Dana Marie Paler",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-in-south-america"
+    },
+    {
+    "title": "6 Best Cities to Study in France for International Students",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "GoAbroad Writing Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-cities-to-study-abroad-in-france"
+    },
+    {
+    "title": "5 Websites to Find Student Housing in the US",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ashley Paskill",
+    "link": "https://www.goabroad.com/articles/study-abroad/websites-to-find-student-housing-usa"
+    },
+    {
+    "title": "The Best Opportunities to Study Abroad in Scandinavia",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "GoAbroad Writing Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-in-scandinavia"
+    },
+    {
+    "title": "Why BIMM University is the Ultimate Destination for Aspiring Music Professionals",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "GoAbroad Writing Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/bimm-university-shaping-the-future-of-modern-music-education"
+    },
+    {
+    "title": "Island Education Experience: Discover the Best Courses to Study in Dominica",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "GoAbroad Writing Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-courses-to-study-dominica"
+    },
+    {
+    "title": "Study Abroad on a Budget with Non-Profit Study Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "GoAbroad Writing Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/low-cost-study-abroad-npsa"
+    },
+    {
+    "title": "Anime and K-Pop: New Study Abroad Programs",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Katrina Bianca Catan",
+    "link": "https://www.goabroad.com/articles/study-abroad/anime-and-kpop-new-study-abroad-programs"
+    },
+    {
+    "title": "7 Best Study Abroad Programs in Japan in 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "GoAbroad Writing Team",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-in-japan"
+    },
+    {
+    "title": "Can I Study Abroad in Asia in English?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Katrina Bianca Catan",
+    "link": "https://www.goabroad.com/articles/study-abroad/can-i-study-abroad-in-asia-in-english"
+    },
+    {
+    "title": "Most Affordable Places to Study Abroad in 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Katrina Bianca Catan",
+    "link": "https://www.goabroad.com/articles/study-abroad/most-affordable-places-to-study-abroad"
+    },
+    {
+    "title": "Top Places to Study Abroad in Africa",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Katrina Bianca Catan",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-countries-to-study-abroad-in-africa"
+    },
+    {
+    "title": "10 Best Short Courses for Summer 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Katrina Bianca Catan",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-short-courses-for-summer"
+    },
+    {
+    "title": "Top 10 Inexpensive Study Abroad Programs",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Katrina Bianca Catan",
+    "link": "https://www.goabroad.com/articles/study-abroad/top-inexpensive-study-abroad-programs"
+    },
+    {
+    "title": "What to Study in Australia",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/what-to-study-in-australia"
+    },
+    {
+    "title": "How to Study in Spain in English",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/can-i-study-in-spain-in-english"
+    },
+    {
+    "title": "Should I Study Abroad in England or Italy?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Claudia Elias",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-in-england-or-italy"
+    },
+    {
+    "title": "What Exactly Is Study Abroad? What Does It Mean?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/what-is-study-abroad-11"
+    },
+    {
+    "title": "4 Things to Do While Studying Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sydney E. Lutz",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-bucket-list"
+    },
+    {
+    "title": "What to Pack for Study Abroad in London",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jordyn Jacobson",
+    "link": "https://www.goabroad.com/articles/study-abroad/what-to-pack-for-study-abroad-in-london"
+    },
+    {
+    "title": "What to Pack When Studying Abroad in Australia",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jordyn Jacobson",
+    "link": "https://www.goabroad.com/articles/study-abroad/what-to-pack-for-study-abroad-in-australia"
+    },
+    {
+    "title": "10 Best Places to Study Abroad for Political Science",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Yaren Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-places-to-study-abroad-for-political-science"
+    },
+    {
+    "title": "What Are the Benefits of Studying Abroad?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/benefits-of-studying-abroad"
+    },
+    {
+    "title": "How to Make the Most of Spring Break as a Pre-Med Student",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Julie Ball",
+    "link": "https://www.goabroad.com/articles/study-abroad/pre-med-spring-break-what-to-do"
+    },
+    {
+    "title": "What to Study in Spain",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Eric Monteres Jamarr Black",
+    "link": "https://www.goabroad.com/articles/study-abroad/what-to-study-in-spain"
+    },
+    {
+    "title": "Why You Should Study Medicine Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Yaren Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/should-i-study-medicine-abroad"
+    },
+    {
+    "title": "Why Study Abroad in Paris?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jordyn Jacobson",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-paris"
+    },
+    {
+    "title": "9 Best STEM Study Abroad Programs",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Eric Monteres Jamarr Black",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-stem-study-abroad-programs"
+    },
+    {
+    "title": "15 Tips for Studying Abroad in Switzerland",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maggie Sheck",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-in-switzerland-tips"
+    },
+    {
+    "title": "What to Pack for Study Abroad in Spain",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Marin Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/what-to-pack-for-study-abroad-in-spain"
+    },
+    {
+    "title": "11 Unique Study Abroad Destinations to Consider in 2025",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/unique-places-to-study-abroad"
+    },
+    {
+    "title": "10 Best Places to Study Abroad for Pre-Med Students",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-places-to-study-abroad-for-pre-med"
+    },
+    {
+    "title": "11 Best J-Term Study Abroad Programs",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/j-term-study-abroad-best-programs"
+    },
+    {
+    "title": "Top 5 Places to Study Abroad in Scotland",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maggie Sheck",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-places-to-study-abroad-in-scotland"
+    },
+    {
+    "title": "11 Top Nursing Study Abroad Programs",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Julie Ball",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-for-nursing-students"
+    },
+    {
+    "title": "Why Study Abroad in Vietnam?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Cathryn Fortuna",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-vietnam"
+    },
+    {
+    "title": "3 Signs You Should Study Abroad in Cyprus",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Megan A. Scanlon",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-cyprus"
+    },
+    {
+    "title": "10 Common Challenges of Studying Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/challenges-of-studying-abroad"
+    },
+    {
+    "title": "12 Reasons to Study Abroad in Cuba",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-cuba"
+    },
+    {
+    "title": "8 Best Places to Study Conservation Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Claudia Elias",
+    "link": "https://www.goabroad.com/articles/study-abroad/where-to-study-conservation-abroad"
+    },
+    {
+    "title": "How to Write a Personal Statement for Study Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-personal-statement"
+    },
+    {
+    "title": "15 Tips for Studying Marine Biology Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/tips-for-studying-marine-biology-abroad"
+    },
+    {
+    "title": "8 Best Places to Study Abroad for Nursing",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-places-to-study-abroad-for-nursing"
+    },
+    {
+    "title": "8 Best Places to Study Criminology Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-places-to-study-criminology-abroad"
+    },
+    {
+    "title": "Why Business Students Should Study Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ellie Goodwin",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-business-abroad"
+    },
+    {
+    "title": "12 Reasons to Study Abroad in Florence",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jacquie Truckey",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-florence"
+    },
+    {
+    "title": "10 Best Places for Zoology Study Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/where-to-study-zoology-abroad"
+    },
+    {
+    "title": "12 Great Reasons to Study Marketing Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-marketing-abroad"
+    },
+    {
+    "title": "How to Get a Student Visa in Canada",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Elizabeth Gorga",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-get-a-student-visa-in-canada"
+    },
+    {
+    "title": "Why Study Abroad in England?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-england"
+    },
+    {
+    "title": "How to Study in Australia from the UK",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jordyn Jacobson",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-australia-from-uk"
+    },
+    {
+    "title": "Why Study Abroad in Mexico?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Eric Monteres Jamarr Black",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-in-mexico"
+    },
+    {
+    "title": "Why Study Abroad in the United Kingdom?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sydney E. Lutz",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-the-uk"
+    },
+    {
+    "title": "How to Study Abroad in Canada",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Yaren Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-canada"
+    },
+    {
+    "title": "11 Benefits of Multi-Country Study Abroad",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/benefits-of-multi-country-study-abroad"
+    },
+    {
+    "title": "15 Tips for Studying Abroad in South Africa",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Elizabeth Gorga",
+    "link": "https://www.goabroad.com/articles/study-abroad/tips-for-studying-abroad-in-south-africa"
+    },
+    {
+    "title": "14 Vital Tips for Studying Abroad in Ecuador",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/ecuador-study-abroad-tips"
+    },
+    {
+    "title": "15 Essential Tips for Studying Abroad in Canada",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/studying-abroad-in-canada-tips"
+    },
+    {
+    "title": "How to Study Abroad in Costa Rica",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Julie Ball",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-costa-rica"
+    },
+    {
+    "title": "15 Tips for Success as a Study Abroad Student in Australia",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/tips-for-studying-abroad-in-australia"
+    },
+    {
+    "title": "How to Study Abroad in Chile",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-chile"
+    },
+    {
+    "title": "How to Study Abroad in the UK",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-the-uk"
+    },
+    {
+    "title": "15 Tips for Studying Abroad in England",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Yaren Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/tips-for-studying-abroad-in-england"
+    },
+    {
+    "title": "15 Essential Tips for a Fulfilling Study Abroad Experience in Scotland",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/studying-abroad-in-scotland-tips"
+    },
+    {
+    "title": "15 Key Tips for Thriving as a Student in Sweden",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Maria Jovita Peden",
+    "link": "https://www.goabroad.com/articles/study-abroad/tips-for-studying-abroad-in-sweden"
+    },
+    {
+    "title": "8 Best Study Abroad Programs in the US",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Marin Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-in-the-us"
+    },
+    {
+    "title": "Should I Study Abroad in Indonesia?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Sydney E. Lutz",
+    "link": "https://www.goabroad.com/articles/study-abroad/should-i-study-abroad-in-indonesia"
+    },
+    {
+    "title": "11 Best Study Abroad Programs in Argentina",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-in-argentina"
+    },
+    {
+    "title": "Why Study Abroad in Panama?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Munira Maricar",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-panama"
+    },
+    {
+    "title": "Why Study Abroad in Guatemala?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Agness Walewinder",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-guatemala"
+    },
+    {
+    "title": "8 Best Study Abroad Programs in Croatia",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-in-croatia"
+    },
+    {
+    "title": "How to Study Abroad in Poland",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-poland"
+    },
+    {
+    "title": "What to Expect from Student Life in Venice",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Munira Maricar",
+    "link": "https://www.goabroad.com/articles/study-abroad/student-life-in-venice-what-to-expect"
+    },
+    {
+    "title": "15 Best Tips for Studying Abroad in Madrid",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-madrid-tips"
+    },
+    {
+    "title": "12 Best Study Abroad Programs in Mexico",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Farryl Last",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-in-mexico"
+    },
+    {
+    "title": "How to Study Abroad in China",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Hannah Miller",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-china"
+    },
+    {
+    "title": "Should I Study Abroad or Just Travel?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jennie Lee Montgomery",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-or-travel"
+    },
+    {
+    "title": "Your Essential Study Abroad Scholarship Timeline",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Munira Maricar",
+    "link": "https://www.goabroad.com/articles/study-abroad/scholarship-application-timeline"
+    },
+    {
+    "title": "What Is It Like to Study Abroad in Seville?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Adrina Patterson",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-in-seville-what-to-expect"
+    },
+    {
+    "title": "A Guide to Study Abroad for Pre-Medical Students",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Munira Maricar",
+    "link": "https://www.goabroad.com/articles/study-abroad/pre-med-study-abroad-guide"
+    },
+    {
+    "title": "12 Best Study Abroad Programs in Scotland This Year",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Yaren Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/best-study-abroad-programs-in-scotland"
+    },
+    {
+    "title": "Why Study Abroad in Turkey?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-turkey"
+    },
+    {
+    "title": "How to Study Abroad in Scotland",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jacquie Truckey",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-scotland"
+    },
+    {
+    "title": "How to Study Abroad in Norway",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-norway"
+    },
+    {
+    "title": "Should I Study Abroad in Australia or Europe?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Elizabeth Gorga",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-australia-vs-europe"
+    },
+    {
+    "title": "Why Study Abroad in Madrid?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jacquie Truckey",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-madrid"
+    },
+    {
+    "title": "11 Cool Benefits of Studying in Denmark",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Hannah Sorila",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-denmark"
+    },
+    {
+    "title": "Why Study Abroad in South Africa?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Munira Maricar",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-south-africa"
+    },
+    {
+    "title": "13 Great Reasons to Study Abroad in Copenhagen",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Jhasmine Wade",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-study-abroad-in-copenhagen"
+    },
+    {
+    "title": "Awareness, Bread, and Compassion: The ABCs of Study Abroad in Lebanon",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Megan A. Scanlon",
+    "link": "https://www.goabroad.com/articles/study-abroad/study-abroad-in-lebanon-abcs"
+    },
+    {
+    "title": "Why Is Intercultural Learning Important?",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Ebony Ellis",
+    "link": "https://www.goabroad.com/articles/study-abroad/why-is-intercultural-learning-important"
+    },
+    {
+    "title": "How to Study Abroad in Denmark",
+    "thumbnail": "CourseCove/images/logo.png",
+    "preview": "Yaren Fadiloglulari",
+    "link": "https://www.goabroad.com/articles/study-abroad/how-to-study-abroad-in-denmark"
+    }
 ]
