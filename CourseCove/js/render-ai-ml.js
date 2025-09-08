@@ -2,7 +2,7 @@
 // Fixed pagination to match math page behavior (windowed pages + ellipses + skip buttons)
 
 (() => {
-  const JSON_URL = "./json/ai-ml-courses.json"; // path from ai-ml.html to its JSON
+  const JSON_URL = "/json/ai-ml-courses.json"; // path from ai-ml.html to its JSON
   const PER_PAGE = 12;
 
   const coursesEl = document.getElementById("courses");
