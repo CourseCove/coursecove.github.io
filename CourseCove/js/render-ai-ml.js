@@ -1,179 +1,161 @@
-// CourseCove/js/render-ai-ml.js
-// Fixed pagination to match math page behavior (windowed pages + ellipses + skip buttons)
+let allCourses = [];
+let filteredCourses = [];
+let currentPage = 1;
+const itemsPerPage = 12;
 
-(() => {
-  const JSON_URL = "/json/ai-ml-courses.json"; // path from ai-ml.html to its JSON
-  const PER_PAGE = 12;
+const courseContainer = document.getElementById('course-container');
+const paginationContainer = document.getElementById('pagination');
+const filters = document.getElementById('filters');
+const searchBar = document.getElementById('searchBar');
 
-  const coursesEl = document.getElementById("courses");
-  const paginationEl = document.getElementById("pagination");
-
-  let courses = [];
-  let currentPage = 1;
-  let totalPages = 1;
-
-  // --- Responsive density: fewer numbered buttons on small screens ---
-  function deltaByWidth() {
-    const w = window.innerWidth || document.documentElement.clientWidth;
-    if (w < 420) return 1; // mobile
-    if (w < 768) return 2; // tablet
-    return 3;              // desktop
-  }
-
-  // --- Build compact page list: [1, "...", 5,6,7, "...", last] ---
-  function buildPageList(current, total, delta = 2) {
-    if (total <= 1) return [1];
-
-    const left = Math.max(2, current - delta);
-    const right = Math.min(total - 1, current + delta);
-
-    const pages = [1];
-    if (left > 2) pages.push("...");
-    for (let p = left; p <= right; p++) pages.push(p);
-    if (right < total - 1) pages.push("...");
-    pages.push(total);
-
-    return pages;
-  }
-
-  // --- Render current page of cards (adjust card markup to your styling if needed) ---
-  function renderCourses() {
-    const start = (currentPage - 1) * PER_PAGE;
-    const end = start + PER_PAGE;
-    const slice = courses.slice(start, end);
-
-    coursesEl.innerHTML = slice.map(c => `
-      <article class="card">
-        <a href="${c.url}" target="_blank" rel="noopener">
-          <h3>${c.title ?? ""}</h3>
-        </a>
-        <p>${c.description ?? ""}</p>
-        <p><strong>Instructor:</strong> ${c.instructor ?? "—"}</p>
-        <p><strong>Rating:</strong> ${c.rating ?? "—"}</p>
-        <p><strong>Level:</strong> ${c.level ?? "—"}</p>
-        <p><strong>Duration:</strong> ${c.duration ?? "—"}</p>
-        <p><strong>Price:</strong> ${c.price ?? "—"}</p>
-      </article>
-    `).join("");
-  }
-
-  function gotoPage(n) {
-    const target = Math.max(1, Math.min(totalPages, n));
-    if (target === currentPage) return;
-    currentPage = target;
+async function loadCourses() {
+  try {
+    const response = await fetch(`json/ai-ml-courses.json?t=${Date.now()}`);
+    allCourses = await response.json();
+    console.log('Loaded courses:', allCourses);  // Add this line
+    filteredCourses = allCourses;
     renderCourses();
-    renderPagination();
-    // Optional: smooth scroll up to the grid after page change
-    if (coursesEl && coursesEl.scrollIntoView) {
-      coursesEl.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    // Optional: keep ?page= in URL like the math page may do
-    if (history && history.replaceState) {
-      const url = new URL(location.href);
-      url.searchParams.set("page", String(currentPage));
-      history.replaceState({}, "", url);
-    }
+    setupEventListeners();
+  } catch (err) {
+    courseContainer.innerHTML = '<p class="text-danger">Failed to load courses.</p>';
+  }
+}
+
+
+function setupEventListeners() {
+  searchBar.addEventListener('input', () => {
+    currentPage = 1;
+    applyFilters();
+  });
+  filters.addEventListener('change', () => {
+    currentPage = 1;
+    applyFilters();
+  });
+}
+
+function applyFilters() {
+  const query = searchBar.value.toLowerCase();
+  const selectedProviders = [...filters.querySelectorAll('input[name="provider"]:checked')].map(i => i.value.toLowerCase());
+  const selectedLevels = [...filters.querySelectorAll('input[name="level"]:checked')].map(i => i.value.toLowerCase());
+  const selectedDurations = [...filters.querySelectorAll('input[name="duration"]:checked')].map(i => i.value);
+
+  filteredCourses = allCourses.filter(course => {
+    const matchesQuery =
+      course.title.toLowerCase().includes(query) ||
+      course.description.toLowerCase().includes(query) ||
+      (course.keywords || []).some(k => k.toLowerCase().includes(query));
+
+
+      const provider = (course.provider || '').toLowerCase();
+      const level = (course.level || '').toLowerCase();
+      
+      const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes(provider);
+      const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes(level);
+
+    
+    
+    const matchesDuration = (() => {
+      if (selectedDurations.length === 0) return true;
+      const hours = parseFloat(course.duration);
+      return selectedDurations.some(d => {
+        if (d === '<2') return hours < 2;
+        if (d === '2-5') return hours >= 2 && hours <= 5;
+        if (d === '>5') return hours > 5;
+      });
+    })();
+
+    return matchesQuery && matchesProvider && matchesLevel && matchesDuration;
+  });
+
+  renderCourses();
+}
+
+function renderCourses() {
+  courseContainer.innerHTML = '';
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = filteredCourses.slice(start, end);
+
+  if(pageItems.length === 0) {
+    courseContainer.innerHTML = '<p>No courses found.</p>';
+    paginationContainer.innerHTML = '';
+    return;
   }
 
-  function renderPagination() {
-    const delta = deltaByWidth();
-    const pages = buildPageList(currentPage, totalPages, delta);
-    paginationEl.innerHTML = "";
+  pageItems.forEach(course => {
+    const rating = Math.round(course.rating || 0);
+    const ratingStars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
+    const card = document.createElement('div');
+    card.className = 'col';
+    card.innerHTML = `
+      <div class="card h-100 shadow-sm">
+        <img src="${course.image || 'images/default-course.jpg'}" alt="${course.title}" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${course.title}</h5>
+          <h6 class="card-subtitle mb-2">${course.instructor || course.provider}</h6>
+          <div class="rating mb-2">${ratingStars} (${(course.rating || 0).toFixed(1)})</div>
+          <p class="card-text flex-grow-1">${course.description}</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="price fw-bold">${course.price || 'Free'}</span>
+            <a href="${course.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
+          </div>
+        </div>
+      </div>
+    `;
+    courseContainer.appendChild(card);
+  });
 
-    const addBtn = (label, onClick, opts = {}) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.textContent = String(label);
-      if (opts.title) b.title = opts.title;
-      if (opts.aria) b.setAttribute("aria-label", opts.aria);
-      if (opts.disabled) b.disabled = true;
-      if (opts.active) b.classList.add("active");
-      if (onClick) b.addEventListener("click", onClick);
-      paginationEl.appendChild(b);
+  renderPagination();
+}
+
+function renderPagination() {
+  paginationContainer.innerHTML = '';
+  const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+  if (totalPages <= 1) return;
+
+  if (currentPage > 1) {
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'btn btn-outline-primary me-2';
+    prevBtn.textContent = 'Previous';
+    prevBtn.onclick = () => {
+      currentPage--;
+      renderCourses();
     };
+    paginationContainer.appendChild(prevBtn);
+  }
 
-    const addDots = () => {
-      const s = document.createElement("span");
-      s.className = "ellipsis";
-      s.textContent = "…";
-      s.setAttribute("aria-hidden", "true");
-      paginationEl.appendChild(s);
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement('button');
+    pageBtn.className = 'btn btn-outline-primary me-2';
+    pageBtn.textContent = i;
+    if (i === currentPage) {
+      pageBtn.disabled = true;
+      pageBtn.classList.add('active');
+    }
+    pageBtn.onclick = () => {
+      currentPage = i;
+      renderCourses();
     };
-
-    // « First
-    addBtn("«", () => gotoPage(1), {
-      title: "First page",
-      aria: "Go to first page",
-      disabled: currentPage === 1
-    });
-
-    // ‹ Prev
-    addBtn("‹", () => gotoPage(currentPage - 1), {
-      title: "Previous page",
-      aria: "Go to previous page",
-      disabled: currentPage === 1
-    });
-
-    // numbered pages + ellipses
-    pages.forEach(p => {
-      if (p === "...") {
-        addDots();
-      } else {
-        addBtn(p, () => gotoPage(p), {
-          aria: `Go to page ${p}`,
-          active: p === currentPage
-        });
-      }
-    });
-
-    // Next ›
-    addBtn("›", () => gotoPage(currentPage + 1), {
-      title: "Next page",
-      aria: "Go to next page",
-      disabled: currentPage === totalPages
-    });
-
-    // Last »
-    addBtn("»", () => gotoPage(totalPages), {
-      title: "Last page",
-      aria: "Go to last page",
-      disabled: currentPage === totalPages
-    });
+    paginationContainer.appendChild(pageBtn);
   }
 
-  // Optional: read ?page= from URL on load
-  function initPageFromURL() {
-    const pageParam = new URL(location.href).searchParams.get("page");
-    const p = pageParam ? parseInt(pageParam, 10) : 1;
-    if (!Number.isNaN(p) && p >= 1) currentPage = p;
+  if (currentPage < totalPages) {
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'btn btn-outline-primary';
+    nextBtn.textContent = 'Next';
+    nextBtn.onclick = () => {
+      currentPage++;
+      renderCourses();
+    };
+    paginationContainer.appendChild(nextBtn);
   }
+}
 
-  async function loadCourses() {
-    const res = await fetch(JSON_URL);
-    courses = await res.json();
-    totalPages = Math.max(1, Math.ceil(courses.length / PER_PAGE));
-    initPageFromURL();
-    if (currentPage > totalPages) currentPage = totalPages;
-    renderCourses();
-    renderPagination();
-  }
+function clearFilters() {
+  filters.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+  searchBar.value = '';
+  applyFilters();
+}
 
-  // Keep pagination compact on resize (recompute ellipses window)
-  function handleResize() {
-    window.addEventListener("resize", () => {
-      renderPagination();
-    });
-  }
-
-  // Keyboard navigation (Left/Right arrows)
-  function handleKeys() {
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft" && currentPage > 1) gotoPage(currentPage - 1);
-      if (e.key === "ArrowRight" && currentPage < totalPages) gotoPage(currentPage + 1);
-    });
-  }
-
-  loadCourses();
-  handleResize();
-  handleKeys();
-})();
+// Initial load
+document.addEventListener('DOMContentLoaded', loadCourses);
