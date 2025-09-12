@@ -63,7 +63,7 @@ function renderCourses() {
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   if (currentPage > totalPages) currentPage = totalPages;
 
-  const start = (currentPage - 1)*itemsPerPage;
+  const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
   const arr = filteredCourses.slice(start, end);
 
@@ -89,18 +89,53 @@ function renderCourses() {
     courseContainer.appendChild(card);
   });
 
-  for (let i=1; i<=Math.ceil(filteredCourses.length/itemsPerPage); i++) {
+  // --- Pagination with Previous/Next ---
+  const ul = document.createElement('ul');
+  ul.className = 'pagination justify-content-center';
+
+  // Previous button
+  const prevLi = document.createElement('li');
+  prevLi.className = 'page-item' + (currentPage === 1 ? ' disabled' : '');
+  prevLi.innerHTML = `<a class="page-link" href="#">Previous</a>`;
+  prevLi.addEventListener('click', e => {
+    e.preventDefault();
+    if (currentPage > 1) {
+      currentPage--;
+      renderCourses();
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+  });
+  ul.appendChild(prevLi);
+
+  // Page numbers
+  for (let i = 1; i <= totalPages; i++) {
     const li = document.createElement('li');
-    li.className = 'page-item' + (i===currentPage? ' active':'');
-    li.innerHTML = `<a href="#" class="page-link">${i}</a>`;
+    li.className = 'page-item' + (i === currentPage ? ' active' : '');
+    li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
     li.addEventListener('click', e => {
       e.preventDefault();
       currentPage = i;
       renderCourses();
       window.scrollTo({top:0, behavior:'smooth'});
     });
-    paginationContainer.appendChild(li);
+    ul.appendChild(li);
   }
+
+  // Next button
+  const nextLi = document.createElement('li');
+  nextLi.className = 'page-item' + (currentPage === totalPages ? ' disabled' : '');
+  nextLi.innerHTML = `<a class="page-link" href="#">Next</a>`;
+  nextLi.addEventListener('click', e => {
+    e.preventDefault();
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderCourses();
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+  });
+  ul.appendChild(nextLi);
+
+  paginationContainer.appendChild(ul);
 }
 
 loadCourses();
