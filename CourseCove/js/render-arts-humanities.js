@@ -7,6 +7,7 @@ let allCourses = [];
 let filteredCourses = [];
 let currentPage = 1;
 const itemsPerPage = 12;
+const maxPageButtons = 5; // How many page numbers to show at once
 
 async function loadCourses() {
   try {
@@ -89,14 +90,26 @@ function renderCourses() {
     courseContainer.appendChild(card);
   });
 
-  // --- Pagination with Previous/Next ---
+  // --- Pagination ---
   const ul = document.createElement('ul');
   ul.className = 'pagination justify-content-center';
 
-  // Previous button
+  // Skip to first
+  const firstLi = document.createElement('li');
+  firstLi.className = 'page-item' + (currentPage === 1 ? ' disabled' : '');
+  firstLi.innerHTML = `<a class="page-link" href="#">&laquo;</a>`;
+  firstLi.addEventListener('click', e => {
+    e.preventDefault();
+    currentPage = 1;
+    renderCourses();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  ul.appendChild(firstLi);
+
+  // Previous
   const prevLi = document.createElement('li');
   prevLi.className = 'page-item' + (currentPage === 1 ? ' disabled' : '');
-  prevLi.innerHTML = `<a class="page-link" href="#">Previous</a>`;
+  prevLi.innerHTML = `<a class="page-link" href="#">&#8249;</a>`;
   prevLi.addEventListener('click', e => {
     e.preventDefault();
     if (currentPage > 1) {
@@ -107,8 +120,15 @@ function renderCourses() {
   });
   ul.appendChild(prevLi);
 
-  // Page numbers
-  for (let i = 1; i <= totalPages; i++) {
+  // Page numbers (show currentPage ± 2)
+  const half = Math.floor(maxPageButtons / 2);
+  let startPage = Math.max(1, currentPage - half);
+  let endPage = Math.min(totalPages, startPage + maxPageButtons - 1);
+  if (endPage - startPage < maxPageButtons - 1) {
+    startPage = Math.max(1, endPage - maxPageButtons + 1);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
     const li = document.createElement('li');
     li.className = 'page-item' + (i === currentPage ? ' active' : '');
     li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
@@ -121,10 +141,10 @@ function renderCourses() {
     ul.appendChild(li);
   }
 
-  // Next button
+  // Next
   const nextLi = document.createElement('li');
   nextLi.className = 'page-item' + (currentPage === totalPages ? ' disabled' : '');
-  nextLi.innerHTML = `<a class="page-link" href="#">Next</a>`;
+  nextLi.innerHTML = `<a class="page-link" href="#">&#8250;</a>`;
   nextLi.addEventListener('click', e => {
     e.preventDefault();
     if (currentPage < totalPages) {
@@ -134,6 +154,18 @@ function renderCourses() {
     }
   });
   ul.appendChild(nextLi);
+
+  // Skip to last
+  const lastLi = document.createElement('li');
+  lastLi.className = 'page-item' + (currentPage === totalPages ? ' disabled' : '');
+  lastLi.innerHTML = `<a class="page-link" href="#">&raquo;</a>`;
+  lastLi.addEventListener('click', e => {
+    e.preventDefault();
+    currentPage = totalPages;
+    renderCourses();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  ul.appendChild(lastLi);
 
   paginationContainer.appendChild(ul);
 }
