@@ -88,7 +88,7 @@ function renderCourses() {
     // Use col-12 col-md-6 to make 2 cards per row on md+ screens
     const cardCol = document.createElement('div');
     cardCol.className = 'col-12 col-md-6';
-    cardCol.innerHTML = `
+     card.innerHTML = `
       <div class="card h-100 shadow-sm">
         <img src="${course.image || 'images/default-course.jpg'}" alt="${course.title}" class="card-img-top" />
         <div class="card-body d-flex flex-column">
@@ -103,7 +103,7 @@ function renderCourses() {
         </div>
       </div>
     `;
-    row.appendChild(cardCol);
+    courseContainer.appendChild(card);
   });
 
   courseContainer.appendChild(row);
