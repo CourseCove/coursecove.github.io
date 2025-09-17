@@ -77,18 +77,12 @@ function renderCourses() {
     return;
   }
 
-  // Create a wrapper row for Bootstrap grid
-  const row = document.createElement('div');
-  row.className = 'row g-4'; // spacing between cards
-
   pageItems.forEach(course => {
     const rating = Math.round(course.rating || 0);
     const ratingStars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
-
-    // Use col-12 col-md-6 to make 2 cards per row on md+ screens
-    const cardCol = document.createElement('div');
-    cardCol.className = 'col-12 col-md-6';
-     card.innerHTML = `
+    const card = document.createElement('div');
+    card.className = 'col';
+    card.innerHTML = `
       <div class="card h-100 shadow-sm">
         <img src="${course.image || 'images/default-course.jpg'}" alt="${course.title}" class="card-img-top" />
         <div class="card-body d-flex flex-column">
@@ -106,7 +100,6 @@ function renderCourses() {
     courseContainer.appendChild(card);
   });
 
-  courseContainer.appendChild(row);
   renderPagination();
 }
 
@@ -117,11 +110,11 @@ function renderPagination() {
 
   const createBtn = (label, page, disabled = false) => {
     const btn = document.createElement('button');
-    btn.className = `btn btn-outline-primary me-2`;
+    btn.className = 'btn btn-outline-primary me-2';
     btn.textContent = label;
     btn.disabled = disabled;
     btn.onclick = () => {
-      if (!disabled) {
+      if (!disabled && page !== currentPage) {
         currentPage = page;
         renderCourses();
       }
@@ -129,8 +122,10 @@ function renderPagination() {
     return btn;
   };
 
-  // Skip first and previous
+  // Skip to first
   paginationContainer.appendChild(createBtn('«', 1, currentPage === 1));
+
+  // Previous
   paginationContainer.appendChild(createBtn('‹', currentPage - 1, currentPage === 1));
 
   // Page numbers (max 5 visible)
@@ -148,8 +143,10 @@ function renderPagination() {
     paginationContainer.appendChild(btn);
   }
 
-  // Next and skip last
+  // Next
   paginationContainer.appendChild(createBtn('›', currentPage + 1, currentPage === totalPages));
+
+  // Skip to last
   paginationContainer.appendChild(createBtn('»', totalPages, currentPage === totalPages));
 }
 
