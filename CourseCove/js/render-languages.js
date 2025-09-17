@@ -1,50 +1,51 @@
-// assuming languagesData is your full list of language courses
-const pageSize = 10;
-let currentPage = 1;
-const totalPages = Math.ceil(languagesData.length / pageSize);
-
-function renderPage(page) {
-  currentPage = page;
-  const start = (page - 1) * pageSize;
-  const pageItems = languagesData.slice(start, start + pageSize);
-  // render pageItems into your container
-  renderLanguages(pageItems);
-
-  renderPagination();
-}
-
 function renderPagination() {
-  const pager = document.getElementById('pagination');
-  pager.innerHTML = '';
+  paginationContainer.innerHTML = '';
+  const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+  if (totalPages <= 1) return;
 
-  function makeButton(text, targetPage, disabled) {
+  // helper to build buttons
+  function makeBtn(label, page, disabled = false, extraClass = '') {
     const btn = document.createElement('button');
-    btn.textContent = text;
+    btn.className = `btn btn-outline-primary me-2 ${extraClass}`;
+    btn.textContent = label;
     btn.disabled = disabled;
-    btn.addEventListener('click', () => renderPage(targetPage));
-    btn.classList.add('page-btn');
-    if (disabled) btn.classList.add('disabled');
+    btn.onclick = () => {
+      if (!disabled && page !== currentPage) {
+        currentPage = page;
+        renderCourses();
+      }
+    };
     return btn;
   }
 
-  // skip to first
-  pager.appendChild(makeButton('«', 1, currentPage === 1));
-  // previous
-  pager.appendChild(makeButton('‹', currentPage - 1, currentPage === 1));
+  // Skip to first
+  paginationContainer.appendChild(makeBtn('«', 1, currentPage === 1));
 
-  // page number links
-  for (let p = 1; p <= totalPages; p++) {
-    const btn = makeButton(p, p, false);
-    if (p === currentPage) btn.classList.add('active');
-    pager.appendChild(btn);
+  // Previous
+  paginationContainer.appendChild(makeBtn('‹', currentPage - 1, currentPage === 1));
+
+  // Show up to 5 page numbers (centered around currentPage)
+  let start = Math.max(1, currentPage - 2);
+  let end = Math.min(totalPages, currentPage + 2);
+
+  if (currentPage <= 2) {
+    end = Math.min(totalPages, 5);
+  } else if (currentPage >= totalPages - 1) {
+    start = Math.max(1, totalPages - 4);
   }
 
-  // next and skip to last
-  pager.appendChild(makeButton('›', currentPage + 1, currentPage === totalPages));
-  pager.appendChild(makeButton('»', totalPages, currentPage === totalPages));
-}
+  for (let i = start; i <= end; i++) {
+    const btn = makeBtn(i, i, false);
+    if (i === currentPage) {
+      btn.disabled = true;
+      btn.classList.add('active');
+    }
+    paginationContainer.appendChild(btn);
+  }
 
-// on initial load
-document.addEventListener('DOMContentLoaded', () => {
-  renderPage(1);
-});
+  // Next
+  paginationContainer.appendChild(makeBtn('›', currentPage + 1, currentPage === totalPages));
+
+  // Skip to last
+  paginationContainer.appendChild(makeBtn('»', totalPages, currentPage === totalPages));
+}
