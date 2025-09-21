@@ -89,12 +89,12 @@ function renderCourses() {
   });
 
   // Pagination with limited page buttons
-  const maxButtons = 5;
-  let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
-  let endPage = startPage + maxButtons - 1;
+  const totalPagesToShow = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(totalPagesToShow / 2));
+  let endPage = startPage + totalPagesToShow - 1;
   if (endPage > totalPages) {
     endPage = totalPages;
-    startPage = Math.max(1, endPage - maxButtons + 1);
+    startPage = Math.max(1, endPage - totalPagesToShow + 1);
   }
 
   // Prev button
@@ -138,34 +138,6 @@ function renderCourses() {
     }
   });
   paginationContainer.appendChild(next);
-}
-
-    for (let i = 1; i <= totalPages; i++) {
-      const li = document.createElement('li');
-      li.className = 'page-item' + (i === currentPage ? ' active' : '');
-      li.innerHTML = `<a href="#" class="page-link">${i}</a>`;
-      li.addEventListener('click', e => {
-        e.preventDefault();
-        currentPage = i;
-        renderCourses();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-      paginationContainer.appendChild(li);
-    }
-
-    const next = document.createElement('li');
-    next.className = 'page-item' + (currentPage === totalPages ? ' disabled' : '');
-    next.innerHTML = `<a href="#" class="page-link">Next</a>`;
-    next.addEventListener('click', e => {
-      e.preventDefault();
-      if (currentPage < totalPages) {
-        currentPage++;
-        renderCourses();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-    paginationContainer.appendChild(next);
-  }
 }
 
 loadCourses();
