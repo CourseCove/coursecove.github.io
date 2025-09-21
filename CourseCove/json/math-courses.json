@@ -15262,5 +15262,1625 @@
         "provider": "Udemy",
         "level": "Beginner",
         "duration": "9"
-    }
+    },
+  {
+    "title": "Making Math Click: Understand Math Without Fear",
+    "link": "https://www.coursera.org/learn/math-click",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Math Prep: College & Work Ready",
+    "link": "https://www.coursera.org/learn/tsi-math-prep",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Mathematical Thinking",
+    "link": "https://www.coursera.org/learn/mathematical-thinking",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematics for Engineering",
+    "link": "https://www.coursera.org/specializations/bits-mathematics-for-engineering-specialization",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematical Foundations for Data Science and Analytics",
+    "link": "https://www.coursera.org/specializations/mathematical-foundations-for-data-science-and-analysis",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematics for Machine Learning and Data Science",
+    "link": "https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Algebra: Elementary to Advanced",
+    "link": "https://www.coursera.org/specializations/algebra-elementary-to-advanced",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Basic Engineering Mathematics",
+    "link": "https://www.coursera.org/learn/basic-mathematics-engineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematics for Engineers",
+    "link": "https://www.coursera.org/specializations/mathematics-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematics for Machine Learning",
+    "link": "https://www.coursera.org/specializations/mathematics-machine-learning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Discrete Mathematics for Computer Science",
+    "link": "https://www.coursera.org/specializations/discrete-mathematics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Data Science Math Skills",
+    "link": "https://www.coursera.org/learn/datasciencemathskills",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Calculus",
+    "link": "https://www.coursera.org/learn/introduction-to-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "How to Use Lookup Reference Math and Text Functions in Excel",
+    "link": "https://www.coursera.org/projects/how-use-lookup-reference-math-text-functions-excel",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Prompt Engineering for ChatGPT",
+    "link": "https://www.coursera.org/learn/prompt-engineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra from Elementary to Advanced",
+    "link": "https://www.coursera.org/specializations/linear-algebra-elementary-to-advanced",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Logic",
+    "link": "https://www.coursera.org/learn/logic-introduction",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Pre-Calculus",
+    "link": "https://www.coursera.org/learn/introduccion-al-calculo",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra for Machine Learning and Data Science",
+    "link": "https://www.coursera.org/learn/machine-learning-linear-algebra",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Precalculus through Data and Modelling",
+    "link": "https://www.coursera.org/specializations/precalculus-data-modelling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Differential Calculus through Data and Modeling",
+    "link": "https://www.coursera.org/specializations/differential-calculus-data-modeling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Expressway to Data Science: Essential Math",
+    "link": "https://www.coursera.org/specializations/expressway-to-data-science-essential-math",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Discrete Mathematics",
+    "link": "https://www.coursera.org/learn/discrete-mathematics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Honors Algebra 2",
+    "link": "https://www.coursera.org/specializations/honors-algebra-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Calculus",
+    "link": "https://www.coursera.org/learn/introduction-to-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "How to Use Lookup Reference Math and Text Functions in Excel",
+    "link": "https://www.coursera.org/projects/how-use-lookup-reference-math-text-functions-excel",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Prompt Engineering for ChatGPT",
+    "link": "https://www.coursera.org/learn/prompt-engineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra from Elementary to Advanced",
+    "link": "https://www.coursera.org/specializations/linear-algebra-elementary-to-advanced",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Logic",
+    "link": "https://www.coursera.org/learn/logic-introduction",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Pre-Calculus",
+    "link": "https://www.coursera.org/learn/introduccion-al-calculo",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra for Machine Learning and Data Science",
+    "link": "https://www.coursera.org/learn/machine-learning-linear-algebra",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Precalculus through Data and Modelling",
+    "link": "https://www.coursera.org/specializations/precalculus-data-modelling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Differential Calculus through Data and Modeling",
+    "link": "https://www.coursera.org/specializations/differential-calculus-data-modeling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Expressway to Data Science: Essential Math",
+    "link": "https://www.coursera.org/specializations/expressway-to-data-science-essential-math",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Discrete Mathematics",
+    "link": "https://www.coursera.org/learn/discrete-mathematics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Honors Algebra 2",
+    "link": "https://www.coursera.org/specializations/honors-algebra-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra for Machine Learning & AI",
+    "link": "https://www.coursera.org/learn/bits-linear-algebra-for-machine-learning-and-ai",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Improving Math Engagement with Prodigy",
+    "link": "https://www.coursera.org/projects/teaching-prodigy",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Algorithm Design: Mastering Computational Problem Solving",
+    "link": "https://www.coursera.org/learn/bits-algorithm-design",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra and Regression Fundamentals for Data Science",
+    "link": "https://www.coursera.org/learn/linear-algebra-and-regression-fundamentals-for-data-science",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Probability and Statistics",
+    "link": "https://www.coursera.org/learn/bits-probability-and-statistics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Math for MBA and GMAT Prep",
+    "link": "https://www.coursera.org/learn/math-mba-gmat-prep",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Precalculus: Relations and Functions",
+    "link": "https://www.coursera.org/learn/precalculus-relations-functions",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Matrix Algebra for Engineers",
+    "link": "https://www.coursera.org/learn/matrix-algebra-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Math behind Moneyball",
+    "link": "https://www.coursera.org/learn/mathematics-sport",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Combinatorics and Probability",
+    "link": "https://www.coursera.org/learn/combinatorics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematics for Machine Learning: Multivariate Calculus",
+    "link": "https://www.coursera.org/learn/multivariate-calculus-machine-learning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra: Linear Systems and Matrix Equations",
+    "link": "https://www.coursera.org/learn/linear-systems-and-matrix-equations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Learning How To Learn for Youth",
+    "link": "https://www.coursera.org/learn/learning-how-to-learn-youth",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Building Students Math Skills with iKnowit",
+    "link": "https://www.coursera.org/projects/student-math-iknowit",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Álgebra básica",
+    "link": "https://www.coursera.org/learn/algebra-basica",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Machine Learning for All",
+    "link": "https://www.coursera.org/learn/uol-machine-learning-for-all",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Algebra: Elementary to Advanced - Functions & Applications",
+    "link": "https://www.coursera.org/learn/algebra-ii",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Applied Math for Materials Science and Engineering",
+    "link": "https://www.coursera.org/learn/applied-math-for-materials-science-and-engineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematical Thinking in Computer Science",
+    "link": "https://www.coursera.org/learn/what-is-a-proof",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Math for AI beginner part 1 Linear Algebra",
+    "link": "https://www.coursera.org/learn/math-for-ai-beginner-part-1-linear-algebra",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Engineering Mechanics",
+    "link": "https://www.coursera.org/learn/engineering-mechanics-statics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Aprendizaje de las matemáticas de primaria",
+    "link": "https://www.coursera.org/learn/aprendizaje-matematicas-primaria",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Single Variable Calculus",
+    "link": "https://www.coursera.org/learn/discrete-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Math for AI Beginner Part 2 : Vector Calulus",
+    "link": "https://www.coursera.org/learn/math-for-ai-beginner-part-2--vector-calulus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Bases matemáticas: Álgebra",
+    "link": "https://www.coursera.org/learn/math-fundamentals-algebra",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Discrete Mathematics for Computer Science and Engineering",
+    "link": "https://www.coursera.org/learn/bits-discrete-mathematics-computer-science-engineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Data Science Fundamentals, Part 1",
+    "link": "https://www.coursera.org/specializations/pearson-data-science-fundamentals-part-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra for ML and Analytics Training",
+    "link": "https://www.coursera.org/learn/linear-algebra-for-ml-and-analytics-training",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Honors Algebra 2: Algebraic, Exponential & Log Functions",
+    "link": "https://www.coursera.org/learn/ha2-exploring-inverse-functions",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Statistics and Calculus Methods for Data Analysis",
+    "link": "https://www.coursera.org/learn/statistics-and-calculus-methods-for-data-analysis",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Master Unity Game Physics: Apply, Simulate & Transform",
+    "link": "https://www.coursera.org/learn/master-unity-game-physics-apply-simulate-transform",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Honors Algebra 2: Polynomials and Complex Numbers",
+    "link": "https://www.coursera.org/learn/ha2-polynomials",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Data Science Fundamentals Part 1: Unit 1",
+    "link": "https://www.coursera.org/learn/pearson-data-science-fundamentals-part-1-learning-basic-concepts-data-wran-yrtzd",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Probability Theory and Regression for Predictive Analytics",
+    "link": "https://www.coursera.org/learn/probability-theory-and-regression-for-predictive-analytics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Beyond the Obvious: How to Think in the Age of Generative AI",
+    "link": "https://www.coursera.org/learn/beyond-the-obvious-how-to-think-in-the-age-of-generative-ai",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Intermediate JavaScript & Best Practices",
+    "link": "https://www.coursera.org/learn/packt-intermediate-javascript-best-practices-jmeag",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Intro to NumPy",
+    "link": "https://www.coursera.org/learn/packt-intro-to-numpy-ftdg2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Logic for Computer Science",
+    "link": "https://www.coursera.org/learn/bits-logic-for-computer-science",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Octave for Machine Learning: Data Analysis Mastery",
+    "link": "https://www.coursera.org/specializations/octave-machine-learning-data-analysis",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Logic and Critical Thinking",
+    "link": "https://www.coursera.org/specializations/logic-critical-thinking-duke",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Everyday Excel, Part 1",
+    "link": "https://www.coursera.org/learn/everyday-excel-part-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus for Machine Learning and Data Science",
+    "link": "https://www.coursera.org/learn/machine-learning-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Career Foundations: A Toolkit to Build Your Future",
+    "link": "https://www.coursera.org/learn/career-foundations-toolkit",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Business Finance and Data Analysis Fundamentals",
+    "link": "https://www.coursera.org/specializations/pre-mba-quantitative-skills",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Generative AI and ChatGPT for K-12 Educators",
+    "link": "https://www.coursera.org/specializations/generative-ai-k12-educators",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentos de Finanzas Empresariales",
+    "link": "https://www.coursera.org/learn/finanzas-empresariales",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Cálculo Diferencial e Integral unidos por el Teorema Fundamental del Cálculo",
+    "link": "https://www.coursera.org/learn/calculo-diferencial",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematical Foundations for Cryptography",
+    "link": "https://www.coursera.org/learn/mathematical-foundations-cryptography",
+    "provider": "Coursera"
+  },
+  {
+    "title": "頑想學概率：機率一 (Probability (1))",
+    "link": "https://www.coursera.org/learn/prob1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "1.- El Cálculo - Modelo Lineal",
+    "link": "https://www.coursera.org/learn/calculo-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Numerical Methods for Engineers",
+    "link": "https://www.coursera.org/learn/numerical-methods-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "機器學習基石上 (Machine Learning Foundations)---Mathematical Foundations",
+    "link": "https://www.coursera.org/learn/ntumlone-mathematicalfoundations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Data Science Essentials: Analysis, Statistics, and ML",
+    "link": "https://www.coursera.org/specializations/packt-data-science-essentials-analysis-statistics-and-ml",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Algebra and Differential Calculus for Data Science",
+    "link": "https://www.coursera.org/learn/algebra-and-differential-calculus-for-data-science",
+    "provider": "Coursera"
+  },
+  {
+    "title": "تعليم  lookup, math, text ,reference   فى Excel",
+    "link": "https://www.coursera.org/projects/taelim-lookup-math-text-reference-faa-barnamaj-excel",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematical Biostatistics Boot Camp 1",
+    "link": "https://www.coursera.org/learn/biostatistics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Contenido de las matemáticas de primaria",
+    "link": "https://www.coursera.org/learn/contenido-matematica-escolar",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Enseñanza de las matemáticas de primaria",
+    "link": "https://www.coursera.org/learn/ensenanza-matematicas-primaria",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mechanical Vibration",
+    "link": "https://www.coursera.org/learn/mechanical-vibration",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Houdini VEX Wrangles: Procedural Effects Guide",
+    "link": "https://www.coursera.org/learn/houdini-vex-wrangles-procedural-effects-guide",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Excel/VBA for Creative Problem Solving, Part 1",
+    "link": "https://www.coursera.org/learn/excel-vba-for-creative-problem-solving-part-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mechanical Vibration",
+    "link": "https://www.coursera.org/learn/mechanical-vibration",
+    "provider": "Coursera"
+  },
+  {
+    "title": "AI for Medical Diagnosis",
+    "link": "https://www.coursera.org/learn/ai-for-medical-diagnosis",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Supply Chain Principles",
+    "link": "https://www.coursera.org/learn/supply-chain-principles",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Houdini VEX Wrangles: Procedural Effects Guide",
+    "link": "https://www.coursera.org/learn/houdini-vex-wrangles-procedural-effects-guide",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Algebra: Elementary to Advanced - Polynomials and Roots",
+    "link": "https://www.coursera.org/learn/polynomials-roots",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus through Data & Modeling: Precalculus Review",
+    "link": "https://www.coursera.org/learn/calculus-through-data-and-modelling-precalculus-review",
+    "provider": "Coursera"
+  },
+  {
+    "title": "GenAI Foundations and AI Agents Development",
+    "link": "https://www.coursera.org/learn/genai-foundations-and-ai-agents-development",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Octave Machine Learning: Apply, Analyze & Build",
+    "link": "https://www.coursera.org/learn/octave-machine-learning-apply-analyze-build",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Octave for Machine Learning: Analyze & Visualize",
+    "link": "https://www.coursera.org/learn/octave-for-machine-learning-analyze-visualize",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Six Sigma Black Belt",
+    "link": "https://www.coursera.org/specializations/six-sigma-black-belt",
+    "provider": "Coursera"
+  },
+  {
+    "title": "GNU Octave: Apply, Implement & Design Functions",
+    "link": "https://www.coursera.org/learn/gnu-octave-apply-implement-design-functions",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Modern Robotics:  Mechanics, Planning, and Control",
+    "link": "https://www.coursera.org/specializations/modernrobotics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "International Business Essentials",
+    "link": "https://www.coursera.org/specializations/mba",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentals of Finance",
+    "link": "https://www.coursera.org/learn/finance-fundamentals",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Linear Algebra",
+    "link": "https://www.coursera.org/learn/introduction-to-linear-algebra",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus: Single Variable Part 4 - Applications",
+    "link": "https://www.coursera.org/learn/applications-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Computer Communications",
+    "link": "https://www.coursera.org/specializations/computer-communications",
+    "provider": "Coursera"
+  },
+  {
+    "title": "2.- El Cálculo - Modelo Cuadrático",
+    "link": "https://www.coursera.org/learn/calculo-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Computer Vision and Image Processing",
+    "link": "https://www.coursera.org/learn/introduction-computer-vision-watson-opencv",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus through Data & Modeling: Limits & Derivatives",
+    "link": "https://www.coursera.org/learn/calculus-through-data-and-modelling-imits-derivatives",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentals of Digital Image and Video Processing",
+    "link": "https://www.coursera.org/learn/digital",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Foundational Finance for Strategic Decision Making",
+    "link": "https://www.coursera.org/specializations/foundational-finance",
+    "provider": "Coursera"
+  },
+  {
+    "title": "An Intuitive Introduction to Probability",
+    "link": "https://www.coursera.org/learn/introductiontoprobability",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Build Basic Generative Adversarial Networks (GANs)",
+    "link": "https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans",
+    "provider": "Coursera"
+  },
+  {
+    "title": "3.- El Cálculo - Modelo Cúbico",
+    "link": "https://www.coursera.org/learn/calculo-3",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Foundations of Data Structures and Algorithms",
+    "link": "https://www.coursera.org/specializations/boulder-data-structures-algorithms",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Integral Calculus and Numerical Analysis for Data Science",
+    "link": "https://www.coursera.org/learn/integral-calculus-and-numerical-analysis-for-data-science",
+    "provider": "Coursera"
+  },
+  {
+    "title": "4.- El Cálculo - Otros Modelos",
+    "link": "https://www.coursera.org/learn/calculo-4",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Financial Engineering and Risk Management",
+    "link": "https://www.coursera.org/specializations/financialengineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Practical Time Series Analysis",
+    "link": "https://www.coursera.org/learn/practical-time-series-analysis",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Matrix Methods",
+    "link": "https://www.coursera.org/learn/matrix-methods",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Advanced Statistics for Data Science",
+    "link": "https://www.coursera.org/specializations/advanced-statistics-data-science",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Portfolio Construction and Analysis with Python",
+    "link": "https://www.coursera.org/learn/introduction-portfolio-construction-python",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Differential Equations for Engineers",
+    "link": "https://www.coursera.org/learn/differential-equations-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Using Basic Formulas and Functions in Microsoft Excel",
+    "link": "https://www.coursera.org/projects/using-basic-formulas-functions-microsoft-excel",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Differential Equations for Engineers",
+    "link": "https://www.coursera.org/learn/differential-equations-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Complex Analysis",
+    "link": "https://www.coursera.org/learn/complex-analysis",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Administração Financeira",
+    "link": "https://www.coursera.org/learn/administracao-financeira",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Matemática Preuniversitaria",
+    "link": "https://www.coursera.org/learn/matematica-preuniversitaria",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Precalculus: Mathematical Modeling",
+    "link": "https://www.coursera.org/learn/precalculus-mathematical-modelling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "The Mathematics of Democracy, Politics and Manipulation",
+    "link": "https://www.coursera.org/learn/math-for-democracy",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Image and Video Processing: From Mars to Hollywood with a Stop at the Hospital",
+    "link": "https://www.coursera.org/learn/image-processing",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Funciones algebraicas y trascendentes",
+    "link": "https://www.coursera.org/learn/funciones-algebraicas",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Differential Equations Part I Basic Theory",
+    "link": "https://www.coursera.org/learn/ordinary-differential-equations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Embedded Machine Learning",
+    "link": "https://www.coursera.org/learn/introduction-to-embedded-machine-learning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "The Science of the Solar System",
+    "link": "https://www.coursera.org/learn/solar-system",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fibonacci Numbers and the Golden Ratio",
+    "link": "https://www.coursera.org/learn/fibonacci",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Operations Research (1): Models and Applications",
+    "link": "https://www.coursera.org/learn/operations-research-modeling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Invitation to Mathematics     הזמנה למתמטיקה",
+    "link": "https://www.coursera.org/learn/introduction-to-math",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mechanics: Motion, Forces, Energy and Gravity, from Particles to Planets",
+    "link": "https://www.coursera.org/learn/mechanics-particles-planets",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Game Theory II: Advanced Applications",
+    "link": "https://www.coursera.org/learn/game-theory-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Semiconductor Devices",
+    "link": "https://www.coursera.org/specializations/semiconductor-devices",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Electrodynamics",
+    "link": "https://www.coursera.org/specializations/electrodynamics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Social and Economic Networks:  Models and Analysis",
+    "link": "https://www.coursera.org/learn/social-economic-networks",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Construction Finance",
+    "link": "https://www.coursera.org/learn/construction-finance",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Applied Cryptography",
+    "link": "https://www.coursera.org/specializations/introduction-applied-cryptography",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Financial Engineering and Risk Management",
+    "link": "https://www.coursera.org/learn/financial-engineering-intro",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Vector Calculus for Engineers",
+    "link": "https://www.coursera.org/learn/vector-calculus-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Precalculus: Periodic Functions",
+    "link": "https://www.coursera.org/learn/precalculus-periodic-functions",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus through Data & Modeling: Applying Differentiation",
+    "link": "https://www.coursera.org/learn/calculus-through-data-and-modelling-applying-differentiation",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Digital Signal Processing 1: Basic Concepts and Algorithms",
+    "link": "https://www.coursera.org/learn/dsp1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Graph Theory",
+    "link": "https://www.coursera.org/learn/graphs",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematics for Engineers: The Capstone Course",
+    "link": "https://www.coursera.org/learn/mathematics-engineers-capstone",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Trigonometría y geometría analítica",
+    "link": "https://www.coursera.org/learn/trigonometria",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Time Value of Money (TVM)",
+    "link": "https://www.coursera.org/learn/time-value-of-money",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentals of Flight mechanics",
+    "link": "https://www.coursera.org/specializations/flight-mechanics-fundamentals",
+    "provider": "Coursera"
+  },
+  {
+    "title": "頑想學概率：機率二 (Probability (2))",
+    "link": "https://www.coursera.org/learn/prob2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Foundational Mathematics for AI",
+    "link": "https://www.coursera.org/learn/foundational-mathematics-for-ai",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Spacecraft Dynamics and Control",
+    "link": "https://www.coursera.org/specializations/spacecraft-dynamics-control",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Optical Engineering",
+    "link": "https://www.coursera.org/specializations/optical-engineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Statistical Thermodynamics",
+    "link": "https://www.coursera.org/specializations/statistical-thermodynamics-engineering",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Uncommon Sense Teaching",
+    "link": "https://www.coursera.org/learn/uncommon-sense-teaching",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus through Data & Modelling: Series and Integration",
+    "link": "https://www.coursera.org/learn/calculus-through-data-and-modelling-series-and-integrals",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Build Better Generative Adversarial Networks (GANs)",
+    "link": "https://www.coursera.org/learn/build-better-generative-adversarial-networks-gans",
+    "provider": "Coursera"
+  },
+  {
+    "title": "GenAI for Executives & Business Leaders: An Introduction",
+    "link": "https://www.coursera.org/learn/generative-ai-for-executives-business-leaders-introduction",
+    "provider": "Coursera"
+  },
+  {
+    "title": "VLSI CAD Part I: Logic",
+    "link": "https://www.coursera.org/learn/vlsi-cad-logic",
+    "provider": "Coursera"
+  },
+  {
+    "title": "MathWorks Computer Vision Engineer",
+    "link": "https://www.coursera.org/professional-certificates/mathworks-computer-vision-engineer",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Finance for Everyone",
+    "link": "https://www.coursera.org/specializations/finance-for-everyone",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Mechanics",
+    "link": "https://www.coursera.org/specializations/introduction-to-mechanics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Matemáticas financieras",
+    "link": "https://www.coursera.org/learn/matematicas",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus for Engineers",
+    "link": "https://www.coursera.org/learn/calculus-for-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Educación Matemática para profesores de infantil. Curso 1",
+    "link": "https://www.coursera.org/learn/educacion-matematica-para-profesores-de-infantil-curso-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Stocks and Bonds",
+    "link": "https://www.coursera.org/learn/bonds-and-stocks",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Number Theory and Cryptography",
+    "link": "https://www.coursera.org/learn/number-theory-cryptography",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Converter Control",
+    "link": "https://www.coursera.org/learn/converter-control",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentals of Fluid-Solid Interactions",
+    "link": "https://www.coursera.org/learn/fluid-solid-interaction",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Everyday Excel, Part 2",
+    "link": "https://www.coursera.org/learn/everyday-excel-part-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Apply Generative Adversarial Networks (GANs)",
+    "link": "https://www.coursera.org/learn/apply-generative-adversarial-networks-gans",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Generative AI Primer",
+    "link": "https://www.coursera.org/learn/generative-ai",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Doğrusal Cebir I: Uzaylar ve İşlemciler / Linear Algebra I: Spaces and Operators",
+    "link": "https://www.coursera.org/learn/linearalgebra1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Flight mechanics - The basis",
+    "link": "https://www.coursera.org/learn/basis-flight-mechanics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Conceptos y Herramientas para la Física Universitaria",
+    "link": "https://www.coursera.org/learn/fisica-universitaria",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Basic Modeling for Discrete Optimization",
+    "link": "https://www.coursera.org/learn/basic-modeling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus through Data & Modelling: Vector Calculus",
+    "link": "https://www.coursera.org/learn/calculus-through-data-and-modelling-vector-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Electricity and Magnetism",
+    "link": "https://www.coursera.org/specializations/introduction-to-electricity-magnetism",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Electricity and Magnetism",
+    "link": "https://www.coursera.org/specializations/introduction-to-electricity-magnetism",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Computers, Waves, Simulations: A Practical Introduction to Numerical Methods using Python",
+    "link": "https://www.coursera.org/learn/computers-waves-simulations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introdução ao Controle de Sistemas",
+    "link": "https://www.coursera.org/learn/controle",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Semiconductor Physics",
+    "link": "https://www.coursera.org/learn/semiconductor-physics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Interest Rate Models",
+    "link": "https://www.coursera.org/learn/interest-rate-models",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Finance for Everyone: Decisions",
+    "link": "https://www.coursera.org/learn/finance-decisions",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Electrodynamics: An Introduction",
+    "link": "https://www.coursera.org/learn/electrodynamics-introduction",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Kinematics: Describing the Motions of Spacecraft",
+    "link": "https://www.coursera.org/learn/spacecraft-dynamics-kinematics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Analysis of Algorithms",
+    "link": "https://www.coursera.org/learn/analysis-of-algorithms",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Analytics for Decision Making",
+    "link": "https://www.coursera.org/specializations/analytics-for-decision-making",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Basic Vibrations",
+    "link": "https://www.coursera.org/learn/introduction-basic-vibrations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Advanced Portfolio Construction and Analysis with Python",
+    "link": "https://www.coursera.org/learn/advanced-portfolio-construction-python",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Think Again II: How to Reason Deductively",
+    "link": "https://www.coursera.org/learn/deductive-reasoning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Object-Oriented Programming with Java",
+    "link": "https://www.coursera.org/learn/object-oriented-programming-with-java",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Density Functional Theory",
+    "link": "https://www.coursera.org/learn/density-functional-theory",
+    "provider": "Coursera"
+  },
+  {
+    "title": "VLSI CAD Part II: Layout",
+    "link": "https://www.coursera.org/learn/vlsi-cad-layout",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Accounting Data Analytics and Visualization",
+    "link": "https://www.coursera.org/learn/intro-accounting-data-analytics-visual",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Pensamento Crítico, Lógica e Argumentação",
+    "link": "https://www.coursera.org/learn/pensamento-critico-argumentacao",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus: Single Variable Part 2 - Differentiation",
+    "link": "https://www.coursera.org/learn/differentiation-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Physics 101 - Forces and Kinematics",
+    "link": "https://www.coursera.org/learn/physics-101-forces-kinematics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Excel Skills for Business Forecasting",
+    "link": "https://www.coursera.org/specializations/excel-skills-for-business-forecasting",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introducción al análisis de Costos para la Dirección de Empresas",
+    "link": "https://www.coursera.org/learn/analisis-costos-direccion-empresas",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Business Analysis Using Spreadsheets: Basics",
+    "link": "https://www.coursera.org/projects/business-analysis-using-spreadsheets",
+    "provider": "Coursera"
+  },
+  {
+    "title": "离散数学概论 Discrete Mathematics Generality",
+    "link": "https://www.coursera.org/learn/dmathgen",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Geometría Analítica Preuniversitaria",
+    "link": "https://www.coursera.org/learn/geometra-analtica-preuniversitaria",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Dynamic Programming, Greedy Algorithms",
+    "link": "https://www.coursera.org/learn/dynamic-programming-greedy-algorithms",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Operations Research (2): Optimization Algorithms",
+    "link": "https://www.coursera.org/learn/operations-research-algorithms",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Modern Robotics, Course 2:  Robot Kinematics",
+    "link": "https://www.coursera.org/learn/modernrobotics-course2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentos de probabilidad y aplicaciones",
+    "link": "https://www.coursera.org/learn/probabilidad",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Python 101: Develop Your First Python Program",
+    "link": "https://www.coursera.org/projects/python101-develop-your-first-python-code",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Power System: Generation, Transmission and Protection",
+    "link": "https://www.coursera.org/specializations/power-system-generation-transmission-and-protection",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Computer Vision with Embedded Machine Learning",
+    "link": "https://www.coursera.org/learn/computer-vision-with-embedded-machine-learning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Éléments de Géomatique",
+    "link": "https://www.coursera.org/learn/geomatique",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Information Theory",
+    "link": "https://www.coursera.org/learn/information-theory",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Machine Learning: Supervised Learning",
+    "link": "https://www.coursera.org/learn/introduction-to-machine-learning-supervised-learning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentos de estadística aplicada",
+    "link": "https://www.coursera.org/learn/estadistica-aplicada-fundamentos",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Job & Exam Aptitude Mastery: Reasoning | DI | Verbal | Quant",
+    "link": "https://www.coursera.org/specializations/job-and-exam-aptitude-mastery",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Fundamentals of waves and vibrations",
+    "link": "https://www.coursera.org/learn/fundamentals-waves-vibrations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Intro to Acoustics (Part 1)",
+    "link": "https://www.coursera.org/learn/intro-to-acoustics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Educación Matemática para profesores de infantil. Curso 2",
+    "link": "https://www.coursera.org/learn/educacion-matematica-para-profesores-de-infantil-curso-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Física: Vectores, Trabajo y Energía",
+    "link": "https://www.coursera.org/learn/fisica-vectores-trabajo-energia",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mastering Statics",
+    "link": "https://www.coursera.org/learn/mastering-statics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "The Engineering of Structures Around Us",
+    "link": "https://www.coursera.org/specializations/engineering-of-structures-around-us",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus through Data & Modelling: Integration Applications",
+    "link": "https://www.coursera.org/learn/calculus-through-data-and-modelling-integration-applications",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Physics 102 - Electric Charges and Fields",
+    "link": "https://www.coursera.org/learn/physics-102-electric-charges-fields",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Battery State-of-Charge (SOC) Estimation",
+    "link": "https://www.coursera.org/learn/battery-state-of-charge",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Quantum Mechanics for Engineers",
+    "link": "https://www.coursera.org/specializations/quantum-mechanics-for-engineers",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus: Single Variable Part 3 - Integration",
+    "link": "https://www.coursera.org/learn/integration-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Aléatoire : une introduction aux probabilités - Partie 1",
+    "link": "https://www.coursera.org/learn/probabilites-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Statistics for Data Science Essentials",
+    "link": "https://www.coursera.org/learn/statistics-for-data-science-essentials",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Image Processing",
+    "link": "https://www.coursera.org/learn/introduction-image-processing",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Pricing Options with Mathematical Models",
+    "link": "https://www.coursera.org/learn/pricing-options-with-mathematical-models",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Quantitative Foundations for International Business",
+    "link": "https://www.coursera.org/learn/quantitative-foundations-international-business",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Principles of Computing (Part 1)",
+    "link": "https://www.coursera.org/learn/principles-of-computing-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Algorithmic Thinking (Part 1)",
+    "link": "https://www.coursera.org/learn/algorithmic-thinking-1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Advanced Linear Models for Data Science 1: Least Squares",
+    "link": "https://www.coursera.org/learn/linear-models",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Critical Thinking: A Brain-Based Guide for the ChatGPT Era",
+    "link": "https://www.coursera.org/specializations/critical-thinking",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Operations Research (3): Theory",
+    "link": "https://www.coursera.org/learn/operations-research-theory",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Digital Signal Processing 2: Filtering",
+    "link": "https://www.coursera.org/learn/dsp2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Essential Linear Algebra for Data Science",
+    "link": "https://www.coursera.org/learn/essential-linear-algebra-for-data-science",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Control Systems Analysis: Modeling of Dynamic Systems",
+    "link": "https://www.coursera.org/learn/modeling-feedback-systems",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Quantum Information",
+    "link": "https://www.coursera.org/learn/introduction-to-quantum-information",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Quantum Computing For Everyone - An Introduction",
+    "link": "https://www.coursera.org/learn/quantum-computing-for-everyone-an-introduction",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Wind resources for renewable energies",
+    "link": "https://www.coursera.org/learn/wind-for-renewable-energies",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Magnetics for Power Electronic Converters",
+    "link": "https://www.coursera.org/learn/magnetics-for-power-electronic-converters-v2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Modern Robotics, Course 3:  Robot Dynamics",
+    "link": "https://www.coursera.org/learn/modernrobotics-course3",
+    "provider": "Coursera"
+  },
+  {
+    "title": "The Complete Quantum Computing Course for Beginners",
+    "link": "https://www.coursera.org/specializations/packt-the-complete-quantum-computing-course-for-beginners",
+    "provider": "Coursera"
+  },
+  {
+    "title": "機器人學一 (Robotics (1))",
+    "link": "https://www.coursera.org/learn/robotics1",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Advanced Engineering Systems in Motion: Dynamics of Three Dimensional (3D) Motion",
+    "link": "https://www.coursera.org/learn/motion-and-kinetics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Dynamical Modeling Methods for Systems Biology",
+    "link": "https://www.coursera.org/learn/dynamical-modeling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Term-Structure and Credit Derivatives",
+    "link": "https://www.coursera.org/learn/financial-engineering-termstructure",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Advanced Linear Models for Data Science 2: Statistical Linear Models",
+    "link": "https://www.coursera.org/learn/linear-models-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Term-Structure and Credit Derivatives",
+    "link": "https://www.coursera.org/learn/financial-engineering-termstructure",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Advanced Linear Models for Data Science 2: Statistical Linear Models",
+    "link": "https://www.coursera.org/learn/linear-models-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Active Learning in STEM with PhET Interactive Simulations",
+    "link": "https://www.coursera.org/specializations/active-learning-in-stem-with-phet-interactive-simulations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Statistical Mechanics: Algorithms and Computations",
+    "link": "https://www.coursera.org/learn/statistical-mechanics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "SQL Mathematical Functions",
+    "link": "https://www.coursera.org/projects/sql-mathematical-functions",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Predictive Modeling",
+    "link": "https://www.coursera.org/learn/introduction-to-predictive-modeling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Thermodynamique : fondements",
+    "link": "https://www.coursera.org/learn/thermo-base",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Classical Cryptosystems and Core Concepts",
+    "link": "https://www.coursera.org/learn/classical-cryptosystems",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Foundations of Quantum Mechanics",
+    "link": "https://www.coursera.org/learn/foundations-quantum-mechanics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Control automático: La tecnología invisible",
+    "link": "https://www.coursera.org/learn/control-automatico",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Digital Signal Processing 3: Analog vs Digital",
+    "link": "https://www.coursera.org/learn/dsp3",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Getting started in cryo-EM",
+    "link": "https://www.coursera.org/learn/cryo-em",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Matemática para Negocios",
+    "link": "https://www.coursera.org/learn/matematica-para-negocios",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Kinetics: Studying Spacecraft Motion",
+    "link": "https://www.coursera.org/learn/spacecraft-dynamics-kinetics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Toma de decisiones financieras",
+    "link": "https://www.coursera.org/learn/proyectofinanzascorporativas",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Battery Pack Balancing and Power Estimation",
+    "link": "https://www.coursera.org/learn/battery-pack-balancing-power-estimation",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Deep Learning",
+    "link": "https://www.coursera.org/learn/introduction-to-deep-learning-boulder",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Data for Analysis with Microsoft Excel",
+    "link": "https://www.coursera.org/learn/data-for-analysis-with-microsoft-excel",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Optical Efficiency and Resolution",
+    "link": "https://www.coursera.org/learn/optical-efficiency-and-resolution",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Electrodynamics: Analysis of Electric Fields",
+    "link": "https://www.coursera.org/learn/electrodynamics-analysis-of-electric-fields",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Games without Chance: Combinatorial Game Theory",
+    "link": "https://www.coursera.org/learn/combinatorial-game-theory",
+    "provider": "Coursera"
+  },
+  {
+    "title": "基礎光學一 (Introduction to Optics (1))",
+    "link": "https://www.coursera.org/learn/ji-chu-guang-xue",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Linear Algebra: Matrix Algebra, Determinants, & Eigenvectors",
+    "link": "https://www.coursera.org/learn/matrix-algebra-determinants-and-eigenvectors",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Digital Signal Processing 4: Applications",
+    "link": "https://www.coursera.org/learn/dsp4",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to advanced tomography",
+    "link": "https://www.coursera.org/learn/cinemaxe",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Electrodynamics: Electric and Magnetic Fields",
+    "link": "https://www.coursera.org/learn/electrodynamics-electric-magnetic-fields",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Electrodynamics: In-depth Solutions for Maxwell’s Equations",
+    "link": "https://www.coursera.org/learn/electrodynamics-solutions-maxwells-equations",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Approximation Algorithms and Linear Programming",
+    "link": "https://www.coursera.org/learn/linear-programming-and-approximation-algorithms",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Physics 101 - Rotational Motion and Gravitation",
+    "link": "https://www.coursera.org/learn/physics-101-rotational-motion-gravitation",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematical Foundations and Quantum Mechanics Essentials",
+    "link": "https://www.coursera.org/learn/packt-mathematical-foundations-and-quantum-mechanics-essentials-bmddx",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Complexity Science",
+    "link": "https://www.coursera.org/learn/complexity",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Engineering of Structures: Tension",
+    "link": "https://www.coursera.org/learn/engineering-of-structures-tension",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Computational Methods in Pricing and Model Calibration",
+    "link": "https://www.coursera.org/learn/financial-engineering-computationalmethods",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Calculus through Data & Modeling: Differentiation Rules",
+    "link": "https://www.coursera.org/learn/calculus-through-data-and-modelling-differentiation-rules",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Analyse numérique pour ingénieurs",
+    "link": "https://www.coursera.org/learn/analyse-numerique",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Flight Mechanics - Anemobarometry",
+    "link": "https://www.coursera.org/learn/anemobarometry-flight-mechanics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Flight Mechanics - Anemobarometry",
+    "link": "https://www.coursera.org/learn/anemobarometry-flight-mechanics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Analytic Combinatorics",
+    "link": "https://www.coursera.org/learn/analytic-combinatorics",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Optimization for Decision Making",
+    "link": "https://www.coursera.org/learn/optimization-for-decision-making",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mécanique : Solide Indéformable",
+    "link": "https://www.coursera.org/learn/mecanique-solide",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Aléatoire : une introduction aux probabilités - Partie 2",
+    "link": "https://www.coursera.org/learn/probabilites-2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Knowing the Universe: History and Philosophy of Astronomy",
+    "link": "https://www.coursera.org/learn/knowing-the-universe",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Initiation à la théorie des distributions",
+    "link": "https://www.coursera.org/learn/theorie-des-distributions",
+    "provider": "Coursera"
+  },
+  {
+    "title": "The Power of Machine Learning: Boost Business, Accumulate Clicks, Fight Fraud, and Deny Deadbeats",
+    "link": "https://www.coursera.org/learn/the-power-of-machine-learning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Advanced Calculus",
+    "link": "https://www.coursera.org/learn/introduction-to-advanced-calculus",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introducción a las Finanzas Corporativas",
+    "link": "https://www.coursera.org/learn/wharton-finanzas-corporativas",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Integral Calculus through Data and Modeling",
+    "link": "https://www.coursera.org/specializations/integral-calculus-data-modeling",
+    "provider": "Coursera"
+  },
+  {
+    "title": "WordPress 101 - The Complete Guide",
+    "link": "https://www.coursera.org/learn/packt-wordpress-101-the-complete-guide-lgzu2",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mécanique de Newton",
+    "link": "https://www.coursera.org/learn/mecanique-newton",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Question Reality! Science, philosophy, a search for meaning",
+    "link": "https://www.coursera.org/specializations/question-reality-science-philosophy",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Quantitative Aptitude Mastery— Exam & Recruitment Prep",
+    "link": "https://www.coursera.org/learn/quantitative-aptitude-mastery",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Control of Nonlinear Spacecraft Attitude Motion",
+    "link": "https://www.coursera.org/learn/nonlinear-spacecraft-attitude-control",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Advanced Models for Decision Making",
+    "link": "https://www.coursera.org/learn/advanced-models-for-decision-making",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Introduction to Data Science and scikit-learn in Python",
+    "link": "https://www.coursera.org/learn/data-science-and-scikit-learn-in-python",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Mathematics and Democracy Teach Out",
+    "link": "https://www.coursera.org/learn/mathematics-and-democracy",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Unsupervised Algorithms in Machine Learning",
+    "link": "https://www.coursera.org/learn/unsupervised-algorithms-in-machine-learning",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Image Segmentation, Filtering, and Region Analysis",
+    "link": "https://www.coursera.org/learn/image-segmentation",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Applied Kalman Filtering",
+    "link": "https://www.coursera.org/specializations/kalman-filtering-applied",
+    "provider": "Coursera"
+  },
+  {
+    "title": "Data Science as a Field",
+    "link": "https://www.coursera.org/learn/data-science-as-a-field",
+    "provider": "Coursera"
+  },
+  {
+    "title": "The Basics of Rocket Science",
+    "link": "https://www.coursera.org/learn/basics-of-rocket-science",
+    "provider": "Coursera"
+  }
 ]
