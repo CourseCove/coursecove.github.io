@@ -78,9 +78,7 @@ function renderCourses() {
       <div class="card h-100 shadow-sm">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${c.title}</h5>
-          <p class="card-text flex-grow-1">${c.description}</p>
           <div class="d-flex justify-content-between align-items-center mt-2">
-            <span>${stars}</span>
             <a href="${c.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
           </div>
         </div>
