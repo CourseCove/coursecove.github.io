@@ -88,20 +88,57 @@ function renderCourses() {
     courseContainer.appendChild(card);
   });
 
-  // Pagination buttons
-  if (totalPages > 1) {
-    const prev = document.createElement('li');
-    prev.className = 'page-item' + (currentPage === 1 ? ' disabled' : '');
-    prev.innerHTML = `<a href="#" class="page-link">Prev</a>`;
-    prev.addEventListener('click', e => {
+  // Pagination with limited page buttons
+  const maxButtons = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
+  let endPage = startPage + maxButtons - 1;
+  if (endPage > totalPages) {
+    endPage = totalPages;
+    startPage = Math.max(1, endPage - maxButtons + 1);
+  }
+
+  // Prev button
+  const prev = document.createElement('li');
+  prev.className = 'page-item' + (currentPage === 1 ? ' disabled' : '');
+  prev.innerHTML = `<a href="#" class="page-link">Prev</a>`;
+  prev.addEventListener('click', e => {
+    e.preventDefault();
+    if (currentPage > 1) {
+      currentPage--;
+      renderCourses();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+  paginationContainer.appendChild(prev);
+
+  // Page buttons
+  for (let i = startPage; i <= endPage; i++) {
+    const li = document.createElement('li');
+    li.className = 'page-item' + (i === currentPage ? ' active' : '');
+    li.innerHTML = `<a href="#" class="page-link">${i}</a>`;
+    li.addEventListener('click', e => {
       e.preventDefault();
-      if (currentPage > 1) {
-        currentPage--;
-        renderCourses();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      currentPage = i;
+      renderCourses();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    paginationContainer.appendChild(prev);
+    paginationContainer.appendChild(li);
+  }
+
+  // Next button
+  const next = document.createElement('li');
+  next.className = 'page-item' + (currentPage === totalPages ? ' disabled' : '');
+  next.innerHTML = `<a href="#" class="page-link">Next</a>`;
+  next.addEventListener('click', e => {
+    e.preventDefault();
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderCourses();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+  paginationContainer.appendChild(next);
+}
 
     for (let i = 1; i <= totalPages; i++) {
       const li = document.createElement('li');
