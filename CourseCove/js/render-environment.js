@@ -48,6 +48,7 @@ function applyFilters() {
     return mQ && mProv && mLev && mDur;
   });
 
+  currentPage = 1; // Reset page after filter
   renderCourses();
 }
 
@@ -62,22 +63,24 @@ function renderCourses() {
 
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   if (currentPage > totalPages) currentPage = totalPages;
+  if (currentPage < 1) currentPage = 1;
 
-  const start = (currentPage - 1)*itemsPerPage;
+  const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
   const arr = filteredCourses.slice(start, end);
 
   arr.forEach(c => {
     const rt = Math.round(c.rating || 0);
-    const stars = '⭐'.repeat(rt) + '☆'.repeat(5-rt);
+    const stars = '⭐'.repeat(rt) + '☆'.repeat(5 - rt);
     const card = document.createElement('div');
-    card.className = 'col';
+    card.className = 'col mb-4';
     card.innerHTML = `
       <div class="card h-100 shadow-sm">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${c.title}</h5>
           <p class="card-text flex-grow-1">${c.description}</p>
           <div class="d-flex justify-content-between align-items-center mt-2">
+            <span>${stars}</span>
             <a href="${c.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
           </div>
         </div>
@@ -85,17 +88,46 @@ function renderCourses() {
     courseContainer.appendChild(card);
   });
 
-  for (let i=1; i<=Math.ceil(filteredCourses.length/itemsPerPage); i++) {
-    const li = document.createElement('li');
-    li.className = 'page-item' + (i===currentPage? ' active':'');
-    li.innerHTML = `<a href="#" class="page-link">${i}</a>`;
-    li.addEventListener('click', e => {
+  // Pagination buttons
+  if (totalPages > 1) {
+    const prev = document.createElement('li');
+    prev.className = 'page-item' + (currentPage === 1 ? ' disabled' : '');
+    prev.innerHTML = `<a href="#" class="page-link">Prev</a>`;
+    prev.addEventListener('click', e => {
       e.preventDefault();
-      currentPage = i;
-      renderCourses();
-      window.scrollTo({top:0, behavior:'smooth'});
+      if (currentPage > 1) {
+        currentPage--;
+        renderCourses();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
-    paginationContainer.appendChild(li);
+    paginationContainer.appendChild(prev);
+
+    for (let i = 1; i <= totalPages; i++) {
+      const li = document.createElement('li');
+      li.className = 'page-item' + (i === currentPage ? ' active' : '');
+      li.innerHTML = `<a href="#" class="page-link">${i}</a>`;
+      li.addEventListener('click', e => {
+        e.preventDefault();
+        currentPage = i;
+        renderCourses();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      paginationContainer.appendChild(li);
+    }
+
+    const next = document.createElement('li');
+    next.className = 'page-item' + (currentPage === totalPages ? ' disabled' : '');
+    next.innerHTML = `<a href="#" class="page-link">Next</a>`;
+    next.addEventListener('click', e => {
+      e.preventDefault();
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderCourses();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+    paginationContainer.appendChild(next);
   }
 }
 
