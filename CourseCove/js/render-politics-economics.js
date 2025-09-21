@@ -104,16 +104,78 @@ function renderPagination() {
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   if (totalPages <= 1) return;
 
+  // First page button
+  if (currentPage > 1) {
+    const firstBtn = document.createElement('button');
+    firstBtn.className = 'btn btn-outline-primary me-2';
+    firstBtn.textContent = '« First';
+    firstBtn.onclick = () => {
+      currentPage = 1;
+      renderCourses();
+    };
+    paginationContainer.appendChild(firstBtn);
+  }
+
+  // Previous button
   if (currentPage > 1) {
     const prevBtn = document.createElement('button');
     prevBtn.className = 'btn btn-outline-primary me-2';
-    prevBtn.textContent = 'Previous';
+    prevBtn.textContent = '‹ Prev';
     prevBtn.onclick = () => {
       currentPage--;
       renderCourses();
     };
     paginationContainer.appendChild(prevBtn);
   }
+
+  // Page numbers (show max 5 pages around current)
+  const maxVisible = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+  if (endPage - startPage + 1 < maxVisible) {
+    startPage = Math.max(1, endPage - maxVisible + 1);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    const pageBtn = document.createElement('button');
+    pageBtn.className = 'btn btn-outline-primary me-2';
+    pageBtn.textContent = i;
+    if (i === currentPage) {
+      pageBtn.disabled = true;
+      pageBtn.classList.add('active');
+    }
+    pageBtn.onclick = () => {
+      currentPage = i;
+      renderCourses();
+    };
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  // Next button
+  if (currentPage < totalPages) {
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'btn btn-outline-primary me-2';
+    nextBtn.textContent = 'Next ›';
+    nextBtn.onclick = () => {
+      currentPage++;
+      renderCourses();
+    };
+    paginationContainer.appendChild(nextBtn);
+  }
+
+  // Last page button
+  if (currentPage < totalPages) {
+    const lastBtn = document.createElement('button');
+    lastBtn.className = 'btn btn-outline-primary';
+    lastBtn.textContent = 'Last »';
+    lastBtn.onclick = () => {
+      currentPage = totalPages;
+      renderCourses();
+    };
+    paginationContainer.appendChild(lastBtn);
+  }
+}
+
 
   for (let i = 1; i <= totalPages; i++) {
     const pageBtn = document.createElement('button');
