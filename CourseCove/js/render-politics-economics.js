@@ -193,7 +193,6 @@ function applyFilters() {
 }
 
 function renderCourses() {
-  // clear
   courseContainer.innerHTML = '';
 
   if (!Array.isArray(filteredCourses) || filteredCourses.length === 0) {
@@ -206,33 +205,38 @@ function renderCourses() {
   const end = start + itemsPerPage;
   const pageItems = filteredCourses.slice(start, end);
 
-  // Create an accessible list and append simple list items (title + link)
-  const ul = document.createElement('ul');
-  ul.style.listStyle = 'none';
-  ul.style.padding = '0';
-  ul.style.margin = '0';
+  const row = document.createElement('div');
+  row.className = 'row row-cols-1 row-cols-md-3 g-4';
 
   pageItems.forEach(course => {
-    const li = document.createElement('li');
-    li.style.padding = '8px 0';
-    li.style.borderBottom = '1px solid #eee';
+    const rating = Math.round(course.rating || 0);
+    const ratingStars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
 
-    const a = document.createElement('a');
-    a.href = course.url;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.textContent = course.title;
-    a.style.textDecoration = 'none';
-    a.style.color = '#0d6efd';
+    const col = document.createElement('div');
+    col.className = 'col';
 
-    li.appendChild(a);
-    ul.appendChild(li);
+    col.innerHTML = `
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${course.title}</h5>
+          <p class="card-text flex-grow-1">${course.description || ''}</p>
+          <div class="mt-2">
+            <span>${ratingStars}</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="${course.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    row.appendChild(col);
   });
 
-  courseContainer.appendChild(ul);
-
+  courseContainer.appendChild(row);
   renderPagination();
 }
+
 
 function renderPagination() {
   paginationContainer.innerHTML = '';
