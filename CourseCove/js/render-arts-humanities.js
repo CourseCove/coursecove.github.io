@@ -75,14 +75,10 @@ function renderCourses() {
     card.className = 'col';
     card.innerHTML = `
       <div class="card h-100 shadow-sm">
-        <img src="${c.image||'images/default-course.jpg'}" class="card-img-top" alt="${c.title}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${c.title}</h5>
-          <h6 class="card-subtitle mb-2">${c.instructor || c.provider || 'Unknown'}</h6>
-          <div class="rating mb-2">${stars} (${(c.rating||0).toFixed(1)})</div>
           <p class="card-text flex-grow-1">${c.description}</p>
           <div class="d-flex justify-content-between align-items-center mt-2">
-            <span class="price fw-bold">${c.price||'Free'}</span>
             <a href="${c.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
           </div>
         </div>
