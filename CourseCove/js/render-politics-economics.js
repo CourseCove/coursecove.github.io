@@ -194,46 +194,36 @@ function applyFilters() {
 
 function renderCourses() {
   courseContainer.innerHTML = '';
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = filteredCourses.slice(start, end);
 
-  if (!Array.isArray(filteredCourses) || filteredCourses.length === 0) {
+  if (pageItems.length === 0) {
     courseContainer.innerHTML = '<p>No courses found.</p>';
     paginationContainer.innerHTML = '';
     return;
   }
 
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const pageItems = filteredCourses.slice(start, end);
-
-  const row = document.createElement('div');
-  row.className = 'row row-cols-1 row-cols-md-3 g-4';
-
   pageItems.forEach(course => {
     const rating = Math.round(course.rating || 0);
     const ratingStars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
 
-    const col = document.createElement('div');
-    col.className = 'col';
-
-    col.innerHTML = `
+    const card = document.createElement('div');
+    card.className = 'col';
+    card.innerHTML = `
       <div class="card h-100 shadow-sm">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${course.title}</h5>
-          <p class="card-text flex-grow-1">${course.description || ''}</p>
-          <div class="mt-2">
-            <span>${ratingStars}</span>
-          </div>
-          <div class="d-flex justify-content-between align-items-center mt-3">
+          <p class="card-text flex-grow-1">${course.description}</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
             <a href="${course.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
           </div>
         </div>
       </div>
     `;
-
-    row.appendChild(col);
+    courseContainer.appendChild(card);
   });
 
-  courseContainer.appendChild(row);
   renderPagination();
 }
 
