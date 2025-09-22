@@ -2,15 +2,15 @@
    Expects:
      - #course-container  (container where results will be injected)
      - #pagination        (container for pagination buttons)
-     - #filters           (optional: container with provider/level/duration checkboxes)
+     - #filters           (optional: container with provider checkboxes)
      - #searchBar         (optional input[type="text"] for search)
    Fetches: json/politics-economics-courses.json?t=TIMESTAMP
-   Renders: simple <ul> of <li><a>Course Title</a></li>
+   Renders: cards with title + provider + link
 */
 
 const courseContainer = document.getElementById('course-container') || createFallback('course-container');
 const paginationContainer = document.getElementById('pagination') || createFallback('pagination');
-const filters = document.getElementById('filters'); // optional
+const filters = document.getElementById('filters'); // provider checkboxes only
 const searchBar = document.getElementById('searchBar'); // optional
 
 let allCourses = [];
@@ -20,10 +20,8 @@ const itemsPerPage = 12;
 const maxPageButtons = 5; // window size for page numbers
 
 function createFallback(id) {
-  // create a harmless placeholder if element is missing so script doesn't break
   const el = document.createElement('div');
   el.id = id;
-  // don't automatically append filters or search fallback; just append containers for results/pagination
   document.body.appendChild(el);
   return el;
 }
@@ -36,9 +34,7 @@ async function loadCourses() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.json();
 
-    // normalize data to a flat array of objects with at least { title, url }
     allCourses = normalizeData(raw);
-    // remove empty entries and duplicates
     allCourses = dedupeAndClean(allCourses);
 
     filteredCourses = allCourses.slice();
@@ -52,32 +48,18 @@ async function loadCourses() {
 }
 
 function normalizeData(data) {
-  // If it's already an array of course objects, return it
-  if (Array.isArray(data)) {
-    return data;
-  }
+  if (Array.isArray(data)) return data;
 
-  // If it's { categories: [ { name, courses: [...] } ] }
   if (data && Array.isArray(data.categories)) {
     const out = [];
     data.categories.forEach(cat => {
-      if (Array.isArray(cat.courses)) {
-        cat.courses.forEach(c => {
-          // attach category if desired: c._category = cat.name
-          out.push(c);
-        });
-      }
+      if (Array.isArray(cat.courses)) out.push(...cat.courses);
     });
     return out;
   }
 
-  // If it's { courses: [...] }
-  if (data && Array.isArray(data.courses)) {
-    return data.courses;
-  }
+  if (data && Array.isArray(data.courses)) return data.courses;
 
-  // Unexpected shape — try to extract any nested arrays
-  // (best-effort)
   const candidates = [];
   Object.values(data || {}).forEach(v => {
     if (Array.isArray(v)) candidates.push(...v);
@@ -92,20 +74,14 @@ function dedupeAndClean(arr) {
     if (!item || typeof item !== 'object') return;
     const title = (item.title || '').toString().trim();
     const url = (item.url || item.link || '').toString().trim();
-    if (!title || !url) return; // skip if missing required fields
-    // normalize URL (simple)
+    if (!title || !url) return;
     const normUrl = url.startsWith('http') ? url : `https://${url.replace(/^\/+/, '')}`;
     if (seen.has(normUrl)) return;
     seen.add(normUrl);
     out.push({
       title,
       url: normUrl,
-      // keep optional fields for filtering if present
-      description: (item.description || '').toString(),
-      instructor: (item.instructor || '').toString(),
-      provider: (item.provider || '').toString(),
-      level: (item.level || '').toString(),
-      duration: (item.duration || '').toString()
+      provider: (item.provider || '').toString().trim()
     });
   });
   return out;
@@ -126,16 +102,15 @@ function setupEventListeners() {
     });
   }
 
-  // Accessibility: keyboard support for pagination container (delegation)
   paginationContainer.addEventListener('click', (e) => {
     const btn = e.target.closest('button[data-action]');
     if (!btn) return;
     const action = btn.getAttribute('data-action');
     if (action === 'first') { currentPage = 1; renderCourses(); }
     else if (action === 'prev') { currentPage = Math.max(1, currentPage - 1); renderCourses(); }
-    else if (action === 'next') { 
+    else if (action === 'next') {
       const totalPages = Math.ceil(filteredCourses.length / itemsPerPage) || 1;
-      currentPage = Math.min(totalPages, currentPage + 1); renderCourses(); 
+      currentPage = Math.min(totalPages, currentPage + 1); renderCourses();
     }
     else if (action === 'last') {
       const totalPages = Math.ceil(filteredCourses.length / itemsPerPage) || 1;
@@ -155,38 +130,18 @@ function applyFilters() {
     ? [...filters.querySelectorAll('input[name="provider"]:checked')].map(el => el.value.toLowerCase())
     : [];
 
-  const selectedLevels = filters
-    ? [...filters.querySelectorAll('input[name="level"]:checked')].map(el => el.value.toLowerCase())
-    : [];
-
-  const selectedDurations = filters
-    ? [...filters.querySelectorAll('input[name="duration"]:checked')].map(el => el.value)
-    : [];
-
   filteredCourses = allCourses.filter(course => {
-    const titleMatch = course.title.toLowerCase().includes(query);
-    const descMatch = (course.description || '').toLowerCase().includes(query);
-    const instructorMatch = (course.instructor || '').toLowerCase().includes(query);
-    const matchesQuery = query === '' || titleMatch || descMatch || instructorMatch;
+    const matchesQuery =
+      course.title.toLowerCase().includes(query) ||
+      (course.url || '').toLowerCase().includes(query) ||
+      (course.provider || '').toLowerCase().includes(query);
 
-    const matchesProvider = selectedProviders.length === 0 || (course.provider && selectedProviders.includes(course.provider.toLowerCase()));
-    const matchesLevel = selectedLevels.length === 0 || (course.level && selectedLevels.includes(course.level.toLowerCase()));
+    const matchesProvider = selectedProviders.length === 0 || 
+      (course.provider && selectedProviders.includes(course.provider.toLowerCase()));
 
-    const matchesDuration = (() => {
-      if (selectedDurations.length === 0) return true;
-      const hours = parseFloat(course.duration) || 0;
-      return selectedDurations.some(d => {
-        if (d === '<2') return hours < 2;
-        if (d === '2-5') return hours >= 2 && hours <= 5;
-        if (d === '>5') return hours > 5;
-        return false;
-      });
-    })();
-
-    return matchesQuery && matchesProvider && matchesLevel && matchesDuration;
+    return matchesQuery && matchesProvider;
   });
 
-  // ensure currentPage valid after filtering
   const totalPages = Math.max(1, Math.ceil(filteredCourses.length / itemsPerPage));
   if (currentPage > totalPages) currentPage = totalPages;
   renderCourses();
@@ -205,16 +160,13 @@ function renderCourses() {
   }
 
   pageItems.forEach(course => {
-    const rating = Math.round(course.rating || 0);
-    const ratingStars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
-
     const card = document.createElement('div');
     card.className = 'col';
     card.innerHTML = `
       <div class="card h-100 shadow-sm">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${course.title}</h5>
-          <p class="card-text flex-grow-1">${course.description}</p>
+          <p class="card-text flex-grow-1"><strong>Provider:</strong> ${course.provider || 'N/A'}</p>
           <div class="d-flex justify-content-between align-items-center mt-2">
             <a href="${course.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
           </div>
@@ -227,7 +179,6 @@ function renderCourses() {
   renderPagination();
 }
 
-
 function renderPagination() {
   paginationContainer.innerHTML = '';
   paginationContainer.style.display = 'flex';
@@ -238,7 +189,6 @@ function renderPagination() {
   const totalPages = Math.ceil(filteredCourses.length / itemsPerPage) || 1;
   if (totalPages <= 1) return;
 
-  // Helper to create a button
   function mkBtn(label, action, page = null, disabled = false) {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -251,16 +201,13 @@ function renderPagination() {
     return btn;
   }
 
-  // First / Prev
   if (currentPage > 1) {
     paginationContainer.appendChild(mkBtn('« First', 'first'));
     paginationContainer.appendChild(mkBtn('‹ Prev', 'prev'));
   }
 
-  // Page number window
   let startPage = Math.max(1, currentPage - Math.floor(maxPageButtons / 2));
   let endPage = Math.min(totalPages, startPage + maxPageButtons - 1);
-  // ensure window size
   if (endPage - startPage + 1 < maxPageButtons) {
     startPage = Math.max(1, endPage - maxPageButtons + 1);
   }
@@ -268,13 +215,10 @@ function renderPagination() {
   for (let i = startPage; i <= endPage; i++) {
     const isCurrent = i === currentPage;
     const btn = mkBtn(i.toString(), 'goto', i, isCurrent);
-    if (isCurrent) {
-      btn.classList.add('active');
-    }
+    if (isCurrent) btn.classList.add('active');
     paginationContainer.appendChild(btn);
   }
 
-  // Next / Last
   if (currentPage < totalPages) {
     paginationContainer.appendChild(mkBtn('Next ›', 'next'));
     paginationContainer.appendChild(mkBtn('Last »', 'last'));
