@@ -4888,5 +4888,345 @@
         "title": "Build, Train and Deploy ML Models with Keras on Google Cloud - Español",
         "link": "https://www.coursera.org/learn/tensorflow-on-google-cloud---espaol",
         "provider": "Coursera"
-    }
+},
+{
+    "title": "Building AI with Bedrock Agent",
+    "link": "https://www.edx.org/learn/communication/pragmatic-ai-labs-building-ai-with-bedrock-agent?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=1",
+    "provider": "edX"
+  },
+  {
+    "title": "Azure AI Fundamentals",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-azure-ai-fundamentals?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=2",
+    "provider": "edX"
+  },
+  {
+    "title": "Google AI for JavaScript developers with TensorFlow.js",
+    "link": "https://www.edx.org/learn/javascript/google-google-ai-for-javascript-developers-with-tensorflow-js?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=3",
+    "provider": "edX"
+  },
+  {
+    "title": "Ethics in AI Design",
+    "link": "https://www.edx.org/learn/ethics/delft-university-of-technology-ethics-in-ai-design?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=4",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to AI/ML Toolkits with Kubeflow",
+    "link": "https://www.edx.org/learn/artificial-intelligence/the-linux-foundation-introduction-to-ai-ml-toolkits-with-kubeflow?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=5",
+    "provider": "edX"
+  },
+  {
+    "title": "Machine Learning Use Cases in Finance",
+    "link": "https://www.edx.org/learn/machine-learning/universite-de-montreal-machine-learning-use-cases-in-finance?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=6",
+    "provider": "edX"
+  },
+  {
+    "title": "Data Creation and Collection for Artificial Intelligence via Crowdsourcing",
+    "link": "https://www.edx.org/learn/data-analysis/delft-university-of-technology-data-creation-and-collection-for-artificial-intelligence-via-crowdsourcing?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=7",
+    "provider": "edX"
+  },
+  {
+    "title": "Teach teens computing: Machine learning and AI",
+    "link": "https://www.edx.org/learn/computer-programming/raspberry-pi-foundation-introduction-to-machine-learning-and-ai?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=8",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to Machine Learning on AWS",
+    "link": "https://www.edx.org/learn/amazon-web-services-aws/amazon-web-services-introduction-to-machine-learning-on-aws?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=9",
+    "provider": "edX"
+  },
+  {
+    "title": "Mastering Generative AI: Language Models with Transformers",
+    "link": "https://www.edx.org/learn/computer-science/ibm-mastering-generative-ai-language-models-with-transformers?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=10",
+    "provider": "edX"
+  },
+  {
+    "title": "Large Language Models with Azure",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-llmops-with-azure?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=11",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps Platforms: Amazon SageMaker and Azure ML",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-mlops-platforms-amazon-sagemaker-and-azure-ml?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=12",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps Tools: MLflow and Hugging Face",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-mlops-tools-mlflow-and-hugging-face?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=13",
+    "provider": "edX"
+  },
+  {
+    "title": "Fundamentals of TinyML",
+    "link": "https://www.edx.org/learn/machine-learning/harvard-university-fundamentals-of-tinyml?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=14",
+    "provider": "edX"
+  },
+  {
+    "title": "Applications of TinyML",
+    "link": "https://www.edx.org/learn/tinyml/harvard-university-applications-of-tinyml?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=15",
+    "provider": "edX"
+  },
+  {
+    "title": "FinTech Technologies",
+    "link": "https://www.edx.org/learn/fintech/university-of-hong-kong-fintech-technologies?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=16",
+    "provider": "edX"
+  },
+  {
+    "title": "Prompt Engineering and Advanced ChatGPT",
+    "link": "https://www.edx.org/learn/computer-programming/edx-advanced-chatgpt?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=17",
+    "provider": "edX"
+  },
+  {
+    "title": "AI to Understand and Connect People",
+    "link": "https://www.edx.org/learn/humanities/ku-leuven-ai-to-understand-and-connect-people-a-course-for-humanities-and-social-sciences-professionals?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=18",
+    "provider": "edX"
+  },
+  {
+    "title": "Azure AI Fundamentals: Build & Deploy AI",
+    "link": "https://www.edx.org/learn/computer-science/microsoft-learning-path-microsoft-azure-ai-fundamentals-ai-overview?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=19",
+    "provider": "edX"
+  },
+  {
+    "title": "Optimizing Generative AI on Arm Processors: from Edge to Cloud",
+    "link": "https://www.edx.org/learn/computer-science/arm-education-ai-on-arm?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=20",
+    "provider": "edX"
+  },
+  {
+    "title": "Python Fundamentals for MLOps",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-python-fundamentals-for-mlops?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=21",
+    "provider": "edX"
+  },
+  {
+    "title": "Rust for Large Language Model Operations (LLMOps)",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-rust-for-machine-learning-operations-llmops?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=22",
+    "provider": "edX"
+  },
+  {
+    "title": "Deep Learning",
+    "link": "https://www.edx.org/learn/computer-science/rwth-aachen-university-deep-learning-4?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=23",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to Machine Learning for Finance",
+    "link": "https://www.edx.org/learn/machine-learning/state-bank-of-india-introduction-to-machine-learning-for-finance?index=product&queryId=b8ef9dd20d475b273fa7d595f7e11b55&position=24",
+    "provider": "edX"
+  },
+  {
+    "title": "Web Applications and Command-Line Tools for Data Engineering",
+    "link": "https://www.edx.org/learn/data-engineering/pragmatic-ai-labs-web-applications-and-command-line-tools-for-data-engineering?index=product&queryId=e0daf056bc3aa92404534d4c9e50e1fc&position=1",
+    "provider": "edX"
+  },
+  {
+    "title": "Predictive Analytics: Basic Modeling Techniques",
+    "link": "https://www.edx.org/learn/predictive-analytics/statistics-com-predictive-analytics-basic-modeling-techniques?index=product&queryId=e0daf056bc3aa92404534d4c9e50e1fc&position=2",
+    "provider": "edX"
+  },
+  {
+    "title": "Engagement Banking",
+    "link": "https://www.edx.org/learn/finance/state-bank-of-india-engagement-banking?index=product&queryId=e0daf056bc3aa92404534d4c9e50e1fc&position=3",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to Cloud Computing",
+    "link": "https://www.edx.org/certificates/professional-certificate/ai-introduction-to-cloud-computing?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=1",
+    "provider": "edX"
+  },
+  {
+    "title": "Generative AI Fundamentals",
+    "link": "https://www.edx.org/certificates/professional-certificate/ai-generative-ai-fundamentals?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=2",
+    "provider": "edX"
+  },
+  {
+    "title": "Rust Programming",
+    "link": "https://www.edx.org/certificates/professional-certificate/ai-rust-programming?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=3",
+    "provider": "edX"
+  },
+  {
+    "title": "Machine Learning Operations",
+    "link": "https://www.edx.org/certificates/professional-certificate/ai-machine-learning-operations?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=4",
+    "provider": "edX"
+  },
+  {
+    "title": "Tiny Machine Learning (TinyML)",
+    "link": "https://www.edx.org/certificates/professional-certificate/harvardx-tiny-machine-learning?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=5",
+    "provider": "edX"
+  },
+  {
+    "title": "Google Cloud Computing Foundations",
+    "link": "https://www.edx.org/certificates/professional-certificate/google-cloud-computing-foundations?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=6",
+    "provider": "edX"
+  },
+  {
+    "title": "Machine Learning Operations with Google Cloud Platform (MLOps with GCP)",
+    "link": "https://www.edx.org/certificates/professional-certificate/statisticscomx-machine-learning-operations-using-google-cloud-platform-mlops-with-gcp?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=7",
+    "provider": "edX"
+  },
+  {
+    "title": "Machine Learning Operations with Microsoft Azure (MLOps with Azure)",
+    "link": "https://www.edx.org/certificates/professional-certificate/statisticscomx-machine-learning-operations-mlops-with-azure?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=8",
+    "provider": "edX"
+  },
+  {
+    "title": "Machine Learning Operations with Amazon Web Services (MLOps with AWS)",
+    "link": "https://www.edx.org/certificates/professional-certificate/statisticscomx-machine-learning-operations-with-amazon-web-services-mlops-with-aws?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=9",
+    "provider": "edX"
+  },
+  {
+    "title": "Data Skills for Artificial Intelligence",
+    "link": "https://www.edx.org/certificates/professional-certificate/delftx-data-skills-for-artificial-intelligence?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=10",
+    "provider": "edX"
+  },
+  {
+    "title": "Applied Tiny Machine Learning (TinyML) for Scale",
+    "link": "https://www.edx.org/certificates/professional-certificate/harvardx-applied-tiny-machine-learning-tinyml-for-scale?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=11",
+    "provider": "edX"
+  },
+  {
+    "title": "Artificial Intelligence & Machine Learning in Healthcare",
+    "link": "https://www.edx.org/masters/micromasters/mgh-institute-artificial-intelligence-machine-learning-in-healthcare?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=12",
+    "provider": "edX"
+  },
+  {
+    "title": "Python for Data Science and Machine Learning",
+    "link": "https://www.edx.org/certificates/professional-certificate/harvardx-python-for-data-science-and-machine-learning?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=13",
+    "provider": "edX"
+  },
+  {
+    "title": "Fundamentals of Google AI for Web Based Machine Learning",
+    "link": "https://www.edx.org/certificates/professional-certificate/google-fundamentals-of-google-ai-for-web-based-machine-learning?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=14",
+    "provider": "edX"
+  },
+  {
+    "title": "Data Engineering Foundations",
+    "link": "https://www.edx.org/certificates/professional-certificate/ai-data-engineering-foundations?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=15",
+    "provider": "edX"
+  },
+  {
+    "title": "Advanced Embedded Systems on Arm",
+    "link": "https://www.edx.org/certificates/professional-certificate/armeducationx-advanced-embedded-systems-on-arm?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=16",
+    "provider": "edX"
+  },
+  {
+    "title": "Data Scientist",
+    "link": "https://www.edx.org/certificates/professional-certificate/microsoft-data-scientist?index=product&queryId=b08a5325068038a84dee13d5b5a8d1e4&position=17",
+    "provider": "edX"
+  },
+  {
+    "title": "Cloud Machine Learning Engineering and MLOps",
+    "link": "https://www.edx.org/learn/machine-learning/pragmatic-ai-labs-cloud-machine-learning-engineering-and-mlops?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=1",
+    "provider": "edX"
+  },
+  {
+    "title": "Generative AI and LLMs on AWS",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-generative-ai-and-llms-on-aws?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=2",
+    "provider": "edX"
+  },
+  {
+    "title": "DevOps, DataOps, MLOps",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-devops-dataops-mlops?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=3",
+    "provider": "edX"
+  },
+  {
+    "title": "Using GenAI to Automate Software Development Tasks",
+    "link": "https://www.edx.org/learn/artificial-intelligence/pragmatic-ai-labs-using-genai-to-automate-software-development-tasks?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=4",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to Data Science with Python",
+    "link": "https://www.edx.org/learn/data-science/harvard-university-introduction-to-data-science-with-python?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=5",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps1 (Azure): Deploying AI & ML Models in Production using Microsoft Azure Machine Learning",
+    "link": "https://www.edx.org/learn/azure/statistics-com-mlops1-azure-deploying-ai-ml-models-in-production-using-microsoft-azure-machine-learning?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=6",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps1 (GCP): Deploying AI & ML Models in Production using Google Cloud Platform",
+    "link": "https://www.edx.org/learn/machine-learnng/statistics-com-mlops1-gcp-deploying-ai-ml-models-in-production-using-google-cloud-platform?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=7",
+    "provider": "edX"
+  },
+  {
+    "title": "AI and Gen-AI for Supply Chain Management",
+    "link": "https://www.edx.org/learn/artificial-intelligence/international-supply-chain-education-alliance-ai-and-gen-ai-for-supply-chain-management?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=8",
+    "provider": "edX"
+  },
+  {
+    "title": "Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud",
+    "link": "https://www.edx.org/learn/cloud-computing/google-cloud-google-cloud-computing-foundations-data-ml-and-ai-in-google-cloud?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=9",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps1 (AWS): Deploying AI & ML Models in Production using Amazon Web Services",
+    "link": "https://www.edx.org/learn/amazon-web-services-aws/statistics-com-mlops1-aws-deploying-ai-ml-models-in-production-using-amazon-web-services?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=10",
+    "provider": "edX"
+  },
+  {
+    "title": "Advanced Principles & Topics in AI & Machine Learning in Healthcare",
+    "link": "https://www.edx.org/learn/data-analysis-statistics/mgh-institute-of-health-professions-advanced-principles-topics-in-ai-machine-learning-in-healthcare?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=11",
+    "provider": "edX"
+  },
+  {
+    "title": "Google AI for Anyone",
+    "link": "https://www.edx.org/learn/artificial-intelligence/google-google-ai-for-anyone?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=12",
+    "provider": "edX"
+  },
+  {
+    "title": "Smart Analytics, Machine Learning, and AI on Google Cloud",
+    "link": "https://www.edx.org/learn/artificial-intelligence/google-cloud-smart-analytics-machine-learning-and-ai-on-google-cloud?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=13",
+    "provider": "edX"
+  },
+  {
+    "title": "Google Cloud Big Data and Machine Learning Fundamentals",
+    "link": "https://www.edx.org/learn/big-data/google-cloud-google-cloud-big-data-and-machine-learning-fundamentals?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=14",
+    "provider": "edX"
+  },
+  {
+    "title": "Data Science For Business Professionals",
+    "link": "https://www.edx.org/learn/business-management/institute-of-product-leadership-ipl-data-science-for-business-professionals?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=15",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to AI & Machine Learning in Healthcare",
+    "link": "https://www.edx.org/learn/data-analysis-statistics/mgh-institute-of-health-professions-introduction-to-ai-machine-learning-in-healthcare?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=16",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps2 (GCP): Data Pipeline Automation & Optimization using Google Cloud Platform",
+    "link": "https://www.edx.org/learn/data-science/statistics-com-mlops2-gcp-data-pipeline-automation-optimization-using-google-cloud-platform?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=17",
+    "provider": "edX"
+  },
+  {
+    "title": "Spark, Hadoop, and Snowflake for Data Engineering",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-spark-hadoop-and-snowflake-for-data-engineering?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=18",
+    "provider": "edX"
+  },
+  {
+    "title": "Advanced RAG",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-advanced-rag?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=19",
+    "provider": "edX"
+  },
+  {
+    "title": "Data Engineering with Databricks",
+    "link": "https://www.edx.org/learn/computer-science/pragmatic-ai-labs-data-engineering-with-databricks?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=20",
+    "provider": "edX"
+  },
+  {
+    "title": "Foundations of Data Science",
+    "link": "https://www.edx.org/learn/data-science/indian-institute-of-management-bangalore-foundations-of-data-science?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=21",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to AI",
+    "link": "https://www.edx.org/learn/computer-science/arm-education-introduction-to-ai?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=22",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps2 (Azure): Data Pipeline Automation & Optimization using Microsoft Azure Machine Learning",
+    "link": "https://www.edx.org/learn/azure/statistics-com-mlops2-azure-data-pipeline-automation-optimization-using-microsoft-azure-machine-learning?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=23",
+    "provider": "edX"
+  },
+  {
+    "title": "MLOps2 (AWS): Data Pipeline Automation & Optimization using Amazon Web Services",
+    "link": "https://www.edx.org/learn/amazon-web-services-aws/statistics-com-mlops2-aws-data-pipeline-automation-optimization-using-amazon-web-services?index=product&queryId=5813bbb28ea8c8c3aa25adb59baf4cac&position=24",
+    "provider": "edX"
+  }
 ]
