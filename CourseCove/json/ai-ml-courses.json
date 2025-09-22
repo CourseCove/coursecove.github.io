@@ -3268,5 +3268,1625 @@
         "title": "Artificial Intelligence Blueprint™: Machine Learning",
         "url": "https://www.udemy.com/course/machine-learning-algorithms/",
         "provider": "Udemy"
+    },
+    {
+        "title": "Introduction to Artificial Intelligence (AI)",
+        "link": "https://www.coursera.org/learn/introduction-to-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft AI & ML Engineering",
+        "link": "https://www.coursera.org/professional-certificates/microsoft-ai-and-ml-engineering",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Linear Algebra for Machine Learning & AI",
+        "link": "https://www.coursera.org/learn/bits-linear-algebra-for-machine-learning-and-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AWS: Machine Learning & MLOps Foundations",
+        "link": "https://www.coursera.org/learn/aws-machine-learning--mlops-foundations",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Fundamentals of Machine Learning and Artificial Intelligence",
+        "link": "https://www.coursera.org/learn/fundamentals-of-machine-learning-and-artificial-intelligence",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Engineering with LLMs",
+        "link": "https://www.coursera.org/specializations/generative-ai-engineering-with-llms",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on Google Cloud",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud",
+        "provider": "Coursera"
+    },
+    {
+        "title": "MLOps | Machine Learning Operations",
+        "link": "https://www.coursera.org/specializations/mlops-machine-learning-duke",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Foundations of AI and Machine Learning",
+        "link": "https://www.coursera.org/learn/foundations-of-ai-and-machine-learning",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI For Business",
+        "link": "https://www.coursera.org/specializations/ai-for-business-wharton",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Artificial Intelligence in Finance and Wealth Management",
+        "link": "https://www.coursera.org/specializations/aimachinelearninginfinance",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Unlocking AI and ML : Your Path to Smart Business Solutions",
+        "link": "https://www.coursera.org/learn/unlocking-ai-ml-your-path-to-smart-business-solutions",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Digital Transformation Using AI/ML with Google Cloud",
+        "link": "https://www.coursera.org/specializations/digital-transformation-using-ai-ml-with-google-cloud",
+        "provider": "Coursera"
+    },
+    {
+        "title": "LLM Fine-Tuning and Customization Training",
+        "link": "https://www.coursera.org/learn/llm-fine-tuning-and-customization-training",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Fundamentals for Non-Data Scientists",
+        "link": "https://www.coursera.org/learn/wharton-ai-fundamentals-non-data-scientists",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Artificial Intelligence",
+        "link": "https://www.coursera.org/learn/illinois-tech-artificial-intelligence",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI ML with Deep Learning and Supervised Models",
+        "link": "https://www.coursera.org/specializations/ai-ml-with-deep-learning-and-supervised-models",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Master of Science in Artificial Intelligence",
+        "link": "https://www.coursera.org/degrees/ms-artificial-intelligence-boulder",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI and Machine Learning Essentials with Python",
+        "link": "https://www.coursera.org/specializations/ai-machinelearning-essentials",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Linear Algebra for ML and Analytics Training",
+        "link": "https://www.coursera.org/learn/linear-algebra-for-ml-and-analytics-training",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Medicine",
+        "link": "https://www.coursera.org/specializations/ai-for-medicine",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI & Law",
+        "link": "https://www.coursera.org/learn/ai-law",
+        "provider": "Coursera"
+    },
+    {
+        "title": "THRIVE with AI: Mastering AI for Leadership Growth & Innovation",
+        "link": "https://www.coursera.org/learn/thrive-with-ai-mastering-ai-for-leadership--innovation",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning Rock Star – the End-to-End Practice",
+        "link": "https://www.coursera.org/specializations/machine-learning-for-everyone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Mastering AI: Neural Nets, Vision System, Speech Recognition",
+        "link": "https://www.coursera.org/specializations/mastering-ai-neural-nets-vision-speech",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning with Apache Spark",
+        "link": "https://www.coursera.org/learn/machine-learning-with-apache-spark",
+        "provider": "Coursera"
+    },
+    {
+        "title": "DevOps, DataOps, MLOps",
+        "link": "https://www.coursera.org/learn/devops-dataops-mlops-duke",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Developing AI Applications on Azure",
+        "link": "https://www.coursera.org/learn/developing-ai-applications-azure",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning and NLP Basics",
+        "link": "https://www.coursera.org/learn/machine-learning-and-nlp-basics",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Artificial Intelligence in Marketing",
+        "link": "https://www.coursera.org/learn/uva-darden-artificial-intelligence-marketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Medical Diagnosis",
+        "link": "https://www.coursera.org/learn/ai-for-medical-diagnosis",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Exploring Artificial Intelligence Use Cases and Applications",
+        "link": "https://www.coursera.org/learn/exploring-artificial-intelligence-use-cases-and-applications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Smart Analytics, Machine Learning, and AI on Google Cloud",
+        "link": "https://www.coursera.org/learn/smart-analytics-machine-learning-ai-gcp",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI-900 MS Azure AI Fundamentals",
+        "link": "https://www.coursera.org/learn/ai-900-ms-azure-ai-fundamentals",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Machine Learning: Art of the Possible",
+        "link": "https://www.coursera.org/learn/introduction-to-machine-learning-art-of-the-possible",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - Español",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-gc---es",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Smart Analytics, Machine Learning, and AI on GCP en Français",
+        "link": "https://www.coursera.org/learn/smart-analytics-machine-learning-ai-gcp-fr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning in the Enterprise - 日本語版",
+        "link": "https://www.coursera.org/learn/machine-learning-in-the-enterprise-ja",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Embedded Machine Learning",
+        "link": "https://www.coursera.org/learn/introduction-to-embedded-machine-learning",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning in the Enterprise",
+        "link": "https://www.coursera.org/learn/art-science-ml",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Autonomous Vehicles and Robotics",
+        "link": "https://www.coursera.org/learn/ai-for-autonomous-vehicles-and-robotics",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Math for AI beginner part 1 Linear Algebra",
+        "link": "https://www.coursera.org/learn/math-for-ai-beginner-part-1-linear-algebra",
+        "provider": "Coursera"
+    },
+    {
+        "title": "MLOps Platforms: Amazon SageMaker and Azure ML",
+        "link": "https://www.coursera.org/learn/mlops-aws-azure-duke",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Innovating with Google Cloud Artificial Intelligence - 日本語版",
+        "link": "https://www.coursera.org/learn/innovating-with-google-cloud-artificial-intelligence-ja",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Smart Analytics, Machine Learning, and AI on GCP 日本語版",
+        "link": "https://www.coursera.org/learn/smart-analytics-machine-learning-ai-gcp-jp",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - Italiano",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud-it",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft Azure Machine Learning",
+        "link": "https://www.coursera.org/learn/microsoft-azure-machine-learning",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI & ML Applications in Oil and Gas Industry",
+        "link": "https://www.coursera.org/learn/aiml-applications-in-oil-and-gas-industry",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI & ML Applications in Oil and Gas Industry",
+        "link": "https://www.coursera.org/learn/aiml-applications-in-oil-and-gas-industry",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Machine Learning and Algorithmic Bias",
+        "link": "https://www.coursera.org/learn/introduction-to-machine-learning-and-algorithmic-bias",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - 繁體中文",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud-zhtw",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Fundamentals of AI, Machine Learning, and Python Programming",
+        "link": "https://www.coursera.org/learn/packt-keras-deep-learning-and-generative-adversarial-networks-gan-ilsxz",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Art and Science of Machine Learning en Español",
+        "link": "https://www.coursera.org/learn/art-science-ml-es",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Design and Optimization",
+        "link": "https://www.coursera.org/learn/ai-for-design-and-optimization",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - Français",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud-fr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Innovating with Google Cloud Artificial Intelligence - Português Brasileiro",
+        "link": "https://www.coursera.org/learn/innovating-with-google-cloud-artificial-intelligence---ptbr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Artificial Intelligence",
+        "link": "https://www.coursera.org/learn/artificial-intelligence-1",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Managing Machine Learning Projects",
+        "link": "https://www.coursera.org/learn/managing-machine-learning-projects",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft Azure for AI and Machine Learning",
+        "link": "https://www.coursera.org/learn/microsoft-azure-for-ai-and-machine-learning",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning in the Enterprise - Italiano",
+        "link": "https://www.coursera.org/learn/machine-learning-in-the-enterprise-it",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Cyber Security: Application of AI",
+        "link": "https://www.coursera.org/learn/cyber-security-application-of-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning Operations (MLOps) with Vertex AI: Manage Features",
+        "link": "https://www.coursera.org/learn/machine-learning-operations-with-vertex-ai-manage-features",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI For Medical Treatment",
+        "link": "https://www.coursera.org/learn/ai-for-medical-treatment",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning Foundations for Product Managers",
+        "link": "https://www.coursera.org/learn/machine-learning-foundations-for-product-managers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - 日本語版",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud-ja",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Operationalizing ML Models: MLOps for Scalable AI",
+        "link": "https://www.coursera.org/learn/operationalizing-ml-models-mlops-for-scalable-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - Indonesian",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-gc-id",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - 한국어",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-gc-ko",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Azure AI & ML: Optimize Language Models for AI Applications",
+        "link": "https://www.coursera.org/learn/azure-ai-ml-optimize-language-models-for-ai-applications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Smart Analytics, Machine Learning, and AI on GCP - Italiano",
+        "link": "https://www.coursera.org/learn/smart-analytics-machine-learning-ai-gcp-it",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - Deutsch",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud-de",
+        "provider": "Coursera"
+    },
+    {
+        "title": "LLM Engineering with RAG: Optimizing AI Solutions",
+        "link": "https://www.coursera.org/learn/llm-engineering-with-rag-optimizing-ai-solutions",
+        "provider": "Coursera"
+    },
+    {
+        "title": "LLM Engineering with RAG: Optimizing AI Solutions",
+        "link": "https://www.coursera.org/learn/llm-engineering-with-rag-optimizing-ai-solutions",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - 简体中文",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud-zhcn",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Advanced AI and Machine Learning Techniques and Capstone",
+        "link": "https://www.coursera.org/learn/advanced-ai-and-machine-learning-techniques-and-capstone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Materials",
+        "link": "https://www.coursera.org/learn/ai-materials",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning with Implementation in Java",
+        "link": "https://www.coursera.org/learn/machine-learning-with-implementation-in-java",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning and Human Learning",
+        "link": "https://www.coursera.org/learn/machine-learning-and-human-learning",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Build and Operate Machine Learning Solutions with Azure",
+        "link": "https://www.coursera.org/learn/build-and-operate-machine-learning-solutions-with-azure",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning with Small Data Part 1",
+        "link": "https://www.coursera.org/learn/machine-learning-with-small-data",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Innovating with Google Cloud Artificial Intelligence - Français",
+        "link": "https://www.coursera.org/learn/innovating-with-gc-artificial-intelligence---franais",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI and Machine Learning on GC - Português",
+        "link": "https://www.coursera.org/learn/introduction-to-ai-and-machine-learning-on-google-cloud-ptbr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Evaluating and Debugging Generative AI",
+        "link": "https://www.coursera.org/projects/evaluating-and-debugging-generative-ai-project",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI & Deep Learning Concepts and Applications",
+        "link": "https://www.coursera.org/learn/ai-and-deep-learning-concepts-and-applications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Deep Learning for Business",
+        "link": "https://www.coursera.org/learn/deep-learning-business",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Data and Machine Learning for Technical Product Managers",
+        "link": "https://www.coursera.org/learn/data-and-machine-learning-for-technical-product-managers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI and Machine Learning Algorithms and Techniques",
+        "link": "https://www.coursera.org/learn/ai-and-machine-learning-algorithms-and-techniques",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Machine Learning Pipelines with Azure ML Studio",
+        "link": "https://www.coursera.org/projects/azure-machine-learning-studio-pipeline",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Real-World Applications & Model Deployment in Java",
+        "link": "https://www.coursera.org/learn/real-world-applications--model-deployment-in-java",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ML Algorithms",
+        "link": "https://www.coursera.org/learn/ml-algorithms",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Vertex Pipelines: Qwik Start",
+        "link": "https://www.coursera.org/projects/googlecloud-vertex-pipelines-qwik-start-cqsni",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI, Automation, and Emerging Technology",
+        "link": "https://www.coursera.org/learn/ai-automation-and-emerging-technology",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Technologies and platforms for Artificial Intelligence",
+        "link": "https://www.coursera.org/learn/technologies-and-platforms-for-artificial-intelligence",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Strategy for Business Leaders with ChatGPT, ML & DL",
+        "link": "https://www.coursera.org/learn/packt-ai-strategy-for-business-leaders-with-chatgpt-ml-dl-uel66",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Azure ML: Deploying, Managing, and Experimenting with Models",
+        "link": "https://www.coursera.org/learn/azure-ml-deploying-managing-and-experimenting-with-models",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Solve Business Problems with AI and Machine Learning",
+        "link": "https://www.coursera.org/learn/solve-problems-ai-machine-learning",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Digital Marketing Tools: Machine Learning and AI",
+        "link": "https://www.coursera.org/learn/digital-marketing-tools-machine-learning-and-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Industrial Applications of AI",
+        "link": "https://www.coursera.org/learn/industrial-applications-of-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Launching Machine Learning: Delivering Operational Success with Gold Standard ML Leadership",
+        "link": "https://www.coursera.org/learn/launching-machine-learning-leadership",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AWS Certified AI Practitioner",
+        "link": "https://www.coursera.org/learn/aws-certified-ai-practitioner",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Petroleum Engineering with AI Applications",
+        "link": "https://www.coursera.org/specializations/petroleum-engineering-with-ai-applications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Agentic AI and AI Agents for Leaders",
+        "link": "https://www.coursera.org/specializations/ai-agents-for-leaders",
+        "provider": "Coursera"
+    },
+    {
+        "title": "CertNexus Certified Artificial Intelligence Practitioner",
+        "link": "https://www.coursera.org/professional-certificates/certified-artificial-intelligence-practitioner",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI with Python: Apply & Implement ML Models",
+        "link": "https://www.coursera.org/learn/ai-with-python-apply-implement-ml-models",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Agents and Agentic AI with Python & Generative AI",
+        "link": "https://www.coursera.org/learn/ai-agents-python",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Agentic AI and AI Agents: A Primer for Leaders",
+        "link": "https://www.coursera.org/learn/agentic-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Strategy and Governance",
+        "link": "https://www.coursera.org/learn/wharton-ai-strategy-governance",
+        "provider": "Coursera"
+    },
+    {
+        "title": "H2O Gen AI Ecosystem Overview - Level 2",
+        "link": "https://www.coursera.org/learn/h2o-gen-ai-ecosystem-overview-level-2",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Executives and Business Leaders",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-executives-and-business-leaders",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Agents and Agentic AI in Python: Powered by Generative AI",
+        "link": "https://www.coursera.org/specializations/ai-agents-python",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Infrastructure and Operations Fundamentals",
+        "link": "https://www.coursera.org/learn/ai-infrastructure-operations-fundamentals",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Emerging Technology, Disruption, and AI",
+        "link": "https://www.coursera.org/learn/emerging-technology-disruption-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "IBM RAG and Agentic AI",
+        "link": "https://www.coursera.org/professional-certificates/ibm-rag-and-agentic-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Essentials: Overview and Impact",
+        "link": "https://www.coursera.org/learn/generative-ai-essentials",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Applications in Marketing and Finance",
+        "link": "https://www.coursera.org/learn/wharton-ai-applications-marketing-finance",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI: Introduction and Applications",
+        "link": "https://www.coursera.org/learn/generative-ai-introduction-and-applications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Lawyers and Other Advocates",
+        "link": "https://www.coursera.org/specializations/ai-for-lawyers-and-other-advocates",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI and LLMs: Architecture and Data Preparation",
+        "link": "https://www.coursera.org/learn/generative-ai-llm-architecture-data-preparation",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI: Foundation Models and Platforms",
+        "link": "https://www.coursera.org/learn/generative-ai-foundation-models-and-platforms",
+        "provider": "Coursera"
+    },
+    {
+        "title": "DevOps and AI on AWS",
+        "link": "https://www.coursera.org/specializations/devops-ai-aws",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Developing AI Applications with Python and Flask",
+        "link": "https://www.coursera.org/learn/python-project-for-ai-application-development",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Security, Compliance, and Governance for AI Solutions",
+        "link": "https://www.coursera.org/learn/security-compliance-and-governance-for-ai-solutions",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Building AI Agents and Agentic Workflows",
+        "link": "https://www.coursera.org/specializations/building-ai-agents-and-agentic-workflows",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative and Agentic AI",
+        "link": "https://www.coursera.org/learn/generative-and-agentic-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Fundamentals of AI Agents Using RAG and LangChain",
+        "link": "https://www.coursera.org/learn/fundamentals-of-ai-agents-using-rag-and-langchain",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Agents and Agentic AI Architecture in Python",
+        "link": "https://www.coursera.org/learn/ai-agents-architecture-python",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Project Managers and Scrum Masters",
+        "link": "https://www.coursera.org/learn/ai-for-project-managers-and-scrum-masters",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Ethics, Responsible Use, and Creativity",
+        "link": "https://www.coursera.org/learn/ai-ethics-responsible-use-and-creativity",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Assistants",
+        "link": "https://www.coursera.org/specializations/generative-ai-assistants",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Responsible Generative AI",
+        "link": "https://www.coursera.org/specializations/responsible-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Security",
+        "link": "https://www.coursera.org/learn/ai-security",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft Azure AI Fundamentals AI-900 Exam Prep",
+        "link": "https://www.coursera.org/specializations/microsoft-azure-ai-900-ai-fundamentals",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Engineering",
+        "link": "https://www.coursera.org/specializations/ai-engineering",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Learn AI Agents",
+        "link": "https://www.coursera.org/learn/learn-ai-agents",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Automation",
+        "link": "https://www.coursera.org/specializations/generative-ai-automation",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Fundamentals",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-everyone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI: Impact, Considerations, and Ethical Issues",
+        "link": "https://www.coursera.org/learn/generative-ai-ethical-considerations-and-implications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Leader",
+        "link": "https://www.coursera.org/professional-certificates/generative-ai-for-leaders",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Google AI Essentials",
+        "link": "https://www.coursera.org/specializations/ai-essentials-google",
+        "provider": "Coursera"
+    },
+    {
+        "title": "The AI Awakening: Implications for the Economy and Society",
+        "link": "https://www.coursera.org/learn/ai-awakening",
+        "provider": "Coursera"
+    },
+    {
+        "title": "IBM AI Developer",
+        "link": "https://www.coursera.org/professional-certificates/applied-artifical-intelligence-ibm-watson-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Agent Developer",
+        "link": "https://www.coursera.org/specializations/ai-agents",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to AI",
+        "link": "https://www.coursera.org/learn/google-introduction-to-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Governance",
+        "link": "https://www.coursera.org/learn/ai-governance",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Creative Work",
+        "link": "https://www.coursera.org/specializations/ai-for-creative-work",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI",
+        "link": "https://www.coursera.org/learn/introduction-to-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Essentials",
+        "link": "https://www.coursera.org/learn/ai-essentials",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Essentials",
+        "link": "https://www.coursera.org/learn/oxford-ai-essentials",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Agentic AI with LangChain and LangGraph",
+        "link": "https://www.coursera.org/learn/agentic-ai-with-langchain-and-langgraph",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Marketing",
+        "link": "https://www.coursera.org/specializations/aiformarketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI in Business",
+        "link": "https://www.coursera.org/specializations/generative-ai-in-business",
+        "provider": "Coursera"
+    },
+    {
+        "title": "IBM AI Engineering",
+        "link": "https://www.coursera.org/professional-certificates/ai-engineer",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI and ChatGPT for K-12 Educators",
+        "link": "https://www.coursera.org/specializations/generative-ai-k12-educators",
+        "provider": "Coursera"
+    },
+    {
+        "title": "IBM Generative AI Engineering",
+        "link": "https://www.coursera.org/professional-certificates/ibm-generative-ai-engineering",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Leaders",
+        "link": "https://www.coursera.org/learn/generative-ai-for-leaders",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Responsible AI",
+        "link": "https://www.coursera.org/learn/introduction-to-responsible-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Explainable AI (XAI)",
+        "link": "https://www.coursera.org/specializations/explainable-artificial-intelligence-xai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Interactive and Immersive Experiences with Generative AI",
+        "link": "https://www.coursera.org/learn/interactive-and-immersive-experiences-with-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Exam Prep AI-102: Microsoft Azure AI Engineer Associate",
+        "link": "https://www.coursera.org/learn/ai-102-microsoft-azure-ai-engineer-associate-course",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Product Management",
+        "link": "https://www.coursera.org/specializations/ai-product-management-duke",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI For Everyone",
+        "link": "https://www.coursera.org/learn/ai-for-everyone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Foundations for Everyone",
+        "link": "https://www.coursera.org/specializations/ai-foundations-for-everyone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AWS AI Practitioner",
+        "link": "https://www.coursera.org/specializations/aws-certified-ai-practitioner",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Data Analysts",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-data-analysts",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI: Governance, Policy, and Emerging Regulation",
+        "link": "https://www.coursera.org/learn/generative-ai-governance-policy-and-emerging-regulation",
+        "provider": "Coursera"
+    },
+    {
+        "title": "IBM AI Foundations for Business",
+        "link": "https://www.coursera.org/specializations/ibm-ai-foundations-for-business",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI in Healthcare",
+        "link": "https://www.coursera.org/specializations/ai-healthcare",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI, Empathy & Ethics",
+        "link": "https://www.coursera.org/learn/ai-empathy-ethics",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI, Empathy & Ethics",
+        "link": "https://www.coursera.org/learn/ai-empathy-ethics",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Digital Marketing",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-digital-marketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Project Managers",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-project-managers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Educators & Teachers",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-educators-teachers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Content Creation",
+        "link": "https://www.coursera.org/learn/generative-ai-content-creation",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Business: Branding, Creative Content, and Marketing",
+        "link": "https://www.coursera.org/specializations/useaitogrowyourbusiness-brandingcreativecontentandai-poweredmarketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft AI Product Manager",
+        "link": "https://www.coursera.org/professional-certificates/microsoft-ai-product-manager",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AWS Generative AI Applications",
+        "link": "https://www.coursera.org/professional-certificates/aws-generative-ai-applications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI in Marketing",
+        "link": "https://www.coursera.org/specializations/generative-ai-in-marketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Trustworthy Generative AI",
+        "link": "https://www.coursera.org/learn/trustworthy-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Primer",
+        "link": "https://www.coursera.org/learn/generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Good",
+        "link": "https://www.coursera.org/specializations/ai-for-good",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Agents in LangGraph",
+        "link": "https://www.coursera.org/projects/ai-agents-in-langgraph",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Vertex AI",
+        "link": "https://www.coursera.org/learn/introduction-to-vertex-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI Learning Path",
+        "link": "https://www.coursera.org/specializations/introduction-to-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Data Scientists",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-data-scientists",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Ethics in Business",
+        "link": "https://www.coursera.org/learn/ai-ethics-business",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Marketers",
+        "link": "https://www.coursera.org/specializations/microsoft-copilotformarketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI: Prompt Engineering Basics",
+        "link": "https://www.coursera.org/learn/generative-ai-prompt-engineering-for-everyone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Software Developers",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-software-developers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "IBM AI Product Manager",
+        "link": "https://www.coursera.org/professional-certificates/ibm-ai-product-manager",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Multi AI Agent Systems with crewAI",
+        "link": "https://www.coursera.org/projects/multi-ai-agent-systems-with-crewai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Product Managers",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-product-managers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Everyone",
+        "link": "https://www.coursera.org/learn/generative-ai-for-everyone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Product Managers",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-product-managers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Multi AI Agent Systems with crewAI",
+        "link": "https://www.coursera.org/projects/multi-ai-agent-systems-with-crewai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Responsible AI Practices",
+        "link": "https://www.coursera.org/learn/responsible-artificial-intelligence-practices",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Fundamentals of Building AI Agents",
+        "link": "https://www.coursera.org/learn/fundamentals-of-building-ai-agents",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Maximize Productivity With AI Tools",
+        "link": "https://www.coursera.org/learn/google-maximize-productivity-with-ai-tools",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Video Creation: A Beginner's Guide to Realistic AI Videos",
+        "link": "https://www.coursera.org/learn/ai-video-creation-a-beginners-guide-to-realistic-ai-videos",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI in Healthcare Capstone",
+        "link": "https://www.coursera.org/learn/ai-in-healthcare-capstone",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Software Engineering",
+        "link": "https://www.coursera.org/specializations/generative-ai-software-engineering",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Programming with Generative AI",
+        "link": "https://www.coursera.org/learn/programming-with-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Business Analysts",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-business-analysts",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Cybersecurity",
+        "link": "https://www.coursera.org/specializations/ai-for-cybersecurity",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI in Education",
+        "link": "https://www.coursera.org/learn/generative-ai-in-education",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ChatGPT & Zapier: Agentic AI for Everyone",
+        "link": "https://www.coursera.org/learn/agentic-ai-chatgpt-zapier",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Everyday Life",
+        "link": "https://www.coursera.org/learn/ai-for-everyday-life",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Vertex AI Studio",
+        "link": "https://www.coursera.org/learn/introduction-to-generative-ai-studio",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Educators",
+        "link": "https://www.coursera.org/specializations/generative-ai-educators",
+        "provider": "Coursera"
+    },
+    {
+        "title": "The Future of Education with AI: Exploring Perspectives",
+        "link": "https://www.coursera.org/learn/future-of-education-with-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Education (Intermediate)",
+        "link": "https://www.coursera.org/learn/ai-for-education-intermediate",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Business: Generation & Prediction",
+        "link": "https://www.coursera.org/learn/ai-for-business-generation-and-prediction",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Python for Beginners",
+        "link": "https://www.coursera.org/learn/ai-python-for-beginners",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI in Finance",
+        "link": "https://www.coursera.org/learn/introduction-to-generative-ai-in-finance",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ChatGPT Playground for Beginners: Intro to NLP AI",
+        "link": "https://www.coursera.org/projects/rudi-hinds-chatgpt-playground-for-beginners-intro-to-nlp-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "OpenAI for Beginners: AI Assistants for Project Managers",
+        "link": "https://www.coursera.org/projects/openai-for-beginners-ai-assistants-for-project-managers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Gen AI Agents: Transform Your Organization",
+        "link": "https://www.coursera.org/learn/gen-ai-agents-transform-your-organization",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI, Business & the Future of Work",
+        "link": "https://www.coursera.org/learn/ai-business-future-of-work",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Workflow Automation using Generative AI",
+        "link": "https://www.coursera.org/learn/workflow-automation-using-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Human Resources (HR) Professionals",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-human-resources",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI",
+        "link": "https://www.coursera.org/learn/intro-gen-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft Generative AI for Data Analysis",
+        "link": "https://www.coursera.org/professional-certificates/microsoft-genai-for-data-analysis",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Knowledge Workers",
+        "link": "https://www.coursera.org/learn/ai-for-knowledge-workers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ChatGPT: Master Free AI Tools to Supercharge Productivity",
+        "link": "https://www.coursera.org/specializations/chatgpt-free-ai-tools-to-excel",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI Marketing",
+        "link": "https://www.coursera.org/learn/introduction-to-generative-ai-marketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft 365 with Generative AI",
+        "link": "https://www.coursera.org/professional-certificates/microsoft-365-copilot-for-productivity",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Education (Basic)",
+        "link": "https://www.coursera.org/learn/ai-for-education-basic",
+        "provider": "Coursera"
+    },
+    {
+        "title": "IBM Generative AI for Cybersecurity Professionals",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-cybersecurity-professionals",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI with Large Language Models",
+        "link": "https://www.coursera.org/learn/generative-ai-with-llms",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI in Digital Marketing",
+        "link": "https://www.coursera.org/learn/ai-in-digital-marketing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Evaluations of AI Applications in Healthcare",
+        "link": "https://www.coursera.org/learn/evaluations-ai-applications-healthcare",
+        "provider": "Coursera"
+    },
+    {
+        "title": "OpenAI GPTs: Creating Your Own Custom AI Assistants",
+        "link": "https://www.coursera.org/learn/openai-custom-gpts",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Vibe Coding with Cursor AI",
+        "link": "https://www.coursera.org/learn/vibe-coding-with-cursor-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Practical Python for AI Coding 1",
+        "link": "https://www.coursera.org/learn/practical-python-for-ai-coding--preparation-for-coding",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI in Education: Leveraging ChatGPT for Teaching",
+        "link": "https://www.coursera.org/learn/wharton-ai-in-education-leveraging-chatgpt-for-teaching",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Data Scientists",
+        "link": "https://www.coursera.org/specializations/microsoft-copilot-for-data-science",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Agentic Design Patterns with AutoGen",
+        "link": "https://www.coursera.org/projects/ai-agentic-design-patterns-with-autogen",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Data Science Essentials: Analysis, Statistics, and ML",
+        "link": "https://www.coursera.org/specializations/packt-data-science-essentials-analysis-statistics-and-ml",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Mechanical Engineers",
+        "link": "https://www.coursera.org/specializations/ai-for-mechanical-engineers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Software Developers",
+        "link": "https://www.coursera.org/specializations/microsoft-copilot-for-software-development",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Learn to code with AI",
+        "link": "https://www.coursera.org/learn/learn-to-code-with-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Exam Prep AIF-C01: AWS Certified AI Practitioner",
+        "link": "https://www.coursera.org/learn/exam-prep-aif-c01-aws-certified-ai-practitioner",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI For Everyone （すべての人のためのAIリテラシー講座）",
+        "link": "https://www.coursera.org/learn/ai-for-everyone-ja",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ChatGPT + Excel: AI-Enhanced Data Analysis & Insight",
+        "link": "https://www.coursera.org/specializations/chatgpt-excel",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Managing AI Projects: From Strategy to Delivery",
+        "link": "https://www.coursera.org/learn/ai-project-management-aipm",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Content Creation With Generative AI",
+        "link": "https://www.coursera.org/learn/content-creation-with-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for University Leaders",
+        "link": "https://www.coursera.org/learn/gen-ai-for-university-leaders",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Trustworthy AI for Healthcare Management",
+        "link": "https://www.coursera.org/learn/trustworthy-ai-for-healthcare-management",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI - Art of the Possible",
+        "link": "https://www.coursera.org/learn/aws-introduction-to-generative-ai-art-of-the-possible",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Build AI Apps with ChatGPT, Dall-E, and GPT-4",
+        "link": "https://www.coursera.org/learn/build-ai-apps-with-chatgpt-dalle-gpt4",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft Copilot: Your Everyday AI Companion",
+        "link": "https://www.coursera.org/specializations/microsoft-copilot-your-everyday-ai-companion",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Prompt Engineering Generative AI for Marketing & Advertising",
+        "link": "https://www.coursera.org/projects/prompt-engineering-generative-ai-for-marketing-advertising",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Landing.AI for Beginners: Build Data Visualization AI Models",
+        "link": "https://www.coursera.org/learn/landing-ai-for-beginners-build-data-visualization-ai-models",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI for Business Intelligence (BI) Analysts",
+        "link": "https://www.coursera.org/specializations/generative-ai-for-business-intelligence-analysts",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI in Healthcare",
+        "link": "https://www.coursera.org/learn/introduction-to-generative-ai-in-healthcare",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Agents: From Prompts to Multi-Agent Systems",
+        "link": "https://www.coursera.org/learn/ai-agents-from-prompts-to-multi-agent-systems",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Accelerate Your Job Search with AI",
+        "link": "https://www.coursera.org/learn/accelerate-your-job-search-with-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI for Grant Writing",
+        "link": "https://www.coursera.org/learn/ai-for-grant-writing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Change Management for Generative AI",
+        "link": "https://www.coursera.org/learn/change-management-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Python for Data Science, AI & Development",
+        "link": "https://www.coursera.org/learn/python-for-applied-data-science-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Product Management: Building AI-Powered Products",
+        "link": "https://www.coursera.org/learn/product-management-building-ai-powered-products",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Grow with AI: Your AI-driven Growth Marketing strategy",
+        "link": "https://www.coursera.org/learn/grow-with-ai-your-ai-driven-growth-marketing-strategy",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Python: Logistic Regression & Supervised ML",
+        "link": "https://www.coursera.org/learn/python-logistic-regression-supervised-ml",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Building AI Powered Chatbots Without Programming",
+        "link": "https://www.coursera.org/learn/building-ai-powered-chatbots",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Hands-on quantum error correction with Google Quantum AI",
+        "link": "https://www.coursera.org/learn/quantum-error-correction",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ChatGPT for Project Management - Leveraging AI for Success",
+        "link": "https://www.coursera.org/specializations/chatgpt-project-management",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Python - Complete Python, Django, Data Science and ML Guide",
+        "link": "https://www.coursera.org/specializations/packt-python-complete-python-django-data-science-and-ml-guide",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Learning Languages with AI",
+        "link": "https://www.coursera.org/learn/learning-languages-with-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI para docentes: Transforma tu enseñanza con ChatGPT",
+        "link": "https://www.coursera.org/learn/ai-para-docentes-enseanza-con-chatgpt",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI for Software Development",
+        "link": "https://www.coursera.org/learn/introduction-to-generative-ai-for-software-development",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Use Generative AI as Your Thought Partner",
+        "link": "https://www.coursera.org/learn/use-generativeai-as-your-thought-partner",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Advanced ML Algorithms & Unsupervised Learning",
+        "link": "https://www.coursera.org/learn/packt-advanced-ml-algorithms-unsupervised-learning-konpg",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI Advance Fine-Tuning for LLMs",
+        "link": "https://www.coursera.org/learn/generative-ai-advanced-fine-tuning-for-llms",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Artificial Intelligence (AI) Education for Teachers",
+        "link": "https://www.coursera.org/learn/artificial-intelligence-education-for-teachers",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Summarize Text using SQL and LLMs in BigQuery ML",
+        "link": "https://www.coursera.org/projects/googlecloud-summarize-text-using-sql-and-llms-in-bigquery-ml-0bh73",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Building Generative AI-Powered Applications with Python",
+        "link": "https://www.coursera.org/learn/building-gen-ai-powered-applications",
+        "provider": "Coursera"
+    },
+    {
+        "title": "PySpark: Apply & Evaluate Predictive ML Models",
+        "link": "https://www.coursera.org/learn/pyspark-apply-evaluate-predictive-ml-models",
+        "provider": "Coursera"
+    },
+    {
+        "title": "6G Vision: ML, Intelligent Surfaces & Optical Networks",
+        "link": "https://www.coursera.org/learn/6g-vision-ml-intelligent-surfaces-and-optical-networks",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Mathematics for Machine Learning and Data Science",
+        "link": "https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Deploy a BigQuery ML Customer Churn Classifier to Vertex AI for Online Predictions",
+        "link": "https://www.coursera.org/projects/googlecloud-deploy-a-bigquery-ml-customer-churn-classifier-to-vertex-ai-fo-3k2jw",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Exploratory Data Analysis & Core ML Algorithms",
+        "link": "https://www.coursera.org/learn/packt-exploratory-data-analysis-core-ml-algorithms-konpg",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ML Parameters Optimization: GridSearch, Bayesian, Random",
+        "link": "https://www.coursera.org/projects/ml-parameters-optimization-gridsearch-bayesian-random",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Graduate Admission Prediction with Pyspark ML",
+        "link": "https://www.coursera.org/projects/graduate-admission-prediction-with-pyspark-ml",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Analyze Data in Azure ML Studio",
+        "link": "https://www.coursera.org/projects/analyze-data-azure-ml-studio",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Building Demand Forecasting with BigQuery ML",
+        "link": "https://www.coursera.org/projects/googlecloud-building-demand-forecasting-with-bigquery-ml-75qqf",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ML Pipelines on Google Cloud - 한국어",
+        "link": "https://www.coursera.org/learn/ml-pipelines-google-cloud-ko",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ML Pipelines on Google Cloud - Português",
+        "link": "https://www.coursera.org/learn/ml-pipelines-google-cloud-pt",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Auditing Generative AI: Strategy, Analysis & Risk Mitigation",
+        "link": "https://www.coursera.org/learn/auditing-generative-ai-strategy-analysis--risk-mitigation",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ML Pipelines on Google Cloud - Français",
+        "link": "https://www.coursera.org/learn/ml-pipelines-google-cloud-fr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AWS: ML Workflows with SageMaker, Storage & Security",
+        "link": "https://www.coursera.org/learn/aws-ml-workflows-with-sagemaker-storage--security",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Build, Train and Deploy ML Models with Keras on Google Cloud",
+        "link": "https://www.coursera.org/learn/intro-tensorflow",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ChatGPT: Excel at Personal Automation with GPTs, AI & Zapier",
+        "link": "https://www.coursera.org/specializations/chatgpt-gpt-zapier-excel-at-automation",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Python: Implement & Evaluate Random Forests for ML",
+        "link": "https://www.coursera.org/learn/python-implement-evaluate-random-forests-ml",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Data Engineering, Big Data and ML on Google Cloud en Español",
+        "link": "https://www.coursera.org/specializations/gcp-data-machine-learning-es",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Leadership Strategies for AI and Generative AI",
+        "link": "https://www.coursera.org/specializations/leadership-strategies-for-ai-and-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Develop Clustering Models with Azure ML Designer",
+        "link": "https://www.coursera.org/projects/develop-clustering-models-microsoft-azure-ml-designer",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Data Engineer, Big Data and ML on Google Cloud em Português",
+        "link": "https://www.coursera.org/specializations/gcp-data-machine-learning-br",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Usar o BigQuery ML para inferência",
+        "link": "https://www.coursera.org/learn/using-bigquery-machine-learning-for-inference-ptbr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Data Engineer, Big Data and ML on Google Cloud en Français",
+        "link": "https://www.coursera.org/specializations/gcp-data-machine-learning-fr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI Concepts and Strategy",
+        "link": "https://www.coursera.org/learn/ai-strategy",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Oracle Cloud and AI",
+        "link": "https://www.coursera.org/specializations/oracle-cloud-and-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Oracle Cloud and AI",
+        "link": "https://www.coursera.org/specializations/oracle-cloud-and-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI and Public Health",
+        "link": "https://www.coursera.org/learn/ai-and-public-health",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Microsoft Copilot for Excel: AI-Powered Data Analysis",
+        "link": "https://www.coursera.org/learn/copilot-for-excel",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI and ESG",
+        "link": "https://www.coursera.org/learn/genai-and-esg",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Foundations of ML & Python for Data Science",
+        "link": "https://www.coursera.org/learn/packt-foundations-of-ml-python-for-data-science-qipcd",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Generative AI and Blockchain",
+        "link": "https://www.coursera.org/learn/generative-ai-and-blockchain",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI and Climate Change",
+        "link": "https://www.coursera.org/learn/ai-and-climate-change",
+        "provider": "Coursera"
+    },
+    {
+        "title": "AI and Disaster Management",
+        "link": "https://www.coursera.org/learn/ai-and-disaster-management",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Introduction to Generative AI - Español",
+        "link": "https://www.coursera.org/learn/introduction-to-generative-ai---locales",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Practical AI and prompting for sales professionals",
+        "link": "https://www.coursera.org/learn/practical-ai-and-prompting-for-sales-professionals",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Data Science Fundamentals with Python and SQL",
+        "link": "https://www.coursera.org/specializations/data-science-fundamentals-python-sql",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Product Analytics and AI",
+        "link": "https://www.coursera.org/learn/uva-darden-agile-analytics",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Data Science Fundamentals with Python and SQL",
+        "link": "https://www.coursera.org/specializations/data-science-fundamentals-python-sql",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Hydrocarbon Exploration and Production",
+        "link": "https://www.coursera.org/learn/hydrocarbon-exploration-and-production",
+        "provider": "Coursera"
+    },
+    {
+        "title": "ML Pipelines on Google Cloud en Español",
+        "link": "https://www.coursera.org/learn/ml-pipelines-google-cloud-es",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Terrorism and Counterterrorism: Comparing Theory and Practice",
+        "link": "https://www.coursera.org/learn/terrorism",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Finance of Mergers and Acquisitions: Valuation and Pricing",
+        "link": "https://www.coursera.org/learn/mergers-acquisitions-valuation-pricing",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Adaptability and Resiliency",
+        "link": "https://www.coursera.org/learn/adaptability-and-resiliency",
+        "provider": "Coursera"
+    },
+    {
+        "title": "B2B and Territory Sales Strategies and Techniques",
+        "link": "https://www.coursera.org/learn/b2b-and-territory-sales-strategies-and-techniques",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Build, Train and Deploy ML Models with Keras on Google Cloud - Français",
+        "link": "https://www.coursera.org/learn/intro-tensorflow-fr",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Cómo utilizar BigQuery ML para ejecutar inferencias",
+        "link": "https://www.coursera.org/learn/cmo-utilizar-el-aprendizaje-automtico-de",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Applied NLP and Generative AI",
+        "link": "https://www.coursera.org/specializations/packt-applied-nlp-and-generative-ai",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Build, Train and Deploy ML Models with Keras on Google Cloud - 한국어",
+        "link": "https://www.coursera.org/learn/tensorflow-on-google-cloud-ko",
+        "provider": "Coursera"
+    },
+    {
+        "title": "Build, Train and Deploy ML Models with Keras on Google Cloud - Español",
+        "link": "https://www.coursera.org/learn/tensorflow-on-google-cloud---espaol",
+        "provider": "Coursera"
     }
 ]
