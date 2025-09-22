@@ -8395,5 +8395,330 @@
     "title": "General Academic English",
     "url": "https://www.coursera.org/learn/general-academic-english",
     "provider": "Coursera"
+  },
+{
+    "title": "Iñupiaq Language and Culture",
+    "link": "https://www.edx.org/learn/language/university-of-alaska-fairbanks-inupiaq-language-and-culture?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=1",
+    "provider": "edX"
+  },
+  {
+    "title": "Chinese Idioms: A Thousand Miles",
+    "link": "https://www.edx.org/learn/mandarin-chinese/mandarinx-chinese-idioms-a-thousand-miles?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=2",
+    "provider": "edX"
+  },
+  {
+    "title": "Yup'ik Language and Culture",
+    "link": "https://www.edx.org/learn/language/university-of-alaska-fairbanks-yup-ik-language-and-culture?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=3",
+    "provider": "edX"
+  },
+  {
+    "title": "Italian Language and Culture: Intermediate (2025-2026)",
+    "link": "https://www.edx.org/learn/italian/wellesley-college-italian-language-and-culture-intermediate-2025-2026?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=4",
+    "provider": "edX"
+  },
+  {
+    "title": "AP® Italian Language and Culture (2025-2026)",
+    "link": "https://www.edx.org/learn/humanities/wellesley-college-ap-r-italian-language-and-culture?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=5",
+    "provider": "edX"
+  },
+  {
+    "title": "Mandarin Chinese for Business",
+    "link": "https://www.edx.org/learn/mandarin-chinese/mandarinx-mandarin-chinese-for-business?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=6",
+    "provider": "edX"
+  },
+  {
+    "title": "Italian Language and Culture: Advanced (2025-2026)",
+    "link": "https://www.edx.org/learn/italian/wellesley-college-italian-language-and-culture-advanced-2025-2026?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=7",
+    "provider": "edX"
+  },
+  {
+    "title": "Italian Language and Culture: Beginner (2025-2026)",
+    "link": "https://www.edx.org/learn/italian/wellesley-college-italian-language-and-culture-beginner-2025-2026?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=8",
+    "provider": "edX"
+  },
+  {
+    "title": "Mandarin Chinese Level 1",
+    "link": "https://www.edx.org/learn/mandarin-chinese/mandarinx-mandarin-chinese-level-1?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=9",
+    "provider": "edX"
+  },
+  {
+    "title": "Mandarin Chinese Essentials",
+    "link": "https://www.edx.org/learn/mandarin-chinese/mandarinx-mandarin-chinese-essentials?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=10",
+    "provider": "edX"
+  },
+  {
+    "title": "Basic Spanish 2: One Step Further",
+    "link": "https://www.edx.org/learn/spanish/universitat-politecnica-de-valencia-basic-spanish-2-one-step-further?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=11",
+    "provider": "edX"
+  },
+  {
+    "title": "Basic Spanish 3: Getting there",
+    "link": "https://www.edx.org/learn/spanish/universitat-politecnica-de-valencia-basic-spanish-3-getting-there?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=12",
+    "provider": "edX"
+  },
+  {
+    "title": "Oriental Beliefs: Between Reason and Traditions",
+    "link": "https://www.edx.org/learn/culture/universite-catholique-de-louvain-oriental-beliefs-between-reason-and-traditions?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=13",
+    "provider": "edX"
+  },
+  {
+    "title": "Introduction to Portuguese / Iniciação à Língua Portuguesa",
+    "link": "https://www.edx.org/learn/language/fundacao-para-a-ciencia-e-a-tecnologia-iniciacao-a-lingua-portuguesa?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=14",
+    "provider": "edX"
+  },
+  {
+    "title": "Chinese Language in Culture: Level 3",
+    "link": "https://www.edx.org/learn/language/massachusetts-institute-of-technology-chinese-language-in-culture-level-3?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=15",
+    "provider": "edX"
+  },
+  {
+    "title": "DOCUMENTAL! Nuevas tendencias, nuevos formatos / DOCUMENTARY! New Trends, New Formats",
+    "link": "https://www.edx.org/learn/film/universidad-carlos-iii-de-madrid-documental-nuevas-tendencias-nuevos-formatos-documentary-new-trends-new-formats?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=16",
+    "provider": "edX"
+  },
+  {
+    "title": "The Book: Monasteries, Schools, and Notaries, Part 2: Introduction to the Transitional Gothic Script",
+    "link": "https://www.edx.org/learn/literature/harvard-university-the-book-monasteries-schools-and-notaries-part-2-introduction-to-the-transitional-gothic-script?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=17",
+    "provider": "edX"
+  },
+  {
+    "title": "The Book: Monasteries, Schools, and Notaries, Part 1: Reading the Late Medieval Marseille Archive",
+    "link": "https://www.edx.org/learn/literature/harvard-university-the-book-monasteries-schools-and-notaries-part-1-reading-the-late-medieval-marseille-archive?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=18",
+    "provider": "edX"
+  },
+  {
+    "title": "Japanese Culture and Language (I) | 日语与日本文化（1）",
+    "link": "https://www.edx.org/learn/japanese/tsinghua-university-japanese-culture-and-language-i-ri-yu-yu-ri-ben-wen-hua-1?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=19",
+    "provider": "edX"
+  },
+  {
+    "title": "On-Ramp to AP® French Language and Culture",
+    "link": "https://www.edx.org/learn/french/weston-high-school-on-ramp-to-ap-r-french-language-and-culture?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=20",
+    "provider": "edX"
+  },
+  {
+    "title": "Japanese Culture and Language (II) | 日语与日本文化（2）",
+    "link": "https://www.edx.org/learn/japanese/tsinghua-university-japanese-culture-and-language-ii-ri-yu-yu-ri-ben-wen-hua-2?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=21",
+    "provider": "edX"
+  },
+  {
+    "title": "Spanish Across the Americas",
+    "link": "https://www.edx.org/learn/spanish/universidad-nacional-de-cordoba-spanish-across-the-americas?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=22",
+    "provider": "edX"
+  },
+  {
+    "title": "汉语与文化交际 Chinese Cultural Communication",
+    "link": "https://www.edx.org/learn/mandarin-chinese/peking-university-yi-yu-yu-wen-hua-jiao-ji-chinese-cultural-communication?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=23",
+    "provider": "edX"
+  },
+  {
+    "title": "Global Shakespeares: Re-Creating the Merchant of Venice",
+    "link": "https://www.edx.org/learn/shakespeare/massachusetts-institute-of-technology-global-shakespeares-re-creating-the-merchant-of-venice?index=product&queryId=944489a3aecbbeceb9d191e28e433ba6&position=24",
+    "provider": "edX"
+  },
+  {
+    "title": "Neurosciences : audition, langage et musique",
+    "link": "https://www.edx.org/learn/neuroscience/universite-de-montreal-neurosciences-audition-langage-et-musique?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=1",
+    "provider": "edX"
+  },
+  {
+    "title": "Steps in Japanese for Beginners2 Part1",
+    "link": "https://www.edx.org/learn/japanese/waseda-university-steps-in-japanese-for-beginners2-part1?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=2",
+    "provider": "edX"
+  },
+  {
+    "title": "Historia global de la arquitectura islámica: espacio, ciudad, arte",
+    "link": "https://www.edx.org/learn/art/universidad-del-rosario-historia-global-de-la-arquitectura-islamica-espacio-ciudad-arte?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=3",
+    "provider": "edX"
+  },
+  {
+    "title": "Le solfège à votre portée 4",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-le-solfege-a-votre-portee-4?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=4",
+    "provider": "edX"
+  },
+  {
+    "title": "Le solfège à votre portée 3",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-le-solfege-a-votre-portee-3?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=5",
+    "provider": "edX"
+  },
+  {
+    "title": "Le solfège à votre portée",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-le-solfege-a-votre-portee-2?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=6",
+    "provider": "edX"
+  },
+  {
+    "title": "Le solfège à votre portée 2",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-le-solfege-a-votre-portee-2-2?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=7",
+    "provider": "edX"
+  },
+  {
+    "title": "Fotografía en Latinoamérica: historia, imágenes y espacios",
+    "link": "https://www.edx.org/learn/latin-america/universidad-del-rosario-fotografia-en-latinoamerica-historia-imagenes-y-espacios?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=8",
+    "provider": "edX"
+  },
+  {
+    "title": "Solfege at your fingertips 2",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-solfege-at-your-fingertips-2?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=9",
+    "provider": "edX"
+  },
+  {
+    "title": "Solfege at your fingertips 3",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-solfege-at-your-fingertips-3?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=10",
+    "provider": "edX"
+  },
+  {
+    "title": "Solfege at your fingertips 4",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-solfege-at-your-fingertips-4-2?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=11",
+    "provider": "edX"
+  },
+  {
+    "title": "The Ancient Greek Hero",
+    "link": "https://www.edx.org/learn/greek-heroes/harvard-university-the-ancient-greek-hero?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=12",
+    "provider": "edX"
+  },
+  {
+    "title": "Just Reading and Writing in English | 生活英语读写",
+    "link": "https://www.edx.org/learn/english/tsinghua-university-just-reading-and-writing-in-english-sheng-huo-ying-yu-du-xie?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=13",
+    "provider": "edX"
+  },
+  {
+    "title": "Poetry in America: Modernism",
+    "link": "https://www.edx.org/learn/poetry/harvard-university-poetry-in-america-modernism?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=14",
+    "provider": "edX"
+  },
+  {
+    "title": "Pattern Studying and Making | 图案审美与创作",
+    "link": "https://www.edx.org/learn/design/tsinghua-university-pattern-studying-and-making-tu-an-shen-mei-yu-chuang-zuo?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=15",
+    "provider": "edX"
+  },
+  {
+    "title": "Gender and Sexuality: Applications in Society",
+    "link": "https://www.edx.org/learn/gender-studies/university-of-british-columbia-gender-and-sexuality-applications-in-society?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=16",
+    "provider": "edX"
+  },
+  {
+    "title": "Shakespeare on the Page and in Performance: Tragic Love",
+    "link": "https://www.edx.org/learn/shakespeare/wellesley-college-shakespeare-on-the-page-and-in-performance-tragic-love?index=product&queryId=692e1398f871ddc741c5e059b0c0b69b&position=17",
+    "provider": "edX"
+  },
+  {
+    "title": "Writing successfully for the Stage",
+    "link": "https://www.edx.org/learn/creative-writing/university-of-cambridge-writing-successfully-for-the-stage?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=1",
+    "provider": "edX"
+  },
+  {
+    "title": "European Paintings: From Leonardo to Rembrandt to Goya",
+    "link": "https://www.edx.org/learn/art/universidad-carlos-iii-de-madrid-european-paintings-from-leonardo-to-rembrandt-to-goya?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=2",
+    "provider": "edX"
+  },
+  {
+    "title": "Stand Up!; Comedy Writing and Performance Poetry",
+    "link": "https://www.edx.org/learn/writing/university-of-cambridge-stand-up-comedy-writing-and-performance-poetry?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=3",
+    "provider": "edX"
+  },
+  {
+    "title": "Tsinghua Chinese: Start Talking with 1.3 Billion People",
+    "link": "https://www.edx.org/learn/language/tsinghua-university-tsinghua-chinese-start-talking-with-1-3-billion-people?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=4",
+    "provider": "edX"
+  },
+  {
+    "title": "Mandarin Chinese Level 2",
+    "link": "https://www.edx.org/learn/mandarin-chinese/mandarinx-mandarin-chinese-level-2?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=5",
+    "provider": "edX"
+  },
+  {
+    "title": "Invitation to The Tale of Genji: The Foundational Elements of Japanese Culture",
+    "link": "https://www.edx.org/learn/literature/waseda-university-invitation-to-the-tale-of-genji-the-foundational-elements-of-japanese-culture?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=6",
+    "provider": "edX"
+  },
+  {
+    "title": "Mandarin Chinese Level 3",
+    "link": "https://www.edx.org/learn/mandarin-chinese/mandarinx-mandarin-chinese-level-3?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=7",
+    "provider": "edX"
+  },
+  {
+    "title": "Building your Screenplay",
+    "link": "https://www.edx.org/learn/screenplays/university-of-cambridge-building-your-screenplay?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=8",
+    "provider": "edX"
+  },
+  {
+    "title": "Graphic Design Essentials",
+    "link": "https://www.edx.org/learn/graphic-design/lci-education-graphic-design-essentials?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=9",
+    "provider": "edX"
+  },
+  {
+    "title": "Finding your voice as a playwright",
+    "link": "https://www.edx.org/learn/creative-writing/university-of-cambridge-finding-your-voice-as-a-playwright?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=10",
+    "provider": "edX"
+  },
+  {
+    "title": "Ancient Masterpieces of World Literature",
+    "link": "https://www.edx.org/learn/literature/harvard-university-ancient-masterpieces-of-world-literature?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=11",
+    "provider": "edX"
+  },
+  {
+    "title": "Solfege at your fingertips 1",
+    "link": "https://www.edx.org/learn/music-theory/universite-de-montreal-solfege-at-your-fingertips-1?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=12",
+    "provider": "edX"
+  },
+  {
+    "title": "Teaching Complex Thinking through Art with the National Gallery of Art",
+    "link": "https://www.edx.org/learn/art/the-smithsonian-institution-teaching-complex-thinking-through-art-with-the-national-gallery-of-art?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=13",
+    "provider": "edX"
+  },
+  {
+    "title": "Doing Gender and Why it Matters",
+    "link": "https://www.edx.org/learn/gender-studies/university-of-hong-kong-doing-gender-and-why-it-matters?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=14",
+    "provider": "edX"
+  },
+  {
+    "title": "Prompt Engineering for ChatGPT",
+    "link": "https://www.edx.org/learn/artificial-intelligence/davidson-college-ai-prompt-engineering-for-beginners?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=15",
+    "provider": "edX"
+  },
+  {
+    "title": "Humanities in Focus",
+    "link": "https://www.edx.org/learn/humanities/the-hong-kong-polytechnic-university-humanities-in-focus?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=16",
+    "provider": "edX"
+  },
+  {
+    "title": "Becoming a Native Knowledge 360° Educator: American Indian Removal",
+    "link": "https://www.edx.org/learn/education-teacher-training/the-smithsonian-institution-becoming-a-native-knowledge-360deg-educator-american-indian-removal?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=17",
+    "provider": "edX"
+  },
+  {
+    "title": "Poetry in America: Whitman",
+    "link": "https://www.edx.org/learn/poetry/harvard-university-poetry-in-america-whitman?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=18",
+    "provider": "edX"
+  },
+  {
+    "title": "Poetry in America: The Civil War and Its Aftermath",
+    "link": "https://www.edx.org/learn/poetry/harvard-university-poetry-in-america-the-civil-war-and-its-aftermath?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=19",
+    "provider": "edX"
+  },
+  {
+    "title": "Landscape Techniques | 山水画技法",
+    "link": "https://www.edx.org/learn/art/tsinghua-university-landscape-techniques-shan-shui-hua-ji-fa?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=20",
+    "provider": "edX"
+  },
+  {
+    "title": "Representations of HIV/AIDS",
+    "link": "https://www.edx.org/learn/healthcare/davidson-next-representations-of-hiv-aids?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=21",
+    "provider": "edX"
+  },
+  {
+    "title": "Music as the Mirror of Western Culture",
+    "link": "https://www.edx.org/learn/music-arts/israelx-music-as-the-mirror-of-western-culture?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=22",
+    "provider": "edX"
+  },
+  {
+    "title": "Reading Religious Conversion",
+    "link": "https://www.edx.org/learn/religion/israelx-reading-religious-conversion?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=23",
+    "provider": "edX"
+  },
+  {
+    "title": "Art and Design in the Digital Age",
+    "link": "https://www.edx.org/learn/art/israelx-art-and-design-in-the-digital-age?index=product&queryId=30cb3a8dff79083af96764c660c1ab67&position=24",
+    "provider": "edX"
   }
 ]
