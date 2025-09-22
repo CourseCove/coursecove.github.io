@@ -34,32 +34,17 @@ function setupEventListeners() {
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const selectedProviders = [...filters.querySelectorAll('input[name="provider"]:checked')].map(i => i.value.toLowerCase());
-  const selectedLevels = [...filters.querySelectorAll('input[name="level"]:checked')].map(i => i.value.toLowerCase());
-  const selectedDurations = [...filters.querySelectorAll('input[name="duration"]:checked')].map(i => i.value);
 
   filteredCourses = allCourses.filter(course => {
     const matchesQuery =
-      course.title.toLowerCase().includes(query) ||
-      course.description.toLowerCase().includes(query) ||
-      (course.keywords || []).some(k => k.toLowerCase().includes(query));
+      (course.title || '').toLowerCase().includes(query) ||
+      (course.url || '').toLowerCase().includes(query) ||
+      (course.provider || '').toLowerCase().includes(query);
 
     const provider = (course.provider || '').toLowerCase();
-    const level = (course.level || '').toLowerCase();
-
     const matchesProvider = selectedProviders.length === 0 || selectedProviders.includes(provider);
-    const matchesLevel = selectedLevels.length === 0 || selectedLevels.includes(level);
 
-    const matchesDuration = (() => {
-      if (selectedDurations.length === 0) return true;
-      const hours = parseFloat(course.duration);
-      return selectedDurations.some(d => {
-        if (d === '<2') return hours < 2;
-        if (d === '2-5') return hours >= 2 && hours <= 5;
-        if (d === '>5') return hours > 5;
-      });
-    })();
-
-    return matchesQuery && matchesProvider && matchesLevel && matchesDuration;
+    return matchesQuery && matchesProvider;
   });
 
   renderCourses();
@@ -78,15 +63,13 @@ function renderCourses() {
   }
 
   pageItems.forEach(course => {
-    const rating = Math.round(course.rating || 0);
-    const ratingStars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
     const card = document.createElement('div');
     card.className = 'col';
     card.innerHTML = `
       <div class="card h-100 shadow-sm">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${course.title}</h5>
-          <p class="card-text flex-grow-1">${course.description}</p>
+          <p class="card-text flex-grow-1"><strong>Provider:</strong> ${course.provider}</p>
           <div class="d-flex justify-content-between align-items-center mt-2">
             <a href="${course.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
           </div>
