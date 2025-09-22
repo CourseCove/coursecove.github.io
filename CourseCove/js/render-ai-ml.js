@@ -89,9 +89,6 @@ function renderPagination() {
 
   if (totalPages <= 1) return;
 
-  const ul = document.createElement('ul');
-  ul.className = 'pagination justify-content-center flex-wrap';
-
   const createPageItem = (page, text = null, active = false, disabled = false) => {
     const li = document.createElement('li');
     li.className = `page-item${active ? ' active' : ''}${disabled ? ' disabled' : ''}`;
@@ -104,56 +101,46 @@ function renderPagination() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
-    return li;
+    paginationContainer.appendChild(li);
   };
 
   // Previous button
-  ul.appendChild(createPageItem(currentPage - 1, '«', false, currentPage === 1));
+  createPageItem(currentPage - 1, '«', false, currentPage === 1);
 
-  const maxVisible = 2; // pages before/after current
+  const maxVisible = 2; // how many pages around the current one
   let startPage = Math.max(2, currentPage - maxVisible);
   let endPage = Math.min(totalPages - 1, currentPage + maxVisible);
 
   // Always show first page
-  ul.appendChild(createPageItem(1, '1', currentPage === 1));
+  createPageItem(1, '1', currentPage === 1);
 
+  // Ellipsis before middle pages
   if (startPage > 2) {
     const dots = document.createElement('li');
     dots.className = 'page-item disabled';
     dots.innerHTML = `<span class="page-link">…</span>`;
-    ul.appendChild(dots);
+    paginationContainer.appendChild(dots);
   }
 
+  // Middle pages
   for (let i = startPage; i <= endPage; i++) {
-    ul.appendChild(createPageItem(i, `${i}`, currentPage === i));
+    createPageItem(i, `${i}`, currentPage === i);
   }
 
+  // Ellipsis after middle pages
   if (endPage < totalPages - 1) {
     const dots = document.createElement('li');
     dots.className = 'page-item disabled';
     dots.innerHTML = `<span class="page-link">…</span>`;
-    ul.appendChild(dots);
+    paginationContainer.appendChild(dots);
   }
 
   // Always show last page
   if (totalPages > 1) {
-    ul.appendChild(createPageItem(totalPages, `${totalPages}`, currentPage === totalPages));
+    createPageItem(totalPages, `${totalPages}`, currentPage === totalPages);
   }
 
   // Next button
-  ul.appendChild(createPageItem(currentPage + 1, '»', false, currentPage === totalPages));
-
-  paginationContainer.appendChild(ul);
-}};
-
-  if (totalPages <= 1) return;
-
-  createPageItem(currentPage - 1, '«', false, currentPage === 1);
-
-  for (let i = 1; i <= totalPages; i++) {
-    createPageItem(i, `${i}`, currentPage === i);
-  }
-
   createPageItem(currentPage + 1, '»', false, currentPage === totalPages);
 }
 
