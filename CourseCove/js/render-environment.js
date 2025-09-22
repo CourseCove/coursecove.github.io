@@ -38,13 +38,23 @@ function applyFilters() {
   const selDur = [...filters.querySelectorAll('input[name="duration"]:checked')].map(i => i.value);
 
   filteredCourses = allCourses.filter(c => {
-    const t = c.title.toLowerCase(), d = c.description.toLowerCase(), instr = (c.instructor||'').toLowerCase();
-    const mQ = !q || t.includes(q) || d.includes(q) || instr.includes(q);
-    const prov = (c.provider||'').toLowerCase(), lev = (c.level||'').toLowerCase();
+    const title = (c.title || '').toLowerCase();
+    const url = (c.url || '').toLowerCase();
+    const prov = (c.provider || '').toLowerCase();
+
+    // Search only by title, url, and provider
+    const mQ = !q || title.includes(q) || url.includes(q) || prov.includes(q);
+
+    const lev = (c.level || '').toLowerCase();
     const mProv = !selProv.length || selProv.includes(prov);
     const mLev = !selLev.length || selLev.includes(lev);
     const hrs = parseFloat(c.duration) || 0;
-    const mDur = !selDur.length || selDur.some(r => r===' <2'? hrs<2 : r==='2-5'? hrs>=2&&hrs<=5 : hrs>5);
+    const mDur = !selDur.length || selDur.some(r =>
+      r === '<2' ? hrs < 2 :
+      r === '2-5' ? hrs >= 2 && hrs <= 5 :
+      hrs > 5
+    );
+
     return mQ && mProv && mLev && mDur;
   });
 
@@ -70,14 +80,13 @@ function renderCourses() {
   const arr = filteredCourses.slice(start, end);
 
   arr.forEach(c => {
-    const rt = Math.round(c.rating || 0);
-    const stars = '⭐'.repeat(rt) + '☆'.repeat(5 - rt);
     const card = document.createElement('div');
     card.className = 'col mb-4';
     card.innerHTML = `
       <div class="card h-100 shadow-sm">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${c.title}</h5>
+          <p class="card-text"><strong>Provider:</strong> ${c.provider || 'N/A'}</p>
           <div class="d-flex justify-content-between align-items-center mt-2">
             <a href="${c.url}" target="_blank" class="btn btn-primary btn-sm">Go to course</a>
           </div>
