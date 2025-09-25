@@ -4,84 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Course & Book Aggregator | CourseCove</title>
-<link rel="stylesheet" href="style.css"> <!-- Use your site's CSS -->
+<link rel="stylesheet" href="style.css"> <!-- Replace with your site CSS -->
 <style>
-  /* Additional page-specific styling */
-  .search-bar {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    margin-bottom: 24px;
-    font-size: 16px;
+  /* Page-specific styling */
+  body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
+  .search-bar, .category-filter {
+    width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #ccc; margin-bottom: 16px; font-size: 16px;
   }
-  #course-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-  }
+  #course-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
   .book-card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 16px;
+    background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 16px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .book-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  }
-  .book-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 12px;
-  }
-  .book-card h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 6px;
-    color: #111;
-  }
-  .book-card p {
-    font-size: 14px;
-    margin: 2px 0;
-    color: #555;
-  }
-  .book-card a {
-    display: inline-block;
-    margin-top: 8px;
-    color: #1a73e8;
-    font-weight: 500;
-    text-decoration: none;
-  }
-  .book-card a:hover {
-    text-decoration: underline;
-  }
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-top: 32px;
-  }
-  .pagination button {
-    background: #1a73e8;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-  }
-  .pagination button:hover {
-    background: #1664c1;
-  }
-  #pageInfo {
-    font-weight: 500;
-    color: #333;
-  }
+  .book-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+  .book-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
+  .book-card h3 { font-size: 18px; font-weight: 600; margin: 0 0 6px; color: #111; }
+  .book-card p { font-size: 14px; margin: 2px 0; color: #555; }
+  .book-card a { display: inline-block; margin-top: 8px; color: #1a73e8; font-weight: 500; text-decoration: none; }
+  .book-card a:hover { text-decoration: underline; }
+  .pagination { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 32px; }
+  .pagination button { background: #1a73e8; color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 500; }
+  .pagination button:hover { background: #1664c1; }
+  #pageInfo { font-weight: 500; color: #333; }
 </style>
 </head>
 <body>
@@ -92,6 +36,14 @@
 </header>
 
 <input type="text" id="searchBar" placeholder="Search courses or books..." class="search-bar" />
+<select id="categoryFilter" class="category-filter">
+  <option value="">All Categories</option>
+  <option value="politics">Politics</option>
+  <option value="economics">Economics</option>
+  <option value="philosophy">Philosophy</option>
+  <option value="science">Science</option>
+  <option value="history">History</option>
+</select>
 
 <div id="course-container"></div>
 
@@ -106,9 +58,9 @@ Book data sourced from <a href="https://www.gutenberg.org/" target="_blank">Proj
 </p>
 
 <script>
-// CourseCove style book + course aggregator
 const courseContainer = document.getElementById('course-container');
 const searchBar = document.getElementById('searchBar');
+const categoryFilter = document.getElementById('categoryFilter');
 const prevPageBtn = document.getElementById('prevPage');
 const nextPageBtn = document.getElementById('nextPage');
 const pageInfo = document.getElementById('pageInfo');
@@ -118,35 +70,47 @@ let filteredItems = [];
 let currentPage = 1;
 const itemsPerPage = 6;
 
-// Fetch Project Gutenberg books
-async function fetchGutenbergBooks(query) {
-  const res = await fetch(`https://gutendex.com/books?search=${encodeURIComponent(query)}&page=1`);
-  const data = await res.json();
-  return data.results.map(book => ({
-    title: book.title,
-    authors: book.authors.map(a => a.name).join(", ") || "Unknown",
-    link: book.formats["text/html"] || book.formats["application/epub+zip"],
-    source: "Project Gutenberg",
-    cover: "",
-    type: "book"
-  }));
+// Fetch multiple pages from Gutenberg
+async function fetchGutenbergBooks(query, category="") {
+  let books = [];
+  for (let page = 1; page <= 5; page++) { // fetch 5 pages
+    const topicQuery = category ? `&topic=${category}` : "";
+    const res = await fetch(`https://gutendex.com/books?search=${encodeURIComponent(query)}${topicQuery}&page=${page}`);
+    const data = await res.json();
+    books.push(...data.results.map(b => ({
+      title: b.title,
+      authors: b.authors.map(a => a.name).join(", ") || "Unknown",
+      link: b.formats["text/html"] || b.formats["application/epub+zip"],
+      source: "Project Gutenberg",
+      cover: "",
+      type: "book"
+    })));
+  }
+  return books;
 }
 
-// Fetch Open Library / Internet Archive books
-async function fetchOpenLibraryBooks(query) {
-  const res = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`);
-  const data = await res.json();
-  return data.docs.map(book => ({
-    title: book.title,
-    authors: (book.author_name || ["Unknown"]).join(", "),
-    link: book.key ? `https://openlibrary.org${book.key}` : "#",
-    cover: book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : "",
-    source: "Open Library / Internet Archive",
-    type: "book"
-  }));
+// Fetch multiple pages from Open Library
+async function fetchOpenLibraryBooks(query, category="") {
+  let books = [];
+  for (let page = 1; page <= 3; page++) { // fetch 3 pages
+    const subjectQuery = category ? `/subjects/${category}.json?limit=50&page=${page}` : `/search.json?q=${encodeURIComponent(query)}&limit=50&page=${page}`;
+    const url = category ? `https://openlibrary.org${subjectQuery}` : `https://openlibrary.org${subjectQuery}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const docs = category ? data.works : data.docs;
+    books.push(...docs.map(b => ({
+      title: b.title,
+      authors: (b.author_name || (b.authors ? b.authors.map(a=>a.name) : ["Unknown"])).join(", "),
+      link: b.key ? `https://openlibrary.org${b.key}` : "#",
+      cover: b.cover_i ? `https://covers.openlibrary.org/b/id/${b.cover_i}-M.jpg` : "",
+      source: "Open Library / Internet Archive",
+      type: "book"
+    })));
+  }
+  return books;
 }
 
-// Placeholder courses (replace with your JSON)
+// Fetch placeholder courses
 async function fetchCourses() {
   return [
     { title: "Introduction to Political Science", instructors: "Alexandra Paskhaver", link: "#", source: "Udemy", type: "course", cover: "" },
@@ -154,11 +118,11 @@ async function fetchCourses() {
   ];
 }
 
-// Load all items
-async function loadAllItems(query = "politics") {
+// Load items
+async function loadAllItems(query="", category="") {
   const [gutenberg, openLibrary, courses] = await Promise.all([
-    fetchGutenbergBooks(query),
-    fetchOpenLibraryBooks(query),
+    fetchGutenbergBooks(query, category),
+    fetchOpenLibraryBooks(query, category),
     fetchCourses()
   ]);
   allItems = [...courses, ...gutenberg, ...openLibrary];
@@ -167,20 +131,20 @@ async function loadAllItems(query = "politics") {
   renderItems();
 }
 
-// Render items
+// Render paginated items
 function renderItems() {
-  const start = (currentPage - 1) * itemsPerPage;
+  const start = (currentPage-1)*itemsPerPage;
   const end = start + itemsPerPage;
   const paginatedItems = filteredItems.slice(start, end);
-
   courseContainer.innerHTML = "";
+
   paginatedItems.forEach(item => {
     const card = document.createElement("div");
     card.className = "book-card";
     card.innerHTML = `
       ${item.cover ? `<img src="${item.cover}" alt="${item.title}">` : ""}
       <h3>${item.title}</h3>
-      <p>${item.type === "book" ? "Author: " + item.authors : "Instructor: " + item.instructors}</p>
+      <p>${item.type === "book" ? "Author: "+item.authors : "Instructor: "+item.instructors}</p>
       <p style="font-size:12px;color:#888;">Source: ${item.source}</p>
       <a href="${item.link}" target="_blank">${item.type === "book" ? "Read / Borrow" : "View Course"}</a>
     `;
@@ -190,23 +154,28 @@ function renderItems() {
   pageInfo.textContent = `Page ${currentPage} of ${Math.ceil(filteredItems.length / itemsPerPage)}`;
 }
 
-// Pagination
+// Pagination buttons
 prevPageBtn.addEventListener("click", () => {
-  if (currentPage > 1) { currentPage--; renderItems(); }
+  if (currentPage>1) { currentPage--; renderItems(); }
 });
 nextPageBtn.addEventListener("click", () => {
-  if (currentPage < Math.ceil(filteredItems.length / itemsPerPage)) { currentPage++; renderItems(); }
+  if (currentPage<Math.ceil(filteredItems.length/itemsPerPage)) { currentPage++; renderItems(); }
 });
 
-// Search filter
-searchBar.addEventListener("input", () => {
-  const query = searchBar.value.toLowerCase();
-  filteredItems = allItems.filter(item =>
-    item.title.toLowerCase().includes(query) ||
-    (item.type === "book" ? item.authors.toLowerCase() : item.instructors.toLowerCase())
-  );
-  currentPage = 1;
-  renderItems();
+// Search input
+searchBar.addEventListener("keypress", async (e) => {
+  if (e.key==="Enter") {
+    const query = searchBar.value.trim();
+    const category = categoryFilter.value;
+    await loadAllItems(query, category);
+  }
+});
+
+// Category filter
+categoryFilter.addEventListener("change", async () => {
+  const query = searchBar.value.trim();
+  const category = categoryFilter.value;
+  await loadAllItems(query, category);
 });
 
 // Initial load
