@@ -6,21 +6,21 @@
 <title>Course & Book Aggregator | CourseCove</title>
 <link rel="stylesheet" href="style.css"> <!-- Replace with your site CSS -->
 <style>
-  body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
-  .search-bar, .category-filter { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #ccc; margin-bottom: 16px; font-size: 16px; }
-  #course-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-  .book-card { background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-  .book-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
-  .book-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
-  .book-card h3 { font-size: 18px; font-weight: 600; margin: 0 0 6px; color: #111; }
-  .book-card p { font-size: 14px; margin: 2px 0; color: #555; }
-  .book-card a { display: inline-block; margin-top: 8px; color: #1a73e8; font-weight: 500; text-decoration: none; }
-  .book-card a:hover { text-decoration: underline; }
-  .pagination { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 32px; }
-  .pagination button { background: #1a73e8; color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 500; }
-  .pagination button:hover { background: #1664c1; }
-  #pageInfo { font-weight: 500; color: #333; }
-  #loading { text-align:center; margin-top:20px; font-weight:bold; color:#555; display:none; }
+body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
+.search-bar, .category-filter { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #ccc; margin-bottom: 16px; font-size: 16px; }
+#course-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.book-card { background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.book-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.book-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
+.book-card h3 { font-size: 18px; font-weight: 600; margin: 0 0 6px; color: #111; }
+.book-card p { font-size: 14px; margin: 2px 0; color: #555; }
+.book-card a { display: inline-block; margin-top: 8px; color: #1a73e8; font-weight: 500; text-decoration: none; }
+.book-card a:hover { text-decoration: underline; }
+.pagination { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 32px; }
+.pagination button { background: #1a73e8; color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 500; }
+.pagination button:hover { background: #1664c1; }
+#pageInfo { font-weight: 500; color: #333; }
+#loading { text-align:center; margin-top:20px; font-weight:bold; color:#555; display:none; }
 </style>
 </head>
 <body>
@@ -50,7 +50,7 @@
 </div>
 
 <p style="margin-top: 24px; font-size: 0.85em; color: #666;">
-Book data sourced from <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg</a> and <a href="https://openlibrary.org/" target="_blank">Open Library / Internet Archive</a>.
+Book data sourced from <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg</a>, <a href="https://openlibrary.org/" target="_blank">Open Library / Internet Archive</a>, <a href="https://books.google.com/" target="_blank">Google Books</a>, and <a href="https://archive.org/" target="_blank">Internet Archive</a>.
 </p>
 
 <script>
@@ -73,12 +73,11 @@ function renderItems() {
   const end = start + itemsPerPage;
   const paginatedItems = filteredItems.slice(start, end);
   courseContainer.innerHTML = "";
-
-  paginatedItems.forEach(item => {
+  paginatedItems.forEach(item=>{
     const card = document.createElement("div");
-    card.className = "book-card";
+    card.className="book-card";
     card.innerHTML = `
-      ${item.cover ? `<img src="${item.cover}" alt="${item.title}">` : ""}
+      ${item.cover?`<img src="${item.cover}" alt="${item.title}">`:""}
       <h3>${item.title}</h3>
       <p>${item.type==="book"?"Author: "+item.authors:"Instructor: "+item.instructors}</p>
       <p style="font-size:12px;color:#888;">Source: ${item.source}</p>
@@ -93,20 +92,17 @@ function renderItems() {
 prevPageBtn.addEventListener("click", ()=>{if(currentPage>1){currentPage--;renderItems();}});
 nextPageBtn.addEventListener("click", ()=>{if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){currentPage++;renderItems();}});
 
-// Fetch first page and then lazy-load additional pages
+// Fetch Project Gutenberg (first + lazy)
 async function fetchGutenbergBooks(query, category="") {
   const books = [];
   const topicQuery = category ? `&topic=${category}` : "";
-  // First page immediately
   const res1 = await fetch(`https://gutendex.com/books?search=${encodeURIComponent(query)}${topicQuery}&page=1`);
   const data1 = await res1.json();
   books.push(...data1.results.map(b=>({
     title:b.title, authors:b.authors.map(a=>a.name).join(", ")||"Unknown",
     link:b.formats["text/html"]||b.formats["application/epub+zip"], source:"Project Gutenberg", cover:"", type:"book"
   })));
-  renderItems(); // render first page immediately
-
-  // Lazy load pages 2-5
+  renderItems();
   loadingEl.style.display="block";
   for(let page=2; page<=5; page++){
     const res = await fetch(`https://gutendex.com/books?search=${encodeURIComponent(query)}${topicQuery}&page=${page}`);
@@ -120,9 +116,9 @@ async function fetchGutenbergBooks(query, category="") {
   return books;
 }
 
+// Fetch Open Library
 async function fetchOpenLibraryBooks(query, category="") {
   const books = [];
-  // First page
   const url1 = category?`https://openlibrary.org/subjects/${category}.json?limit=50&page=1`:`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=50&page=1`;
   const res1 = await fetch(url1);
   const data1 = await res1.json();
@@ -133,8 +129,6 @@ async function fetchOpenLibraryBooks(query, category="") {
     cover:b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-M.jpg`:"", source:"Open Library / Internet Archive", type:"book"
   })));
   renderItems();
-
-  // Lazy load pages 2-3
   loadingEl.style.display="block";
   for(let page=2; page<=3; page++){
     const url = category?`https://openlibrary.org/subjects/${category}.json?limit=50&page=${page}`:`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=50&page=${page}`;
@@ -151,7 +145,40 @@ async function fetchOpenLibraryBooks(query, category="") {
   return books;
 }
 
-// Fetch courses
+// Fetch Google Books (requires API key)
+async function fetchGoogleBooks(query) {
+  const books = [];
+  const API_KEY = "YOUR_GOOGLE_BOOKS_API_KEY"; // replace with your key
+  const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=20&key=${API_KEY}`);
+  const data = await res.json();
+  if(data.items) {
+    books.push(...data.items.map(b=>({
+      title:b.volumeInfo.title,
+      authors:(b.volumeInfo.authors||["Unknown"]).join(", "),
+      link:b.volumeInfo.previewLink||"#",
+      cover:b.volumeInfo.imageLinks?.thumbnail||"",
+      source:"Google Books",
+      type:"book"
+    })));
+  }
+  return books;
+}
+
+// Fetch Internet Archive advanced query
+async function fetchInternetArchive(query, category="") {
+  const books = [];
+  const q = category?`subject:${category}`:`${query}`;
+  const res = await fetch(`https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&fl[]=identifier, title, creator, mediatype&rows=50&page=1&output=json`);
+  const data = await res.json();
+  books.push(...data.response.docs.map(d=>({
+    title:d.title||"Unknown", authors:d.creator||"Unknown",
+    link:`https://archive.org/details/${d.identifier}`,
+    cover:"", source:"Internet Archive", type:"book"
+  })));
+  return books;
+}
+
+// Fetch placeholder courses
 async function fetchCourses() {
   return [
     { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", source:"Udemy", type:"course", cover:"" },
@@ -161,38 +188,24 @@ async function fetchCourses() {
 
 // Load all items
 async function loadAllItems(query="", category="") {
-  allItems = [];
-  filteredItems = [];
-  currentPage=1;
+  allItems=[]; filteredItems=[]; currentPage=1;
   loadingEl.style.display="block";
-
-  const [courses, gutenberg, openLibrary] = await Promise.all([
+  const [courses, gutenberg, openLibrary, googleBooks, internetArchive] = await Promise.all([
     fetchCourses(),
     fetchGutenbergBooks(query, category),
-    fetchOpenLibraryBooks(query, category)
+    fetchOpenLibraryBooks(query, category),
+    fetchGoogleBooks(query),
+    fetchInternetArchive(query, category)
   ]);
-
-  allItems = [...courses, ...gutenberg, ...openLibrary];
+  allItems = [...courses, ...gutenberg, ...openLibrary, ...googleBooks, ...internetArchive];
   filteredItems = allItems;
   renderItems();
   loadingEl.style.display="none";
 }
 
-// Search input
-searchBar.addEventListener("keypress", async (e)=>{
-  if(e.key==="Enter"){
-    const query = searchBar.value.trim();
-    const category = categoryFilter.value;
-    await loadAllItems(query, category);
-  }
-});
-
-// Category filter
-categoryFilter.addEventListener("change", async ()=>{
-  const query = searchBar.value.trim();
-  const category = categoryFilter.value;
-  await loadAllItems(query, category);
-});
+// Search and category filter
+searchBar.addEventListener("keypress", async (e)=>{if(e.key==="Enter"){await loadAllItems(searchBar.value.trim(), categoryFilter.value);}});
+categoryFilter.addEventListener("change", async ()=>{await loadAllItems(searchBar.value.trim(), categoryFilter.value);});
 
 // Initial load
 loadAllItems();
