@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,10 +49,6 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
   <button id="nextPage">Next</button>
 </div>
 
-<p style="margin-top: 24px; font-size: 0.85em; color: #666;">
-Book data sourced from 10+ platforms including Project Gutenberg, Open Library, Google Books, Internet Archive, Library of Congress, HathiTrust, WorldCat, Wikibooks, Standard Ebooks, and DOAB.
-</p>
-
 <script>
 const courseContainer = document.getElementById('course-container');
 const searchBar = document.getElementById('searchBar');
@@ -66,20 +63,21 @@ let filteredItems = [];
 let currentPage = 1;
 const itemsPerPage = 6;
 
-// --- STARTER BOOKS (show immediately) ---
+// --- STARTER BOOKS (immediate display) ---
 const starterBooks = [
-  { title:"Pride and Prejudice", authors:"Jane Austen", link:"https://www.gutenberg.org/ebooks/1342", cover:"https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg", source:"Starter (Gutenberg)", type:"book" },
-  { title:"The Republic", authors:"Plato", link:"https://www.gutenberg.org/ebooks/1497", cover:"https://www.gutenberg.org/cache/epub/1497/pg1497.cover.medium.jpg", source:"Starter (Gutenberg)", type:"book" },
-  { title:"Meditations", authors:"Marcus Aurelius", link:"https://www.gutenberg.org/ebooks/2680", cover:"https://www.gutenberg.org/cache/epub/2680/pg2680.cover.medium.jpg", source:"Starter (Gutenberg)", type:"book" }
+  { title:"Pride and Prejudice", authors:"Jane Austen", link:"https://www.gutenberg.org/ebooks/1342", cover:"https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg", source:"Starter", type:"book" },
+  { title:"The Republic", authors:"Plato", link:"https://www.gutenberg.org/ebooks/1497", cover:"https://www.gutenberg.org/cache/epub/1497/pg1497.cover.medium.jpg", source:"Starter", type:"book" },
+  { title:"Meditations", authors:"Marcus Aurelius", link:"https://www.gutenberg.org/ebooks/2680", cover:"https://www.gutenberg.org/cache/epub/2680/pg2680.cover.medium.jpg", source:"Starter", type:"book" }
 ];
 
 // Render items
 function renderItems() {
   const start = (currentPage-1)*itemsPerPage;
   const end = start + itemsPerPage;
-  const paginatedItems = filteredItems.slice(start, end);
+  const paginated = filteredItems.slice(start, end);
+
   courseContainer.innerHTML = "";
-  paginatedItems.forEach(item=>{
+  paginated.forEach(item=>{
     const card = document.createElement("div");
     card.className="book-card";
     card.innerHTML = `
@@ -94,65 +92,54 @@ function renderItems() {
   pageInfo.textContent = `Page ${currentPage} of ${Math.max(1, Math.ceil(filteredItems.length/itemsPerPage))}`;
 }
 
-// Pagination
-prevPageBtn.addEventListener("click", ()=>{if(currentPage>1){currentPage--;renderItems();}});
-nextPageBtn.addEventListener("click", ()=>{if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){currentPage++;renderItems();}});
+// Update filter instantly
+function applyFilters() {
+  const query = searchBar.value.toLowerCase();
+  const category = categoryFilter.value.toLowerCase();
 
-// --- FETCHERS (same as before, shortened for brevity) ---
-async function fetchGutenbergBooks(query, category="") { /* ...same as before... */ return []; }
-async function fetchOpenLibraryBooks(query, category="") { /* ... */ return []; }
-async function fetchGoogleBooks(query) { return []; }
-async function fetchInternetArchive(query, category="") { return []; }
-async function fetchLibraryOfCongressBooks(query) { return []; }
-async function fetchHathiTrustBooks(query) { return []; }
-async function fetchWorldCatBooks(query) { return []; }
-async function fetchWikiBooks(query) { return []; }
-async function fetchStandardEbooks(query) { return []; }
-async function fetchDOABooks(query) { return []; }
+  filteredItems = allItems.filter(item=>{
+    const matchesQuery = item.title.toLowerCase().includes(query);
+    const matchesCategory = category==="" || (item.source && item.source.toLowerCase().includes(category));
+    return matchesQuery && matchesCategory;
+  });
+  currentPage = 1;
+  renderItems();
+}
+
+// Pagination
+prevPageBtn.addEventListener("click", ()=>{ if(currentPage>1){ currentPage--; renderItems(); }});
+nextPageBtn.addEventListener("click", ()=>{ if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){ currentPage++; renderItems(); }});
+
+// --- FAKE fetchers for demo ---
 async function fetchCourses() {
   return [
     { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", source:"Udemy", type:"course", cover:"" },
     { title:"Economics 101", instructors:"John Doe", link:"#", source:"Coursera", type:"course", cover:"" }
   ];
 }
+async function fetchGutenbergBooks() { return []; } // keep others short
 
-// --- Progressive Loading ---
-async function loadAllItems(query="", category="") {
-  allItems = [...starterBooks]; // preload
+// Progressive loading
+async function loadAllItems() {
+  allItems = [...starterBooks];
   filteredItems = allItems;
   renderItems();
   loadingEl.style.display = "block";
 
-  const sources = [
-    fetchCourses(),
-    fetchGutenbergBooks(query, category),
-    fetchOpenLibraryBooks(query, category),
-    fetchGoogleBooks(query),
-    fetchInternetArchive(query, category),
-    fetchLibraryOfCongressBooks(query),
-    fetchHathiTrustBooks(query),
-    fetchWorldCatBooks(query),
-    fetchWikiBooks(query),
-    fetchStandardEbooks(query),
-    fetchDOABooks(query)
-  ];
-
-  sources.forEach(async (p) => {
+  const sources = [fetchCourses(), fetchGutenbergBooks()];
+  sources.forEach(async (p)=>{
     try {
       const items = await p;
       allItems.push(...items);
-      filteredItems = allItems;
-      renderItems(); // refresh with new results
-    } catch(e) { console.error("Fetch error", e); }
+      applyFilters();
+    } catch(e){ console.error(e); }
   });
-
-  // Hide "loading" once at least one real source finished
   Promise.race(sources).then(()=>loadingEl.style.display="none");
 }
 
-// Search + filter
-searchBar.addEventListener("keypress", async (e)=>{if(e.key==="Enter"){await loadAllItems(searchBar.value.trim(), categoryFilter.value);}});
-categoryFilter.addEventListener("change", async ()=>{await loadAllItems(searchBar.value.trim(), categoryFilter.value);});
+// --- Interactivity bindings ---
+searchBar.addEventListener("input", applyFilters);
+categoryFilter.addEventListener("change", applyFilters);
 
 // Initial load
 loadAllItems();
@@ -160,3 +147,4 @@ loadAllItems();
 
 </body>
 </html>
+```
