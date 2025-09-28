@@ -1,10 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Course & Book Aggregator | CourseCove</title>
-<link rel="stylesheet" href="style.css"> <!-- Replace with your site CSS -->
 <style>
 body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 .search-bar, .category-filter { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #ccc; margin-bottom: 16px; font-size: 16px; }
@@ -50,7 +50,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 </div>
 
 <p style="margin-top: 24px; font-size: 0.85em; color: #666;">
-Book data sourced from <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg</a>, <a href="https://openlibrary.org/" target="_blank">Open Library / Internet Archive</a>, <a href="https://books.google.com/" target="_blank">Google Books</a>, and <a href="https://archive.org/" target="_blank">Internet Archive</a>.
+Book data sourced from Project Gutenberg, Open Library, Google Books, Internet Archive, Library of Congress, HathiTrust, WorldCat, Wikibooks, Standard Ebooks, and DOAB.
 </p>
 
 <script>
@@ -92,63 +92,41 @@ function renderItems() {
 prevPageBtn.addEventListener("click", ()=>{if(currentPage>1){currentPage--;renderItems();}});
 nextPageBtn.addEventListener("click", ()=>{if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){currentPage++;renderItems();}});
 
-// Fetch Project Gutenberg (first + lazy)
+// --- DATA FETCHERS ---
+
+// Gutenberg
 async function fetchGutenbergBooks(query, category="") {
   const books = [];
   const topicQuery = category ? `&topic=${category}` : "";
-  const res1 = await fetch(`https://gutendex.com/books?search=${encodeURIComponent(query)}${topicQuery}&page=1`);
-  const data1 = await res1.json();
-  books.push(...data1.results.map(b=>({
+  const res = await fetch(`https://gutendex.com/books?search=${encodeURIComponent(query)}${topicQuery}&page=1`);
+  const data = await res.json();
+  books.push(...data.results.map(b=>({
     title:b.title, authors:b.authors.map(a=>a.name).join(", ")||"Unknown",
     link:b.formats["text/html"]||b.formats["application/epub+zip"], source:"Project Gutenberg", cover:"", type:"book"
   })));
-  renderItems();
-  loadingEl.style.display="block";
-  for(let page=2; page<=5; page++){
-    const res = await fetch(`https://gutendex.com/books?search=${encodeURIComponent(query)}${topicQuery}&page=${page}`);
-    const data = await res.json();
-    books.push(...data.results.map(b=>({
-      title:b.title, authors:b.authors.map(a=>a.name).join(", ")||"Unknown",
-      link:b.formats["text/html"]||b.formats["application/epub+zip"], source:"Project Gutenberg", cover:"", type:"book"
-    })));
-  }
-  loadingEl.style.display="none";
   return books;
 }
 
-// Fetch Open Library
+// Open Library
 async function fetchOpenLibraryBooks(query, category="") {
   const books = [];
-  const url1 = category?`https://openlibrary.org/subjects/${category}.json?limit=50&page=1`:`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=50&page=1`;
-  const res1 = await fetch(url1);
-  const data1 = await res1.json();
-  const docs1 = category?data1.works:data1.docs;
-  books.push(...docs1.map(b=>({
+  const url = category?`https://openlibrary.org/subjects/${category}.json?limit=20`:`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=20`;
+  const res = await fetch(url);
+  const data = await res.json();
+  const docs = category?data.works:data.docs;
+  books.push(...docs.map(b=>({
     title:b.title, authors:(b.author_name||b.authors?.map(a=>a.name)||["Unknown"]).join(", "),
     link:b.key?`https://openlibrary.org${b.key}`:"#",
-    cover:b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-M.jpg`:"", source:"Open Library / Internet Archive", type:"book"
+    cover:b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-M.jpg`:"", source:"Open Library", type:"book"
   })));
-  renderItems();
-  loadingEl.style.display="block";
-  for(let page=2; page<=3; page++){
-    const url = category?`https://openlibrary.org/subjects/${category}.json?limit=50&page=${page}`:`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=50&page=${page}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    const docs = category?data.works:data.docs;
-    books.push(...docs.map(b=>({
-      title:b.title, authors:(b.author_name||b.authors?.map(a=>a.name)||["Unknown"]).join(", "),
-      link:b.key?`https://openlibrary.org${b.key}`:"#",
-      cover:b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-M.jpg`:"", source:"Open Library / Internet Archive", type:"book"
-    })));
-  }
-  loadingEl.style.display="none";
   return books;
 }
 
-// Fetch Google Books (requires API key)
+// Google Books
 async function fetchGoogleBooks(query) {
   const books = [];
-  const API_KEY = "YOUR_GOOGLE_BOOKS_API_KEY"; // replace with your key
+  const API_KEY = "YOUR_GOOGLE_BOOKS_API_KEY"; // Replace
+  if (!API_KEY) return books;
   const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=20&key=${API_KEY}`);
   const data = await res.json();
   if(data.items) {
@@ -164,11 +142,11 @@ async function fetchGoogleBooks(query) {
   return books;
 }
 
-// Fetch Internet Archive advanced query
+// Internet Archive
 async function fetchInternetArchive(query, category="") {
   const books = [];
   const q = category?`subject:${category}`:`${query}`;
-  const res = await fetch(`https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&fl[]=identifier, title, creator, mediatype&rows=50&page=1&output=json`);
+  const res = await fetch(`https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&fl[]=identifier,title,creator&rows=20&page=1&output=json`);
   const data = await res.json();
   books.push(...data.response.docs.map(d=>({
     title:d.title||"Unknown", authors:d.creator||"Unknown",
@@ -178,7 +156,92 @@ async function fetchInternetArchive(query, category="") {
   return books;
 }
 
-// Fetch placeholder courses
+// Library of Congress
+async function fetchLibraryOfCongressBooks(query) {
+  const books = [];
+  const res = await fetch(`https://www.loc.gov/books/?q=${encodeURIComponent(query)}&fo=json`);
+  const data = await res.json();
+  if(data.results) {
+    books.push(...data.results.map(b=>({
+      title:b.title, authors:b.contributor||"Unknown",
+      link:b.url||"#", cover:b.image_url||"",
+      source:"Library of Congress", type:"book"
+    })));
+  }
+  return books;
+}
+
+// HathiTrust (metadata API, requires query)
+async function fetchHathiTrustBooks(query) {
+  const books = [];
+  const res = await fetch(`https://catalog.hathitrust.org/api/volumes/full/htid/${encodeURIComponent(query)}.json`);
+  if(res.ok){
+    const data = await res.json();
+    Object.keys(data.items).forEach(id=>{
+      const b = data.items[id];
+      books.push({
+        title:b.title, authors:b.responsibility||"Unknown",
+        link:`https://hdl.handle.net/${b.htid}`,
+        cover:"", source:"HathiTrust", type:"book"
+      });
+    });
+  }
+  return books;
+}
+
+// WorldCat (requires API key)
+async function fetchWorldCatBooks(query) {
+  const books = [];
+  const API_KEY = "YOUR_WORLDCAT_KEY"; // Replace
+  if (!API_KEY) return books;
+  const res = await fetch(`http://www.worldcat.org/webservices/catalog/search/opensearch?q=${encodeURIComponent(query)}&wskey=${API_KEY}`);
+  // Normally returns XML, would need XML parsing
+  return books;
+}
+
+// Wikibooks (via Wikimedia API)
+async function fetchWikiBooks(query) {
+  const books = [];
+  const res = await fetch(`https://en.wikibooks.org/w/api.php?action=query&list=search&format=json&srsearch=${encodeURIComponent(query)}&origin=*`);
+  const data = await res.json();
+  if(data.query && data.query.search) {
+    books.push(...data.query.search.map(b=>({
+      title:b.title, authors:"Community Contributors",
+      link:`https://en.wikibooks.org/wiki/${encodeURIComponent(b.title)}`,
+      cover:"", source:"Wikibooks", type:"book"
+    })));
+  }
+  return books;
+}
+
+// Standard Ebooks (JSON feed)
+async function fetchStandardEbooks(query) {
+  const books = [];
+  const res = await fetch(`https://standardebooks.org/opds/all`);
+  if(res.ok){
+    const text = await res.text();
+    // OPDS XML parsing would be required, leaving placeholder
+  }
+  return books;
+}
+
+// DOAB (Directory of Open Access Books)
+async function fetchDOABooks(query) {
+  const books = [];
+  const res = await fetch(`https://directory.doabooks.org/rest/search?query=${encodeURIComponent(query)}`);
+  if(res.ok){
+    const data = await res.json();
+    if(data.results){
+      books.push(...data.results.map(b=>({
+        title:b.title, authors:b.author||"Unknown",
+        link:b.url||"#", cover:"", source:"DOAB", type:"book"
+      })));
+    }
+  }
+  return books;
+}
+
+// Courses (placeholder)
 async function fetchCourses() {
   return [
     { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", source:"Udemy", type:"course", cover:"" },
@@ -190,20 +253,26 @@ async function fetchCourses() {
 async function loadAllItems(query="", category="") {
   allItems=[]; filteredItems=[]; currentPage=1;
   loadingEl.style.display="block";
-  const [courses, gutenberg, openLibrary, googleBooks, internetArchive] = await Promise.all([
+  const results = await Promise.all([
     fetchCourses(),
     fetchGutenbergBooks(query, category),
     fetchOpenLibraryBooks(query, category),
     fetchGoogleBooks(query),
-    fetchInternetArchive(query, category)
+    fetchInternetArchive(query, category),
+    fetchLibraryOfCongressBooks(query),
+    fetchHathiTrustBooks(query),
+    fetchWorldCatBooks(query),
+    fetchWikiBooks(query),
+    fetchStandardEbooks(query),
+    fetchDOABooks(query)
   ]);
-  allItems = [...courses, ...gutenberg, ...openLibrary, ...googleBooks, ...internetArchive];
+  allItems = results.flat();
   filteredItems = allItems;
   renderItems();
   loadingEl.style.display="none";
 }
 
-// Search and category filter
+// Events
 searchBar.addEventListener("keypress", async (e)=>{if(e.key==="Enter"){await loadAllItems(searchBar.value.trim(), categoryFilter.value);}});
 categoryFilter.addEventListener("change", async ()=>{await loadAllItems(searchBar.value.trim(), categoryFilter.value);});
 
@@ -213,3 +282,4 @@ loadAllItems();
 
 </body>
 </html>
+```
