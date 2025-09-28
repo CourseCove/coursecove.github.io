@@ -57,6 +57,7 @@ let allItems = [];
 let filteredItems = [];
 let isFetching = false;
 let sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
+const categoryCache = {}; // store fetched items per category
 
 // Starter books
 const starterBooks = [
@@ -107,17 +108,24 @@ function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const category = categoryFilter.value.toLowerCase();
 
-  filteredItems = allItems.filter(item=>{
+  // Filter the books already in memory
+  filteredItems = allItems.filter(item => {
     const matchesQuery = item.title.toLowerCase().includes(query);
     const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
     return matchesQuery && matchesCategory;
   });
 
-  renderItems();
+  renderItems(); // show results immediately
 
-  // Reset pages and fetch new batch
-  sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
-  allItems = [...starterBooks];
+  // If category already cached, just use it
+  if(category && categoryCache[category]){
+    allItems = [...starterBooks, ...categoryCache[category]];
+    filteredItems = allItems.filter(item => !category || item.category.toLowerCase() === category);
+    renderItems();
+    return;
+  }
+
+  // Fetch more in background
   loadNextBatch(category);
 }
 
@@ -178,17 +186,21 @@ async function loadNextBatch(category="") {
   sourcePages.openlibrary++;
   sourcePages.internetarchive++;
 
+  const newItems = [...gutenberg, ...openlibrary, ...internetarchive];
+
+  // Cache by category
+  if(category) categoryCache[category] = newItems;
+
+  allItems.push(...newItems);
+
   const query = searchBar.value.toLowerCase();
-  const filteredBatch = [...gutenberg, ...openlibrary, ...internetarchive].filter(item=>{
+  filteredItems = allItems.filter(item => {
     const matchesQuery = item.title.toLowerCase().includes(query);
     const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
     return matchesQuery && matchesCategory;
   });
 
-  allItems.push(...filteredBatch);
-  filteredItems = [...allItems];
   renderItems();
-
   isFetching = false;
   loadingEl.style.display = "none";
 }
