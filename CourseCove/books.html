@@ -5,32 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Listings | CourseCove</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-<!--<style>
-  body { font-family: 'Inter', sans-serif; background-color: #f4f7fb; margin:0; padding:0; display:flex; flex-direction:column; align-items:center; }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #f4f7fb; margin:0; padding:0; }
   header { text-align:center; margin:20px 0; }
   header h1 { font-size:2.5rem; color:#333; margin:0; }
   header p { font-size:1.125rem; color:#666; }
   .filters { display:flex; justify-content:center; margin:20px 0; gap:20px; flex-wrap:wrap; }
   select, input[type="text"] { padding:10px; border-radius:8px; border:1px solid #ddd; font-size:1rem; width:200px; }
-  #course-container { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:20px; padding:20px; width:80%; max-width:1200px; }
-  .book-card { background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden; transition:transform 0.3s ease, box-shadow 0.3s ease; }
-  .book-card:hover { transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.15); }
-  .book-card img { width:100%; height:180px; object-fit:cover; }
-  .book-card .content { padding:15px; }
-  .book-card h3 { font-size:1.25rem; margin:10px 0; color:#333; }
-  .book-card p { font-size:0.875rem; color:#777; margin:5px 0; }
-  .book-card a { display:inline-block; margin-top:10px; color:#007bff; text-decoration:none; font-weight:600; }
-  .book-card a:hover { text-decoration:underline; }
   #loading { text-align:center; margin:20px; color:#666; }
-</style>-->
+</style>
 </head>
 <body>
 
-
-  <nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
+<nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
   <div class="container">
     <a class="navbar-brand" href="../index.html">
       <img src="images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
@@ -43,7 +33,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="math.html">Math</a></li>
-        <li class="nav-item"><a class="nav-link " href="ai-ml.html">AI / ML</a></li>
+        <li class="nav-item"><a class="nav-link" href="ai-ml.html">AI / ML</a></li>
         <li class="nav-item"><a class="nav-link" href="arts-humanities.html">Arts & Humanities</a></li>
         <li class="nav-item"><a class="nav-link" href="languages.html">Languages</a></li>
         <li class="nav-item"><a class="nav-link" href="politics-economics.html">Politics & Economics</a></li>
@@ -54,6 +44,11 @@
     </div>
   </div>
 </nav>
+
+<header>
+  <h1>Book Listings</h1>
+  <p>Discover a curated selection of books from multiple sources.</p>
+</header>
 
 <div class="filters">
   <input type="text" id="searchBar" placeholder="Search books..." />
@@ -68,7 +63,10 @@
   </select>
 </div>
 
-<div id="course-container"></div>
+<div class="container my-4">
+  <div class="row" id="course-container"></div>
+</div>
+
 <div id="loading">Loading books...</div>
 
 <script>
@@ -81,7 +79,7 @@ let allItems = [];
 let filteredItems = [];
 let isFetching = false;
 let sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
-const categoryCache = {}; // store fetched items per category
+const categoryCache = {};
 
 // Starter books
 const starterBooks = [
@@ -94,7 +92,6 @@ const starterBooks = [
   { title:"History of Science", authors:"Robert Brown", link:"#", cover:"", type:"book", category:"science" }
 ];
 
-// Map title to category
 function mapTitleToCategory(title){
   title = title.toLowerCase();
   if(title.includes("politics") || title.includes("democracy")) return "politics";
@@ -105,43 +102,44 @@ function mapTitleToCategory(title){
   return "literature"; 
 }
 
-// Render items
 function renderItems() {
   courseContainer.innerHTML = "";
   if(filteredItems.length === 0){
-    courseContainer.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:#777;">No results found.</p>`;
+    courseContainer.innerHTML = `<div class="col-12 text-center text-muted">No results found.</div>`;
+    return;
   }
+
   filteredItems.forEach(item=>{
-    const card = document.createElement("div");
-    card.className="book-card";
-    card.innerHTML = `
-      ${item.cover?`<img src="${item.cover}" alt="${item.title}">`:""}
-      <div class="content">
-        <h3>${item.title}</h3>
-        <p>${item.type==="book"?"Author: "+item.authors:"Instructor: "+item.instructors}</p>
-        <p style="font-size:12px;color:#888;">${item.category?("Category: "+item.category):("Source: "+item.source)}</p>
-        <a href="${item.link}" target="_blank">${item.type==="book"?"Read / Borrow":"View Course"}</a>
+    const col = document.createElement("div");
+    col.className = "col-12 col-md-4 col-lg-3 mb-4"; // responsive columns
+
+    col.innerHTML = `
+      <div class="card h-100 shadow-sm">
+        ${item.cover ? `<img src="${item.cover}" class="card-img-top" alt="${item.title}">` : ''}
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${item.title}</h5>
+          <p class="card-text mb-1">${item.type==="book"?"Author: "+item.authors:"Instructor: "+item.instructors}</p>
+          <p class="text-muted small">${item.category?("Category: "+item.category):("Source: "+item.source)}</p>
+          <a href="${item.link}" target="_blank" class="mt-auto btn btn-primary btn-sm">${item.type==="book"?"Read / Borrow":"View Course"}</a>
+        </div>
       </div>
     `;
-    courseContainer.appendChild(card);
+    courseContainer.appendChild(col);
   });
 }
 
-// Apply filters
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const category = categoryFilter.value.toLowerCase();
 
-  // Filter the books already in memory
   filteredItems = allItems.filter(item => {
     const matchesQuery = item.title.toLowerCase().includes(query);
     const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
     return matchesQuery && matchesCategory;
   });
 
-  renderItems(); // show results immediately
+  renderItems();
 
-  // If category already cached, just use it
   if(category && categoryCache[category]){
     allItems = [...starterBooks, ...categoryCache[category]];
     filteredItems = allItems.filter(item => !category || item.category.toLowerCase() === category);
@@ -149,11 +147,9 @@ function applyFilters() {
     return;
   }
 
-  // Fetch more in background
   loadNextBatch(category);
 }
 
-// Fetch functions
 async function fetchGutenberg(page=1, category=""){
   const topicQuery = category?`&topic=${encodeURIComponent(category)}`:"";
   const res = await fetch(`https://gutendex.com/books?page=${page}${topicQuery}`);
@@ -194,7 +190,6 @@ async function fetchInternetArchive(page=1){
   }));
 }
 
-// Load next batch
 async function loadNextBatch(category="") {
   if(isFetching) return;
   isFetching = true;
@@ -212,7 +207,6 @@ async function loadNextBatch(category="") {
 
   const newItems = [...gutenberg, ...openlibrary, ...internetarchive];
 
-  // Cache by category
   if(category) categoryCache[category] = newItems;
 
   allItems.push(...newItems);
@@ -229,14 +223,12 @@ async function loadNextBatch(category="") {
   loadingEl.style.display = "none";
 }
 
-// Infinite scroll
 window.addEventListener("scroll", ()=>{
   if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
     loadNextBatch(categoryFilter.value.toLowerCase());
   }
 });
 
-// Initial load
 allItems = [...starterBooks];
 applyFilters();
 
@@ -244,5 +236,6 @@ searchBar.addEventListener("input", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
