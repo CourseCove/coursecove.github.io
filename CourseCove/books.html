@@ -38,6 +38,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
   <option value="philosophy">Philosophy</option>
   <option value="science">Science</option>
   <option value="history">History</option>
+  <option value="literature">Literature</option>
 </select>
 
 <div id="course-container"></div>
@@ -65,12 +66,27 @@ let filteredItems = [];
 let currentPage = 1;
 const itemsPerPage = 6;
 
-// --- Starter books
+// --- Starter books for all categories
 const starterBooks = [
-  { title:"Pride and Prejudice", authors:"Jane Austen", link:"https://www.gutenberg.org/ebooks/1342", cover:"https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg", type:"book", category:"literature" },
-  { title:"The Republic", authors:"Plato", link:"https://www.gutenberg.org/ebooks/1497", cover:"https://www.gutenberg.org/cache/epub/1497/pg1497.cover.medium.jpg", type:"book", category:"philosophy" },
-  { title:"Meditations", authors:"Marcus Aurelius", link:"https://www.gutenberg.org/ebooks/2680", cover:"https://www.gutenberg.org/cache/epub/2680/pg2680.cover.medium.jpg", type:"book", category:"philosophy" }
+  { title:"Pride and Prejudice", authors:"Jane Austen", link:"#", cover:"", type:"book", category:"literature" },
+  { title:"The Republic", authors:"Plato", link:"#", cover:"", type:"book", category:"philosophy" },
+  { title:"Meditations", authors:"Marcus Aurelius", link:"#", cover:"", type:"book", category:"philosophy" },
+  { title:"Democracy in America", authors:"Alexis de Tocqueville", link:"#", cover:"", type:"book", category:"politics" },
+  { title:"Economics Basics", authors:"John Doe", link:"#", cover:"", type:"book", category:"economics" },
+  { title:"World History", authors:"Jane Smith", link:"#", cover:"", type:"book", category:"history" },
+  { title:"History of Science", authors:"Robert Brown", link:"#", cover:"", type:"book", category:"science" }
 ];
+
+// --- Utility: Map API titles to categories
+function mapTitleToCategory(title){
+  title = title.toLowerCase();
+  if(title.includes("politics") || title.includes("democracy")) return "politics";
+  if(title.includes("economics") || title.includes("money")) return "economics";
+  if(title.includes("philosophy") || title.includes("meditation")) return "philosophy";
+  if(title.includes("science") || title.includes("physics") || title.includes("biology")) return "science";
+  if(title.includes("history") || title.includes("war")) return "history";
+  return "literature"; // default
+}
 
 // --- Render items
 function renderItems() {
@@ -97,7 +113,7 @@ function renderItems() {
   pageInfo.textContent = `Page ${currentPage} of ${Math.max(1, Math.ceil(filteredItems.length/itemsPerPage))}`;
 }
 
-// --- Apply filters instantly
+// --- Filter instantly
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const category = categoryFilter.value.toLowerCase();
@@ -115,7 +131,7 @@ function applyFilters() {
 prevPageBtn.addEventListener("click", ()=>{ if(currentPage>1){ currentPage--; renderItems(); }});
 nextPageBtn.addEventListener("click", ()=>{ if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){ currentPage++; renderItems(); }});
 
-// --- Fake fetchers (replace with real API calls)
+// --- Example fetchers (replace with real API calls)
 async function fetchCourses() {
   return [
     { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", type:"course", category:"politics" },
@@ -123,15 +139,19 @@ async function fetchCourses() {
   ];
 }
 async function fetchGutenbergBooks() {
-  return [
-    { title:"Democracy in America", authors:"Alexis de Tocqueville", link:"https://www.gutenberg.org/ebooks/815", cover:"https://www.gutenberg.org/cache/epub/815/pg815.cover.medium.jpg", type:"book", category:"politics" }
+  const books = [
+    { title:"Democracy in America", authors:"Alexis de Tocqueville", link:"#", cover:"", type:"book" },
+    { title:"The Wealth of Nations", authors:"Adam Smith", link:"#", cover:"", type:"book" },
+    { title:"Meditations", authors:"Marcus Aurelius", link:"#", cover:"", type:"book" }
   ];
+  // assign categories automatically
+  return books.map(b => ({ ...b, category: mapTitleToCategory(b.title) }));
 }
 async function fetchOpenLibraryBooks() { return []; }
 async function fetchGoogleBooks() { return []; }
 async function fetchInternetArchive() { return []; }
 
-// --- Progressive loading with live progress ---
+// --- Progressive loading with live progress
 async function loadAllItems() {
   allItems = [...starterBooks];
   filteredItems = allItems;
@@ -161,15 +181,14 @@ async function loadAllItems() {
     }
   });
 
-  // hide spinner after first source finishes
   Promise.race(sources.map(s=>s.fn())).then(()=>loadingEl.style.display="none");
 }
 
-// --- Bind events ---
+// --- Bind events
 searchBar.addEventListener("input", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
 
-// --- Initial load ---
+// --- Initial load
 loadAllItems();
 </script>
 
