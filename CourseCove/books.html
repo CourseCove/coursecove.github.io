@@ -20,6 +20,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 .pagination button:hover { background: #1664c1; }
 #pageInfo { font-weight: 500; color: #333; }
 #loading { text-align:center; margin-top:20px; font-weight:bold; color:#555; }
+#progress { text-align:center; margin-top:8px; font-size:0.9em; color:#666; }
 </style>
 </head>
 <body>
@@ -41,6 +42,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 
 <div id="course-container"></div>
 <div id="loading">Loading more books...</div>
+<div id="progress"></div>
 
 <div class="pagination">
   <button id="prevPage">Previous</button>
@@ -56,20 +58,21 @@ const prevPageBtn = document.getElementById('prevPage');
 const nextPageBtn = document.getElementById('nextPage');
 const pageInfo = document.getElementById('pageInfo');
 const loadingEl = document.getElementById('loading');
+const progressEl = document.getElementById('progress');
 
 let allItems = [];
 let filteredItems = [];
 let currentPage = 1;
 const itemsPerPage = 6;
 
-// --- STARTER BOOKS (tagged with categories) ---
+// --- Starter books
 const starterBooks = [
-  { title:"Pride and Prejudice", authors:"Jane Austen", link:"https://www.gutenberg.org/ebooks/1342", cover:"https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg", source:"Gutenberg", type:"book", category:"literature" },
-  { title:"The Republic", authors:"Plato", link:"https://www.gutenberg.org/ebooks/1497", cover:"https://www.gutenberg.org/cache/epub/1497/pg1497.cover.medium.jpg", source:"Gutenberg", type:"book", category:"philosophy" },
-  { title:"Meditations", authors:"Marcus Aurelius", link:"https://www.gutenberg.org/ebooks/2680", cover:"https://www.gutenberg.org/cache/epub/2680/pg2680.cover.medium.jpg", source:"Gutenberg", type:"book", category:"philosophy" }
+  { title:"Pride and Prejudice", authors:"Jane Austen", link:"https://www.gutenberg.org/ebooks/1342", cover:"https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg", type:"book", category:"literature" },
+  { title:"The Republic", authors:"Plato", link:"https://www.gutenberg.org/ebooks/1497", cover:"https://www.gutenberg.org/cache/epub/1497/pg1497.cover.medium.jpg", type:"book", category:"philosophy" },
+  { title:"Meditations", authors:"Marcus Aurelius", link:"https://www.gutenberg.org/ebooks/2680", cover:"https://www.gutenberg.org/cache/epub/2680/pg2680.cover.medium.jpg", type:"book", category:"philosophy" }
 ];
 
-// Render items
+// --- Render items
 function renderItems() {
   const start = (currentPage-1)*itemsPerPage;
   const end = start + itemsPerPage;
@@ -94,60 +97,79 @@ function renderItems() {
   pageInfo.textContent = `Page ${currentPage} of ${Math.max(1, Math.ceil(filteredItems.length/itemsPerPage))}`;
 }
 
-// Update filter instantly
+// --- Apply filters instantly
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const category = categoryFilter.value.toLowerCase();
 
   filteredItems = allItems.filter(item=>{
     const matchesQuery = item.title.toLowerCase().includes(query);
-    const matchesCategory = category==="" || (item.category && item.category.toLowerCase()===category);
+    const matchesCategory = !category || (item.category && item.category.toLowerCase()===category);
     return matchesQuery && matchesCategory;
   });
   currentPage = 1;
   renderItems();
 }
 
-// Pagination
+// --- Pagination
 prevPageBtn.addEventListener("click", ()=>{ if(currentPage>1){ currentPage--; renderItems(); }});
 nextPageBtn.addEventListener("click", ()=>{ if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){ currentPage++; renderItems(); }});
 
-// --- Example fetchers with categories ---
+// --- Fake fetchers (replace with real API calls)
 async function fetchCourses() {
   return [
-    { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", source:"Udemy", type:"course", cover:"", category:"politics" },
-    { title:"Economics 101", instructors:"John Doe", link:"#", source:"Coursera", type:"course", cover:"", category:"economics" }
+    { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", type:"course", category:"politics" },
+    { title:"Economics 101", instructors:"John Doe", link:"#", type:"course", category:"economics" }
   ];
 }
 async function fetchGutenbergBooks() {
   return [
-    { title:"Democracy in America", authors:"Alexis de Tocqueville", link:"https://www.gutenberg.org/ebooks/815", cover:"https://www.gutenberg.org/cache/epub/815/pg815.cover.medium.jpg", source:"Gutenberg", type:"book", category:"politics" }
+    { title:"Democracy in America", authors:"Alexis de Tocqueville", link:"https://www.gutenberg.org/ebooks/815", cover:"https://www.gutenberg.org/cache/epub/815/pg815.cover.medium.jpg", type:"book", category:"politics" }
   ];
 }
+async function fetchOpenLibraryBooks() { return []; }
+async function fetchGoogleBooks() { return []; }
+async function fetchInternetArchive() { return []; }
 
-// Progressive loading
+// --- Progressive loading with live progress ---
 async function loadAllItems() {
   allItems = [...starterBooks];
   filteredItems = allItems;
   renderItems();
   loadingEl.style.display = "block";
+  progressEl.textContent = "0/4 sources loaded...";
 
-  const sources = [fetchCourses(), fetchGutenbergBooks()];
-  sources.forEach(async (p)=>{
+  const sources = [
+    { name:"Courses", fn: fetchCourses },
+    { name:"Gutenberg", fn: fetchGutenbergBooks },
+    { name:"Open Library", fn: fetchOpenLibraryBooks },
+    { name:"Google Books", fn: fetchGoogleBooks }
+  ];
+
+  let completed = 0;
+  sources.forEach(async source=>{
     try {
-      const items = await p;
+      const items = await source.fn();
       allItems.push(...items);
-      applyFilters(); // reapply so category filter works instantly
-    } catch(e){ console.error(e); }
+      completed++;
+      progressEl.textContent = `${completed}/${sources.length} sources loaded...`;
+      applyFilters();
+    } catch(e) {
+      console.error(`Error loading ${source.name}`, e);
+      completed++;
+      progressEl.textContent = `${completed}/${sources.length} sources loaded...`;
+    }
   });
-  Promise.race(sources).then(()=>loadingEl.style.display="none");
+
+  // hide spinner after first source finishes
+  Promise.race(sources.map(s=>s.fn())).then(()=>loadingEl.style.display="none");
 }
 
-// --- Interactivity bindings ---
+// --- Bind events ---
 searchBar.addEventListener("input", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
 
-// Initial load
+// --- Initial load ---
 loadAllItems();
 </script>
 
