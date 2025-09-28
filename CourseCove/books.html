@@ -62,11 +62,11 @@ let filteredItems = [];
 let currentPage = 1;
 const itemsPerPage = 6;
 
-// --- STARTER BOOKS (immediate display) ---
+// --- STARTER BOOKS (tagged with categories) ---
 const starterBooks = [
-  { title:"Pride and Prejudice", authors:"Jane Austen", link:"https://www.gutenberg.org/ebooks/1342", cover:"https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg", source:"Starter", type:"book" },
-  { title:"The Republic", authors:"Plato", link:"https://www.gutenberg.org/ebooks/1497", cover:"https://www.gutenberg.org/cache/epub/1497/pg1497.cover.medium.jpg", source:"Starter", type:"book" },
-  { title:"Meditations", authors:"Marcus Aurelius", link:"https://www.gutenberg.org/ebooks/2680", cover:"https://www.gutenberg.org/cache/epub/2680/pg2680.cover.medium.jpg", source:"Starter", type:"book" }
+  { title:"Pride and Prejudice", authors:"Jane Austen", link:"https://www.gutenberg.org/ebooks/1342", cover:"https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg", source:"Gutenberg", type:"book", category:"literature" },
+  { title:"The Republic", authors:"Plato", link:"https://www.gutenberg.org/ebooks/1497", cover:"https://www.gutenberg.org/cache/epub/1497/pg1497.cover.medium.jpg", source:"Gutenberg", type:"book", category:"philosophy" },
+  { title:"Meditations", authors:"Marcus Aurelius", link:"https://www.gutenberg.org/ebooks/2680", cover:"https://www.gutenberg.org/cache/epub/2680/pg2680.cover.medium.jpg", source:"Gutenberg", type:"book", category:"philosophy" }
 ];
 
 // Render items
@@ -76,6 +76,9 @@ function renderItems() {
   const paginated = filteredItems.slice(start, end);
 
   courseContainer.innerHTML = "";
+  if (paginated.length === 0) {
+    courseContainer.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:#777;">No results found.</p>`;
+  }
   paginated.forEach(item=>{
     const card = document.createElement("div");
     card.className="book-card";
@@ -83,7 +86,7 @@ function renderItems() {
       ${item.cover?`<img src="${item.cover}" alt="${item.title}">`:""}
       <h3>${item.title}</h3>
       <p>${item.type==="book"?"Author: "+item.authors:"Instructor: "+item.instructors}</p>
-      <p style="font-size:12px;color:#888;">Source: ${item.source}</p>
+      <p style="font-size:12px;color:#888;">${item.category?("Category: "+item.category):("Source: "+item.source)}</p>
       <a href="${item.link}" target="_blank">${item.type==="book"?"Read / Borrow":"View Course"}</a>
     `;
     courseContainer.appendChild(card);
@@ -98,7 +101,7 @@ function applyFilters() {
 
   filteredItems = allItems.filter(item=>{
     const matchesQuery = item.title.toLowerCase().includes(query);
-    const matchesCategory = category==="" || (item.source && item.source.toLowerCase().includes(category));
+    const matchesCategory = category==="" || (item.category && item.category.toLowerCase()===category);
     return matchesQuery && matchesCategory;
   });
   currentPage = 1;
@@ -109,14 +112,18 @@ function applyFilters() {
 prevPageBtn.addEventListener("click", ()=>{ if(currentPage>1){ currentPage--; renderItems(); }});
 nextPageBtn.addEventListener("click", ()=>{ if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){ currentPage++; renderItems(); }});
 
-// --- FAKE fetchers for demo ---
+// --- Example fetchers with categories ---
 async function fetchCourses() {
   return [
-    { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", source:"Udemy", type:"course", cover:"" },
-    { title:"Economics 101", instructors:"John Doe", link:"#", source:"Coursera", type:"course", cover:"" }
+    { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", source:"Udemy", type:"course", cover:"", category:"politics" },
+    { title:"Economics 101", instructors:"John Doe", link:"#", source:"Coursera", type:"course", cover:"", category:"economics" }
   ];
 }
-async function fetchGutenbergBooks() { return []; } // keep others short
+async function fetchGutenbergBooks() {
+  return [
+    { title:"Democracy in America", authors:"Alexis de Tocqueville", link:"https://www.gutenberg.org/ebooks/815", cover:"https://www.gutenberg.org/cache/epub/815/pg815.cover.medium.jpg", source:"Gutenberg", type:"book", category:"politics" }
+  ];
+}
 
 // Progressive loading
 async function loadAllItems() {
@@ -130,7 +137,7 @@ async function loadAllItems() {
     try {
       const items = await p;
       allItems.push(...items);
-      applyFilters();
+      applyFilters(); // reapply so category filter works instantly
     } catch(e){ console.error(e); }
   });
   Promise.race(sources).then(()=>loadingEl.style.display="none");
