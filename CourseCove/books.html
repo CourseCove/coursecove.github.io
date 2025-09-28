@@ -16,7 +16,6 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 .book-card a { display: inline-block; margin-top: 8px; color: #1a73e8; font-weight: 500; text-decoration: none; }
 .book-card a:hover { text-decoration: underline; }
 #loading { text-align:center; margin-top:20px; font-weight:bold; color:#555; }
-#progress { text-align:center; margin-top:8px; font-size:0.9em; color:#666; }
 </style>
 </head>
 <body>
@@ -39,7 +38,6 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 
 <div id="course-container"></div>
 <div id="loading">Loading books...</div>
-<div id="progress"></div>
 
 <script>
 const courseContainer = document.getElementById('course-container');
@@ -104,15 +102,15 @@ function applyFilters() {
   // Filter already loaded items
   filteredItems = allItems.filter(item=>{
     const matchesQuery = item.title.toLowerCase().includes(query);
-    const matchesCategory = !category || (item.category && item.category.toLowerCase()===category);
+    const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
     return matchesQuery && matchesCategory;
   });
 
   renderItems();
 
-  // Reset pages and load first batch for new category
+  // Reset pages and fetch new batch for new category
   sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
-  allItems = [...starterBooks];
+  allItems = [...starterBooks]; // keep starter books
   loadNextBatch(category);
 }
 
@@ -131,7 +129,7 @@ async function fetchGutenberg(page=1, category=""){
   }));
 }
 
-async function fetchOpenLibrary(page=1, category=""){
+async function fetchOpenLibrary(page=1){
   const res = await fetch(`https://openlibrary.org/search.json?q=the&limit=20&page=${page}`);
   const data = await res.json();
   return data.docs.map(b=>({
@@ -144,7 +142,7 @@ async function fetchOpenLibrary(page=1, category=""){
   }));
 }
 
-async function fetchInternetArchive(page=1, category=""){
+async function fetchInternetArchive(page=1){
   const res = await fetch(`https://archive.org/advancedsearch.php?q=mediatype:texts&fl[]=identifier,title,creator&rows=20&page=${page}&output=json`);
   const data = await res.json();
   return data.response.docs.map(d=>({
@@ -161,22 +159,32 @@ async function fetchInternetArchive(page=1, category=""){
 async function loadNextBatch(category="") {
   if(isFetching) return;
   isFetching = true;
-  loadingEl.style.display="block";
+  loadingEl.style.display = "block";
 
   const [gutenberg, openlibrary, internetarchive] = await Promise.all([
     fetchGutenberg(sourcePages.gutenberg, category),
-    fetchOpenLibrary(sourcePages.openlibrary, category),
-    fetchInternetArchive(sourcePages.internetarchive, category)
+    fetchOpenLibrary(sourcePages.openlibrary),
+    fetchInternetArchive(sourcePages.internetarchive)
   ]);
 
   sourcePages.gutenberg++;
   sourcePages.openlibrary++;
   sourcePages.internetarchive++;
 
-  allItems.push(...gutenberg, ...openlibrary, ...internetarchive);
-  applyFilters(); // reapply filters including category
+  // Filter batch before appending
+  const query = searchBar.value.toLowerCase();
+  const filteredBatch = [...gutenberg, ...openlibrary, ...internetarchive].filter(item=>{
+    const matchesQuery = item.title.toLowerCase().includes(query);
+    const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
+    return matchesQuery && matchesCategory;
+  });
+
+  allItems.push(...filteredBatch);
+  filteredItems = [...allItems];
+  renderItems();
+
   isFetching = false;
-  loadingEl.style.display="none";
+  loadingEl.style.display = "none";
 }
 
 // --- Infinite scroll
