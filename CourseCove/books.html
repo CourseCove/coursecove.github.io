@@ -3,43 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Infinite Scroll Book Aggregator</title>
+<title>Book Aggregator | CourseCove Style</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
-.search-bar, .category-filter { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #ccc; margin-bottom: 16px; font-size: 16px; }
-#course-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-.book-card { background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-.book-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
-.book-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
-.book-card h3 { font-size: 18px; font-weight: 600; margin: 0 0 6px; color: #111; }
-.book-card p { font-size: 14px; margin: 2px 0; color: #555; }
-.book-card a { display: inline-block; margin-top: 8px; color: #1a73e8; font-weight: 500; text-decoration: none; }
-.book-card a:hover { text-decoration: underline; }
-#loading { text-align:center; margin-top:20px; font-weight:bold; color:#555; }
-#progress { text-align:center; margin-top:8px; font-size:0.9em; color:#666; }
+  body { font-family: 'Inter', sans-serif; background-color: #f4f7fb; margin:0; padding:0; display:flex; flex-direction:column; align-items:center; }
+  header { text-align:center; margin:20px 0; }
+  header h1 { font-size:2.5rem; color:#333; margin:0; }
+  header p { font-size:1.125rem; color:#666; }
+  .filters { display:flex; justify-content:center; margin:20px 0; gap:20px; flex-wrap:wrap; }
+  select, input[type="text"] { padding:10px; border-radius:8px; border:1px solid #ddd; font-size:1rem; width:200px; }
+  #course-container { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:20px; padding:20px; width:80%; max-width:1200px; }
+  .book-card { background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden; transition:transform 0.3s ease, box-shadow 0.3s ease; }
+  .book-card:hover { transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.15); }
+  .book-card img { width:100%; height:180px; object-fit:cover; }
+  .book-card .content { padding:15px; }
+  .book-card h3 { font-size:1.25rem; margin:10px 0; color:#333; }
+  .book-card p { font-size:0.875rem; color:#777; margin:5px 0; }
+  .book-card a { display:inline-block; margin-top:10px; color:#007bff; text-decoration:none; font-weight:600; }
+  .book-card a:hover { text-decoration:underline; }
+  #loading { text-align:center; margin:20px; color:#666; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Infinite Scroll Book Aggregator</h1>
-  <p>Browse hundreds of books from multiple sources in real-time</p>
+  <h1>Book Aggregator</h1>
+  <p>Discover a curated selection of books from multiple sources.</p>
 </header>
 
-<input type="text" id="searchBar" placeholder="Search books..." class="search-bar" />
-<select id="categoryFilter" class="category-filter">
-  <option value="">All Categories</option>
-  <option value="politics">Politics</option>
-  <option value="economics">Economics</option>
-  <option value="philosophy">Philosophy</option>
-  <option value="science">Science</option>
-  <option value="history">History</option>
-  <option value="literature">Literature</option>
-</select>
+<div class="filters">
+  <input type="text" id="searchBar" placeholder="Search books..." />
+  <select id="categoryFilter">
+    <option value="">All Categories</option>
+    <option value="politics">Politics</option>
+    <option value="economics">Economics</option>
+    <option value="philosophy">Philosophy</option>
+    <option value="science">Science</option>
+    <option value="history">History</option>
+    <option value="literature">Literature</option>
+  </select>
+</div>
 
 <div id="course-container"></div>
 <div id="loading">Loading books...</div>
-<div id="progress"></div>
 
 <script>
 const courseContainer = document.getElementById('course-container');
@@ -50,11 +56,9 @@ const loadingEl = document.getElementById('loading');
 let allItems = [];
 let filteredItems = [];
 let isFetching = false;
-
-// Track page for each source
 let sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
 
-// --- Starter books
+// Starter books
 const starterBooks = [
   { title:"Pride and Prejudice", authors:"Jane Austen", link:"#", cover:"", type:"book", category:"literature" },
   { title:"The Republic", authors:"Plato", link:"#", cover:"", type:"book", category:"philosophy" },
@@ -65,7 +69,7 @@ const starterBooks = [
   { title:"History of Science", authors:"Robert Brown", link:"#", cover:"", type:"book", category:"science" }
 ];
 
-// --- Map title to category
+// Map title to category
 function mapTitleToCategory(title){
   title = title.toLowerCase();
   if(title.includes("politics") || title.includes("democracy")) return "politics";
@@ -76,7 +80,7 @@ function mapTitleToCategory(title){
   return "literature"; 
 }
 
-// --- Render items
+// Render items
 function renderItems() {
   courseContainer.innerHTML = "";
   if(filteredItems.length === 0){
@@ -87,36 +91,37 @@ function renderItems() {
     card.className="book-card";
     card.innerHTML = `
       ${item.cover?`<img src="${item.cover}" alt="${item.title}">`:""}
-      <h3>${item.title}</h3>
-      <p>${item.type==="book"?"Author: "+item.authors:"Instructor: "+item.instructors}</p>
-      <p style="font-size:12px;color:#888;">${item.category?("Category: "+item.category):("Source: "+item.source)}</p>
-      <a href="${item.link}" target="_blank">${item.type==="book"?"Read / Borrow":"View Course"}</a>
+      <div class="content">
+        <h3>${item.title}</h3>
+        <p>${item.type==="book"?"Author: "+item.authors:"Instructor: "+item.instructors}</p>
+        <p style="font-size:12px;color:#888;">${item.category?("Category: "+item.category):("Source: "+item.source)}</p>
+        <a href="${item.link}" target="_blank">${item.type==="book"?"Read / Borrow":"View Course"}</a>
+      </div>
     `;
     courseContainer.appendChild(card);
   });
 }
 
-// --- Apply filters
+// Apply filters
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const category = categoryFilter.value.toLowerCase();
 
-  // Filter already loaded items
   filteredItems = allItems.filter(item=>{
     const matchesQuery = item.title.toLowerCase().includes(query);
-    const matchesCategory = !category || (item.category && item.category.toLowerCase()===category);
+    const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
     return matchesQuery && matchesCategory;
   });
 
   renderItems();
 
-  // Reset pages and load first batch for new category
+  // Reset pages and fetch new batch
   sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
   allItems = [...starterBooks];
   loadNextBatch(category);
 }
 
-// --- Fetch functions
+// Fetch functions
 async function fetchGutenberg(page=1, category=""){
   const topicQuery = category?`&topic=${encodeURIComponent(category)}`:"";
   const res = await fetch(`https://gutendex.com/books?page=${page}${topicQuery}`);
@@ -131,7 +136,7 @@ async function fetchGutenberg(page=1, category=""){
   }));
 }
 
-async function fetchOpenLibrary(page=1, category=""){
+async function fetchOpenLibrary(page=1){
   const res = await fetch(`https://openlibrary.org/search.json?q=the&limit=20&page=${page}`);
   const data = await res.json();
   return data.docs.map(b=>({
@@ -144,7 +149,7 @@ async function fetchOpenLibrary(page=1, category=""){
   }));
 }
 
-async function fetchInternetArchive(page=1, category=""){
+async function fetchInternetArchive(page=1){
   const res = await fetch(`https://archive.org/advancedsearch.php?q=mediatype:texts&fl[]=identifier,title,creator&rows=20&page=${page}&output=json`);
   const data = await res.json();
   return data.response.docs.map(d=>({
@@ -157,36 +162,45 @@ async function fetchInternetArchive(page=1, category=""){
   }));
 }
 
-// --- Load next batch
+// Load next batch
 async function loadNextBatch(category="") {
   if(isFetching) return;
   isFetching = true;
-  loadingEl.style.display="block";
+  loadingEl.style.display = "block";
 
   const [gutenberg, openlibrary, internetarchive] = await Promise.all([
     fetchGutenberg(sourcePages.gutenberg, category),
-    fetchOpenLibrary(sourcePages.openlibrary, category),
-    fetchInternetArchive(sourcePages.internetarchive, category)
+    fetchOpenLibrary(sourcePages.openlibrary),
+    fetchInternetArchive(sourcePages.internetarchive)
   ]);
 
   sourcePages.gutenberg++;
   sourcePages.openlibrary++;
   sourcePages.internetarchive++;
 
-  allItems.push(...gutenberg, ...openlibrary, ...internetarchive);
-  applyFilters(); // reapply filters including category
+  const query = searchBar.value.toLowerCase();
+  const filteredBatch = [...gutenberg, ...openlibrary, ...internetarchive].filter(item=>{
+    const matchesQuery = item.title.toLowerCase().includes(query);
+    const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
+    return matchesQuery && matchesCategory;
+  });
+
+  allItems.push(...filteredBatch);
+  filteredItems = [...allItems];
+  renderItems();
+
   isFetching = false;
-  loadingEl.style.display="none";
+  loadingEl.style.display = "none";
 }
 
-// --- Infinite scroll
+// Infinite scroll
 window.addEventListener("scroll", ()=>{
   if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
     loadNextBatch(categoryFilter.value.toLowerCase());
   }
 });
 
-// --- Initial load
+// Initial load
 allItems = [...starterBooks];
 applyFilters();
 
