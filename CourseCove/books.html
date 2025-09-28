@@ -23,7 +23,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 
 <header>
   <h1>Infinite Scroll Book Aggregator</h1>
-  <p>Browse hundreds of books from 10 sources in real-time</p>
+  <p>Browse hundreds of books from multiple sources in real-time</p>
 </header>
 
 <input type="text" id="searchBar" placeholder="Search books..." class="search-bar" />
@@ -46,19 +46,13 @@ const courseContainer = document.getElementById('course-container');
 const searchBar = document.getElementById('searchBar');
 const categoryFilter = document.getElementById('categoryFilter');
 const loadingEl = document.getElementById('loading');
-const progressEl = document.getElementById('progress');
 
 let allItems = [];
 let filteredItems = [];
+let isFetching = false;
 
 // Track page for each source
-let sourcePages = {
-  gutenberg: 1,
-  openlibrary: 1,
-  internetarchive: 1
-};
-
-let isFetching = false;
+let sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
 
 // --- Starter books
 const starterBooks = [
@@ -85,6 +79,9 @@ function mapTitleToCategory(title){
 // --- Render items
 function renderItems() {
   courseContainer.innerHTML = "";
+  if(filteredItems.length === 0){
+    courseContainer.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:#777;">No results found.</p>`;
+  }
   filteredItems.forEach(item=>{
     const card = document.createElement("div");
     card.className="book-card";
@@ -99,21 +96,30 @@ function renderItems() {
   });
 }
 
-// --- Filter items
+// --- Apply filters
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const category = categoryFilter.value.toLowerCase();
+
+  // Filter already loaded items
   filteredItems = allItems.filter(item=>{
     const matchesQuery = item.title.toLowerCase().includes(query);
     const matchesCategory = !category || (item.category && item.category.toLowerCase()===category);
     return matchesQuery && matchesCategory;
   });
+
   renderItems();
+
+  // Reset pages and load first batch for new category
+  sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
+  allItems = [...starterBooks];
+  loadNextBatch(category);
 }
 
 // --- Fetch functions
-async function fetchGutenberg(page=1){
-  const res = await fetch(`https://gutendex.com/books?page=${page}`);
+async function fetchGutenberg(page=1, category=""){
+  const topicQuery = category?`&topic=${encodeURIComponent(category)}`:"";
+  const res = await fetch(`https://gutendex.com/books?page=${page}${topicQuery}`);
   const data = await res.json();
   return data.results.map(b=>({
     title: b.title,
@@ -125,7 +131,7 @@ async function fetchGutenberg(page=1){
   }));
 }
 
-async function fetchOpenLibrary(page=1){
+async function fetchOpenLibrary(page=1, category=""){
   const res = await fetch(`https://openlibrary.org/search.json?q=the&limit=20&page=${page}`);
   const data = await res.json();
   return data.docs.map(b=>({
@@ -138,7 +144,7 @@ async function fetchOpenLibrary(page=1){
   }));
 }
 
-async function fetchInternetArchive(page=1){
+async function fetchInternetArchive(page=1, category=""){
   const res = await fetch(`https://archive.org/advancedsearch.php?q=mediatype:texts&fl[]=identifier,title,creator&rows=20&page=${page}&output=json`);
   const data = await res.json();
   return data.response.docs.map(d=>({
@@ -152,15 +158,15 @@ async function fetchInternetArchive(page=1){
 }
 
 // --- Load next batch
-async function loadNextBatch(){
+async function loadNextBatch(category="") {
   if(isFetching) return;
   isFetching = true;
   loadingEl.style.display="block";
 
   const [gutenberg, openlibrary, internetarchive] = await Promise.all([
-    fetchGutenberg(sourcePages.gutenberg),
-    fetchOpenLibrary(sourcePages.openlibrary),
-    fetchInternetArchive(sourcePages.internetarchive)
+    fetchGutenberg(sourcePages.gutenberg, category),
+    fetchOpenLibrary(sourcePages.openlibrary, category),
+    fetchInternetArchive(sourcePages.internetarchive, category)
   ]);
 
   sourcePages.gutenberg++;
@@ -168,7 +174,7 @@ async function loadNextBatch(){
   sourcePages.internetarchive++;
 
   allItems.push(...gutenberg, ...openlibrary, ...internetarchive);
-  applyFilters();
+  applyFilters(); // reapply filters including category
   isFetching = false;
   loadingEl.style.display="none";
 }
@@ -176,14 +182,13 @@ async function loadNextBatch(){
 // --- Infinite scroll
 window.addEventListener("scroll", ()=>{
   if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
-    loadNextBatch();
+    loadNextBatch(categoryFilter.value.toLowerCase());
   }
 });
 
 // --- Initial load
 allItems = [...starterBooks];
 applyFilters();
-loadNextBatch();
 
 searchBar.addEventListener("input", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
