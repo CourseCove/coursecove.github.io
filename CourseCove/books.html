@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Streaming Course & Book Aggregator</title>
+<title>Infinite Scroll Book Aggregator</title>
 <style>
 body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 .search-bar, .category-filter { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #ccc; margin-bottom: 16px; font-size: 16px; }
@@ -15,10 +15,6 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 .book-card p { font-size: 14px; margin: 2px 0; color: #555; }
 .book-card a { display: inline-block; margin-top: 8px; color: #1a73e8; font-weight: 500; text-decoration: none; }
 .book-card a:hover { text-decoration: underline; }
-.pagination { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 32px; }
-.pagination button { background: #1a73e8; color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 500; }
-.pagination button:hover { background: #1664c1; }
-#pageInfo { font-weight: 500; color: #333; }
 #loading { text-align:center; margin-top:20px; font-weight:bold; color:#555; }
 #progress { text-align:center; margin-top:8px; font-size:0.9em; color:#666; }
 </style>
@@ -26,11 +22,11 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 <body>
 
 <header>
-  <h1>Streaming Course & Book Aggregator</h1>
-  <p>Browse curated courses and free books in real-time</p>
+  <h1>Infinite Scroll Book Aggregator</h1>
+  <p>Browse hundreds of books from 10 sources in real-time</p>
 </header>
 
-<input type="text" id="searchBar" placeholder="Search courses or books..." class="search-bar" />
+<input type="text" id="searchBar" placeholder="Search books..." class="search-bar" />
 <select id="categoryFilter" class="category-filter">
   <option value="">All Categories</option>
   <option value="politics">Politics</option>
@@ -45,26 +41,24 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
 <div id="loading">Loading books...</div>
 <div id="progress"></div>
 
-<div class="pagination">
-  <button id="prevPage">Previous</button>
-  <span id="pageInfo">Page 1</span>
-  <button id="nextPage">Next</button>
-</div>
-
 <script>
 const courseContainer = document.getElementById('course-container');
 const searchBar = document.getElementById('searchBar');
 const categoryFilter = document.getElementById('categoryFilter');
-const prevPageBtn = document.getElementById('prevPage');
-const nextPageBtn = document.getElementById('nextPage');
-const pageInfo = document.getElementById('pageInfo');
 const loadingEl = document.getElementById('loading');
 const progressEl = document.getElementById('progress');
 
 let allItems = [];
 let filteredItems = [];
-let currentPage = 1;
-const itemsPerPage = 6;
+
+// Track page for each source
+let sourcePages = {
+  gutenberg: 1,
+  openlibrary: 1,
+  internetarchive: 1
+};
+
+let isFetching = false;
 
 // --- Starter books
 const starterBooks = [
@@ -90,15 +84,8 @@ function mapTitleToCategory(title){
 
 // --- Render items
 function renderItems() {
-  const start = (currentPage-1)*itemsPerPage;
-  const end = start + itemsPerPage;
-  const paginated = filteredItems.slice(start, end);
-
   courseContainer.innerHTML = "";
-  if (paginated.length === 0) {
-    courseContainer.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:#777;">No results found.</p>`;
-  }
-  paginated.forEach(item=>{
+  filteredItems.forEach(item=>{
     const card = document.createElement("div");
     card.className="book-card";
     card.innerHTML = `
@@ -110,10 +97,9 @@ function renderItems() {
     `;
     courseContainer.appendChild(card);
   });
-  pageInfo.textContent = `Page ${currentPage} of ${Math.max(1, Math.ceil(filteredItems.length/itemsPerPage))}`;
 }
 
-// --- Apply filters instantly
+// --- Filter items
 function applyFilters() {
   const query = searchBar.value.toLowerCase();
   const category = categoryFilter.value.toLowerCase();
@@ -122,24 +108,12 @@ function applyFilters() {
     const matchesCategory = !category || (item.category && item.category.toLowerCase()===category);
     return matchesQuery && matchesCategory;
   });
-  currentPage = 1;
   renderItems();
 }
 
-// --- Pagination
-prevPageBtn.addEventListener("click", ()=>{ if(currentPage>1){ currentPage--; renderItems(); }});
-nextPageBtn.addEventListener("click", ()=>{ if(currentPage<Math.ceil(filteredItems.length/itemsPerPage)){ currentPage++; renderItems(); }});
-
-// --- Example fetchers with streaming
-async function fetchCourses() {
-  return [
-    { title:"Introduction to Political Science", instructors:"Alexandra Paskhaver", link:"#", type:"course", category:"politics" },
-    { title:"Economics 101", instructors:"John Doe", link:"#", type:"course", category:"economics" }
-  ];
-}
-
-async function fetchGutenbergBooks() {
-  const res = await fetch("https://gutendex.com/books?topic=&page=1");
+// --- Fetch functions
+async function fetchGutenberg(page=1){
+  const res = await fetch(`https://gutendex.com/books?page=${page}`);
   const data = await res.json();
   return data.results.map(b=>({
     title: b.title,
@@ -151,8 +125,8 @@ async function fetchGutenbergBooks() {
   }));
 }
 
-async function fetchOpenLibraryBooks() {
-  const res = await fetch("https://openlibrary.org/search.json?q=the&limit=20");
+async function fetchOpenLibrary(page=1){
+  const res = await fetch(`https://openlibrary.org/search.json?q=the&limit=20&page=${page}`);
   const data = await res.json();
   return data.docs.map(b=>({
     title: b.title,
@@ -164,8 +138,8 @@ async function fetchOpenLibraryBooks() {
   }));
 }
 
-async function fetchInternetArchive() {
-  const res = await fetch("https://archive.org/advancedsearch.php?q=mediatype:texts&fl[]=identifier,title,creator&rows=20&page=1&output=json");
+async function fetchInternetArchive(page=1){
+  const res = await fetch(`https://archive.org/advancedsearch.php?q=mediatype:texts&fl[]=identifier,title,creator&rows=20&page=${page}&output=json`);
   const data = await res.json();
   return data.response.docs.map(d=>({
     title: d.title || "Unknown",
@@ -177,50 +151,42 @@ async function fetchInternetArchive() {
   }));
 }
 
-// --- Streaming loader
-async function loadAllStreaming() {
-  allItems = [...starterBooks];
-  filteredItems = allItems;
-  renderItems();
-  loadingEl.style.display = "block";
+// --- Load next batch
+async function loadNextBatch(){
+  if(isFetching) return;
+  isFetching = true;
+  loadingEl.style.display="block";
 
-  const sources = [
-    { name:"Courses", fn: fetchCourses },
-    { name:"Gutenberg", fn: fetchGutenbergBooks },
-    { name:"Open Library", fn: fetchOpenLibraryBooks },
-    { name:"Internet Archive", fn: fetchInternetArchive }
-    // Add more sources here
-  ];
+  const [gutenberg, openlibrary, internetarchive] = await Promise.all([
+    fetchGutenberg(sourcePages.gutenberg),
+    fetchOpenLibrary(sourcePages.openlibrary),
+    fetchInternetArchive(sourcePages.internetarchive)
+  ]);
 
-  let completed = 0;
-  for (let source of sources) {
-    source.fn().then(items=>{
-      allItems.push(...items);
-      completed++;
-      progressEl.textContent = `${completed}/${sources.length} sources loaded...`;
-      applyFilters(); // update UI immediately as data arrives
-    }).catch(e=>{
-      console.error(`Error loading ${source.name}`, e);
-      completed++;
-      progressEl.textContent = `${completed}/${sources.length} sources loaded...`;
-    });
-  }
+  sourcePages.gutenberg++;
+  sourcePages.openlibrary++;
+  sourcePages.internetarchive++;
 
-  // Hide loading once all sources complete
-  const checkComplete = setInterval(()=>{
-    if (completed >= sources.length) {
-      loadingEl.style.display = "none";
-      clearInterval(checkComplete);
-    }
-  }, 500);
+  allItems.push(...gutenberg, ...openlibrary, ...internetarchive);
+  applyFilters();
+  isFetching = false;
+  loadingEl.style.display="none";
 }
 
-// --- Bind events
-searchBar.addEventListener("input", applyFilters);
-categoryFilter.addEventListener("change", applyFilters);
+// --- Infinite scroll
+window.addEventListener("scroll", ()=>{
+  if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
+    loadNextBatch();
+  }
+});
 
 // --- Initial load
-loadAllStreaming();
+allItems = [...starterBooks];
+applyFilters();
+loadNextBatch();
+
+searchBar.addEventListener("input", applyFilters);
+categoryFilter.addEventListener("change", applyFilters);
 </script>
 
 </body>
