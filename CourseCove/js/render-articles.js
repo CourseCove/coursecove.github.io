@@ -155,28 +155,34 @@
       } catch { return []; }
     }
 
-    function renderArticles() {
-      container.innerHTML = "";
-      let results = articles;
-      if (activeFilters.length > 0) {
-        results = results.filter(a => activeFilters.includes(a.category));
-      }
-      if (results.length === 0) {
-        container.innerHTML = "<p style='text-align:center;color:#777;'>No articles found.</p>";
-        return;
-      }
-      results.forEach(a => {
-        const card = document.createElement("div");
-        card.classList.add("article-card");
-        card.innerHTML = `
+function renderArticles() {
+  container.innerHTML = "";
+  let results = articles;
+  if (activeFilters.length > 0) {
+    results = results.filter(a => activeFilters.includes(a.category));
+  }
+  if (results.length === 0) {
+    container.innerHTML = "<p class='text-center text-muted'>No articles found.</p>";
+    return;
+  }
+  results.forEach(a => {
+    const cardCol = document.createElement("div");
+    cardCol.classList.add("col");
+    cardCol.innerHTML = `
+      <div class="card article-card h-100">
+        <img src="images/article-placeholder.png" class="card-img-top" alt="Article Image">
+        <div class="card-body d-flex flex-column">
           <div class="article-title">${a.title}</div>
           <div class="article-snippet">${a.snippet}</div>
-          <div class="article-source"><strong>Authors:</strong> ${a.authors}<br><strong>Source:</strong> ${a.provider}<br><strong>Category:</strong> ${a.category}</div>
-          <a href="${a.url}" target="_blank" class="article-link">View Article</a>
-        `;
-        container.appendChild(card);
-      });
-    }
+          <div class="article-footer"><strong>Authors:</strong> ${a.authors}<br><strong>Source:</strong> ${a.provider}<br><strong>Category:</strong> ${a.category}</div>
+          <a href="${a.url}" target="_blank" class="article-link mt-2">View Article</a>
+        </div>
+      </div>
+    `;
+    container.appendChild(cardCol);
+  });
+}
+
 
     // ✅ Load first batch automatically
     window.onload = () => {
