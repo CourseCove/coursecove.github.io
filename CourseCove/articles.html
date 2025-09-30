@@ -1,242 +1,86 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scholarly Article Aggregator | CourseCove</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scholarly Articles | CourseCove</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
-    body { font-family: 'Inter', sans-serif; background: #fafafa; margin: 0; }
-    header { background: #2a4d8f; color: white; padding: 1rem; text-align: center; }
-    #searchBar { width: 90%; max-width: 500px; padding: 0.75rem; margin: 1.5rem auto; display: block;
-                 border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
-    #filters { text-align: center; margin: 1rem 0; }
-    #filters label { margin: 0 10px; cursor: pointer; font-size: 0.9rem; }
-    #article-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                         gap: 1.5rem; padding: 1rem; max-width: 1200px; margin: 0 auto; }
-    .article-card { background: white; border-radius: 10px; padding: 1rem;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    body { background-color: #f8f9fa; }
+    h1 { color: #2c3e50; }
+    .card-img-top { height: 150px; object-fit: contain; background: #e9ecef; }
+    .article-card { cursor: pointer; transition: transform 0.2s; }
     .article-card:hover { transform: translateY(-4px); }
-    .article-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; }
-    .article-snippet { font-size: 0.9rem; margin-bottom: 0.5rem; }
-    .article-source { font-size: 0.8rem; color: #555; }
-    .article-link { display: inline-block; margin-top: 0.5rem; color: #2a4d8f;
-                    text-decoration: none; font-weight: 600; }
-    .loading { text-align: center; padding: 1rem; color: #555; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Find Research Articles & Papers</h1>
-  </header>
 
-  <input type="text" id="searchBar" placeholder="Search scholarly articles...">
-
-  <div id="filters">
-    <label><input type="checkbox" value="Computer Science"> Computer Science</label>
-    <label><input type="checkbox" value="Economics"> Economics</label>
-    <label><input type="checkbox" value="Biology"> Biology</label>
-    <label><input type="checkbox" value="Medicine"> Medicine</label>
-    <label><input type="checkbox" value="Physics"> Physics</label>
-    <label><input type="checkbox" value="Social Sciences"> Social Sciences</label>
-    <label><input type="checkbox" value="General"> General</label>
+<nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="articles.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
 
-  <div id="article-container"></div>
-  <div id="loading" class="loading"></div>
+<main class="container my-5">
+  <h1 class="mb-4">Scholarly Articles</h1>
+  <div class="row">
+    <!-- Filters Sidebar -->
+    <aside class="col-lg-4 mb-4">
+      <div class="card p-3" id="filters">
+        <h5 class="mb-3">Filter by Category</h5>
+        <div class="mb-3">
+          <div><input type="checkbox" value="Computer Science" id="cat-cs"> <label for="cat-cs">Computer Science</label></div>
+          <div><input type="checkbox" value="Economics" id="cat-econ"> <label for="cat-econ">Economics</label></div>
+          <div><input type="checkbox" value="Biology" id="cat-bio"> <label for="cat-bio">Biology</label></div>
+          <div><input type="checkbox" value="Medicine" id="cat-med"> <label for="cat-med">Medicine</label></div>
+          <div><input type="checkbox" value="Physics" id="cat-phys"> <label for="cat-phys">Physics</label></div>
+          <div><input type="checkbox" value="Social Sciences" id="cat-social"> <label for="cat-social">Social Sciences</label></div>
+          <div><input type="checkbox" value="General" id="cat-general"> <label for="cat-general">General</label></div>
+        </div>
+      </div>
+    </aside>
 
-  <script>
-    const container = document.getElementById("article-container");
-    const searchBar = document.getElementById("searchBar");
-    const filters = document.getElementById("filters");
-    const loadingDiv = document.getElementById("loading");
+    <!-- Articles Section -->
+    <section class="col-lg-8">
+      <input type="search" id="searchBar" class="form-control mb-3" placeholder="Search scholarly articles..." />
+      <div id="article-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4"></div>
+      <div id="loading" class="text-center text-muted mt-3"></div>
+    </section>
+  </div>
+</main>
 
-    let query = ""; // ✅ default search
-    let page = 0;
-    const pageSize = 10;
-    let articles = [];
-    let isLoading = false;
-    let activeFilters = [];
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-2 mb-md-0">
+      <strong>Course Aggregator</strong> &nbsp;|&nbsp;
+      <strong>© 2025 All rights reserved.</strong>
+    </div>
+    <div>
+      <a href="../index.html" class="text-light text-decoration-none me-3">Home</a>
+      <a href="contact.html" class="text-light text-decoration-none me-3">Contact</a>
+      <a href="privacy.html" class="text-light text-decoration-none">Privacy</a>
+    </div>
+  </div>
+</footer>
 
-    searchBar.addEventListener("keypress", e => {
-      if (e.key === "Enter") {
-        query = searchBar.value.trim() || "machine learning";
-        page = 0;
-        articles = [];
-        container.innerHTML = "";
-        loadMore();
-      }
-    });
-
-    filters.addEventListener("change", () => {
-      activeFilters = [...filters.querySelectorAll("input:checked")].map(c => c.value);
-    
-      if (!searchBar.value.trim() && activeFilters.length > 0) {
-        // ✅ Use the first active filter as the query if no search term entered
-        query = activeFilters[0];
-        page = 0;
-        articles = [];
-        container.innerHTML = "";
-        loadMore();
-      } else {
-        // ✅ Just re-filter already loaded articles
-        renderArticles();
-      }
-    });
-
-
-    async function loadMore() {
-      if (!query || isLoading) return;
-      isLoading = true;
-      loadingDiv.textContent = "Loading results...";
-
-      // ✅ Fetch Semantic Scholar + arXiv first (always renderable)
-      const [semantic, arxiv] = await Promise.all([
-        fetchSemanticScholar(query, page),
-        fetchArxiv(query, page)
-      ]);
-      articles = [...articles, ...semantic, ...arxiv];
-      renderArticles();
-
-      // ✅ Try CrossRef + PubMed in background
-      fetchCrossRef(query, page).then(res => {
-        articles = [...articles, ...res]; renderArticles();
-      }).catch(()=>{});
-      fetchPubMed(query, page).then(res => {
-        articles = [...articles, ...res]; renderArticles();
-      }).catch(()=>{});
-
-      page++;
-      isLoading = false;
-      loadingDiv.textContent = "";
-    }
-
-    function categorize(text, provider) {
-      const t = (text || "").toLowerCase();
-      if (provider === "PubMed") return "Medicine";
-      if (t.includes("econom") || t.includes("finance")) return "Economics";
-      if (t.includes("biology") || t.includes("genetics")) return "Biology";
-      if (t.includes("medicine") || t.includes("clinical")) return "Medicine";
-      if (t.includes("physics") || t.includes("quantum")) return "Physics";
-      if (t.includes("computer") || t.includes("machine learning") || t.includes("artificial intelligence") || t.includes("algorithm")) return "Computer Science";
-      if (t.includes("sociology") || t.includes("political") || t.includes("education") || t.includes("social")) return "Social Sciences";
-      return "General";
-    }
-
-    async function fetchSemanticScholar(query, page) {
-      try {
-        const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${encodeURIComponent(query)}&offset=${page*pageSize}&limit=${pageSize}&fields=title,abstract,url,authors,year,venue`;
-        const res = await fetch(url);
-        const data = await res.json();
-        return data.data.map(p => ({
-          title: p.title,
-          snippet: p.abstract || "No abstract available.",
-          authors: p.authors.map(a => a.name).join(", "),
-          url: p.url,
-          provider: "Semantic Scholar",
-          category: categorize(p.venue || p.abstract || p.title, "Semantic Scholar")
-        }));
-      } catch { return []; }
-    }
-
-    async function fetchArxiv(query, page) {
-      try {
-        const start = page * pageSize;
-        const url = `https://export.arxiv.org/api/query?search_query=all:${encodeURIComponent(query)}&start=${start}&max_results=${pageSize}`;
-        const res = await fetch(url);
-        const text = await res.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, "application/xml");
-        const entries = [...xml.getElementsByTagName("entry")];
-        return entries.map(e => {
-          const title = e.getElementsByTagName("title")[0].textContent;
-          const snippet = e.getElementsByTagName("summary")[0].textContent;
-          const authors = [...e.getElementsByTagName("author")].map(a => a.getElementsByTagName("name")[0].textContent).join(", ");
-          const url = e.getElementsByTagName("id")[0].textContent;
-          return {
-            title,
-            snippet,
-            authors,
-            url,
-            provider: "arXiv",
-            category: categorize(snippet + " " + title, "arXiv")
-          };
-        });
-      } catch { return []; }
-    }
-
-    async function fetchCrossRef(query, page) {
-      try {
-        const url = `https://api.crossref.org/works?query=${encodeURIComponent(query)}&rows=${pageSize}&offset=${page*pageSize}`;
-        const res = await fetch(url);
-        const data = await res.json();
-        return data.message.items.map(p => ({
-          title: p.title ? p.title[0] : "Untitled",
-          snippet: p.abstract ? p.abstract.replace(/<[^>]+>/g, '') : "No abstract available.",
-          authors: p.author ? p.author.map(a => (a.given || "") + " " + (a.family || "")).join(", ") : "Unknown",
-          url: p.URL,
-          provider: "CrossRef",
-          category: categorize((p.subject || []).join(" ") + " " + (p["container-title"] ? p["container-title"][0] : ""), "CrossRef")
-        }));
-      } catch { return []; }
-    }
-
-    async function fetchPubMed(query, page) {
-      try {
-        const url = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=${pageSize}&retstart=${page*pageSize}&term=${encodeURIComponent(query)}`;
-        const res = await fetch(url);
-        const data = await res.json();
-        if (!data.esearchresult || !data.esearchresult.idlist) return [];
-        const ids = data.esearchresult.idlist.join(",");
-        const summaryUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${ids}`;
-        const summaryRes = await fetch(summaryUrl);
-        const summaryData = await summaryRes.json();
-        const pmArticles = Object.values(summaryData.result).filter(r => r.uid);
-        return pmArticles.map(a => ({
-          title: a.title || "Untitled",
-          snippet: a.source || "No abstract available.",
-          authors: a.authors ? a.authors.map(x => x.name).join(", ") : "Unknown",
-          url: `https://pubmed.ncbi.nlm.nih.gov/${a.uid}/`,
-          provider: "PubMed",
-          category: categorize(a.title + " " + (a.source || ""), "PubMed")
-        }));
-      } catch { return []; }
-    }
-
-    function renderArticles() {
-      container.innerHTML = "";
-      let results = articles;
-      if (activeFilters.length > 0) {
-        results = results.filter(a => activeFilters.includes(a.category));
-      }
-      if (results.length === 0) {
-        container.innerHTML = "<p style='text-align:center;color:#777;'>No articles found.</p>";
-        return;
-      }
-      results.forEach(a => {
-        const card = document.createElement("div");
-        card.classList.add("article-card");
-        card.innerHTML = `
-          <div class="article-title">${a.title}</div>
-          <div class="article-snippet">${a.snippet}</div>
-          <div class="article-source"><strong>Authors:</strong> ${a.authors}<br><strong>Source:</strong> ${a.provider}<br><strong>Category:</strong> ${a.category}</div>
-          <a href="${a.url}" target="_blank" class="article-link">View Article</a>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // ✅ Load first batch automatically
-    window.onload = () => {
-      searchBar.value = query;
-      loadMore();
-    };
-
-    // Infinite scroll
-    window.addEventListener("scroll", () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
-        loadMore();
-      }
-    });
-  </script>
+<script src="js/render-articles.js"></script>
 </body>
 </html>
+```
