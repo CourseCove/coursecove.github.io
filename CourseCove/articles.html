@@ -29,7 +29,7 @@
     <h1>Find Research Articles & Papers</h1>
   </header>
 
-  <input type="text" id="searchBar" placeholder="Search scholarly articles (e.g. political economy, AI ethics)...">
+  <input type="text" id="searchBar" placeholder="Search scholarly articles...">
 
   <div id="filters">
     <label><input type="checkbox" value="Computer Science"> Computer Science</label>
@@ -50,7 +50,7 @@
     const filters = document.getElementById("filters");
     const loadingDiv = document.getElementById("loading");
 
-    let query = "";
+    let query = "machine learning"; // ✅ default search
     let page = 0;
     const pageSize = 10;
     let articles = [];
@@ -59,7 +59,7 @@
 
     searchBar.addEventListener("keypress", e => {
       if (e.key === "Enter") {
-        query = searchBar.value.trim();
+        query = searchBar.value.trim() || "machine learning";
         page = 0;
         articles = [];
         container.innerHTML = "";
@@ -77,15 +77,22 @@
       isLoading = true;
       loadingDiv.textContent = "Loading results...";
 
-      const [semantic, arxiv, crossref, pubmed] = await Promise.all([
+      // ✅ Fetch Semantic Scholar + arXiv first (always renderable)
+      const [semantic, arxiv] = await Promise.all([
         fetchSemanticScholar(query, page),
-        fetchArxiv(query, page),
-        fetchCrossRef(query, page),
-        fetchPubMed(query, page)
+        fetchArxiv(query, page)
       ]);
-
-      articles = [...articles, ...semantic, ...arxiv, ...crossref, ...pubmed];
+      articles = [...articles, ...semantic, ...arxiv];
       renderArticles();
+
+      // ✅ Try CrossRef + PubMed in background
+      fetchCrossRef(query, page).then(res => {
+        articles = [...articles, ...res]; renderArticles();
+      }).catch(()=>{});
+      fetchPubMed(query, page).then(res => {
+        articles = [...articles, ...res]; renderArticles();
+      }).catch(()=>{});
+
       page++;
       isLoading = false;
       loadingDiv.textContent = "";
@@ -94,10 +101,10 @@
     function categorize(text, provider) {
       const t = (text || "").toLowerCase();
       if (provider === "PubMed") return "Medicine";
-      if (t.includes("econom") || t.includes("finance") || t.includes("market")) return "Economics";
-      if (t.includes("biology") || t.includes("genetics") || t.includes("cell")) return "Biology";
-      if (t.includes("medicine") || t.includes("clinical") || t.includes("disease")) return "Medicine";
-      if (t.includes("physics") || t.includes("quantum") || t.includes("astro")) return "Physics";
+      if (t.includes("econom") || t.includes("finance")) return "Economics";
+      if (t.includes("biology") || t.includes("genetics")) return "Biology";
+      if (t.includes("medicine") || t.includes("clinical")) return "Medicine";
+      if (t.includes("physics") || t.includes("quantum")) return "Physics";
       if (t.includes("computer") || t.includes("machine learning") || t.includes("artificial intelligence") || t.includes("algorithm")) return "Computer Science";
       if (t.includes("sociology") || t.includes("political") || t.includes("education") || t.includes("social")) return "Social Sciences";
       return "General";
@@ -189,6 +196,10 @@
       if (activeFilters.length > 0) {
         results = results.filter(a => activeFilters.includes(a.category));
       }
+      if (results.length === 0) {
+        container.innerHTML = "<p style='text-align:center;color:#777;'>No articles found.</p>";
+        return;
+      }
       results.forEach(a => {
         const card = document.createElement("div");
         card.classList.add("article-card");
@@ -201,6 +212,12 @@
         container.appendChild(card);
       });
     }
+
+    // ✅ Load first batch automatically
+    window.onload = () => {
+      searchBar.value = query;
+      loadMore();
+    };
 
     // Infinite scroll
     window.addEventListener("scroll", () => {
