@@ -1,4 +1,3 @@
-<script>
     const container = document.getElementById("article-container");
     const searchBar = document.getElementById("searchBar");
     const filters = document.getElementById("filters");
@@ -191,4 +190,3 @@
         loadMore();
       }
     });
-  </script>
