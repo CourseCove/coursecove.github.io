@@ -170,7 +170,6 @@ function renderArticles() {
     cardCol.classList.add("col");
     cardCol.innerHTML = `
       <div class="card article-card h-100">
-        <img src="images/article-placeholder.png" class="card-img-top" alt="Article Image">
         <div class="card-body d-flex flex-column">
           <div class="article-title">${a.title}</div>
           <div class="article-snippet">${a.snippet}</div>
