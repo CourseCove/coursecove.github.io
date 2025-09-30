@@ -630,3 +630,58 @@ footer a.text-light:hover {
   .book-card a { display:inline-block; margin-top:10px; color:#007bff; text-decoration:none; font-weight:600; }
   .book-card a:hover { text-decoration:underline; }
   #loading { text-align:center; margin:20px; color:#666; }
+.article-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    0 10px 20px rgba(44, 62, 80, 0.12),
+    0 6px 6px rgba(44, 62, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 30px rgba(44, 62, 80, 0.25),
+    0 10px 10px rgba(44, 62, 80, 0.12);
+}
+
+.article-card img {
+  height: 140px;
+  object-fit: cover;
+  background: #e9ecef;
+}
+
+.article-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2em;
+}
+
+.article-snippet {
+  font-size: 0.9rem;
+  color: #555;
+  flex-grow: 1;
+  overflow: hidden;
+  max-height: 4.2em;
+  margin-bottom: 0.5rem;
+}
+
+.article-footer {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: auto;
+}
+
+.article-link {
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #2a4d8f;
+  font-weight: 600;
+}
