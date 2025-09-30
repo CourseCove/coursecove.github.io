@@ -69,8 +69,20 @@
 
     filters.addEventListener("change", () => {
       activeFilters = [...filters.querySelectorAll("input:checked")].map(c => c.value);
-      renderArticles();
+    
+      if (!searchBar.value.trim() && activeFilters.length > 0) {
+        // ✅ Use the first active filter as the query if no search term entered
+        query = activeFilters[0];
+        page = 0;
+        articles = [];
+        container.innerHTML = "";
+        loadMore();
+      } else {
+        // ✅ Just re-filter already loaded articles
+        renderArticles();
+      }
     });
+
 
     async function loadMore() {
       if (!query || isLoading) return;
