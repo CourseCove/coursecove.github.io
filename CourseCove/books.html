@@ -86,6 +86,7 @@
   </div>
 </footer>
 
+```html
 <script>
 const courseContainer = document.getElementById('course-container');
 const searchBar = document.getElementById('searchBar');
@@ -96,9 +97,7 @@ let allItems = [];
 let filteredItems = [];
 let isFetching = false;
 let sourcePages = { gutenberg: 1, openlibrary: 1, internetarchive: 1 };
-const categoryCache = {};
 
-// Starter books
 const starterBooks = [
   { title:"Pride and Prejudice", authors:"Jane Austen", link:"#", cover:"", type:"book", category:"literature" },
   { title:"The Republic", authors:"Plato", link:"#", cover:"", type:"book", category:"philosophy" },
@@ -119,17 +118,15 @@ function mapTitleToCategory(title){
   return "literature"; 
 }
 
-function renderItems() {
+function renderItems(items) {
   courseContainer.innerHTML = "";
-  if(filteredItems.length === 0){
+  if(items.length === 0){
     courseContainer.innerHTML = `<div class="col-12 text-center text-muted">No results found.</div>`;
     return;
   }
-
-  filteredItems.forEach(item=>{
+  items.forEach(item=>{
     const col = document.createElement("div");
-    col.className = "col-12 col-md-4 col-lg-3 mb-4"; // responsive columns
-
+    col.className = "col-12 col-md-4 col-lg-3 mb-4";
     col.innerHTML = `
       <div class="card h-100 shadow-sm">
         ${item.cover ? `<img src="${item.cover}" class="card-img-top" alt="${item.title}">` : ''}
@@ -139,37 +136,18 @@ function renderItems() {
           <p class="text-muted small">${item.category?("Category: "+item.category):("Source: "+item.source)}</p>
           <a href="${item.link}" target="_blank" class="mt-auto btn btn-primary btn-sm">${item.type==="book"?"Read / Borrow":"View Course"}</a>
         </div>
-      </div>
-    `;
+      </div>`;
     courseContainer.appendChild(col);
   });
 }
 
-function applyFilters() {
-  const query = searchBar.value.toLowerCase();
-  const category = categoryFilter.value.toLowerCase();
+// ----------------- FETCH HELPERS -----------------
 
-  filteredItems = allItems.filter(item => {
-    const matchesQuery = item.title.toLowerCase().includes(query);
-    const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
-    return matchesQuery && matchesCategory;
-  });
-
-  renderItems();
-
-  if(category && categoryCache[category]){
-    allItems = [...starterBooks, ...categoryCache[category]];
-    filteredItems = allItems.filter(item => !category || item.category.toLowerCase() === category);
-    renderItems();
-    return;
-  }
-
-  loadNextBatch(category);
-}
-
-async function fetchGutenberg(page=1, category=""){
-  const topicQuery = category?`&topic=${encodeURIComponent(category)}`:"";
-  const res = await fetch(`https://gutendex.com/books?page=${page}${topicQuery}`);
+async function fetchGutenberg(query="", category="", page=1) {
+  let url = `https://gutendex.com/books?page=${page}`;
+  if (query) url += `&search=${encodeURIComponent(query)}`;
+  if (category) url += `&topic=${encodeURIComponent(category)}`;
+  const res = await fetch(url);
   const data = await res.json();
   return data.results.map(b=>({
     title: b.title,
@@ -177,12 +155,13 @@ async function fetchGutenberg(page=1, category=""){
     link: b.formats["text/html"]||b.formats["application/epub+zip"]||"#",
     cover: "",
     type:"book",
-    category: mapTitleToCategory(b.title)
+    category: mapTitleToCategory(b.title),
+    source:"Gutenberg"
   }));
 }
 
-async function fetchOpenLibrary(page=1){
-  const res = await fetch(`https://openlibrary.org/search.json?q=the&limit=20&page=${page}`);
+async function fetchOpenLibrary(query="the", page=1){
+  const res = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=20&page=${page}`);
   const data = await res.json();
   return data.docs.map(b=>({
     title: b.title,
@@ -190,12 +169,14 @@ async function fetchOpenLibrary(page=1){
     link: b.key?`https://openlibrary.org${b.key}`:"#",
     cover: b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-M.jpg`:"",
     type:"book",
-    category: mapTitleToCategory(b.title)
+    category: mapTitleToCategory(b.title),
+    source:"OpenLibrary"
   }));
 }
 
-async function fetchInternetArchive(page=1){
-  const res = await fetch(`https://archive.org/advancedsearch.php?q=mediatype:texts&fl[]=identifier,title,creator&rows=20&page=${page}&output=json`);
+async function fetchInternetArchive(query="", page=1){
+  const q = query ? `${encodeURIComponent(query)}` : "mediatype:texts";
+  const res = await fetch(`https://archive.org/advancedsearch.php?q=${q}+AND+mediatype:texts&fl[]=identifier,title,creator&rows=20&page=${page}&output=json`);
   const data = await res.json();
   return data.response.docs.map(d=>({
     title: d.title || "Unknown",
@@ -203,8 +184,38 @@ async function fetchInternetArchive(page=1){
     link: `https://archive.org/details/${d.identifier}`,
     cover: "",
     type:"book",
-    category: mapTitleToCategory(d.title)
+    category: mapTitleToCategory(d.title),
+    source:"InternetArchive"
   }));
+}
+
+// ----------------- CORE -----------------
+
+async function applyFilters() {
+  const query = searchBar.value.trim().toLowerCase();
+  const category = categoryFilter.value.toLowerCase();
+
+  // Step 1: local search
+  const localMatches = allItems.filter(item =>
+    item.title.toLowerCase().includes(query) &&
+    (!category || (item.category && item.category.toLowerCase() === category))
+  );
+
+  if (localMatches.length > 0 || !query) {
+    renderItems(localMatches);
+    return;
+  }
+
+  // Step 2: external fetch (if no local match)
+  loadingEl.style.display = "block";
+  const [gutenberg, openlibrary, internetarchive] = await Promise.all([
+    fetchGutenberg(query, category),
+    fetchOpenLibrary(query),
+    fetchInternetArchive(query)
+  ]);
+  const externalResults = [...gutenberg, ...openlibrary, ...internetarchive];
+  renderItems(externalResults);
+  loadingEl.style.display = "none";
 }
 
 async function loadNextBatch(category="") {
@@ -213,32 +224,23 @@ async function loadNextBatch(category="") {
   loadingEl.style.display = "block";
 
   const [gutenberg, openlibrary, internetarchive] = await Promise.all([
-    fetchGutenberg(sourcePages.gutenberg, category),
-    fetchOpenLibrary(sourcePages.openlibrary),
-    fetchInternetArchive(sourcePages.internetarchive)
+    fetchGutenberg("", category, sourcePages.gutenberg),
+    fetchOpenLibrary("the", sourcePages.openlibrary),
+    fetchInternetArchive("", sourcePages.internetarchive)
   ]);
-
   sourcePages.gutenberg++;
   sourcePages.openlibrary++;
   sourcePages.internetarchive++;
 
   const newItems = [...gutenberg, ...openlibrary, ...internetarchive];
-
-  if(category) categoryCache[category] = newItems;
-
   allItems.push(...newItems);
+  renderItems(allItems);
 
-  const query = searchBar.value.toLowerCase();
-  filteredItems = allItems.filter(item => {
-    const matchesQuery = item.title.toLowerCase().includes(query);
-    const matchesCategory = !category || (item.category && item.category.toLowerCase() === category);
-    return matchesQuery && matchesCategory;
-  });
-
-  renderItems();
   isFetching = false;
   loadingEl.style.display = "none";
 }
+
+// ----------------- INIT -----------------
 
 window.addEventListener("scroll", ()=>{
   if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
@@ -247,11 +249,13 @@ window.addEventListener("scroll", ()=>{
 });
 
 allItems = [...starterBooks];
-applyFilters();
+renderItems(allItems);
 
 searchBar.addEventListener("input", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
 </script>
+```
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
