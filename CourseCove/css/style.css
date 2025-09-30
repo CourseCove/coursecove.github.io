@@ -630,6 +630,10 @@ footer a.text-light:hover {
   .book-card a { display:inline-block; margin-top:10px; color:#007bff; text-decoration:none; font-weight:600; }
   .book-card a:hover { text-decoration:underline; }
   #loading { text-align:center; margin:20px; color:#666; }
+
+
+
+/* Card container padding and margin */
 .article-card {
   background-color: #ffffff;
   border: none;
@@ -642,6 +646,9 @@ footer a.text-light:hover {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
+
+  padding: 1rem; /* inside padding */
+  margin: 0.75rem; /* outside margin */
 }
 
 .article-card:hover {
@@ -655,6 +662,7 @@ footer a.text-light:hover {
   height: 140px;
   object-fit: cover;
   background: #e9ecef;
+  margin-bottom: 0.75rem;
 }
 
 .article-title {
