@@ -693,3 +693,7 @@ footer a.text-light:hover {
   color: #2a4d8f;
   font-weight: 600;
 }
+
+#refsContainer {
+  color: white;
+}
