@@ -737,3 +737,10 @@ footer a.text-light:hover {
   color: black;
 }
 
+#emptyNote {
+  color: white;
+}
+
+label {
+  color: white;
+}
