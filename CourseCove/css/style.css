@@ -701,3 +701,11 @@ footer a.text-light:hover {
 .citation-form section {
   color: white;
 }
+
+#copyCurrent {
+  color: black;
+}
+
+#resetForm {
+  color: black;
+}
