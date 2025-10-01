@@ -46,7 +46,547 @@
     header nav a.active, header nav a:hover { color: var(--primary-color, #3b82f6); font-weight: 600; }
   </style>
 </head>
-<body>
-  <!-- The rest of your citation.html content remains the same -->
+<body class="bg-gray-50 text-gray-900">
+  <nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="math.html">Math</a></li>
+        <li class="nav-item"><a class="nav-link " href="ai-ml.html">AI / ML</a></li>
+        <li class="nav-item"><a class="nav-link" href="arts-humanities.html">Arts & Humanities</a></li>
+        <li class="nav-item"><a class="nav-link" href="languages.html">Languages</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics-economics.html">Politics & Economics</a></li>
+        <li class="nav-item"><a class="nav-link" href="environment.html">Environment</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link active" href="articles.html">Citation generator</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 citation-form">
+    <h1 class="text-3xl font-bold mb-2">Citation Generator</h1>
+    <p class="muted mb-6">Create citations in APA, MLA, Chicago (Author-Date), Harvard or Vancouver. Add multiple sources, then copy or download a fully formatted references list.</p>
+
+    <section class="card p-6">
+      <!-- Top controls -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <div>
+          <label class="block text-sm font-medium">Style</label>
+          <select id="style" class="mt-1 block w-full rounded border-gray-300 p-2">
+            <option>APA 7</option>
+            <option>MLA 9</option>
+            <option>Chicago (Author-Date)</option>
+            <option>Harvard</option>
+            <option>Vancouver</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium">Source type</label>
+          <select id="sourceType" class="mt-1 block w-full rounded border-gray-300 p-2">
+            <option>Book</option>
+            <option>Journal Article</option>
+            <option>Website</option>
+          </select>
+        </div>
+
+        <div class="flex items-end gap-2">
+          <button id="fillExample" class="px-4 py-2 bg-gray-100 rounded hover:bg-gray-200">Fill example</button>
+          <button id="generateAdd" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Generate & Add</button>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Author(s)</label>
+          <input id="author" placeholder="Last, First; Last2, First2" class="mt-1 p-2 w-full rounded border-gray-300" />
+          <div class="author-input-note">Separate multiple authors with a semicolon: <span class="chip">Smith, John; Doe, Jane</span></div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium">Year</label>
+          <input id="year" placeholder="2025 or leave blank for n.d." class="mt-1 p-2 w-full rounded border-gray-300" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium">Title</label>
+          <input id="title" placeholder="Title of the work" class="mt-1 p-2 w-full rounded border-gray-300" />
+        </div>
+
+        <div id="extraFields"></div>
+      </div>
+
+      <!-- Generated preview -->
+      <div class="mt-6">
+        <label class="block text-sm font-medium">Preview (current style)</label>
+        <div id="preview" class="mt-2 p-3 bg-gray-50 border border-gray-200 rounded min-h-[56px]"></div>
+      </div>
+
+      <!-- Actions for current item -->
+      <div class="mt-4 flex gap-2">
+        <button id="copyCurrent" class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200">Copy current</button>
+        <button id="addToList" class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700">Add to list</button>
+        <button id="resetForm" class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200">Reset form</button>
+      </div>
+    </section>
+
+    <!-- List of added citations -->
+    <section class="mt-6">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-xl font-semibold">References</h2>
+        <div class="flex gap-2 ref-controls">
+          <button id="copyAll" class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200">Copy all</button>
+          <button id="downloadAll" class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200">Download .txt</button>
+          <button id="clearAll" class="px-3 py-1 bg-red-100 text-red-700 rounded hover:bg-red-200">Clear all</button>
+        </div>
+      </div>
+
+      <div id="refsContainer" class="card p-4">
+        <div id="emptyNote" class="muted">No citations yet — create a citation and click <strong>Add to list</strong>.</div>
+        <ol id="refsList" class="references list-decimal pl-6"></ol>
+      </div>
+    </section>
+
+    <p class="mt-6 small muted">Tip: this tool gives formatted citations for common cases. Always double-check against your institution’s exact style guide.</p>
+  </main>
+
+  <footer class="bg-dark text-white py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-2 mb-md-0">
+      <strong>Course Aggregator</strong> &nbsp;|&nbsp;
+      <strong>© 2025 All rights reserved.</strong>
+    </div>
+    <div>
+      <a href="../index.html" class="text-light text-decoration-none me-3">Home</a>
+      <a href="contact.html" class="text-light text-decoration-none me-3">Contact</a>
+      <a href="privacy.html" class="text-light text-decoration-none">Privacy</a>
+    </div>
+  </div>
+</footer>
+  <script>
+    // Utilities
+    function parseAuthors(raw) {
+      if (!raw) return [];
+      return raw.split(';').map(s => s.trim()).filter(Boolean).map(p => {
+        if (p.includes(',')) {
+          const parts = p.split(',');
+          const last = parts[0];
+          const rest = parts.slice(1).join(',');
+          return { last: last.trim(), first: rest.trim() };
+        }
+        const words = p.split(' ').filter(Boolean);
+        return { first: words.slice(0,-1).join(' '), last: words.slice(-1)[0] };
+      });
+    }
+    function initials(name) { if (!name) return ''; return name.split(' ').map(n => n? n[0].toUpperCase()+'.' : '').join(' '); }
+
+    function authorsAPA(parsed) {
+      if (!parsed.length) return '';
+      if (parsed.length === 1) return parsed[0].last + ', ' + initials(parsed[0].first);
+      if (parsed.length === 2) return parsed[0].last + ', ' + initials(parsed[0].first) + ' & ' + parsed[1].last + ', ' + initials(parsed[1].first);
+      var allButLast = parsed.slice(0,-1).map(function(p){ return p.last + ', ' + initials(p.first); });
+      var last = parsed[parsed.length-1];
+      return allButLast.join(', ') + ', & ' + last.last + ', ' + initials(last.first);
+    }
+
+    // Elements
+    const styleEl = document.getElementById('style');
+    const typeEl = document.getElementById('sourceType');
+    const authorEl = document.getElementById('author');
+    const yearEl = document.getElementById('year');
+    const titleEl = document.getElementById('title');
+    const extraFields = document.getElementById('extraFields');
+    const preview = document.getElementById('preview');
+    const refsList = document.getElementById('refsList');
+    const refsContainer = document.getElementById('refsContainer');
+    const emptyNote = document.getElementById('emptyNote');
+
+    let citations = [];
+
+    // Render dynamic extra fields
+    function renderExtraFields(type) {
+      extraFields.innerHTML = '';
+      if (type === 'Book') {
+        extraFields.innerHTML = '
+          <div>
+            <label class="block text-sm font-medium">Publisher</label>
+            <input id="publisher" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="Publisher name" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Place (city)</label>
+            <input id="place" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="City" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">DOI or URL (optional)</label>
+            <input id="doi" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="10.xxxx/xxxxx or https://..." />
+          </div>
+        ';
+      } else if (type === 'Journal Article') {
+        extraFields.innerHTML = '
+          <div>
+            <label class="block text-sm font-medium">Journal</label>
+            <input id="journal" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="Journal name" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Volume</label>
+            <input id="volume" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="12" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Issue</label>
+            <input id="issue" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="3" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Pages</label>
+            <input id="pages" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="45-59" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">DOI or URL</label>
+            <input id="doi" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="10.xxxx/xxxxx or https://..." />
+          </div>
+        ';
+      } else if (type === 'Website') {
+        extraFields.innerHTML = '
+          <div>
+            <label class="block text-sm font-medium">Website / Site name</label>
+            <input id="siteName" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="Site name" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">URL</label>
+            <input id="url" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="https://..." />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Accessed (e.g. August 5, 2025)</label>
+            <input id="accessDate" class="mt-1 p-2 w-full rounded border-gray-300" placeholder="August 5, 2025" />
+          </div>
+        ';
+      }
+    }
+
+    // Formatting functions per source type and style
+    function formatBook(style, f) {
+      const authors = parseAuthors(f.author);
+      switch(style) {
+        case 'APA 7': {
+          const a = authors.length ? authorsAPA(authors) : '';
+          const year = f.year ? '(' + f.year + '). ' : '(n.d.). ';
+          const title = f.title ? '<i>' + f.title + '</i>. ' : '';
+          var doiClean = f.doi ? f.doi.replace('https://','').replace('http://','') : '';
+          const placePub = f.place && f.publisher ? f.place + ': ' + f.publisher + '. ' : f.publisher ? f.publisher + '. ' : '';
+          const doi = doiClean ? 'https://doi.org/' + doiClean : '';
+          return (a + ' ' + year + title + placePub + doi).trim();
+        }
+        case 'MLA 9': {
+          const a = authors.length ? authors[0].last + ', ' + authors[0].first : '';
+          const title = f.title ? '<i>' + f.title + '</i>. ' : '';
+          const publisher = f.publisher ? f.publisher + ', ' : '';
+          const year = f.year ? f.year + '.' : '';
+          return (a + ' ' + title + publisher + year).trim();
+        }
+        case 'Chicago (Author-Date)': {
+          const a = authors.length ? authors[0].last + ', ' + authors[0].first : '';
+          const year = f.year ? f.year + '. ' : 'n.d. ';
+          const title = f.title ? '<i>' + f.title + '</i>. ' : '';
+          const pub = f.publisher ? f.publisher + '. ' : '';
+          return (a + ' ' + year + title + pub).trim();
+        }
+        case 'Harvard': {
+          const a = authors.length ? authors[0].last + ', ' + initials(authors[0].first) : '';
+          const year = f.year ? '(' + f.year + ') ' : '(n.d.) ';
+          const title = f.title ? '<i>' + f.title + '</i>. ' : '';
+          const pub = f.publisher ? f.publisher + '. ' : '';
+          return (a + ' ' + year + title + pub).trim();
+        }
+        case 'Vancouver': {
+          const a = authors.length ? authors[0].last + ' ' + initials(authors[0].first) : '';
+          const year = f.year ? f.year + ' ' : '';
+          const title = f.title ? f.title + '. ' : '';
+          const pub = f.publisher ? f.publisher + '. ' : '';
+          return (a + ' ' + year + title + pub).trim();
+        }
+      }
+    }
+
+    function formatJournal(style, f) {
+      const authors = parseAuthors(f.author);
+      switch(style) {
+        case 'APA 7': {
+          const a = authors.length ? authorsAPA(authors) : '';
+          const year = f.year ? '(' + f.year + '). ' : '(n.d.). ';
+          const title = f.title ? f.title + '. ' : '';
+          const journal = f.journal ? '<i>' + f.journal + '</i>' : '';
+          const volIssue = f.volume ? f.volume : '';
+          const issue = f.issue ? '(' + f.issue + ')' : '';
+          const pages = f.pages ? ', ' + f.pages : '';
+          var doiClean = f.doi ? f.doi.replace('https://','').replace('http://','') : '';
+          const doi = doiClean ? ' https://doi.org/' + doiClean : '';
+          return (a + ' ' + year + title + journal + ', ' + volIssue + issue + pages + '.' + doi).trim();
+        }
+        case 'MLA 9': {
+          const a = authors.length ? authors[0].last + ', ' + authors[0].first : '';
+          const title = f.title ? '"' + f.title + '." ' : '';
+          const journal = f.journal ? '<i>' + f.journal + '</i> ' : '';
+          const vol = f.volume ? f.volume : '';
+          const issue = f.issue ? '.' + f.issue : '';
+          const pages = f.pages ? ': ' + f.pages : '';
+          const year = f.year ? f.year : '';
+          return (a + ' ' + title + journal + vol + issue + pages + ' ' + year + '.').trim();
+        }
+        case 'Chicago (Author-Date)': {
+          const a = authors.length ? authors[0].last + ', ' + authors[0].first : '';
+          const year = f.year ? f.year + '. ' : 'n.d. ';
+          const title = f.title ? f.title + '. ' : '';
+          const journal = f.journal ? '<i>' + f.journal + '</i> ' : '';
+          const vol = f.volume ? f.volume : '';
+          const pages = f.pages ? ': ' + f.pages : '';
+          return (a + ' ' + year + title + journal + vol + pages).trim();
+        }
+        case 'Harvard': {
+          const a = authors.length ? authors[0].last + ', ' + initials(authors[0].first) : '';
+          const year = f.year ? '(' + f.year + ') ' : '(n.d.) ';
+          const title = f.title ? f.title + ', ' : '';
+          const journal = f.journal ? f.journal : '';
+          const vol = f.volume ? ', ' + f.volume : '';
+          const pages = f.pages ? ', pp. ' + f.pages : '';
+          return (a + ' ' + year + title + journal + vol + pages + '.').trim();
+        }
+        case 'Vancouver': {
+          const a = authors.length ? authors[0].last + ' ' + initials(authors[0].first) : '';
+          const year = f.year ? f.year + ';' : '';
+          const journal = f.journal ? f.journal : '';
+          const vol = f.volume ? f.volume : '';
+          const issue = f.issue ? '(' + f.issue + ')' : '';
+          const pages = f.pages ? ':' + f.pages : '';
+          return (a + ' ' + journal + ' ' + year + vol + issue + pages + '.').trim();
+        }
+      }
+    }
+
+    function formatWebsite(style, f) {
+      const authors = parseAuthors(f.author);
+      switch(style) {
+        case 'APA 7': {
+          const a = authors.length ? authors[0].last + ', ' + initials(authors[0].first) : '';
+          const year = f.year ? '(' + f.year + '). ' : '(n.d.). ';
+          const title = f.title ? f.title + '. ' : '';
+          const site = f.siteName ? f.siteName + '. ' : '';
+          const url = f.url ? f.url : '';
+          const access = f.accessDate ? ' Accessed ' + f.accessDate + '.' : '';
+          return (a + ' ' + year + title + site + url + access).trim();
+        }
+        case 'MLA 9': {
+          const a = authors.length ? authors[0].last + ', ' + authors[0].first : '';
+          const title = f.title ? '"' + f.title + '." ' : '';
+          const site = f.siteName ? f.siteName + ', ' : '';
+          const url = f.url ? f.url + '.' : '';
+          const access = f.accessDate ? ' Accessed ' + f.accessDate + '.' : '';
+          return (a + ' ' + title + site + url + access).trim();
+        }
+        case 'Chicago (Author-Date)': {
+          const a = authors.length ? authors[0].last + ', ' + authors[0].first : '';
+          const date = f.year ? f.year + '. ' : 'n.d. ';
+          const title = f.title ? f.title + '. ' : '';
+          const url = f.url ? f.url : '';
+          return (a + ' ' + date + title + url).trim();
+        }
+        case 'Harvard': {
+          const a = authors.length ? authors[0].last + ', ' + initials(authors[0].first) : '';
+          const year = f.year ? '(' + f.year + ') ' : '(n.d.) ';
+          const title = f.title ? f.title + '. ' : '';
+          const site = f.siteName ? f.siteName + '. ' : '';
+          const url = f.url ? f.url : '';
+          const access = f.accessDate ? ' [Accessed ' + f.accessDate + '].' : '';
+          return (a + ' ' + year + title + site + url + access).trim();
+        }
+        case 'Vancouver': {
+          const a = authors.length ? authors[0].last + ' ' + initials(authors[0].first) : '';
+          const title = f.title ? f.title + '. ' : '';
+          const site = f.siteName ? f.siteName + '. ' : '';
+          const year = f.year ? f.year + '. ' : '';
+          const url = f.url ? f.url : '';
+          const access = f.accessDate ? ' [Accessed ' + f.accessDate + '].' : '';
+          return (a + ' ' + title + site + year + url + access).trim();
+        }
+      }
+    }
+
+    function buildFormatted(style, type, fields) {
+      if (type === 'Book') return formatBook(style, fields);
+      if (type === 'Journal Article') return formatJournal(style, fields);
+      if (type === 'Website') return formatWebsite(style, fields);
+      return '';
+    }
+
+    // Preview generation
+    function generatePreview() {
+      const style = styleEl.value;
+      const type = typeEl.value;
+      const fields = collectFields();
+      const formatted = buildFormatted(style, type, fields);
+      // show with hanging style for multi-line
+      preview.innerHTML = '<span class="hanging">' + formatted + '</span>';
+      return formatted;
+    }
+
+    function collectFields() {
+      return {
+        author: authorEl.value.trim(),
+        year: yearEl.value.trim(),
+        title: titleEl.value.trim(),
+        // extra fields fetched defensively
+        publisher: document.getElementById('publisher') ? document.getElementById('publisher').value.trim() : '',
+        place: document.getElementById('place') ? document.getElementById('place').value.trim() : '',
+        doi: document.getElementById('doi') ? document.getElementById('doi').value.trim() : '',
+        journal: document.getElementById('journal') ? document.getElementById('journal').value.trim() : '',
+        volume: document.getElementById('volume') ? document.getElementById('volume').value.trim() : '',
+        issue: document.getElementById('issue') ? document.getElementById('issue').value.trim() : '',
+        pages: document.getElementById('pages') ? document.getElementById('pages').value.trim() : '',
+        siteName: document.getElementById('siteName') ? document.getElementById('siteName').value.trim() : '',
+        url: document.getElementById('url') ? document.getElementById('url').value.trim() : '',
+        accessDate: document.getElementById('accessDate') ? document.getElementById('accessDate').value.trim() : ''
+      };
+    }
+
+    // Manage list
+    function addToList() {
+      const style = styleEl.value;
+      const type = typeEl.value;
+      const fields = collectFields();
+      const formatted = buildFormatted(style, type, fields);
+      if (!formatted.trim()) return alert('Cannot generate an empty citation — fill required fields.');
+      const entry = { id: Date.now(), style, type, fields, formatted };
+      citations.push(entry);
+      renderList();
+      resetForm();
+    }
+
+    function renderList() {
+      refsList.innerHTML = '';
+      if (!citations.length) {
+        emptyNote.style.display = 'block';
+        return;
+      }
+      emptyNote.style.display = 'none';
+      citations.forEach((c, idx) => {
+        const li = document.createElement('li');
+        li.className = 'ref-item';
+        // formatted HTML inside hanging span
+        li.innerHTML = '
+          <div class="flex justify-between items-start">
+            <div class="w-full">
+              <span class="hanging">' + c.formatted + '</span>
+            </div>
+            <div class="ml-4">
+              <button data-id="' + c.id + '" class="removeBtn px-2 py-1 text-sm bg-red-50 text-red-600 rounded">Remove</button>
+            </div>
+          </div>
+        ';
+        refsList.appendChild(li);
+      });
+      // attach remove handlers
+      document.querySelectorAll('.removeBtn').forEach(btn => btn.addEventListener('click', (e) => {
+        const id = Number(e.currentTarget.getAttribute('data-id'));
+        citations = citations.filter(x => x.id !== id);
+        renderList();
+      }));
+    }
+
+    function copyAll() {
+      if (!citations.length) return;
+      const text = citations.map(c => stripTags(c.formatted)).join('
+
+');
+      navigator.clipboard.writeText(text).then(()=>{ alert('Copied all citations to clipboard'); }).catch(()=>{ alert('Copy failed'); });
+    }
+
+    function downloadAll() {
+      if (!citations.length) return;
+      const text = citations.map(c => stripTags(c.formatted)).join('
+
+');
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'references.txt'; a.click(); URL.revokeObjectURL(url);
+    }
+
+    function clearAll() {
+      if (!confirm('Clear all citations?')) return;
+      citations = [];
+      renderList();
+    }
+
+    function stripTags(html) {
+      const tmp = document.createElement('div'); tmp.innerHTML = html; return tmp.innerText;
+    }
+
+    function resetForm() {
+      authorEl.value = '';
+      yearEl.value = '';
+      titleEl.value = '';
+      // clear extras
+      ['publisher','place','doi','journal','volume','issue','pages','siteName','url','accessDate'].forEach(function(id){ var el = document.getElementById(id); if (el) el.value = ''; });
+      preview.innerHTML = '';
+    }
+
+    // Fill examples
+    function fillExample() {
+      const t = typeEl.value;
+      if (t === 'Book') {
+        authorEl.value = 'Smith, John; Doe, Jane';
+        yearEl.value = '2020';
+        titleEl.value = 'Understanding X: A Practical Guide';
+        document.getElementById('publisher') && (document.getElementById('publisher').value = 'Acme Books');
+        document.getElementById('place') && (document.getElementById('place').value = 'London');
+        document.getElementById('doi') && (document.getElementById('doi').value = '10.1234/example.book');
+      } else if (t === 'Journal Article') {
+        authorEl.value = 'Lopez, Maria';
+        yearEl.value = '2019';
+        titleEl.value = 'New findings in Y';
+        document.getElementById('journal') && (document.getElementById('journal').value = 'Journal of Y Studies');
+        document.getElementById('volume') && (document.getElementById('volume').value = '12');
+        document.getElementById('issue') && (document.getElementById('issue').value = '3');
+        document.getElementById('pages') && (document.getElementById('pages').value = '45-59');
+        document.getElementById('doi') && (document.getElementById('doi').value = '10.1234/abcd.2019.001');
+      } else if (t === 'Website') {
+        authorEl.value = 'Jones, Sam';
+        yearEl.value = '2021';
+        titleEl.value = 'How to do Z';
+        document.getElementById('siteName') && (document.getElementById('siteName').value = 'Z Central');
+        document.getElementById('url') && (document.getElementById('url').value = 'https://www.zcentral.example/article');
+        document.getElementById('accessDate') && (document.getElementById('accessDate').value = 'August 5, 2025');
+      }
+      generatePreview();
+    }
+
+    // Events
+    typeEl.addEventListener('change', function(){ renderExtraFields(typeEl.value); preview.innerHTML = ''; });
+    document.getElementById('generateAdd').addEventListener('click', function(){ generatePreview(); addToList(); });
+    document.getElementById('addToList').addEventListener('click', addToList);
+    document.getElementById('fillExample').addEventListener('click', fillExample);
+    document.getElementById('copyCurrent').addEventListener('click', function(){ var text = stripTags(generatePreview()); if (!text) return; navigator.clipboard.writeText(text).then(function(){ alert('Copied current citation'); }).catch(function(){ alert('Copy failed'); }); });
+    document.getElementById('resetForm').addEventListener('click', resetForm);
+    document.getElementById('copyAll').addEventListener('click', copyAll);
+    document.getElementById('downloadAll').addEventListener('click', downloadAll);
+    document.getElementById('clearAll').addEventListener('click', clearAll);
+
+    // live preview when typing (debounced)
+    var previewTimer;
+    ['author','year','title'].forEach(function(id){ var el = document.getElementById(id); if (el) el.addEventListener('input', function(){ clearTimeout(previewTimer); previewTimer = setTimeout(generatePreview, 400); }); });
+
+    // initialize
+    renderExtraFields(typeEl.value);
+  </script>
 </body>
 </html>
