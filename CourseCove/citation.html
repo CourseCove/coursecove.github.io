@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Citation Generator | CourseCove</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- ========== Header / Navigation ========== -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-blue-600">CourseCove</a>
+      <nav class="space-x-6">
+        <a href="/CourseCove/math.html" class="hover:text-blue-600">Math</a>
+        <a href="/CourseCove/books.html" class="hover:text-blue-600">Books</a>
+        <a href="/CourseCove/courses.html" class="hover:text-blue-600">Courses</a>
+        <a href="/CourseCove/citation.html" class="text-blue-600 font-semibold">Citation Generator</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== Main Content ========== -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-6">Citation Generator</h1>
+    <div class="bg-white rounded-lg shadow p-6">
+      <!-- Controls: style + source type -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium">Style</label>
+          <select id="style" class="mt-1 block w-full rounded border-gray-300">
+            <option>APA 7</option>
+            <option>MLA 9</option>
+            <option>Chicago (Author‑Date)</option>
+            <option>Harvard</option>
+            <option>Vancouver</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Source Type</label>
+          <select id="sourceType" class="mt-1 block w-full rounded border-gray-300">
+            <option>Book</option>
+            <option>Journal Article</option>
+            <option>Website</option>
+          </select>
+        </div>
+        <div class="flex items-end gap-2">
+          <button id="exampleBtn" class="px-4 py-2 bg-gray-100 rounded hover:bg-gray-200">Fill Example</button>
+          <button id="generateBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Generate</button>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" id="fields">
+        <div>
+          <label class="block text-sm font-medium">Author(s)</label>
+          <input id="author" type="text" placeholder="Last, First; Last2, First2"
+                 class="mt-1 block w-full rounded border-gray-300" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Year</label>
+          <input id="year" type="text" placeholder="2025"
+                 class="mt-1 block w-full rounded border-gray-300" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Title</label>
+          <input id="title" type="text" placeholder="Sample Title"
+                 class="mt-1 block w-full rounded border-gray-300" />
+        </div>
+        <div id="extraFields"></div>
+      </div>
+
+      <!-- Output -->
+      <div>
+        <label class="block text-sm font-medium">Generated Citation</label>
+        <div id="citationArea" class="bg-gray-50 border border-gray-200 rounded p-3 mb-4 min-h-[4rem]">No citation yet</div>
+        <div class="flex gap-2">
+          <button id="copyBtn" class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200">Copy</button>
+          <button id="downloadBtn" class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200">Download .txt</button>
+          <button id="clearBtn" class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200">Clear</button>
+        </div>
+        <p id="note" class="mt-2 text-sm text-green-600"></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-sm text-gray-500">
+      © 2025 CourseCove. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ========== Script ========== -->
+  <script>
+    const styleSel = document.getElementById('style');
+    const typeSel = document.getElementById('sourceType');
+    const author = document.getElementById('author');
+    const year = document.getElementById('year');
+    const title = document.getElementById('title');
+    const extraFields = document.getElementById('extraFields');
+    const citationArea = document.getElementById('citationArea');
+    const note = document.getElementById('note');
+
+    function generateCitation() {
+      const style = styleSel.value;
+      const type = typeSel.value;
+      const a = author.value;
+      const y = year.value;
+      const t = title.value;
+      let citation = '';
+
+      if (style === 'APA 7') {
+        citation = `${a} (${y}). ${t}.`;
+      } else if (style === 'MLA 9') {
+        citation = `${a}. "${t}." (${y}).`;
+      } else if (style === 'Chicago (Author‑Date)') {
+        citation = `${a}. ${y}. ${t}.`;
+      } else if (style === 'Harvard') {
+        citation = `${a}, ${y}, ${t}.`;
+      } else if (style === 'Vancouver') {
+        citation = `${a}. ${t}. ${y}.`;
+      }
+
+      citationArea.textContent = citation || 'No citation yet';
+    }
+
+    document.getElementById('generateBtn').addEventListener('click', generateCitation);
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      author.value = year.value = title.value = '';
+      citationArea.textContent = 'No citation yet';
+    });
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      navigator.clipboard.writeText(citationArea.textContent);
+      note.textContent = 'Copied!';
+      setTimeout(() => note.textContent = '', 2000);
+    });
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const blob = new Blob([citationArea.textContent], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'citation.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
