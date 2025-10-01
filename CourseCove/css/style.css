@@ -744,3 +744,7 @@ footer a.text-light:hover {
 label {
   color: white;
 }
+
+#author-input-note {
+  color: white;
+}
