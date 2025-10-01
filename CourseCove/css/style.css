@@ -721,3 +721,19 @@ footer a.text-light:hover {
 #fillExample {
   color: black;
 }
+
+.citation-form section select {
+  color: black;
+  
+}
+
+
+.citation-form section input {
+    color: black;
+}
+
+
+.citation-form section div {
+  color: black;
+}
+
