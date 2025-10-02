@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Summarizer | CourseCove</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+<header class="bg-white shadow p-4 mb-6">
+  <h1 class="text-2xl font-bold text-gray-800">CourseCove Text Summarizer</h1>
+</header>
+
+<main class="container mx-auto p-4">
+
+  <div class="bg-white p-6 rounded shadow-md">
+    <h2 class="text-xl font-semibold mb-4">Paste text, upload a file, or provide a link to summarize</h2>
+
+    <!-- Textarea -->
+    <textarea id="inputText" rows="8" class="w-full p-3 border rounded mb-3" placeholder="Paste text here..."></textarea>
+
+    <!-- File Upload -->
+    <input type="file" id="fileInput" accept=".txt" class="mb-3">
+
+    <!-- URL Input -->
+    <input type="url" id="urlInput" class="w-full p-3 border rounded mb-3" placeholder="Or paste a link to a webpage">
+
+    <!-- Buttons -->
+    <div class="flex gap-3 mb-3">
+      <button id="summarizeBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Generate Summary</button>
+      <button id="clearBtn" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded">Clear</button>
+      <button id="copyBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">Copy Summary</button>
+    </div>
+
+    <!-- Output -->
+    <div id="summaryOutput" class="border p-3 rounded bg-gray-50 min-h-[100px] text-gray-800"></div>
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/summarizer-js/dist/summarizer.min.js"></script>
+<script>
+const inputText = document.getElementById('inputText');
+const fileInput = document.getElementById('fileInput');
+const urlInput = document.getElementById('urlInput');
+const summaryOutput = document.getElementById('summaryOutput');
+
+document.getElementById('summarizeBtn').addEventListener('click', async () => {
+  let text = inputText.value.trim();
+
+  // Check if a file is uploaded
+  if (!text && fileInput.files.length) {
+    const file = fileInput.files[0];
+    text = await file.text();
+  }
+
+  // If a URL is provided
+  if (!text && urlInput.value.trim()) {
+    try {
+      const response = await fetch(urlInput.value);
+      const html = await response.text();
+      // Strip HTML tags to get plain text
+      text = html.replace(/<[^>]+>/g, ' ');
+    } catch (err) {
+      summaryOutput.innerText = 'Error fetching URL content. Make sure CORS allows it.';
+      return;
+    }
+  }
+
+  if (!text) {
+    summaryOutput.innerText = 'Please provide text, upload a file, or enter a URL.';
+    return;
+  }
+
+  // Generate summary using summarizer-js
+  try {
+    const summarizer = new Summarizer({ returnCount: 5 }); // returns top 5 sentences
+    const summary = summarizer.summarize(text);
+    summaryOutput.innerText = summary.join(' ');
+  } catch (err) {
+    console.error(err);
+    summaryOutput.innerText = 'Error generating summary.';
+  }
+});
+
+// Clear all inputs
+document.getElementById('clearBtn').addEventListener('click', () => {
+  inputText.value = '';
+  fileInput.value = '';
+  urlInput.value = '';
+  summaryOutput.innerText = '';
+});
+
+// Copy summary to clipboard
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  if (!summaryOutput.innerText) return;
+  try {
+    await navigator.clipboard.writeText(summaryOutput.innerText);
+    alert('Summary copied to clipboard!');
+  } catch (err) {
+    alert('Could not copy summary.');
+  }
+});
+</script>
+
+</body>
+</html>
