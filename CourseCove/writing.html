@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grammar Tool — CourseCove</title>
+  <link rel="stylesheet" href="…your-css-path…"> <!-- same CSS as in math.html -->
+</head>
+<body>
+  <!-- (You can reuse your nav/header from math.html) -->
+  <header>
+    <!-- your nav markup -->
+  </header>
+
+  <main class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">Grammar & Style Checker</h1>
+    <p class="mb-6">Paste your course description or text here and click “Check Grammar”</p>
+
+    <div class="bg-gray-100 p-6 rounded shadow">
+      <textarea id="inputText" rows="8" class="w-full p-3 border rounded" placeholder="Paste your text here…"></textarea>
+      <button id="checkBtn" class="mt-3 px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Check Grammar</button>
+      <div id="results" class="mt-5 p-4 bg-white border rounded min-h-[100px]">
+        <!-- results will appear here -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-12">
+    <!-- your footer markup -->
+  </footer>
+
+  <script>
+    document.getElementById("checkBtn").addEventListener("click", async () => {
+      const text = document.getElementById("inputText").value.trim();
+      const resultsDiv = document.getElementById("results");
+      if (!text) {
+        resultsDiv.innerHTML = "<p class='text-red-500'>Please enter some text to check.</p>";
+        return;
+      }
+
+      resultsDiv.innerHTML = "<p>Checking…</p>";
+
+      try {
+        const resp = await fetch("https://api.languagetool.org/v2/check", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: new URLSearchParams({
+            text: text,
+            language: "en-US"
+          })
+        });
+        const data = await resp.json();
+
+        if (!data.matches || data.matches.length === 0) {
+          resultsDiv.innerHTML = "<p class='text-green-600'>No issues found 🎉</p>";
+        } else {
+          let html = "<ul class='list-disc pl-5'>";
+          data.matches.forEach(match => {
+            const msg = match.message;
+            const offset = match.offset;
+            const length = match.length;
+            const context = match.context && match.context.text;
+            const replacements = match.replacements.map(r => r.value).join(", ");
+            html += `<li class="mb-2">
+                       <strong>Issue:</strong> ${msg}<br>
+                       <strong>Context:</strong> “…${context}…”<br>
+                       <strong>Suggestions:</strong> ${replacements || "None"}
+                     </li>`;
+          });
+          html += "</ul>";
+          resultsDiv.innerHTML = html;
+        }
+      } catch (err) {
+        console.error("Error checking grammar:", err);
+        resultsDiv.innerHTML = "<p class='text-red-500'>Something went wrong. Try again.</p>";
+      }
+    });
+  </script>
+</body>
+</html>
