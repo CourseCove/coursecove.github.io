@@ -750,6 +750,8 @@ label {
 }
 
 
-.hanging {
-  color: black;
+.hanging { display: block; text-indent: -1.5em; padding-left: 1.5em; margin-bottom: 0.5em; color: black; }
+
+.ref-item .hanging {
+  color: white;
 }
