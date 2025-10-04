@@ -209,12 +209,15 @@ function applyFilters(query='') {
   const category = categoryFilter.value.trim().toLowerCase();
 
   let filtered = allItems.filter(item =>
-    item.title.toLowerCase().includes(searchTerm) &&
+    (!searchTerm || item.title.toLowerCase().includes(searchTerm)) &&
     (!category || item.category.toLowerCase() === category)
   );
 
-  if(searchTerm && filtered.length === 0) {
-    loadAudiobooks(searchTerm);
+  // Fetch more if nothing locally matches
+  if(filtered.length === 0 && (searchTerm || category)) {
+    loadAudiobooks(searchTerm || category).then(() => {
+      applyFilters(searchTerm); // Reapply after fetch
+    });
     return;
   }
 
