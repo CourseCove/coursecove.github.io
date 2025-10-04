@@ -102,7 +102,7 @@ let isFetching = false;
 let offsets = { lv: 0, ia: 0 };
 const limit = 12;
 
-// Normalize categories
+// Category mapping
 function normalizeCategory(title, sourceCategory = '') {
   const t = title.toLowerCase();
   const sc = sourceCategory.toLowerCase();
@@ -137,7 +137,7 @@ function renderItems(items) {
   });
 }
 
-// Fetch LibriVox safely
+// Fetch LibriVox via allorigins to bypass CORS
 async function fetchLibriVox(offset=0, query='') {
   try {
     let url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
@@ -159,7 +159,7 @@ async function fetchLibriVox(offset=0, query='') {
   }
 }
 
-// Fetch Internet Archive
+// Fetch Internet Archive audiobooks
 async function fetchInternetArchive(offset=0, query='') {
   try {
     const page = offset / limit + 1;
@@ -180,44 +180,46 @@ async function fetchInternetArchive(offset=0, query='') {
   }
 }
 
-// Load audiobooks
+// Load audiobooks with throttling
 async function loadAudiobooks(query='') {
   if(isFetching) return;
   isFetching = true;
   loadingEl.style.display = 'block';
 
-  const [lv, ia] = await Promise.all([
-    fetchLibriVox(offsets.lv, query),
-    fetchInternetArchive(offsets.ia, query)
-  ]);
+  try {
+    const [lv, ia] = await Promise.all([
+      fetchLibriVox(offsets.lv, query),
+      fetchInternetArchive(offsets.ia, query)
+    ]);
 
-  offsets.lv += limit;
-  offsets.ia += limit;
+    offsets.lv += limit;
+    offsets.ia += limit;
 
-  const newItems = [...lv, ...ia];
-  const uniqueItems = newItems.filter(n => !allItems.some(a => a.link === n.link));
-  allItems.push(...uniqueItems);
+    const newItems = [...lv, ...ia];
+    const uniqueItems = newItems.filter(n => !allItems.some(a => a.link === n.link));
+    allItems.push(...uniqueItems);
+  } catch(err) {
+    console.error('Error loading audiobooks:', err);
+  }
 
-  applyFilters(query);
   isFetching = false;
   loadingEl.style.display = 'none';
+  renderFilteredItems();
 }
 
-// Hybrid search + category filter
-function applyFilters(query='') {
-  const searchTerm = (query || searchBar.value).trim().toLowerCase();
+// Render filtered items based on current search & category
+function renderFilteredItems() {
+  const searchTerm = searchBar.value.trim().toLowerCase();
   const category = categoryFilter.value.trim().toLowerCase();
 
-  let filtered = allItems.filter(item =>
+  const filtered = allItems.filter(item =>
     (!searchTerm || item.title.toLowerCase().includes(searchTerm)) &&
     (!category || item.category.toLowerCase() === category)
   );
 
-  // Fetch more if nothing locally matches
-  if(filtered.length === 0 && (searchTerm || category)) {
-    loadAudiobooks(searchTerm || category).then(() => {
-      applyFilters(searchTerm); // Reapply after fetch
-    });
+  // Fetch more if nothing matches locally
+  if(filtered.length === 0 && !isFetching && (searchTerm || category)) {
+    loadAudiobooks(searchTerm || category);
     return;
   }
 
@@ -232,8 +234,8 @@ window.addEventListener('scroll', () => {
 });
 
 // Event listeners
-searchBar.addEventListener('input', () => applyFilters());
-categoryFilter.addEventListener('change', () => applyFilters());
+searchBar.addEventListener('input', () => renderFilteredItems());
+categoryFilter.addEventListener('change', () => renderFilteredItems());
 
 // Initial load
 loadAudiobooks();
