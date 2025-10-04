@@ -139,8 +139,9 @@ function renderItems(items) {
 }
 
 // Fetch LibriVox audiobooks
-async function fetchLibriVox(offset) {
-  const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
+async function fetchLibriVox(offset, query='') {
+  let url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
+  if(query) url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&title=${encodeURIComponent(query)}&offset=${offset}`)}`;
   const res = await fetch(url);
   const data = await res.json();
   const books = JSON.parse(data.contents).books;
@@ -153,9 +154,11 @@ async function fetchLibriVox(offset) {
 }
 
 // Fetch Internet Archive audiobooks
-async function fetchInternetArchive(offset) {
+async function fetchInternetArchive(offset, query='') {
   const page = offset / limit + 1;
-  const url = `https://archive.org/advancedsearch.php?q=mediatype:audiobook&rows=${limit}&page=${page}&output=json`;
+  let q = 'mediatype:audiobook';
+  if(query) q += ` AND ${query}`;
+  const url = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&rows=${limit}&page=${page}&output=json`;
   const res = await fetch(url);
   const data = await res.json();
   return data.response.docs.map(d => ({
@@ -167,18 +170,17 @@ async function fetchInternetArchive(offset) {
 }
 
 // Load next batch
-async function loadNextBatch() {
+async function loadNextBatch(query='') {
   if(isFetching) return;
   isFetching = true;
   loadingEl.style.display = 'block';
 
   const [lv, ia] = await Promise.all([
-    fetchLibriVox(currentOffset),
-    fetchInternetArchive(currentOffset)
+    fetchLibriVox(currentOffset, query),
+    fetchInternetArchive(currentOffset, query)
   ]);
 
   const newItems = [...lv, ...ia];
-  // Remove duplicates by link
   const uniqueItems = newItems.filter(n => !allItems.some(a => a.link === n.link));
   allItems.push(...uniqueItems);
   applyFilters();
@@ -188,14 +190,26 @@ async function loadNextBatch() {
   loadingEl.style.display = 'none';
 }
 
-// Filter items
-function applyFilters() {
+// Hybrid search: local + API if not found
+async function applyFilters() {
   const query = searchBar.value.trim().toLowerCase();
   const category = categoryFilter.value.trim().toLowerCase();
-  const filtered = allItems.filter(item =>
+
+  // Filter locally first
+  let filtered = allItems.filter(item =>
     item.title.toLowerCase().includes(query) &&
     (!category || item.category.toLowerCase().includes(category))
   );
+
+  // If no matches locally, fetch new results
+  if(filtered.length === 0 && query) {
+    await loadNextBatch(query);
+    filtered = allItems.filter(item =>
+      item.title.toLowerCase().includes(query) &&
+      (!category || item.category.toLowerCase().includes(category))
+    );
+  }
+
   renderItems(filtered);
 }
 
