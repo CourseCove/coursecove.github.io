@@ -102,7 +102,7 @@ let isFetching = false;
 let currentOffset = 0;
 const limit = 12;
 
-// Map category based on title if needed
+// Map category based on title
 function mapCategory(title) {
   title = title.toLowerCase();
   if(title.includes('politics')) return 'politics';
@@ -125,7 +125,6 @@ function renderItems(items) {
     col.className = 'col-12 col-md-4 col-lg-3 mb-4';
     col.innerHTML = `
       <div class="card h-100 shadow-sm">
-        ${item.cover ? `<img src="${item.cover}" class="card-img-top" alt="${item.title}">` : ''}
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${item.title}</h5>
           <p class="card-text mb-1">Author: ${item.authors}</p>
@@ -137,7 +136,7 @@ function renderItems(items) {
   });
 }
 
-// Fetch functions
+// Fetch functions using public sources
 async function fetchLibriVox(offset) {
   const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
   const res = await fetch(url);
@@ -147,7 +146,6 @@ async function fetchLibriVox(offset) {
     title: b.title,
     authors: b.authors.length ? b.authors.map(a=>a.first_name+' '+a.last_name).join(', ') : 'Unknown',
     link: b.url_librivox,
-    cover: b.cover_url || '',
     category: mapCategory(b.title)
   }));
 }
@@ -161,7 +159,6 @@ async function fetchInternetArchive(offset) {
     title: d.title || 'Unknown',
     authors: d.creator || 'Unknown',
     link: `https://archive.org/details/${d.identifier}`,
-    cover: d.cover_i ? `https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg` : '',
     category: mapCategory(d.title)
   }));
 }
@@ -174,7 +171,6 @@ async function fetchOpenLibrary(offset) {
     title: w.title,
     authors: w.authors.map(a=>a.name).join(', '),
     link: `https://openlibrary.org${w.key}`,
-    cover: w.cover_id ? `https://covers.openlibrary.org/b/id/${w.cover_id}-M.jpg` : '',
     category: 'literature'
   }));
 }
