@@ -99,14 +99,13 @@ const loadingEl = document.getElementById('loading');
 
 let allItems = [];
 let isFetching = false;
-let currentOffset = 0;
+let offsets = { lv: 0, ia: 0 };
 const limit = 12;
 
-// Normalize categories across sources
+// Normalize categories
 function normalizeCategory(title, sourceCategory = '') {
   const t = title.toLowerCase();
   const sc = sourceCategory.toLowerCase();
-
   if(t.includes('politics') || sc.includes('politics') || sc.includes('government')) return 'Politics';
   if(t.includes('economics') || t.includes('money') || sc.includes('economics') || sc.includes('finance')) return 'Economics';
   if(t.includes('philosophy') || sc.includes('philosophy') || sc.includes('religion') || t.includes('meditation')) return 'Philosophy';
@@ -118,7 +117,7 @@ function normalizeCategory(title, sourceCategory = '') {
 // Render items
 function renderItems(items) {
   container.innerHTML = '';
-  if(items.length === 0) {
+  if(items.length === 0){
     container.innerHTML = '<div class="col-12 text-center text-muted">No results found.</div>';
     return;
   }
@@ -138,8 +137,8 @@ function renderItems(items) {
   });
 }
 
-// Fetch LibriVox audiobooks
-async function fetchLibriVox(offset, query='') {
+// Fetch LibriVox
+async function fetchLibriVox(offset=0, query='') {
   let url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
   if(query) url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&title=${encodeURIComponent(query)}&offset=${offset}`)}`;
   const res = await fetch(url);
@@ -153,8 +152,8 @@ async function fetchLibriVox(offset, query='') {
   }));
 }
 
-// Fetch Internet Archive audiobooks
-async function fetchInternetArchive(offset, query='') {
+// Fetch Internet Archive
+async function fetchInternetArchive(offset=0, query='') {
   const page = offset / limit + 1;
   let q = 'mediatype:audiobook';
   if(query) q += ` AND ${query}`;
@@ -169,45 +168,43 @@ async function fetchInternetArchive(offset, query='') {
   }));
 }
 
-// Load next batch
-async function loadNextBatch(query='') {
+// Load audiobooks
+async function loadAudiobooks(query='') {
   if(isFetching) return;
   isFetching = true;
   loadingEl.style.display = 'block';
 
   const [lv, ia] = await Promise.all([
-    fetchLibriVox(currentOffset, query),
-    fetchInternetArchive(currentOffset, query)
+    fetchLibriVox(offsets.lv, query),
+    fetchInternetArchive(offsets.ia, query)
   ]);
+
+  offsets.lv += limit;
+  offsets.ia += limit;
 
   const newItems = [...lv, ...ia];
   const uniqueItems = newItems.filter(n => !allItems.some(a => a.link === n.link));
   allItems.push(...uniqueItems);
-  applyFilters();
 
-  currentOffset += limit;
+  applyFilters(query);
   isFetching = false;
   loadingEl.style.display = 'none';
 }
 
-// Hybrid search: local + API if not found
-async function applyFilters() {
-  const query = searchBar.value.trim().toLowerCase();
+// Hybrid search + category filter
+function applyFilters(query='') {
+  const searchTerm = (query || searchBar.value).trim().toLowerCase();
   const category = categoryFilter.value.trim().toLowerCase();
 
-  // Filter locally first
   let filtered = allItems.filter(item =>
-    item.title.toLowerCase().includes(query) &&
-    (!category || item.category.toLowerCase().includes(category))
+    item.title.toLowerCase().includes(searchTerm) &&
+    (!category || item.category.toLowerCase() === category)
   );
 
-  // If no matches locally, fetch new results
-  if(filtered.length === 0 && query) {
-    await loadNextBatch(query);
-    filtered = allItems.filter(item =>
-      item.title.toLowerCase().includes(query) &&
-      (!category || item.category.toLowerCase().includes(category))
-    );
+  // If search term exists and no results, fetch more
+  if(searchTerm && filtered.length === 0) {
+    loadAudiobooks(searchTerm);
+    return;
   }
 
   renderItems(filtered);
@@ -216,15 +213,16 @@ async function applyFilters() {
 // Infinite scroll
 window.addEventListener('scroll', () => {
   if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
-    loadNextBatch();
+    loadAudiobooks();
   }
 });
 
-searchBar.addEventListener('input', applyFilters);
-categoryFilter.addEventListener('change', applyFilters);
+// Event listeners
+searchBar.addEventListener('input', () => applyFilters());
+categoryFilter.addEventListener('change', () => applyFilters());
 
 // Initial load
-loadNextBatch();
+loadAudiobooks();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
