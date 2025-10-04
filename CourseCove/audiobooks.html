@@ -55,19 +55,19 @@
 
 <header>
   <h1>Audiobooks</h1>
-  <p>Discover a curated selection of audiobooks from multiple public sources.</p>
+  <p>Discover public-domain audiobooks from LibriVox and Internet Archive.</p>
 </header>
 
 <div class="filters">
   <input type="text" id="searchBar" placeholder="Search audiobooks..." />
   <select id="categoryFilter">
     <option value="">All Categories</option>
-    <option value="literature">Literature</option>
-    <option value="history">History</option>
-    <option value="science">Science</option>
-    <option value="philosophy">Philosophy</option>
-    <option value="politics">Politics</option>
-    <option value="economics">Economics</option>
+    <option value="Literature">Literature</option>
+    <option value="History">History</option>
+    <option value="Science">Science</option>
+    <option value="Philosophy">Philosophy</option>
+    <option value="Politics">Politics</option>
+    <option value="Economics">Economics</option>
   </select>
 </div>
 
@@ -102,15 +102,17 @@ let isFetching = false;
 let currentOffset = 0;
 const limit = 12;
 
-// Map category based on title
-function mapCategory(title) {
-  title = title.toLowerCase();
-  if(title.includes('politics')) return 'politics';
-  if(title.includes('economics') || title.includes('money')) return 'economics';
-  if(title.includes('philosophy') || title.includes('meditation')) return 'philosophy';
-  if(title.includes('science') || title.includes('physics') || title.includes('biology')) return 'science';
-  if(title.includes('history') || title.includes('war')) return 'history';
-  return 'literature';
+// Normalize categories across sources
+function normalizeCategory(title, sourceCategory = '') {
+  const t = title.toLowerCase();
+  const sc = sourceCategory.toLowerCase();
+
+  if(t.includes('politics') || sc.includes('politics') || sc.includes('government')) return 'Politics';
+  if(t.includes('economics') || t.includes('money') || sc.includes('economics') || sc.includes('finance')) return 'Economics';
+  if(t.includes('philosophy') || sc.includes('philosophy') || sc.includes('religion') || t.includes('meditation')) return 'Philosophy';
+  if(t.includes('science') || t.includes('physics') || t.includes('biology') || sc.includes('science') || sc.includes('technology')) return 'Science';
+  if(t.includes('history') || t.includes('war') || sc.includes('history') || sc.includes('biography')) return 'History';
+  return 'Literature';
 }
 
 // Render items
@@ -136,7 +138,7 @@ function renderItems(items) {
   });
 }
 
-// Fetch functions using public sources
+// Fetch LibriVox audiobooks
 async function fetchLibriVox(offset) {
   const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
   const res = await fetch(url);
@@ -146,10 +148,11 @@ async function fetchLibriVox(offset) {
     title: b.title,
     authors: b.authors.length ? b.authors.map(a=>a.first_name+' '+a.last_name).join(', ') : 'Unknown',
     link: b.url_librivox,
-    category: mapCategory(b.title)
+    category: normalizeCategory(b.title)
   }));
 }
 
+// Fetch Internet Archive audiobooks
 async function fetchInternetArchive(offset) {
   const page = offset / limit + 1;
   const url = `https://archive.org/advancedsearch.php?q=mediatype:audiobook&rows=${limit}&page=${page}&output=json`;
@@ -159,19 +162,7 @@ async function fetchInternetArchive(offset) {
     title: d.title || 'Unknown',
     authors: d.creator || 'Unknown',
     link: `https://archive.org/details/${d.identifier}`,
-    category: mapCategory(d.title)
-  }));
-}
-
-async function fetchOpenLibrary(offset) {
-  const url = `https://openlibrary.org/subjects/audiobooks.json?limit=${limit}&offset=${offset}`;
-  const res = await fetch(url);
-  const data = await res.json();
-  return data.works.map(w => ({
-    title: w.title,
-    authors: w.authors.map(a=>a.name).join(', '),
-    link: `https://openlibrary.org${w.key}`,
-    category: 'literature'
+    category: normalizeCategory(d.title, d.subject ? d.subject.join(' ') : '')
   }));
 }
 
@@ -181,13 +172,12 @@ async function loadNextBatch() {
   isFetching = true;
   loadingEl.style.display = 'block';
 
-  const [lv, ia, ol] = await Promise.all([
+  const [lv, ia] = await Promise.all([
     fetchLibriVox(currentOffset),
-    fetchInternetArchive(currentOffset),
-    fetchOpenLibrary(currentOffset)
+    fetchInternetArchive(currentOffset)
   ]);
 
-  const newItems = [...lv, ...ia, ...ol];
+  const newItems = [...lv, ...ia];
   // Remove duplicates by link
   const uniqueItems = newItems.filter(n => !allItems.some(a => a.link === n.link));
   allItems.push(...uniqueItems);
