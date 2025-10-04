@@ -102,8 +102,8 @@ let isFetching = false;
 let offsets = { lv: 0, ia: 0 };
 const limit = 12;
 
-// Category mapping
-function normalizeCategory(title, sourceCategory = '') {
+// Map title/source to category
+function normalizeCategory(title, sourceCategory='') {
   const t = title.toLowerCase();
   const sc = sourceCategory.toLowerCase();
   if(t.includes('politics') || sc.includes('politics') || sc.includes('government')) return 'Politics';
@@ -180,7 +180,7 @@ async function fetchInternetArchive(offset=0, query='') {
   }
 }
 
-// Load audiobooks with throttling
+// Load audiobooks
 async function loadAudiobooks(query='') {
   if(isFetching) return;
   isFetching = true;
@@ -207,7 +207,7 @@ async function loadAudiobooks(query='') {
   renderFilteredItems();
 }
 
-// Render filtered items based on current search & category
+// Render filtered items
 function renderFilteredItems() {
   const searchTerm = searchBar.value.trim().toLowerCase();
   const category = categoryFilter.value.trim().toLowerCase();
@@ -217,7 +217,6 @@ function renderFilteredItems() {
     (!category || item.category.toLowerCase() === category)
   );
 
-  // Fetch more if nothing matches locally
   if(filtered.length === 0 && !isFetching && (searchTerm || category)) {
     loadAudiobooks(searchTerm || category);
     return;
@@ -234,8 +233,8 @@ window.addEventListener('scroll', () => {
 });
 
 // Event listeners
-searchBar.addEventListener('input', () => renderFilteredItems());
-categoryFilter.addEventListener('change', () => renderFilteredItems());
+searchBar.addEventListener('input', renderFilteredItems);
+categoryFilter.addEventListener('change', renderFilteredItems);
 
 // Initial load
 loadAudiobooks();
