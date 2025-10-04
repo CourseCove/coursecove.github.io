@@ -137,35 +137,47 @@ function renderItems(items) {
   });
 }
 
-// Fetch LibriVox
+// Fetch LibriVox safely
 async function fetchLibriVox(offset=0, query='') {
-  let url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
-  if(query) url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&title=${encodeURIComponent(query)}&offset=${offset}`)}`;
-  const res = await fetch(url);
-  const data = await res.json();
-  const books = JSON.parse(data.contents).books;
-  return books.map(b => ({
-    title: b.title,
-    authors: b.authors.length ? b.authors.map(a=>a.first_name+' '+a.last_name).join(', ') : 'Unknown',
-    link: b.url_librivox,
-    category: normalizeCategory(b.title)
-  }));
+  try {
+    let url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
+    if(query) url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&title=${encodeURIComponent(query)}&offset=${offset}`)}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const books = JSON.parse(data.contents).books || [];
+    return books.map(b => ({
+      title: b.title || 'Unknown',
+      authors: Array.isArray(b.authors) && b.authors.length
+                 ? b.authors.map(a => (a.first_name||'')+' '+(a.last_name||'')).join(', ')
+                 : 'Unknown',
+      link: b.url_librivox || '#',
+      category: normalizeCategory(b.title)
+    }));
+  } catch(err) {
+    console.error('LibriVox fetch error:', err);
+    return [];
+  }
 }
 
 // Fetch Internet Archive
 async function fetchInternetArchive(offset=0, query='') {
-  const page = offset / limit + 1;
-  let q = 'mediatype:audiobook';
-  if(query) q += ` AND ${query}`;
-  const url = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&rows=${limit}&page=${page}&output=json`;
-  const res = await fetch(url);
-  const data = await res.json();
-  return data.response.docs.map(d => ({
-    title: d.title || 'Unknown',
-    authors: d.creator || 'Unknown',
-    link: `https://archive.org/details/${d.identifier}`,
-    category: normalizeCategory(d.title, d.subject ? d.subject.join(' ') : '')
-  }));
+  try {
+    const page = offset / limit + 1;
+    let q = 'mediatype:audiobook';
+    if(query) q += ` AND ${query}`;
+    const url = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&rows=${limit}&page=${page}&output=json`;
+    const res = await fetch(url);
+    const data = await res.json();
+    return data.response.docs.map(d => ({
+      title: d.title || 'Unknown',
+      authors: d.creator || 'Unknown',
+      link: d.identifier ? `https://archive.org/details/${d.identifier}` : '#',
+      category: normalizeCategory(d.title, d.subject ? d.subject.join(' ') : '')
+    }));
+  } catch(err) {
+    console.error('Internet Archive fetch error:', err);
+    return [];
+  }
 }
 
 // Load audiobooks
@@ -201,7 +213,6 @@ function applyFilters(query='') {
     (!category || item.category.toLowerCase() === category)
   );
 
-  // If search term exists and no results, fetch more
   if(searchTerm && filtered.length === 0) {
     loadAudiobooks(searchTerm);
     return;
