@@ -14,7 +14,7 @@
   header p { font-size:1.125rem; color:#666; }
   .filters { display:flex; justify-content:center; margin:20px 0; gap:20px; flex-wrap:wrap; }
   select, input[type="text"] { padding:10px; border-radius:8px; border:1px solid #ddd; font-size:1rem; width:200px; }
-  #loading { text-align:center; margin:20px; color:#666; }
+  #loading, #scroll-loading { text-align:center; margin:20px; color:#666; }
   .card-body { display: flex; flex-direction: column; justify-content: space-between; }
   .card-title { font-size: 1.125rem; font-weight: bold; }
   .card-text { font-size: 0.875rem; color: #555; }
@@ -76,6 +76,7 @@
 </div>
 
 <div id="loading">Loading audiobooks...</div>
+<div id="scroll-loading" style="display:none;">Loading more audiobooks...</div>
 
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
@@ -96,13 +97,16 @@ const container = document.getElementById('audiobook-container');
 const searchBar = document.getElementById('searchBar');
 const categoryFilter = document.getElementById('categoryFilter');
 const loadingEl = document.getElementById('loading');
+const scrollLoading = document.getElementById('scroll-loading');
 
 let allItems = [];
+let preloadNextBatch = [];
 let isFetching = false;
 let offsets = { lv: 0, ia: 0 };
 const limit = 12;
+const SCROLL_THRESHOLD = 1000;
 
-// Map title/source to category
+// Normalize category
 function normalizeCategory(title, sourceCategory='') {
   const t = title.toLowerCase();
   const sc = sourceCategory.toLowerCase();
@@ -137,7 +141,7 @@ function renderItems(items) {
   });
 }
 
-// Fetch LibriVox via allorigins to bypass CORS
+// Fetch LibriVox
 async function fetchLibriVox(offset=0, query='') {
   try {
     let url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
@@ -180,31 +184,48 @@ async function fetchInternetArchive(offset=0, query='') {
   }
 }
 
+// Preload next batch
+async function preloadAudiobooks(query='') {
+  if(preloadNextBatch.length > 0 || isFetching) return;
+  const [lv, ia] = await Promise.all([
+    fetchLibriVox(offsets.lv, query),
+    fetchInternetArchive(offsets.ia, query)
+  ]);
+  offsets.lv += limit;
+  offsets.ia += limit;
+
+  const newItems = [...lv, ...ia].filter(n => !allItems.some(a => a.link === n.link));
+  preloadNextBatch.push(...newItems);
+}
+
 // Load audiobooks
 async function loadAudiobooks(query='') {
   if(isFetching) return;
   isFetching = true;
   loadingEl.style.display = 'block';
+  scrollLoading.style.display = 'block';
 
-  try {
+  let itemsToAdd = [];
+  if(preloadNextBatch.length > 0) {
+    itemsToAdd = preloadNextBatch.splice(0);
+  } else {
     const [lv, ia] = await Promise.all([
       fetchLibriVox(offsets.lv, query),
       fetchInternetArchive(offsets.ia, query)
     ]);
-
     offsets.lv += limit;
     offsets.ia += limit;
-
-    const newItems = [...lv, ...ia];
-    const uniqueItems = newItems.filter(n => !allItems.some(a => a.link === n.link));
-    allItems.push(...uniqueItems);
-  } catch(err) {
-    console.error('Error loading audiobooks:', err);
+    itemsToAdd = [...lv, ...ia].filter(n => !allItems.some(a => a.link === n.link));
   }
 
+  allItems.push(...itemsToAdd);
   isFetching = false;
   loadingEl.style.display = 'none';
+  scrollLoading.style.display = 'none';
   renderFilteredItems();
+
+  // Preload next batch
+  preloadAudiobooks();
 }
 
 // Render filtered items
@@ -227,7 +248,10 @@ function renderFilteredItems() {
 
 // Infinite scroll
 window.addEventListener('scroll', () => {
-  if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+  const scrollPosition = window.innerHeight + window.scrollY;
+  const triggerPosition = document.body.offsetHeight - SCROLL_THRESHOLD;
+
+  if(scrollPosition >= triggerPosition && !isFetching) {
     loadAudiobooks();
   }
 });
