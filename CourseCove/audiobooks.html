@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audiobook Listings | Course Aggregator</title>
+<title>Audiobooks | CourseCove</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="icon" type="image/png" href="images/favicon.png" />
@@ -15,6 +15,10 @@
   .filters { display:flex; justify-content:center; margin:20px 0; gap:20px; flex-wrap:wrap; }
   select, input[type="text"] { padding:10px; border-radius:8px; border:1px solid #ddd; font-size:1rem; width:200px; }
   #loading { text-align:center; margin:20px; color:#666; }
+  .card-body { display: flex; flex-direction: column; justify-content: space-between; }
+  .card-title { font-size: 1.125rem; font-weight: bold; }
+  .card-text { font-size: 0.875rem; color: #555; }
+  .btn { margin-top: auto; }
 </style>
 </head>
 <body>
@@ -50,25 +54,25 @@
 </nav>
 
 <header>
-  <h1>Audiobook Listings</h1>
-  <p>Discover a curated selection of audiobooks from public domain sources.</p>
+  <h1>Audiobooks</h1>
+  <p>Discover a curated selection of audiobooks from multiple public sources.</p>
 </header>
 
 <div class="filters">
   <input type="text" id="searchBar" placeholder="Search audiobooks..." />
   <select id="categoryFilter">
     <option value="">All Categories</option>
+    <option value="literature">Literature</option>
+    <option value="history">History</option>
+    <option value="science">Science</option>
+    <option value="philosophy">Philosophy</option>
     <option value="politics">Politics</option>
     <option value="economics">Economics</option>
-    <option value="philosophy">Philosophy</option>
-    <option value="science">Science</option>
-    <option value="history">History</option>
-    <option value="literature">Literature</option>
   </select>
 </div>
 
 <div class="container my-4">
-  <div class="row" id="course-container"></div>
+  <div class="row" id="audiobook-container"></div>
 </div>
 
 <div id="loading">Loading audiobooks...</div>
@@ -88,167 +92,139 @@
 </footer>
 
 <script>
-const courseContainer = document.getElementById('course-container');
+const container = document.getElementById('audiobook-container');
 const searchBar = document.getElementById('searchBar');
 const categoryFilter = document.getElementById('categoryFilter');
 const loadingEl = document.getElementById('loading');
 
 let allItems = [];
 let isFetching = false;
-let currentPage = 1;
+let currentOffset = 0;
+const limit = 12;
 
-// Starter items to show before API fetch
-const starterBooks = [
-  {
-    title: "Pride and Prejudice",
-    authors: "Jane Austen",
-    link: "https://librivox.org/pride-and-prejudice-by-jane-austen/",
-    cover: "",
-    type: "audiobook",
-    category: "literature"
-  },
-  {
-    title: "The Republic",
-    authors: "Plato",
-    link: "https://librivox.org/the-republic-by-plato/",
-    cover: "",
-    type: "audiobook",
-    category: "philosophy"
-  },
-  {
-    title: "Meditations",
-    authors: "Marcus Aurelius",
-    link: "https://librivox.org/meditations-by-marcus-aurelius/",
-    cover: "",
-    type: "audiobook",
-    category: "philosophy"
-  },
-  {
-    title: "Democracy in America",
-    authors: "Alexis de Tocqueville",
-    link: "https://librivox.org/democracy-in-america-by-alexis-de-tocqueville/",
-    cover: "",
-    type: "audiobook",
-    category: "politics"
-  },
-  {
-    title: "Frankenstein",
-    authors: "Mary Shelley",
-    link: "https://librivox.org/frankenstein-by-mary-shelley/",
-    cover: "",
-    type: "audiobook",
-    category: "literature"
-  },
-  {
-    title: "A Tale of Two Cities",
-    authors: "Charles Dickens",
-    link: "https://librivox.org/a-tale-of-two-cities-by-charles-dickens/",
-    cover: "",
-    type: "audiobook",
-    category: "literature"
-  },
-  {
-    title: "The Adventures of Sherlock Holmes",
-    authors: "Arthur Conan Doyle",
-    link: "https://librivox.org/the-adventures-of-sherlock-holmes-by-arthur-conan-doyle/",
-    cover: "",
-    type: "audiobook",
-    category: "literature"
-  }
-];
-
-
-function mapTitleToCategory(title){
+// Map category based on title if needed
+function mapCategory(title) {
   title = title.toLowerCase();
-  if(title.includes("politics") || title.includes("democracy")) return "politics";
-  if(title.includes("economics") || title.includes("money")) return "economics";
-  if(title.includes("philosophy") || title.includes("meditation")) return "philosophy";
-  if(title.includes("science") || title.includes("physics") || title.includes("biology")) return "science";
-  if(title.includes("history") || title.includes("war")) return "history";
-  return "literature"; 
+  if(title.includes('politics')) return 'politics';
+  if(title.includes('economics') || title.includes('money')) return 'economics';
+  if(title.includes('philosophy') || title.includes('meditation')) return 'philosophy';
+  if(title.includes('science') || title.includes('physics') || title.includes('biology')) return 'science';
+  if(title.includes('history') || title.includes('war')) return 'history';
+  return 'literature';
 }
 
+// Render items
 function renderItems(items) {
-  courseContainer.innerHTML = "";
-  if(items.length === 0){
-    courseContainer.innerHTML = `<div class="col-12 text-center text-muted">No results found.</div>`;
+  container.innerHTML = '';
+  if(items.length === 0) {
+    container.innerHTML = '<div class="col-12 text-center text-muted">No results found.</div>';
     return;
   }
-  items.forEach(item=>{
-    const col = document.createElement("div");
-    col.className = "col-12 col-md-4 col-lg-3 mb-4";
+  items.forEach(item => {
+    const col = document.createElement('div');
+    col.className = 'col-12 col-md-4 col-lg-3 mb-4';
     col.innerHTML = `
       <div class="card h-100 shadow-sm">
+        ${item.cover ? `<img src="${item.cover}" class="card-img-top" alt="${item.title}">` : ''}
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${item.title}</h5>
           <p class="card-text mb-1">Author: ${item.authors}</p>
-          <p class="text-muted small">${item.category ? ("Category: "+item.category) : ""}</p>
+          <p class="text-muted small">Category: ${item.category}</p>
           <a href="${item.link}" target="_blank" class="mt-auto btn btn-primary btn-sm">Listen / Download</a>
         </div>
       </div>`;
-    courseContainer.appendChild(col);
+    container.appendChild(col);
   });
 }
 
-// ----------------- FETCH -----------------
-
-async function fetchLibriVox(page=1){
-  const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=12&page=${page}`)}`;
+// Fetch functions
+async function fetchLibriVox(offset) {
+  const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://librivox.org/api/feed/audiobooks?format=json&limit=${limit}&offset=${offset}`)}`;
   const res = await fetch(url);
   const data = await res.json();
   const books = JSON.parse(data.contents).books;
-  return books.map(b=>({
+  return books.map(b => ({
     title: b.title,
-    authors: b.authors.length ? b.authors.map(a=>a.first_name+" "+a.last_name).join(", ") : "Unknown",
+    authors: b.authors.length ? b.authors.map(a=>a.first_name+' '+a.last_name).join(', ') : 'Unknown',
     link: b.url_librivox,
-    cover: "",
-    type:"audiobook",
-    category: mapTitleToCategory(b.title)
+    cover: b.cover_url || '',
+    category: mapCategory(b.title)
   }));
 }
 
-// ----------------- CORE -----------------
-
-async function applyFilters() {
-  const query = searchBar.value.trim().toLowerCase();
-  const category = categoryFilter.value.toLowerCase();
-
-  const filtered = allItems.filter(item =>
-    item.title.toLowerCase().includes(query) &&
-    (!category || item.category.toLowerCase() === category)
-  );
-
-  renderItems(filtered);
+async function fetchInternetArchive(offset) {
+  const page = offset / limit + 1;
+  const url = `https://archive.org/advancedsearch.php?q=mediatype:audiobook&rows=${limit}&page=${page}&output=json`;
+  const res = await fetch(url);
+  const data = await res.json();
+  return data.response.docs.map(d => ({
+    title: d.title || 'Unknown',
+    authors: d.creator || 'Unknown',
+    link: `https://archive.org/details/${d.identifier}`,
+    cover: d.cover_i ? `https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg` : '',
+    category: mapCategory(d.title)
+  }));
 }
 
+async function fetchOpenLibrary(offset) {
+  const url = `https://openlibrary.org/subjects/audiobooks.json?limit=${limit}&offset=${offset}`;
+  const res = await fetch(url);
+  const data = await res.json();
+  return data.works.map(w => ({
+    title: w.title,
+    authors: w.authors.map(a=>a.name).join(', '),
+    link: `https://openlibrary.org${w.key}`,
+    cover: w.cover_id ? `https://covers.openlibrary.org/b/id/${w.cover_id}-M.jpg` : '',
+    category: 'literature'
+  }));
+}
+
+// Load next batch
 async function loadNextBatch() {
   if(isFetching) return;
   isFetching = true;
-  loadingEl.style.display = "block";
+  loadingEl.style.display = 'block';
 
-  const newItems = await fetchLibriVox(currentPage);
-  currentPage++;
-  allItems.push(...newItems);
+  const [lv, ia, ol] = await Promise.all([
+    fetchLibriVox(currentOffset),
+    fetchInternetArchive(currentOffset),
+    fetchOpenLibrary(currentOffset)
+  ]);
+
+  const newItems = [...lv, ...ia, ...ol];
+  // Remove duplicates by link
+  const uniqueItems = newItems.filter(n => !allItems.some(a => a.link === n.link));
+  allItems.push(...uniqueItems);
   applyFilters();
 
+  currentOffset += limit;
   isFetching = false;
-  loadingEl.style.display = "none";
+  loadingEl.style.display = 'none';
 }
 
-// ----------------- INIT -----------------
+// Filter items
+function applyFilters() {
+  const query = searchBar.value.trim().toLowerCase();
+  const category = categoryFilter.value.trim().toLowerCase();
+  const filtered = allItems.filter(item =>
+    item.title.toLowerCase().includes(query) &&
+    (!category || item.category.toLowerCase().includes(category))
+  );
+  renderItems(filtered);
+}
 
-allItems = [...starterBooks];
-renderItems(allItems);
-
-window.addEventListener("scroll", ()=>{
-  if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
+// Infinite scroll
+window.addEventListener('scroll', () => {
+  if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
     loadNextBatch();
   }
 });
 
-searchBar.addEventListener("input", applyFilters);
-categoryFilter.addEventListener("change", applyFilters);
+searchBar.addEventListener('input', applyFilters);
+categoryFilter.addEventListener('change', applyFilters);
 
+// Initial load
+loadNextBatch();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
