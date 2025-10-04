@@ -99,10 +99,64 @@ let currentPage = 1;
 
 // Starter items to show before API fetch
 const starterBooks = [
-  { title:"Pride and Prejudice", authors:"Jane Austen", link:"#", cover:"", type:"audiobook", category:"literature" },
-  { title:"The Republic", authors:"Plato", link:"#", cover:"", type:"audiobook", category:"philosophy" },
-  { title:"Meditations", authors:"Marcus Aurelius", link:"#", cover:"", type:"audiobook", category:"philosophy" }
+  {
+    title: "Pride and Prejudice",
+    authors: "Jane Austen",
+    link: "https://librivox.org/pride-and-prejudice-by-jane-austen/",
+    cover: "",
+    type: "audiobook",
+    category: "literature"
+  },
+  {
+    title: "The Republic",
+    authors: "Plato",
+    link: "https://librivox.org/the-republic-by-plato/",
+    cover: "",
+    type: "audiobook",
+    category: "philosophy"
+  },
+  {
+    title: "Meditations",
+    authors: "Marcus Aurelius",
+    link: "https://librivox.org/meditations-by-marcus-aurelius/",
+    cover: "",
+    type: "audiobook",
+    category: "philosophy"
+  },
+  {
+    title: "Democracy in America",
+    authors: "Alexis de Tocqueville",
+    link: "https://librivox.org/democracy-in-america-by-alexis-de-tocqueville/",
+    cover: "",
+    type: "audiobook",
+    category: "politics"
+  },
+  {
+    title: "Frankenstein",
+    authors: "Mary Shelley",
+    link: "https://librivox.org/frankenstein-by-mary-shelley/",
+    cover: "",
+    type: "audiobook",
+    category: "literature"
+  },
+  {
+    title: "A Tale of Two Cities",
+    authors: "Charles Dickens",
+    link: "https://librivox.org/a-tale-of-two-cities-by-charles-dickens/",
+    cover: "",
+    type: "audiobook",
+    category: "literature"
+  },
+  {
+    title: "The Adventures of Sherlock Holmes",
+    authors: "Arthur Conan Doyle",
+    link: "https://librivox.org/the-adventures-of-sherlock-holmes-by-arthur-conan-doyle/",
+    cover: "",
+    type: "audiobook",
+    category: "literature"
+  }
 ];
+
 
 function mapTitleToCategory(title){
   title = title.toLowerCase();
