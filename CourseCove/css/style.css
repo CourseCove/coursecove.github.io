@@ -753,93 +753,32 @@ label {
 
 
 /*----*/
-/* ==========================
-   General Styles
-========================== */
-.hanging { 
-  display: block; 
-  text-indent: -1.5em; 
-  padding-left: 1.5em; 
-  margin-bottom: 0.5em; 
-  color: black; 
-}
-
-.ref-item .hanging {
-  color: white;
-}
-
-/* ==========================
-   Navbar Dropdown Styles
-========================== */
-
-/* Remove caret icon next to dropdown */
+/* Remove caret icon */
 .navbar .dropdown-toggle::after {
   display: none !important;
 }
 
-/* Base dropdown styling */
+/* Smooth fade + slide for dropdown */
 .dropdown-menu {
   border-radius: 8px;
   border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-  /* Animation base */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.25s ease-in-out;
 }
 
-/* ==========================
-   Desktop (hover) styles
-========================== */
+/* Desktop hover */
 @media (min-width: 992px) {
-  /* Show dropdown on hover */
   .navbar .dropdown:hover .dropdown-menu {
     display: block; /* required for hover */
     opacity: 1;
     transform: translateY(0);
   }
-
-  /* Disable click on desktop for hover dropdown */
-  .navbar .dropdown-toggle {
-    pointer-events: none;
-  }
-
-  .navbar .dropdown:hover > .nav-link {
-    pointer-events: auto;
-  }
 }
 
-/* ==========================
-   Mobile (tap/click) styles
-========================== */
+/* Mobile click */
 @media (max-width: 991px) {
-
-  /* Dropdown menu background & spacing */
-  .dropdown-menu {
-    background-color: #f7f7f9;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  /* Dropdown items */
-  .dropdown-item {
-    padding: 14px 20px;
-    font-size: 1.05rem;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  .dropdown-item:last-child {
-    border-bottom: none;
-  }
-
-  .dropdown-item:hover,
-  .dropdown-item:focus {
-    background-color: #e3e5e9;
-  }
-
-  /* Animate dropdown only when Bootstrap adds .show */
   .dropdown.show > .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
