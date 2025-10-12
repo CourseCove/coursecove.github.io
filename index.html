@@ -15,27 +15,46 @@
     <a class="navbar-brand" href="index.html">
       <img src="CourseCove/images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="CourseCove/math.html">Math</a></li>
-        <li class="nav-item"><a class="nav-link " href="CourseCove/ai-ml.html">AI / ML</a></li>
-        <li class="nav-item"><a class="nav-link" href="CourseCove/arts-humanities.html">Arts & Humanities</a></li>
-        <li class="nav-item"><a class="nav-link" href="CourseCove/languages.html">Languages</a></li>
-        <li class="nav-item"><a class="nav-link" href="CourseCove/politics-economics.html">Politics & Economics</a></li>
-        <li class="nav-item"><a class="nav-link" href="CourseCove/environment.html">Environment</a></li>
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+
+        <!-- Courses Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="coursesDropdown">Courses</a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="CourseCove/math.html">Math</a></li>
+            <li><a class="dropdown-item" href="CourseCove/ai-ml.html">AI / ML</a></li>
+            <li><a class="dropdown-item" href="CourseCove/arts-humanities.html">Arts & Humanities</a></li>
+            <li><a class="dropdown-item" href="CourseCove/languages.html">Languages</a></li>
+            <li><a class="dropdown-item" href="CourseCove/politics-economics.html">Politics & Economics</a></li>
+            <li><a class="dropdown-item" href="CourseCove/environment.html">Environment</a></li>
+          </ul>
+        </li>
+
+        <!-- Other Pages -->
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="CourseCove/books.html">Books</a></li>
         <li class="nav-item"><a class="nav-link" href="CourseCove/articles.html">Articles</a></li>
-        <li class="nav-item"><a class="nav-link" href="CourseCove/citation.html">Citation generator</a></li>                
+        <li class="nav-item"><a class="nav-link" href="CourseCove/citation.html">Citation Generator</a></li>
         <li class="nav-item"><a class="nav-link" href="CourseCove/contact.html">Contact</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
+
 
 <main class="container my-5">
 
