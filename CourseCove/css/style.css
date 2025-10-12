@@ -748,33 +748,49 @@ label {
 .citation-form section div {
   color: white;
 }
-
-
-.hanging { display: block; text-indent: -1.5em; padding-left: 1.5em; margin-bottom: 0.5em; color: black; }
+/* ----- Existing styles ----- */
+.hanging { 
+  display: block; 
+  text-indent: -1.5em; 
+  padding-left: 1.5em; 
+  margin-bottom: 0.5em; 
+  color: black; 
+}
 
 .ref-item .hanging {
   color: white;
-}/* Remove caret icon next to dropdown */
+}
+
+/* ----- Navbar dropdown fixes ----- */
+
+/* Remove caret icon next to dropdown */
 .navbar .dropdown-toggle::after {
   display: none !important;
 }
 
-/* General dropdown styling */
+/* Base dropdown styling */
 .dropdown-menu {
-  transition: all 0.2s ease-in-out;
   border-radius: 8px;
   border: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Smooth fade + slide */
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease-in-out;
 }
 
-/* ===== Desktop (hover behavior) ===== */
+/* ===== Desktop (hover) ===== */
 @media (min-width: 992px) {
   .navbar .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
-  /* Disable Bootstrap’s click trigger for desktop */
+  /* Disable click on desktop for hover dropdown */
   .navbar .dropdown-toggle {
     pointer-events: none;
   }
@@ -784,9 +800,9 @@ label {
   }
 }
 
-/* ===== Mobile (click behavior) ===== */
+/* ===== Mobile (tap/click) ===== */
 @media (max-width: 991px) {
-  /* Reset pointer events for tap behavior */
+  /* Enable click on mobile */
   .navbar .dropdown-toggle {
     pointer-events: auto;
   }
@@ -813,35 +829,16 @@ label {
     background-color: #e3e5e9;
   }
 
-  /* Make sure dropdown aligns correctly within expanded navbar */
+  /* Correct alignment inside collapsed navbar */
   .navbar-collapse.show .dropdown-menu {
     position: static;
     float: none;
   }
-}
 
-
-/* Smooth dropdown animation */
-.navbar .dropdown-menu {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.25s ease-in-out;
-}
-
-/* Show dropdown on hover (desktop) */
-@media (min-width: 992px) {
-  .navbar .dropdown:hover .dropdown-menu {
+  /* Show animation on mobile tap */
+  .navbar .dropdown.show .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-}
-
-/* Show dropdown when opened (mobile click) */
-.navbar .dropdown.show .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
