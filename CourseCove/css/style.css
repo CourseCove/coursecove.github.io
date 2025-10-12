@@ -772,3 +772,58 @@ label {
 .dropdown-menu {
   transition: all 0.2s ease-in-out;
 }
+
+
+/* ===== General dropdown fixes ===== */
+
+/* Remove caret arrow */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Smooth dropdown animation */
+.dropdown-menu {
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Desktop hover behavior ===== */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+/* ===== Mobile improvements ===== */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    background-color: #f7f7f9;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .dropdown-item {
+    padding: 14px 20px;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #e3e5e9;
+  }
+
+  /* Ensure dropdown items expand correctly inside collapsed navbar */
+  .navbar-collapse.show .dropdown-menu {
+    position: static;
+    float: none;
+  }
+}
