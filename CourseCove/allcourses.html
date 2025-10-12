@@ -25,34 +25,51 @@
 <body>
 
 
-   <nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
+  <nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
   <div class="container">
     <a class="navbar-brand" href="../index.html">
       <img src="images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
     </a>
+
+    <!-- Mobile toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="math.html">Math</a></li>
-        <li class="nav-item"><a class="nav-link " href="ai-ml.html">AI / ML</a></li>
-        <li class="nav-item"><a class="nav-link" href="arts-humanities.html">Arts & Humanities</a></li>
-        <li class="nav-item"><a class="nav-link" href="languages.html">Languages</a></li>
-        <li class="nav-item"><a class="nav-link" href="politics-economics.html">Politics & Economics</a></li>
-        <li class="nav-item"><a class="nav-link" href="environment.html">Environment</a></li>
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+
+        <!-- Courses Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="coursesDropdown">Courses</a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="math.html">Math</a></li>
+            <li><a class="dropdown-item" href="ai-ml.html">AI / ML</a></li>
+            <li><a class="dropdown-item" href="arts-humanities.html">Arts & Humanities</a></li>
+            <li><a class="dropdown-item" href="languages.html">Languages</a></li>
+            <li><a class="dropdown-item" href="politics-economics.html">Politics & Economics</a></li>
+            <li><a class="dropdown-item" href="environment.html">Environment</a></li>
+          </ul>
+        </li>
+
+        <!-- Other Pages -->
         <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
         <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
-        <li class="nav-item"><a class="nav-link" href="citation.html">Citation generator</a></li>                
+        <li class="nav-item"><a class="nav-link" href="citation.html">Citation Generator</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
-  
+
   
   <main class="container my-5">
     <h1 class="mb-4">All Courses</h1>
