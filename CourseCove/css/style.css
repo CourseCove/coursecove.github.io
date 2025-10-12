@@ -800,14 +800,14 @@ label {
   }
 }
 
-/* ===== Mobile (tap/click) ===== */
+/* Mobile-only dropdown styling */
 @media (max-width: 991px) {
-  /* Enable click on mobile */
-  .navbar .dropdown-toggle {
-    pointer-events: auto;
-  }
-
   .dropdown-menu {
+    display: none;            /* start hidden */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease-in-out;
+
     background-color: #f7f7f9;
     border-radius: 0;
     box-shadow: none;
@@ -829,16 +829,16 @@ label {
     background-color: #e3e5e9;
   }
 
-  /* Correct alignment inside collapsed navbar */
+  /* Show dropdown when parent has .show (mobile click) */
+  .navbar .dropdown.show .dropdown-menu {
+    display: block;           /* now it actually appears */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Ensure dropdown aligns inside collapsed navbar */
   .navbar-collapse.show .dropdown-menu {
     position: static;
     float: none;
-  }
-
-  /* Show animation on mobile tap */
-  .navbar .dropdown.show .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
   }
 }
