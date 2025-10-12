@@ -773,11 +773,7 @@ label {
   border-radius: 8px;
   border: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-  /* Smooth fade + slide */
-  display: block;
   opacity: 0;
-  visibility: hidden;
   transform: translateY(10px);
   transition: all 0.25s ease-in-out;
 }
@@ -785,8 +781,8 @@ label {
 /* ===== Desktop (hover) ===== */
 @media (min-width: 992px) {
   .navbar .dropdown:hover .dropdown-menu {
+    display: block;       /* necessary for hover */
     opacity: 1;
-    visibility: visible;
     transform: translateY(0);
   }
 
@@ -800,40 +796,32 @@ label {
   }
 }
 
+/* ===== Mobile (tap/click) ===== */
 @media (max-width: 991px) {
-  .navbar .dropdown-menu {
-    display: none;           /* start hidden */
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.25s ease-in-out;
-
+  .dropdown-menu {
     background-color: #f7f7f9;
     border-radius: 0;
     box-shadow: none;
     padding: 0;
-
-    position: static;        /* key fix for mobile */
-    float: none;
   }
 
-  .navbar .dropdown-item {
+  .dropdown-item {
     padding: 14px 20px;
     font-size: 1.05rem;
     border-bottom: 1px solid #e0e0e0;
   }
 
-  .navbar .dropdown-item:last-child {
+  .dropdown-item:last-child {
     border-bottom: none;
   }
 
-  .navbar .dropdown-item:hover,
-  .navbar .dropdown-item:focus {
+  .dropdown-item:hover,
+  .dropdown-item:focus {
     background-color: #e3e5e9;
   }
 
-  /* Show dropdown on mobile click */
-  .navbar .dropdown.show .dropdown-menu {
-    display: block;           /* now visible */
+  /* Animate dropdown only when Bootstrap adds .show */
+  .dropdown.show > .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
   }
