@@ -755,3 +755,20 @@ label {
 .ref-item .hanging {
   color: white;
 }
+
+
+/* Remove dropdown caret arrow */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Show dropdown on hover */
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* Ensures dropdown aligns neatly */
+}
+
+/* Optional: smooth transition */
+.dropdown-menu {
+  transition: all 0.2s ease-in-out;
+}
