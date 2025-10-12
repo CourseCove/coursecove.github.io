@@ -819,3 +819,29 @@ label {
     float: none;
   }
 }
+
+
+/* Smooth dropdown animation */
+.navbar .dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Show dropdown on hover (desktop) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Show dropdown when opened (mobile click) */
+.navbar .dropdown.show .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
