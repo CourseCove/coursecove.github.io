@@ -748,7 +748,14 @@ label {
 .citation-form section div {
   color: white;
 }
-/* ----- Existing styles ----- */
+
+
+
+
+/*----*/
+/* ==========================
+   General Styles
+========================== */
 .hanging { 
   display: block; 
   text-indent: -1.5em; 
@@ -761,7 +768,9 @@ label {
   color: white;
 }
 
-/* ----- Navbar dropdown fixes ----- */
+/* ==========================
+   Navbar Dropdown Styles
+========================== */
 
 /* Remove caret icon next to dropdown */
 .navbar .dropdown-toggle::after {
@@ -773,15 +782,20 @@ label {
   border-radius: 8px;
   border: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Animation base */
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.25s ease-in-out;
 }
 
-/* ===== Desktop (hover) ===== */
+/* ==========================
+   Desktop (hover) styles
+========================== */
 @media (min-width: 992px) {
+  /* Show dropdown on hover */
   .navbar .dropdown:hover .dropdown-menu {
-    display: block;       /* necessary for hover */
+    display: block; /* required for hover */
     opacity: 1;
     transform: translateY(0);
   }
@@ -796,8 +810,12 @@ label {
   }
 }
 
-/* ===== Mobile (tap/click) ===== */
+/* ==========================
+   Mobile (tap/click) styles
+========================== */
 @media (max-width: 991px) {
+
+  /* Dropdown menu background & spacing */
   .dropdown-menu {
     background-color: #f7f7f9;
     border-radius: 0;
@@ -805,6 +823,7 @@ label {
     padding: 0;
   }
 
+  /* Dropdown items */
   .dropdown-item {
     padding: 14px 20px;
     font-size: 1.05rem;
