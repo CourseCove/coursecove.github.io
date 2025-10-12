@@ -754,51 +754,43 @@ label {
 
 .ref-item .hanging {
   color: white;
-}
-
-
-/* Remove dropdown caret arrow */
+}/* Remove caret icon next to dropdown */
 .navbar .dropdown-toggle::after {
   display: none !important;
 }
 
-/* Show dropdown on hover */
-.navbar .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0; /* Ensures dropdown aligns neatly */
-}
-
-/* Optional: smooth transition */
-.dropdown-menu {
-  transition: all 0.2s ease-in-out;
-}
-
-
-/* ===== General dropdown fixes ===== */
-
-/* Remove caret arrow */
-.navbar .dropdown-toggle::after {
-  display: none !important;
-}
-
-/* Smooth dropdown animation */
+/* General dropdown styling */
 .dropdown-menu {
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
   border: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Desktop hover behavior ===== */
+/* ===== Desktop (hover behavior) ===== */
 @media (min-width: 992px) {
   .navbar .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
   }
+
+  /* Disable Bootstrap’s click trigger for desktop */
+  .navbar .dropdown-toggle {
+    pointer-events: none;
+  }
+
+  .navbar .dropdown:hover > .nav-link {
+    pointer-events: auto;
+  }
 }
 
-/* ===== Mobile improvements ===== */
+/* ===== Mobile (click behavior) ===== */
 @media (max-width: 991px) {
+  /* Reset pointer events for tap behavior */
+  .navbar .dropdown-toggle {
+    pointer-events: auto;
+  }
+
   .dropdown-menu {
     background-color: #f7f7f9;
     border-radius: 0;
@@ -821,7 +813,7 @@ label {
     background-color: #e3e5e9;
   }
 
-  /* Ensure dropdown items expand correctly inside collapsed navbar */
+  /* Make sure dropdown aligns correctly within expanded navbar */
   .navbar-collapse.show .dropdown-menu {
     position: static;
     float: none;
