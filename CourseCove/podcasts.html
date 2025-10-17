@@ -108,13 +108,20 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 <script>
 const container = document.getElementById("content-container");
 const searchBar = document.getElementById("searchBar");
-let limit = 12;
 
-async function fetchiTunes(term = "education", limit = 12) {
-  const url = `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=podcast&limit=${limit}`;
+let limit = 12;
+let term = "education";
+let podcasts = [];
+let tedTalks = [];
+let renderedCount = 0;
+
+async function fetchiTunes(term = "education", limit = 12, offset = 0) {
+  const url = `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=podcast&limit=${limit}&offset=${offset}`;
   const res = await fetch(url);
   const data = await res.json();
   return data.results.map(p => ({
@@ -142,52 +149,69 @@ async function fetchTED() {
   }));
 }
 
-async function render(term = "education") {
-  container.innerHTML = "<p>Loading...</p>";
-
-  const [itunes, ted] = await Promise.all([
-    document.getElementById("itunes").checked ? fetchiTunes(term, limit) : [],
-    document.getElementById("ted").checked ? fetchTED() : []
-  ]);
-
-  const allItems = [...itunes, ...ted];
-  container.innerHTML = allItems.length
-    ? allItems.map(i => `
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="${i.image}" class="card-img-top" alt="${i.title}">
-          <div class="card-body">
-            <h5 class="card-title">${i.title}</h5>
-            <p class="text-muted small">${i.author} • ${i.source}</p>
-            <a href="${i.url}" target="_blank" class="btn btn-primary btn-sm">Listen</a>
-          </div>
+function createCard(item) {
+  return `
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="${item.image}" class="card-img-top" alt="${item.title}">
+        <div class="card-body">
+          <h5 class="card-title">${item.title}</h5>
+          <p class="text-muted small">${item.author} • ${item.source}</p>
+          <a href="${item.url}" target="_blank" class="btn btn-primary btn-sm">Listen</a>
         </div>
-      </div>`).join("")
-    : "<p>No results found.</p>";
+      </div>
+    </div>`;
+}
 
-  // Add "Load more" button
-  if (document.getElementById("itunes").checked) {
+function renderAll() {
+  const showTED = document.getElementById("ted").checked;
+  const showITunes = document.getElementById("itunes").checked;
+
+  const itemsToShow = [
+    ...(showTED ? tedTalks : []),
+    ...(showITunes ? podcasts.slice(0, renderedCount) : [])
+  ];
+
+  container.innerHTML = itemsToShow.map(createCard).join("");
+
+  if (showITunes && renderedCount < podcasts.length) {
     const loadMoreBtn = document.createElement("button");
     loadMoreBtn.className = "btn btn-outline-secondary mt-4";
     loadMoreBtn.textContent = "Load more podcasts";
-    loadMoreBtn.onclick = () => {
-      limit += 12;
-      render(term);
-    };
+    loadMoreBtn.onclick = () => loadMore();
     container.appendChild(loadMoreBtn);
+  }
+
+  if (itemsToShow.length === 0) {
+    container.innerHTML = "<p>No results found.</p>";
   }
 }
 
+async function loadData() {
+  container.innerHTML = "<p>Loading...</p>";
+  podcasts = document.getElementById("itunes").checked ? await fetchiTunes(term, 36) : [];
+  tedTalks = document.getElementById("ted").checked ? await fetchTED() : [];
+  renderedCount = 12;
+  renderAll();
+}
+
+function loadMore() {
+  renderedCount += 12;
+  renderAll();
+}
+
 searchBar.addEventListener("input", e => {
-  const term = e.target.value.trim() || "education";
-  limit = 12;
-  render(term);
+  term = e.target.value.trim() || "education";
+  loadData();
 });
 
-document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => render(searchBar.value || "education")));
+document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", loadData));
 
-render();
+loadData();
 </script>
+
+
+  
 
 </body>
 </html>
