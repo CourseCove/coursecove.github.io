@@ -25,7 +25,7 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg" style="background-color: #e3e5e9;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3e5e9;">
   <div class="container">
     <a class="navbar-brand" href="../index.html">
       <img src="images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
@@ -34,7 +34,7 @@
     <!-- Mobile toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,7 +47,7 @@
 
         <!-- Courses Dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#" id="coursesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Courses
           </a>
           <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
@@ -60,12 +60,23 @@
           </ul>
         </li>
 
-        <!-- Other Pages -->
-        <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
-        <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
-        <li class="nav-item"><a class="nav-link" href="citation.html">Citation Generator</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <!-- Literature Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="literatureDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Literature
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="literatureDropdown">
+            <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
+            <li><a class="dropdown-item" href="books.html">Books</a></li>
+            <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+            <li><a class="dropdown-item" href="citation.html">Citation Generator</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
 
       </ul>
     </div>
