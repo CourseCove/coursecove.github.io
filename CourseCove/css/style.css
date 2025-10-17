@@ -784,3 +784,11 @@ label {
     transform: translateY(0);
   }
 }
+
+.dropdown-menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  z-index: 2000 !important;
+}
