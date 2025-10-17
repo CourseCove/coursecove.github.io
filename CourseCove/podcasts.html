@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Podcasts & Lectures | CourseCove</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body { background: #f8f9fa; }
+    h1 { color: #2c3e50; }
+    .card-img-top { height: 150px; object-fit: cover; background: #e9ecef; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#e3e5e9;">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="images/logo1.png" alt="CourseCove Logo" style="height:70px;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Podcasts</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <h1 class="mb-4">Educational Podcasts & Lectures</h1>
+  <div class="row">
+    <aside class="col-lg-4 mb-4">
+      <div class="card p-3">
+        <h5 class="mb-3">Filter by Source</h5>
+        <div>
+          <div><input type="checkbox" class="form-check-input" id="itunes" checked> <label for="itunes">iTunes Podcasts</label></div>
+          <div><input type="checkbox" class="form-check-input" id="ted" checked> <label for="ted">TED Talks</label></div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="col-lg-8">
+      <input type="search" id="searchBar" class="form-control mb-3" placeholder="Search topics (e.g., AI, History, Math)..." />
+      <div id="content-container" class="row row-cols-1 row-cols-sm-2 g-4"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <div><strong>CourseCove</strong> | © 2025 All rights reserved.</div>
+    <div>
+      <a href="../index.html" class="text-light text-decoration-none me-3">Home</a>
+      <a href="contact.html" class="text-light text-decoration-none">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const container = document.getElementById("content-container");
+const searchBar = document.getElementById("searchBar");
+
+async function fetchiTunes(term = "education") {
+  const url = `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=podcast&limit=12`;
+  const res = await fetch(url);
+  const data = await res.json();
+  return data.results.map(p => ({
+    title: p.collectionName,
+    author: p.artistName,
+    image: p.artworkUrl100,
+    url: p.collectionViewUrl,
+    source: "iTunes Podcast"
+  }));
+}
+
+async function fetchTED() {
+  const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://feeds.feedburner.com/tedtalks_video");
+  const data = await res.json();
+  return data.items.map(t => ({
+    title: t.title,
+    author: "TED Talks",
+    image: t.thumbnail,
+    url: t.link,
+    source: "TED Talks"
+  }));
+}
+
+async function render(term = "education") {
+  container.innerHTML = "<p>Loading...</p>";
+
+  const [itunes, ted] = await Promise.all([
+    document.getElementById("itunes").checked ? fetchiTunes(term) : [],
+    document.getElementById("ted").checked ? fetchTED() : []
+  ]);
+
+  const allItems = [...itunes, ...ted];
+  container.innerHTML = allItems.length
+    ? allItems.map(i => `
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="${i.image}" class="card-img-top" alt="${i.title}">
+          <div class="card-body">
+            <h5 class="card-title">${i.title}</h5>
+            <p class="text-muted small">${i.author} • ${i.source}</p>
+            <a href="${i.url}" target="_blank" class="btn btn-primary btn-sm">Listen</a>
+          </div>
+        </div>
+      </div>`).join("")
+    : "<p>No results found.</p>";
+}
+
+searchBar.addEventListener("input", e => {
+  const term = e.target.value.trim() || "education";
+  render(term);
+});
+
+document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => render(searchBar.value || "education")));
+
+render();
+</script>
+</body>
+</html>
