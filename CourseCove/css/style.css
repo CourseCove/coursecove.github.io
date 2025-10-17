@@ -793,3 +793,11 @@ label {
   z-index: 2000 !important;
 }
 
+@media (max-width: 992px) {
+  .navbar .dropdown-menu {
+    position: static;
+    float: none;
+    background-color: #e3e5e9; /* match navbar color for seamless appearance */
+    border: none;
+  }
+}
