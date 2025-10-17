@@ -111,9 +111,10 @@
 <script>
 const container = document.getElementById("content-container");
 const searchBar = document.getElementById("searchBar");
+let limit = 12;
 
-async function fetchiTunes(term = "education") {
-  const url = `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=podcast&limit=12`;
+async function fetchiTunes(term = "education", limit = 12) {
+  const url = `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=podcast&limit=${limit}`;
   const res = await fetch(url);
   const data = await res.json();
   return data.results.map(p => ({
@@ -126,13 +127,17 @@ async function fetchiTunes(term = "education") {
 }
 
 async function fetchTED() {
-  const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://feeds.feedburner.com/tedtalks_video");
+  const url = `https://api.allorigins.win/get?url=${encodeURIComponent('https://feeds.feedburner.com/tedtalks_video')}`;
+  const res = await fetch(url);
   const data = await res.json();
-  return data.items.map(t => ({
-    title: t.title,
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(data.contents, "text/xml");
+  const items = xml.querySelectorAll("item");
+  return Array.from(items).map(item => ({
+    title: item.querySelector("title").textContent,
     author: "TED Talks",
-    image: t.thumbnail,
-    url: t.link,
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/31/TED_conference_logo.svg",
+    url: item.querySelector("link").textContent,
     source: "TED Talks"
   }));
 }
@@ -141,7 +146,7 @@ async function render(term = "education") {
   container.innerHTML = "<p>Loading...</p>";
 
   const [itunes, ted] = await Promise.all([
-    document.getElementById("itunes").checked ? fetchiTunes(term) : [],
+    document.getElementById("itunes").checked ? fetchiTunes(term, limit) : [],
     document.getElementById("ted").checked ? fetchTED() : []
   ]);
 
@@ -159,10 +164,23 @@ async function render(term = "education") {
         </div>
       </div>`).join("")
     : "<p>No results found.</p>";
+
+  // Add "Load more" button
+  if (document.getElementById("itunes").checked) {
+    const loadMoreBtn = document.createElement("button");
+    loadMoreBtn.className = "btn btn-outline-secondary mt-4";
+    loadMoreBtn.textContent = "Load more podcasts";
+    loadMoreBtn.onclick = () => {
+      limit += 12;
+      render(term);
+    };
+    container.appendChild(loadMoreBtn);
+  }
 }
 
 searchBar.addEventListener("input", e => {
   const term = e.target.value.trim() || "education";
+  limit = 12;
   render(term);
 });
 
@@ -170,5 +188,6 @@ document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListe
 
 render();
 </script>
+
 </body>
 </html>
