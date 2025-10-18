@@ -244,3 +244,41 @@ footer {
     gap: 0.5rem;
   }
 }
+
+/* ------------------------
+   Dropdown hover + click
+------------------------ */
+.navbar .dropdown-toggle::after { display: none; }
+
+.dropdown-menu {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.25s ease-in-out;
+  visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-item.dropdown.show .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e3f2fd;
+  color: #1e40af;
+}
