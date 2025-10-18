@@ -11,7 +11,51 @@
     body { background-color: #f8f9fa; }
     h1 { color: #2c3e50; }
     .card-img-top { height: 150px; object-fit: contain; background: #e9ecef; }
-    
+
+    /* ===============================
+       Navbar Dropdown Fixes
+    =============================== */
+    /* Remove default caret */
+    .navbar .dropdown-toggle::after {
+      display: none;
+    }
+
+    /* Base dropdown styles */
+    .dropdown-menu {
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.25s ease-in-out;
+      visibility: hidden;
+    }
+
+    /* Desktop hover */
+    @media (min-width: 992px) {
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+    }
+
+    /* Mobile click */
+    @media (max-width: 991px) {
+      .nav-item.dropdown.show .dropdown-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+    }
+
+    /* Hover effect for dropdown items */
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #e3f2fd;
+      color: #1e40af;
+    }
   </style>
 </head>
 <body>
@@ -22,7 +66,6 @@
       <img src="images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
     </a>
 
-    <!-- Mobile toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,12 +74,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
 
-        <!-- Home -->
         <li class="nav-item">
           <a class="nav-link" href="../index.html">Home</a>
         </li>
 
-        <!-- Courses Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Courses
@@ -51,7 +92,6 @@
           </ul>
         </li>
 
-        <!-- Literature Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="literatureDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Literature
@@ -68,8 +108,6 @@
           <a class="nav-link" href="news.html">News</a>
         </li>
 
-        
-        <!-- Contact -->
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
         </li>
@@ -79,11 +117,9 @@
   </div>
 </nav>
 
-
 <main class="container my-5">
   <h1 class="mb-4">Scholarly Articles</h1>
   <div class="row">
-    <!-- Filters Sidebar -->
     <aside class="col-lg-4 mb-4">
       <div class="card p-3" id="filters">
         <h5 class="mb-3">Filter by Category</h5>
@@ -99,7 +135,6 @@
       </div>
     </aside>
 
-    <!-- Articles Section -->
     <section class="col-lg-8">
       <input type="search" id="searchBar" class="form-control mb-3" placeholder="Search scholarly articles..." />
       <div id="article-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4"></div>
@@ -122,6 +157,24 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/render-articles.js"></script>
+
+<script>
+  // Optional: force click toggle on mobile for dropdowns
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+
+    dropdowns.forEach(function (dropdown) {
+      dropdown.addEventListener('click', function (e) {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          dropdown.classList.toggle('show');
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
