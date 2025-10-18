@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remote Job Listings | CourseCove</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <style>
+    body { background-color: #f8f9fa; }
+    h1 { color: #2c3e50; }
+    .card-img-top { height: 150px; object-fit: contain; background: #e9ecef; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3e5e9;">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="images/logo1.png" alt="Course Aggregator Logo" style="height: 70px; width: auto;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+            <li><a class="dropdown-item" href="math.html">Math</a></li>
+            <li><a class="dropdown-item" href="ai-ml.html">AI / ML</a></li>
+            <li><a class="dropdown-item" href="arts-humanities.html">Arts & Humanities</a></li>
+            <li><a class="dropdown-item" href="languages.html">Languages</a></li>
+            <li><a class="dropdown-item" href="politics-economics.html">Politics & Economics</a></li>
+            <li><a class="dropdown-item" href="environment.html">Environment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="literatureDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Literature</a>
+          <ul class="dropdown-menu" aria-labelledby="literatureDropdown">
+            <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
+            <li><a class="dropdown-item" href="books.html">Books</a></li>
+            <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+            <li><a class="dropdown-item" href="citation.html">Citation Generator</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="jobs.html">Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <h1 class="mb-4">Remote Job Listings</h1>
+  <div class="row">
+    <aside class="col-lg-4 mb-4">
+      <div class="card p-3" id="filters">
+        <h5 class="mb-3">Filter by Tag</h5>
+        <div id="job-tags"></div>
+      </div>
+    </aside>
+
+    <section class="col-lg-8">
+      <input type="search" id="searchBar" class="form-control mb-3" placeholder="Search jobs..." />
+      <p id="last-updated" class="text-muted mb-3">Loading...</p>
+      <div id="job-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4"></div>
+      <nav>
+        <ul id="pagination" class="pagination justify-content-center flex-wrap mt-4"></ul>
+      </nav>
+    </section>
+  </div>
+</main>
+
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-2 mb-md-0">
+      <strong>Course Aggregator</strong> &nbsp;|&nbsp;
+      <strong>© 2025 All rights reserved.</strong>
+    </div>
+    <div>
+      <a href="../index.html" class="text-light text-decoration-none me-3">Home</a>
+      <a href="contact.html" class="text-light text-decoration-none me-3">Contact</a>
+      <a href="privacy.html" class="text-light text-decoration-none">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/render-jobs.js"></script>
+</body>
+</html>
