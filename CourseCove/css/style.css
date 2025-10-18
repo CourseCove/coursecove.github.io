@@ -381,6 +381,7 @@ footer {
 .card {
   background-color: #00264d; /* dark navy */
   border: none;
+  color: white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
