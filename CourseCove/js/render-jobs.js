@@ -11,10 +11,18 @@ let selectedTags = new Set();
 
 // Sources
 const sources = [
+  // WeWorkRemotely categories
+  { name: "WWR - Programming", type: "rss", url: "https://weworkremotely.com/categories/remote-programming-jobs.rss" },
+  { name: "WWR - Design", type: "rss", url: "https://weworkremotely.com/categories/remote-design-jobs.rss" },
+  { name: "WWR - Marketing", type: "rss", url: "https://weworkremotely.com/categories/remote-marketing-jobs.rss" },
+  { name: "WWR - Customer Support", type: "rss", url: "https://weworkremotely.com/categories/remote-customer-support-jobs.rss" },
+  { name: "WWR - Sales", type: "rss", url: "https://weworkremotely.com/categories/remote-sales-jobs.rss" },
+  { name: "WWR - DevOps", type: "rss", url: "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss" },
+  { name: "WWR - Finance/Legal", type: "rss", url: "https://weworkremotely.com/categories/remote-finance-legal-jobs.rss" },
+  { name: "WWR - Copywriting/Content", type: "rss", url: "https://weworkremotely.com/categories/remote-copywriting-content-jobs.rss" },
+
+  // Other sources
   { name: "RemoteOK", type: "json", url: "https://remoteok.io/remote-jobs.json" },
-  { name: "WeWorkRemotely - Programming", type: "rss", url: "https://weworkremotely.com/categories/remote-programming-jobs.rss" },
-  { name: "WeWorkRemotely - Design", type: "rss", url: "https://weworkremotely.com/categories/remote-design-jobs.rss" },
-  { name: "WeWorkRemotely - Marketing", type: "rss", url: "https://weworkremotely.com/categories/remote-marketing-jobs.rss" },
   { name: "Remotive", type: "json", url: "https://remotive.io/api/remote-jobs" }
 ];
 
